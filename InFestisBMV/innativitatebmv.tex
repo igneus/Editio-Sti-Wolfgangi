@@ -1,0 +1,66 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside]{article}
+\usepackage[latin]{babel} 
+\usepackage[landscape, left=2cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
+
+\usepackage{fontspec}
+% \setmainfont{Gentium}
+\setmainfont{Gentium Book Basic}
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{lettrine}
+
+\newenvironment{titulusOfficii}{\begin{center}}{\end{center}}
+\newcommand{\dies}[1]{#1
+
+}
+\newcommand{\nomenFesti}[1]{\textbf{\Large #1}
+
+}
+\newcommand{\celebratio}[1]{#1
+
+}
+
+\newcommand{\hora}[1]{\textbf{#1}
+
+}
+\newcommand{\notitia}[1]{\textcolor{red}{#1}}
+
+\setlength{\columnsep}{30pt} % prostor mezi sloupci
+
+\begin{document}
+
+\emph{Texty podle Antiphonale Romanum 1912. Překlady, není-li výslovně uvedeno
+jinak, J.P.}
+
+\begin{titulusOfficii}
+\dies{Die 8. Septembris.}
+\nomenFesti{In Nativitate B. Mariae Virginis.}
+\celebratio{Duplex 2. classis cum Octava.}
+\end{titulusOfficii}
+
+\hora{In I. vesperis.}
+
+\hora{Ad Laudes.}
+
+Oratio.
+\begin{multicols*}{2}
+\lettrine{F}{amulis} tuis, quaésumus Dómine, coeléstis grátiae munus impertíre:~\dag\mbox{}
+ut quibus beátae Vírginis partus éxstitit salútis exórdium,~*
+Nativitátis ejus votíva solémnitas pacis tríbuat increméntum.
+Per Dóminum.
+
+\columnbreak
+
+% preklad J.P.
+Prosíme tě, Bože, 
+uděl nám, svým služebníkům, dar nebeské milosti,
+aby těm, kterým v porodu blahoslavené Panny vzešel počátek spásy,
+\notitia{(co s \emph{votiva}?)} slavnost jejího narození přinesla
+rozhojnění pokoje.
+Skrze našeho Pána.
+\end{multicols*}
+
+\end{document}
