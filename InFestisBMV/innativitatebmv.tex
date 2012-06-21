@@ -1,12 +1,12 @@
 % LuaLaTeX
 
-\documentclass[a4paper, twoside]{article}
+\documentclass[a4paper, twoside, 12pt]{article}
 \usepackage[latin]{babel} 
-\usepackage[landscape, left=2cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
+\usepackage[landscape, left=2cm, right=1.5cm, top=2cm, bottom=2cm]{geometry} % okraje stranky
 
 \usepackage{fontspec}
-% \setmainfont{Gentium}
-\setmainfont{Gentium Book Basic}
+% \setmainfont{Gentium Book Basic}
+\setmainfont{Junicode}
 
 \usepackage{multicol}
 \usepackage{color}
@@ -23,27 +23,68 @@
 
 }
 
-\newcommand{\hora}[1]{\textbf{#1}
+\newcommand{\hora}[1]{\vspace{0.5cm}\textbf{#1}
 
 }
 \newcommand{\notitia}[1]{\textcolor{red}{#1}}
+
+\newcommand{\titCapitulum}[1]{\hfill \textit{#1}}
+
+\newenvironment{psalmus}{}{}
+
+%%%% Prejmenovat na latinske:
+\newcommand{\nadpisZalmu}[1]{
+  \textbf{#1}%
+  \nopagebreak%
+}
 
 \setlength{\columnsep}{30pt} % prostor mezi sloupci
 
 \begin{document}
 
-\emph{Texty podle Antiphonale Romanum 1912. Překlady, není-li výslovně uvedeno
-jinak, J.P.}
+\emph{Texti secundum Antiphonale Romanum 1912. 
+Translationes, nisi aliud notatum, J.P.
+Translationes capitulorum sumptae sunt ex:
+Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \begin{titulusOfficii}
 \dies{Die 8. Septembris.}
 \nomenFesti{In Nativitate B. Mariae Virginis.}
-\celebratio{Duplex 2. classis cum Octava.}
+\celebratio{Duplex 2. classis.} % puvodne "cum Octava." Oktavy byly ale zruseny
 \end{titulusOfficii}
 
-\hora{In I. vesperis.}
+\hora{In I. Vesperis.}
+
+\input{temporalia/ps109.tex}
 
 \hora{Ad Laudes.}
+
+Capitulum. \titCapitulum{Eccli. 24. b}
+\begin{multicols*}{2}
+Ab inítio et ante saécula creáta sum,~\dag\mbox{}
+et usque ad futúrum saéculum non désinam,~*
+et in habitatióne sancta coram ipso ministrávi.
+
+\columnbreak
+
+% preklad Jeruz. bible
+Před věky, na počátku mě stvořil,
+potrvám věčně. 
+Ve svatém Stanu jsem před ním konala službu.
+\end{multicols*}
+
+%%% TODO: Hymnus
+
+\begin{multicols*}{2}
+℣. Natívitas est hódie sanctae Maríae \textbf{Vír}ginis.\\
+\indent ℟. Cujus vita ínclyta cunctas illústrat ec\textbf{clé}sias.
+
+\columnbreak
+
+% preklad J.P.
+Dnes je Narození svaté Panny Marie.\\
+\indent Jejíž předrahý život osvěcuje všechny církve.
+\end{multicols*}
 
 Oratio.
 \begin{multicols*}{2}
