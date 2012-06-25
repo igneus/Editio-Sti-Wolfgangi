@@ -13,4 +13,3 @@ Brzy
 * vyřešit kam a jak dát překlady antifon a udělat je
 * stejné řádkování žalmů? (to nechci. fuj.)
 * nad antifonami místo na neumy (vyřešit i víceřádkové antifony!)
-* notovaný otčenáš
