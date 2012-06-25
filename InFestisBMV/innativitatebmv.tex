@@ -12,6 +12,11 @@
 \usepackage{color}
 \usepackage{lettrine}
 
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+
 \newenvironment{titulusOfficii}{\begin{center}}{\end{center}}
 \newcommand{\dies}[1]{#1
 
@@ -27,7 +32,7 @@
 
 }
 
-\newcommand{\rubrica}[1]{\vspace{3mm}\itshape{#1}}
+\newcommand{\rubrica}[1]{\vspace{3mm}\textit{#1}}
 
 \newcommand{\notitia}[1]{\textcolor{red}{#1}}
 
@@ -58,12 +63,76 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \hora{In I. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{43}{43}\selectfont #1}%
+}
+
+\includescore{cantus/arom12/deusinadiutorium-festivus.tex}
+
+\pagebreak
+
+\rubrica{psalmus 1.}
+
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
+\includescore{cantus/arom12/ant1.tex}
+\includescore{../tonipsalmorum/arom12/viii-G.tex}
+
 \input{temporalia/ps109.tex}
 
-\hora{Ad Laudes.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 
-Capitulum. \titCapitulum{Eccli. 24. b}
-\begin{multicols*}{2}
+\rubrica{psalmus 2.}
+
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
+\includescore{cantus/arom12/ant2.tex}
+\includescore{../tonipsalmorum/arom12/vii-c.tex}
+
+\input{temporalia/ps112.tex}
+
+\pagebreak
+
+\rubrica{psalmus 3.}
+
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
+\includescore{cantus/arom12/ant3.tex}
+\includescore{../tonipsalmorum/arom12/vi-F.tex}
+
+\input{temporalia/ps121.tex}
+
+\pagebreak
+
+\rubrica{psalmus 4.}
+
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
+\includescore{cantus/arom12/ant4.tex}
+\includescore{../tonipsalmorum/arom12/viii-G.tex}
+
+\input{temporalia/ps126.tex}
+
+\pagebreak
+
+\rubrica{psalmus 5.}
+
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
+\includescore{cantus/arom12/ant5.tex}
+\includescore{../tonipsalmorum/arom12/vii-c.tex}
+
+\input{temporalia/ps147.tex}
+
+\pagebreak
+
+\raggedcolumns
+
+% Capitulum. %%%
+Capitulum. \titCapitulum{Eccli. 24. b} \label{capitulum}
+\begin{multicols}{2}
 \lettrine{A}{b} inítio et ante saécula creáta sum,~\dag\mbox{}
 et usque ad futúrum saéculum non désinam,~*
 et in habitatióne sancta coram ipso ministrávi.
@@ -76,9 +145,16 @@ potrvám věčně.
 Ve svatém Stanu jsem před ním konala službu.
 \end{multicols*}
 
-%%% TODO: Hymnus
+% Hymnus. %%%
+Hymnus.
 
-\begin{multicols*}{2}
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{I.}}}{\small \textsc{\textbf{I.}}}
+\includescore{cantus/arom12/hymAveMarisStella.tex}
+\input{cantus/arom12/hymAveMarisStella-text.tex}
+
+% Versus. %%%
+\label{versus}
+\begin{multicols}{2}
 ℣. Natívitas est hódie sanctae Maríae \textbf{Vír}ginis.\\
 \indent ℟. Cujus vita ínclyta cunctas illústrat ec\textbf{clé}sias.
 
@@ -89,8 +165,15 @@ Dnes je Narození svaté Panny Marie.\\
 \indent Jejíž předrahý život osvěcuje všechny církve.
 \end{multicols*}
 
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{I.D2}}}{\small \textsc{\textbf{I.D2}}}
+\includescore{cantus/arom12/antVesp1Magn.tex}
+\includescore{../tonipsalmorum/arom12/i-D2.tex}
+
+\input{temporalia/magnificat-iD2.tex}
+
+% Oratio. %%%
 Oratio.
-\begin{multicols*}{2}
+\begin{multicols}{2}
 \lettrine{F}{amulis} tuis, quaésumus Dómine, coeléstis grátiae munus impertíre:~\dag\mbox{}
 ut quibus beátae Vírginis partus éxstitit salútis exórdium,~*
 Nativitátis ejus votíva solémnitas pacis tríbuat increméntum.
@@ -106,6 +189,10 @@ aby těm, kterým \notitia{?(}se porod blahoslavené Panny zjevil jako počátek
 rozhojnění pokoje.
 Skrze našeho Pána.
 \end{multicols*}
+
+\input{cantus/arom12/benedicamus-duplex-1vesp.tex}
+
+\hora{Ad Laudes.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \hora{In II. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

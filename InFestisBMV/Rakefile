@@ -13,12 +13,34 @@ def genzalm(zalm, options="", adresar='temporalia/')
   return peceny
 end
 
-toni_psalmorum = {
+def genzalmsuff(zalm, options="", suff="aaa", adresar='temporalia/')
+  wd = Dir.pwd
+  syrovy = "../psalmi/"+zalm
+  peceny = adresar+zalm.gsub(/\.pslm/, '')+'-'+suff+'.tex'
+  preprocessor = "/home/igneus/In-adiutorium/nastroje/psalmpreprocessor.rb"
+  file peceny => [syrovy, preprocessor] do
+    chdir adresar
+    sh "#{RUBY_COMMAND} #{preprocessor} -o #{File.basename(peceny)} #{options} ../#{syrovy}"
+    chdir wd
+  end
+  return peceny
+end
+
+def gregorio(srcf)
+  f2 = srcf.gsub(".gabc", ".tex")
+  file f2 => [srcf] do
+    sh "gregorio #{srcf}"
+  end
+  return f2
+end
+
+TONI_PSALMORUM = {
   'I.D' => [[2,0], [1,2]],
   'I.D2' => [[2,0], [1,2]],
   'II.D' => [[1,0], [1,1]],
   'III.a' => [[2,0], [1,1]],
   'IV.E' => [[1,2], [1,3]],
+  'VI.F' => [[1,1], [1,2]],
   'VII.a' => [[2,0], [2,0]],
   'VII.c' => [[2,0], [2,0]],
   'VIII.G' => [[1,0], [1,2]],
@@ -29,14 +51,49 @@ gloriapatri = File.readlines('../psalmi/gloriapatri.pslm').join ""
 
 nativitas_psalmi = []
 
-{109 => 'VIII.G'}.each_pair do |n,t|
-  accents = "#{toni_psalmorum[t][0][0]}:#{toni_psalmorum[t][1][0]}"
-  preps = "#{toni_psalmorum[t][0][1]}:#{toni_psalmorum[t][1][1]}"
-  nativitas_psalmi << genzalm("ps#{n}.pslm", "--accents-style bold --accents #{accents} --preparatory-syllables #{preps} --append \"#{gloriapatri}\"")
+options_common = "--accents-style bold --append \"#{gloriapatri}\" "
+
+def options_accents(psalmtone)
+  accents = "#{TONI_PSALMORUM[psalmtone][0][0]}:#{TONI_PSALMORUM[psalmtone][1][0]}"
+  preps = "#{TONI_PSALMORUM[psalmtone][0][1]}:#{TONI_PSALMORUM[psalmtone][1][1]}"
+
+  return "--accents #{accents} --preparatory-syllables #{preps}"
 end
 
-file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_psalmi do |t|
-  sh "xelatex #{t.prerequisites.first}"
+# zalmy (akcenty podle napevu)
+{109 => 'VIII.G',
+  112 => 'VII.c',
+  121 => 'VI.F',
+  126 => 'VIII.G',
+  147 => 'VII.c'}.each_pair do |n,t|
+  
+  nativitas_psalmi << genzalm("ps#{n}.pslm", options_common+options_accents(t))
+end
+
+# Benedictus a Magnificat
+nativitas_psalmi << genzalmsuff("magnificat.pslm", options_common+options_accents('I.D2'), 'iD2')
+
+nativitas_cantus = []
+# antifony
+1.upto(5) {|i|
+  nativitas_cantus << gregorio("cantus/arom12/ant#{i}.gabc")
+}
+# napevy zalmu
+['i-D2',
+ 'vi-F',
+ 'vii-c',
+ 'viii-G'].each {|s|
+  nativitas_cantus << gregorio("../tonipsalmorum/arom12/#{s}.gabc")
+}
+# hymny a spol
+nativitas_cantus << gregorio("cantus/arom12/hymAveMarisStella.gabc")
+nativitas_cantus << gregorio("cantus/arom12/deusinadiutorium-festivus.gabc")
+nativitas_cantus << gregorio("cantus/arom12/benedicamus-duplex-1vesp.gabc")
+nativitas_cantus << gregorio("cantus/arom12/antVesp1Magn.gabc")
+
+file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas_psalmi do |t|
+  # sh "xelatex #{t.prerequisites.first}"
+  sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}"
 end
 
 task :nativitas => ["innativitatebmv.pdf"]
