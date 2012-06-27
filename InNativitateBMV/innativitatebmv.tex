@@ -2,7 +2,7 @@
 
 \documentclass[a4paper, twoside, 12pt]{article}
 \usepackage[latin]{babel} 
-\usepackage[landscape, left=2cm, right=1.5cm, top=2cm, bottom=2cm]{geometry} % okraje stranky
+\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=2cm]{geometry} % okraje stranky
 
 \usepackage{fontspec}
 % \setmainfont{Gentium Book Basic}
@@ -37,6 +37,9 @@
 \newcommand{\notitia}[1]{\textcolor{red}{#1}}
 
 \newcommand{\titCapitulum}[1]{\hfill \textit{#1}}
+
+% volne misto nad antifonami, kam si zpevaci dokresli neumy
+\newcommand{\hicSuntNeumae}{\vspace{1.3cm}}
 
 % pars officii, i.e. "oratio", ...
 \newcommand{\pars}[1]{\textbf{#1}}
@@ -77,12 +80,13 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 {\fontsize{43}{43}\selectfont #1}%
 }
 
-\includescore{../cantuscommunes/arom12/deusinadiutorium-festivus.tex}
+\includescore{../cantuscommunes/amon33/deusinadiutorium-communis.tex}
 
 \pagebreak
 
 \pars{psalmus 1.}
 
+\hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/arom12/ant1.tex}
 \includescore{../tonipsalmorum/arom12/viii-G.tex}
@@ -93,6 +97,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \pars{psalmus 2.}
 
+\hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
 \includescore{cantus/arom12/ant2.tex}
 \includescore{../tonipsalmorum/arom12/vii-c.tex}
@@ -103,6 +108,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \pars{psalmus 3.}
 
+\hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
 \includescore{cantus/arom12/ant3.tex}
 \includescore{../tonipsalmorum/arom12/vi-F.tex}
@@ -113,6 +119,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \pars{psalmus 4.}
 
+\hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/arom12/ant4.tex}
 \includescore{../tonipsalmorum/arom12/viii-G.tex}
@@ -138,6 +145,11 @@ potrvám věčně.
 Ve svatém Stanu jsem před ním konala službu.
 \end{multicols*}
 
+\pars{Responsorium breve.}
+
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.}}}{\small \textsc{\textbf{VI.}}}
+\includescore{cantus/amon33/resp1v.tex}
+
 % Hymnus. %%%
 \pars{Hymnus.}
 
@@ -158,6 +170,7 @@ Dnes je Narození svaté Panny Marie.\\
 \indent Jejíž předrahý život osvěcuje všechny církve.
 \end{multicols*}
 
+\hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I.D2}}}{\small \textsc{\textbf{I.D2}}}
 \includescore{cantus/arom12/antVesp1Magn.tex}
 \includescore{../tonipsalmorum/arom12/i-D2.tex}
@@ -203,7 +216,7 @@ Skrze našeho Pána.
 
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
 
-\input{../cantuscommunes/arom12/benedicamus-duplex-1vesp.tex}
+\input{../cantuscommunes/amon33/benedicamus-duplex-vesperae.tex}
 
 \hora{Ad Laudes.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

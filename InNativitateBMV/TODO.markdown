@@ -9,10 +9,9 @@ Později
 
 Brzy
 
-* širší levý okraj pro kroužkovou vazbu?
+* nahradit _všechny_ zpěvy AR12 odpovídajícími zpěvy AM33
 * vyřešit kam a jak dát překlady antifon a udělat je
 * stejné řádkování žalmů? (to nechci. fuj.)
-* nad antifonami místo na neumy (vyřešit i víceřádkové antifony!)
 * pokud možno konstantní řádkování v psalmodii
 * psalmodický vzorec podložit prvním veršem žalmu (vůbec se mi do toho nechce,
   ale je potřeba to udělat včas, protože to nikoli nevýznamně ovlivňuje 
