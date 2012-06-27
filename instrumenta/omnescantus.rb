@@ -46,6 +46,8 @@ EOS
       end
     end
 
+    f.puts '\\vspace{1cm}'
+
     cc = c.gsub(/\.gabc$/, '.tex')
 
     # the score
