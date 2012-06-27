@@ -79,16 +79,15 @@ nativitas_cantus = []
   nativitas_cantus << gregorio("cantus/amon33/ant#{i}.gabc")
 }
 # napevy zalmu
-['i-D2',
- 'vi-F',
- 'vii-c',
- 'viii-G'].each {|s|
-  nativitas_cantus << gregorio("../tonipsalmorum/arom12/#{s}.gabc")
+Dir["../tonipsalmorum/arom12/*.gabc"].each {|t|
+  nativitas_cantus << gregorio(t)
 }
 # hymny a spol
 nativitas_cantus << gregorio("cantus/amon33/resp1v.gabc")
 nativitas_cantus << gregorio("cantus/arom12/hymAveMarisStella.gabc")
 nativitas_cantus << gregorio("cantus/amon33/ant-magn-vesp1.gabc")
+nativitas_cantus << gregorio("cantus/amon33/ant-ben-laud.gabc")
+nativitas_cantus << gregorio("cantus/amon33/ant-magn-vesp2.gabc")
 nativitas_cantus << gregorio("../cantuscommunes/amon33/deusinadiutorium-communis.gabc")
 nativitas_cantus << gregorio("../cantuscommunes/amon33/supplicatiolitaniae.gabc")
 nativitas_cantus << gregorio("../cantuscommunes/amon33/oratiodominica.gabc")
