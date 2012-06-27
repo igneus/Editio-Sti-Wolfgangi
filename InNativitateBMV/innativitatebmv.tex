@@ -11,6 +11,7 @@
 \usepackage{multicol}
 \usepackage{color}
 \usepackage{lettrine}
+\usepackage{fancyhdr}
 
 % usual packages loading:
 \usepackage{luatextra}
@@ -29,6 +30,9 @@
 }
 
 \newcommand{\hora}[1]{\vspace{0.5cm}{\large \textbf{#1}}
+% from some reason the following doesn't work:
+\fancyhead[LE]{\thepage / #1}
+\fancyhead[RO]{#1 / \thepage}
 
 }
 
@@ -69,6 +73,9 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \hora{In I. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
+\fancyhf{}
+\pagestyle{fancy}
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
