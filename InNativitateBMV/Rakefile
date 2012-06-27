@@ -76,7 +76,7 @@ nativitas_psalmi << genzalmsuff("magnificat.pslm", options_common+options_accent
 nativitas_cantus = []
 # antifony
 1.upto(5) {|i|
-  nativitas_cantus << gregorio("cantus/arom12/ant#{i}.gabc")
+  nativitas_cantus << gregorio("cantus/amon33/ant#{i}.gabc")
 }
 # napevy zalmu
 ['i-D2',
@@ -88,7 +88,7 @@ nativitas_cantus = []
 # hymny a spol
 nativitas_cantus << gregorio("cantus/amon33/resp1v.gabc")
 nativitas_cantus << gregorio("cantus/arom12/hymAveMarisStella.gabc")
-nativitas_cantus << gregorio("cantus/arom12/antVesp1Magn.gabc")
+nativitas_cantus << gregorio("cantus/amon33/ant-magn-vesp1.gabc")
 nativitas_cantus << gregorio("../cantuscommunes/amon33/deusinadiutorium-communis.gabc")
 nativitas_cantus << gregorio("../cantuscommunes/amon33/supplicatiolitaniae.gabc")
 nativitas_cantus << gregorio("../cantuscommunes/amon33/oratiodominica.gabc")
