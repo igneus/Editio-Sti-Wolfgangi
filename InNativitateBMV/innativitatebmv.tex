@@ -38,6 +38,9 @@
 
 \newcommand{\titCapitulum}[1]{\hfill \textit{#1}}
 
+% pars officii, i.e. "oratio", ...
+\newcommand{\pars}[1]{\textbf{#1}}
+
 \newenvironment{psalmus}{}{}
 
 %%%% Prejmenovat na latinske:
@@ -78,7 +81,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \pagebreak
 
-\rubrica{psalmus 1.}
+\pars{psalmus 1.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/arom12/ant1.tex}
@@ -88,7 +91,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \pagebreak
 
-\rubrica{psalmus 2.}
+\pars{psalmus 2.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
 \includescore{cantus/arom12/ant2.tex}
@@ -98,7 +101,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \pagebreak
 
-\rubrica{psalmus 3.}
+\pars{psalmus 3.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
 \includescore{cantus/arom12/ant3.tex}
@@ -108,7 +111,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \pagebreak
 
-\rubrica{psalmus 4.}
+\pars{psalmus 4.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/arom12/ant4.tex}
@@ -118,7 +121,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \pagebreak
 
-\rubrica{psalmus 5.}
+\pars{psalmus 5.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
 \includescore{cantus/arom12/ant5.tex}
@@ -131,7 +134,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 \raggedcolumns
 
 % Capitulum. %%%
-Capitulum. \titCapitulum{Eccli. 24. b} \label{capitulum}
+\pars{Capitulum.} \titCapitulum{Eccli. 24. b} \label{capitulum}
 \begin{multicols}{2}
 \lettrine{A}{b} inítio et ante saécula creáta sum,~\dag\mbox{}
 et usque ad futúrum saéculum non désinam,~*
@@ -146,7 +149,7 @@ Ve svatém Stanu jsem před ním konala službu.
 \end{multicols*}
 
 % Hymnus. %%%
-Hymnus.
+\pars{Hymnus.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I.}}}{\small \textsc{\textbf{I.}}}
 \includescore{cantus/arom12/hymAveMarisStella.tex}
@@ -171,10 +174,26 @@ Dnes je Narození svaté Panny Marie.\\
 
 \input{temporalia/magnificat-iD2.tex}
 
+\rubrica{Ante Orationem, cantatur a Superiore:}
+
+\pars{Supplicatio Litaniae.}
+
 \includescore{../cantuscommunes/amon33/supplicatiolitaniae.tex}
 
+\pars{Oratio Dominica.}
+
+\includescore{../cantuscommunes/amon33/oratiodominica.tex}
+
+\rubrica{Deinde dicitur ab Hebdomadario:}
+
+\includescore{../cantuscommunes/amon33/dominusvobiscum-solemnis.tex}
+
+\rubrica{In choro monialium loco Dominus vobiscum dicitur:}
+
+\includescore{../cantuscommunes/amon33/domineexaudi.tex}
+
 % Oratio. %%%
-Oratio.
+\pars{Oratio.}
 \begin{multicols}{2}
 \lettrine{F}{amulis} tuis, quaésumus Dómine, coeléstis grátiae munus impertíre:~\dag\mbox{}
 ut quibus beátae Vírginis partus éxstitit salútis exórdium,~*
@@ -191,6 +210,8 @@ aby těm, kterým \notitia{?(}se porod blahoslavené Panny zjevil jako počátek
 rozhojnění pokoje.
 Skrze našeho Pána.
 \end{multicols*}
+
+\rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
 
 \input{../cantuscommunes/arom12/benedicamus-duplex-1vesp.tex}
 
