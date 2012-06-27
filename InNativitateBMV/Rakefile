@@ -90,6 +90,9 @@ nativitas_cantus << gregorio("cantus/arom12/hymAveMarisStella.gabc")
 nativitas_cantus << gregorio("cantus/arom12/antVesp1Magn.gabc")
 nativitas_cantus << gregorio("../cantuscommunes/arom12/deusinadiutorium-festivus.gabc")
 nativitas_cantus << gregorio("../cantuscommunes/amon33/supplicatiolitaniae.gabc")
+nativitas_cantus << gregorio("../cantuscommunes/amon33/oratiodominica.gabc")
+nativitas_cantus << gregorio("../cantuscommunes/amon33/dominusvobiscum-solemnis.gabc")
+nativitas_cantus << gregorio("../cantuscommunes/amon33/domineexaudi.gabc")
 nativitas_cantus << gregorio("../cantuscommunes/arom12/benedicamus-duplex-1vesp.gabc")
 
 file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas_psalmi do |t|
