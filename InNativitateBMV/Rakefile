@@ -87,9 +87,10 @@ nativitas_cantus = []
 }
 # hymny a spol
 nativitas_cantus << gregorio("cantus/arom12/hymAveMarisStella.gabc")
-nativitas_cantus << gregorio("cantus/arom12/deusinadiutorium-festivus.gabc")
-nativitas_cantus << gregorio("cantus/arom12/benedicamus-duplex-1vesp.gabc")
 nativitas_cantus << gregorio("cantus/arom12/antVesp1Magn.gabc")
+nativitas_cantus << gregorio("../cantuscommunes/arom12/deusinadiutorium-festivus.gabc")
+nativitas_cantus << gregorio("../cantuscommunes/amon33/supplicatiolitaniae.gabc")
+nativitas_cantus << gregorio("../cantuscommunes/arom12/benedicamus-duplex-1vesp.gabc")
 
 file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas_psalmi do |t|
   # sh "xelatex #{t.prerequisites.first}"
