@@ -31,7 +31,7 @@
 
 \newcommand{\hora}[1]{\vspace{0.5cm}{\large \textbf{#1}}
 % from some reason the following doesn't work:
-\fancyhead[LE]{\thepage / #1}
+\fancyhead[LE]{\thepage\ / #1}
 \fancyhead[RO]{#1 / \thepage}
 
 }
@@ -71,11 +71,11 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 \celebratio{Duplex 2. classis.} % puvodne "cum Octava." Oktavy byly ale zruseny
 \end{titulusOfficii}
 
-\hora{In I. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
 \fancyhf{}
 \pagestyle{fancy}
+
+\hora{In I. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
@@ -150,7 +150,7 @@ et in habitatióne sancta coram ipso ministrávi.
 Před věky, na počátku mě stvořil,
 potrvám věčně. 
 Ve svatém Stanu jsem před ním konala službu.
-\end{multicols*}
+\end{multicols}
 
 \pars{Responsorium breve.}
 
@@ -161,7 +161,7 @@ Ve svatém Stanu jsem před ním konala službu.
 \pars{Hymnus.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I.}}}{\small \textsc{\textbf{I.}}}
-\includescore{cantus/arom12/hymAveMarisStella.tex}
+\includescore{cantus/amon33/hym-AveMarisStella.tex}
 \input{cantus/arom12/hymAveMarisStella-text.tex}
 
 % Versus. %%%
@@ -175,7 +175,9 @@ Ve svatém Stanu jsem před ním konala službu.
 % preklad J.P.
 Dnes je Narození svaté Panny Marie.\\
 \indent Jejíž předrahý život osvěcuje všechny církve.
-\end{multicols*}
+\end{multicols}
+
+\pars{Canticum B. Mariae V.}
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I.D2}}}{\small \textsc{\textbf{I.D2}}}
@@ -219,7 +221,7 @@ aby těm, kterým \notitia{?(}se porod blahoslavené Panny zjevil jako počátek
 \notitia{(co s \emph{votiva}?)} slavnost jejího narození přinesla
 rozhojnění pokoje.
 Skrze našeho Pána.
-\end{multicols*}
+\end{multicols}
 
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
 
@@ -280,7 +282,7 @@ Skrze našeho Pána.
 
 \pagebreak
 
-\rubrica{psalmus 5.}
+\pars{psalmus 6.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
 \includescore{cantus/amon33/ant5.tex}
@@ -290,9 +292,26 @@ Skrze našeho Pána.
 
 \pagebreak
 
+\rubrica{Capitulum et responsorium breve de I. vesperis.}
+
+\pars{Hymnus.}
+
+\includescore{cantus/amon33/hym-OGloriosaDomina.tex}
+\includescore{cantus/amon33/hym-OGloriosaDomina-text.tex}
+
+\rubrica{Versus de I. vesperis.}
+
+\pars{Canticum Zachariae.}
+
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
+\includescore{cantus/amon33/ant-ben-laud.tex}
+\input{temporalia/benedictus-viiiG.tex}
+
 \hora{In II. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \rubrica{Omnia ut in I. Vesperis, praeter sequentia.}
+
+\pars{Canticum B. Mariae V.}
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I.f}}}{\small \textsc{\textbf{I.f}}}

@@ -77,6 +77,7 @@ end
 
 # Benedictus a Magnificat
 nativitas_psalmi << genzalmsuff("magnificat.pslm", options_common+options_accents('I.D2'), 'iD2')
+nativitas_psalmi << genzalmsuff("benedictus.pslm", options_common+options_accents('VIII.G'), 'viiiG')
 
 nativitas_cantus = []
 # antifony
@@ -89,7 +90,8 @@ Dir["../tonipsalmorum/arom12/*.gabc"].each {|t|
 }
 # hymny a spol
 nativitas_cantus << gregorio("cantus/amon33/resp1v.gabc")
-nativitas_cantus << gregorio("cantus/arom12/hymAveMarisStella.gabc")
+nativitas_cantus << gregorio("cantus/amon33/hym-AveMarisStella.gabc")
+nativitas_cantus << gregorio("cantus/amon33/hym-OGloriosaDomina.gabc")
 nativitas_cantus << gregorio("cantus/amon33/ant-magn-vesp1.gabc")
 nativitas_cantus << gregorio("cantus/amon33/ant-ben-laud.gabc")
 nativitas_cantus << gregorio("cantus/amon33/ant-magn-vesp2.gabc")
