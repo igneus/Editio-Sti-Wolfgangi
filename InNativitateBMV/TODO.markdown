@@ -16,3 +16,6 @@ Brzy
 * psalmodický vzorec podložit prvním veršem žalmu (vůbec se mi do toho nechce,
   ale je potřeba to udělat včas, protože to nikoli nevýznamně ovlivňuje 
   rozložení stránky)
+  * dodělat skript initiumpsalmi.rb
+  * přesně popsat formát žalmů a formát žalmových vzorců pro automatické 
+	zpracování skriptem initiumpsalmi.rb
