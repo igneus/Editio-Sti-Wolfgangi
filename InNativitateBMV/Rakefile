@@ -34,6 +34,21 @@ def gregorio(srcf)
   return f2
 end
 
+def geninitium(psalm, tone, directory='temporalia/')
+  ntone = tone
+  if i = ntone.index('.') then
+    ntone = ntone[0..i-1].downcase+'-'+ntone[i+1..-1]
+  end
+  patternfile = '../../tonipsalmorum/arom12/'+ntone+'-auto.gabc'
+
+  psalmfile = '../../psalmi/' + (psalm.is_a?(Fixnum) ? "ps#{psalm}" : psalm) + '.pslm'
+  
+  i = File.basename(patternfile).index('.')
+  output_ending = '-initium-'+File.basename(patternfile)[0..i-1]+'.gabc'
+  outputfile = File.basename(psalmfile).gsub(/\.pslm$/, output_ending)
+
+end
+
 TONI_PSALMORUM = {
   'I.D' => [[2,0], [1,2]],
   'I.D2' => [[2,0], [1,2]],
