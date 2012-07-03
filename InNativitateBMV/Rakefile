@@ -95,10 +95,17 @@ nativitas_cantus = []
   112 => 'VII.c',
   121 => 'VI.F',
   126 => 'VIII.G',
-  147 => 'VII.c'}.each_pair do |n,t|
+  147 => 'VII.c',
+  150 => 'VII.c'}.each_pair do |n,t|
   
   nativitas_psalmi << genzalm("ps#{n}.pslm", options_common+options_accents(t))
   nativitas_cantus << geninitium(n, t)
+end
+
+# zalmy bez Gloria Patri
+[148, 149].each do |n|
+  nativitas_psalmi << genzalm("ps#{n}.pslm", "--accents-style bold --skip-verses 1 "+options_accents('VII.c'))
+  nativitas_cantus << geninitium(n, 'VII.c')
 end
 
 nativitas_psalmi << genzalm('dan3.pslm', "--accents-style bold --skip-verses 1 "+options_accents('VIII.G'))

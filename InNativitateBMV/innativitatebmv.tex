@@ -42,6 +42,8 @@
 
 \newcommand{\titCapitulum}[1]{\hfill \textit{#1}}
 
+\newcommand{\translatioCantus}[1]{{\small #1}}
+
 % volne misto nad antifonami, kam si zpevaci dokresli neumy
 \newcommand{\hicSuntNeumae}{\vspace{1.3cm}}
 
@@ -63,14 +65,28 @@
 
 }
 
+%%%% Preklady jednotlivych zpevu (nektere se opakuji, a je dobre mit je
+% vsechny na jedne hromade)
+
+\newcommand{\translatioAntI}{\translatioCantus{Jasné narození slavné Panny Marie,
+z pokolení (dosl. ze semene) Abrahámova, vzešlé z kmene Judova, z rodu Davidova.}}
+\newcommand{\translatioAntII}{\translatioCantus{Dnes je Narození svaté Panny 
+Marie, jejíž předrahý život osvěcuje všechny církve.}}
+\newcommand{\translatioAntIII}{\translatioCantus{Maria, jež vzešla 
+z královského rodu, září; myslí i duchem ji v modlitbách zbožně prosíme, aby 
+nám pomáhala. \notitia{(Překlad druhé části poněkud nejistý.)}}}
+\newcommand{\translatioAntIV}{\translatioCantus{Srdcem i duchem pějme Kristu 
+k slávě o této svaté slavnosti vznešené Rodičky Boží Marie.}}
+\newcommand{\translatioAntV}{\translatioCantus{Příjemně \notitia{?} 
+oslavujme Narození blahoslavené Marie,
+aby se ona za nás přimlouvala u Pána Ježíše Krista.}}
+\newcommand{\translatioRespVesp}{\translatioCantus{Buď zdráva, Maria,
+plná milosti: * Pán s tebou. ℣. Požehnaná jsi mezi ženami,
+a požehnaný plod tvého lůna.}}
+
 \setlength{\columnsep}{30pt} % prostor mezi sloupci
 
 \begin{document}
-
-\emph{Texti et cantus secundum Antiphonale Monasticum, Solesmis 1933. 
-Translationes, nisi aliud notatum, J.P.
-Translationes capitulorum sumptae sunt ex:
-Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 
 \begin{titulusOfficii}
 \dies{Die 8. Septembris.}
@@ -104,6 +120,8 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/amon33/ant1.tex}
 
+\translatioAntI
+
 \includescore{temporalia/ps109-initium-viii-G-auto.tex}
 
 \input{temporalia/ps109.tex}
@@ -115,7 +133,8 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
 \includescore{cantus/amon33/ant2.tex}
-% \includescore{../tonipsalmorum/arom12/vii-c.tex}
+
+\translatioAntII
 
 \includescore{temporalia/ps112-initium-vii-c-auto.tex}
 
@@ -128,7 +147,9 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
 \includescore{cantus/amon33/ant3.tex}
-% \includescore{../tonipsalmorum/arom12/vi-F.tex}
+
+\translatioAntIII
+
 \includescore{temporalia/ps121-initium-vi-F-auto.tex}
 
 \input{temporalia/ps121.tex}
@@ -140,7 +161,9 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/amon33/ant4.tex}
-% \includescore{../tonipsalmorum/arom12/viii-G.tex}
+
+\translatioAntIV
+
 \includescore{temporalia/ps126-initium-viii-G-auto.tex}
 
 \input{temporalia/ps126.tex}
@@ -169,12 +192,16 @@ Ve svatém Stanu jsem před ním konala službu.
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.}}}{\small \textsc{\textbf{VI.}}}
 \includescore{cantus/amon33/resp1v.tex}
 
+\translatioRespVesp
+
 % Hymnus. %%%
 \pars{Hymnus.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I.}}}{\small \textsc{\textbf{I.}}}
 \includescore{cantus/amon33/hym-AveMarisStella.tex}
 \input{cantus/arom12/hymAveMarisStella-text.tex}
+
+\pars{Versus.}
 
 % Versus. %%%
 \label{versus}
@@ -257,7 +284,9 @@ Skrze našeho Pána.
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/amon33/ant1.tex}
-% \includescore{../tonipsalmorum/arom12/viii-G.tex}
+
+\translatioAntI
+
 \includescore{temporalia/ps92-initium-viii-G-auto.tex}
 
 \input{temporalia/ps92.tex}
@@ -269,7 +298,9 @@ Skrze našeho Pána.
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
 \includescore{cantus/amon33/ant2.tex}
-% \includescore{../tonipsalmorum/arom12/vii-c.tex}
+
+\translatioAntII
+
 \includescore{temporalia/ps99-initium-vii-c-auto.tex}
 
 \input{temporalia/ps99.tex}
@@ -281,7 +312,9 @@ Skrze našeho Pána.
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
 \includescore{cantus/amon33/ant3.tex}
-% \includescore{../tonipsalmorum/arom12/vi-F.tex}
+
+\translatioAntIII
+
 \includescore{temporalia/ps62-initium-vi-F-auto.tex}
 
 \input{temporalia/ps62.tex}
@@ -293,7 +326,9 @@ Skrze našeho Pána.
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/amon33/ant4.tex}
-% \includescore{../tonipsalmorum/arom12/viii-G.tex}
+
+\translatioAntIV
+
 \includescore{temporalia/dan3-initium-viii-G-auto.tex}
 
 \input{temporalia/dan3.tex} % Canticum trium
@@ -307,9 +342,24 @@ Skrze našeho Pána.
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
 \includescore{cantus/amon33/ant5.tex}
-% \includescore{../tonipsalmorum/arom12/vii-c.tex}
 
-% \input{temporalia/.tex} % pss 148,149,150
+\translatioAntV
+
+\includescore{temporalia/ps148-initium-vii-c-auto.tex}
+
+\input{temporalia/ps148.tex}
+
+\rubrica{Hic non dicitur Gloria Patri.}
+
+\includescore{temporalia/ps149-initium-vii-c-auto.tex}
+
+\input{temporalia/ps149.tex}
+
+\rubrica{Hic non dicitur Gloria Patri.}
+
+\includescore{temporalia/ps150-initium-vii-c-auto.tex}
+
+\input{temporalia/ps150.tex}
 
 \pagebreak
 
@@ -341,5 +391,32 @@ Skrze našeho Pána.
 
 \input{temporalia/magnificat-iD2.tex}
 
+\pagebreak
+
+%%% TIRAZ
+\pagestyle{empty}
+
+\vspace*{5cm}
+
+\begin{center}
+
+Texti et cantus secundum Antiphonale Monasticum, Solesmis 1933. 
+
+Translationes cantuum, nisi aliud notatum, J.P.
+
+Translationes capitulorum sumptae sunt ex:
+Jeruzalémská bible, Praha-Kostelní Vydří 2009.
+
+\vspace{1cm}
+
+{\large Editio Sancti Wolfgangi 2012.}
+
+\vspace{1cm}
+
+https://github.com/igneus/Editio-Sti-Wolfgangi
+
+\end{center}
+
+\vfill
 
 \end{document}
