@@ -101,6 +101,9 @@ nativitas_cantus = []
   nativitas_cantus << geninitium(n, t)
 end
 
+nativitas_psalmi << genzalm('dan3.pslm', "--accents-style bold --skip-verses 1 "+options_accents('VIII.G'))
+nativitas_cantus << geninitium('dan3', 'VIII.G')
+
 # Benedictus a Magnificat
 nativitas_psalmi << genzalmsuff("magnificat.pslm", options_common+options_accents('I.D2'), 'iD2')
 nativitas_psalmi << genzalmsuff("benedictus.pslm", options_common+options_accents('VIII.G'), 'viiiG')
