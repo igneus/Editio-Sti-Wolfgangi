@@ -241,11 +241,13 @@ end
   partmelody = psalmody.send(versepart == :afterflex ? :mediation : :termination)
 
   melody_i = 0
-  text_i = 0
+  if versepart == :last then
+    text_i = 0
+  end
 
   ## tenor
   first_accent = (partmelody.accents == 2) ? 1 : 2
-  text_i.upto(parttext.accent_pos(first_accent) - partmelody.preparatory_syls - 1) do |i|
+  text_i.upto(parttext.accent_pos(first_accent) - partmelody.preparatory_syls - 2) do |i|
     text_i = i
     s = strip_square_brackets parttext.syllables[text_i]
     if s == ' ' then
@@ -268,7 +270,9 @@ end
       redo
     end
       
+    of.print "<i>"
     of.print s
+    of.print "</i>"
     of.print partmelody[melody_i]
     melody_i += 1
   end
@@ -280,20 +284,23 @@ end
         break
       end
       
-      s = strip_square_brackets parttext.syllables[text_i]
+      s = parttext.syllables[text_i]
       if s == ' ' then
         text_i += 1
         of.print " "
         redo
       end
         
-      if j == 2 && s[0] == '[' then
+      if partmelody[melody_i].index('r0') && s[0] == '[' then
         # no superfluous syllable
+        of.print " "+partmelody[melody_i]+" "
         melody_i += 1
         break
       end
-        
+      
+      of.print "<b>" if j == 0
       of.print strip_square_brackets(s)
+      of.print "</b>" if j == 0
       of.print partmelody[melody_i]
       melody_i += 1
       text_i += 1
