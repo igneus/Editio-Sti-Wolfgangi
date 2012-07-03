@@ -103,7 +103,23 @@ class PsalmVerse
       
       return i
     end
-  end
+
+    def next_nonempty_syl(i)
+      ss = self.syllables
+      loop do
+        i += 1
+        if ! ss[i] then
+          return nil
+        end
+        if ss[i] == ' ' || ss[i] == '*' then
+          next
+        end
+
+        return ss[i]
+      end
+    end
+
+  end # class PsalmVerse::VersePart
 
   def PsalmVerse.read_from_psalmfile(psalmfile)
     first_verse = []
@@ -291,11 +307,15 @@ end
         redo
       end
         
-      if partmelody[melody_i].index('r0') && s[0] == '[' then
+      # if partmelody[melody_i].index('r0') && s[0] == '[' then
+      if j == 1 && 
+          (parttext.syllables[text_i+1].nil? || 
+           ! parttext.next_nonempty_syl(text_i) ||
+           parttext.next_nonempty_syl(text_i)[0] == '[') then
         # no superfluous syllable
-        of.print " "+partmelody[melody_i]+" "
+        of.print " -"+partmelody[melody_i]+" "
         melody_i += 1
-        break
+        next
       end
       
       of.print "<b>" if j == 0
@@ -308,7 +328,7 @@ end
   end
   
   if versepart == :afterflex then
-    of.puts " (:)"
+    of.puts " *(:)"
   else
     of.puts " (::)"
   end
