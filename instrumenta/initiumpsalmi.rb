@@ -249,12 +249,12 @@ end
   first_accent = (partmelody.accents == 2) ? 1 : 2
   text_i.upto(parttext.accent_pos(first_accent) - partmelody.preparatory_syls - 2) do |i|
     text_i = i
-    s = strip_square_brackets parttext.syllables[text_i]
+    s = parttext.syllables[text_i]
     if s == ' ' then
       of.print " "
       next
     else
-      of.print s
+      of.print strip_square_brackets s
       of.print partmelody[0] # tenor note
     end
   end
