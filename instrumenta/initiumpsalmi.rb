@@ -2,14 +2,23 @@
 # produces a new .gabc containing the first verse of the psalm
 # fitted to the pattern.
 #
-# initiumpsalmi.rb [psalm.pslm] [pattern.gabc]
+# initiumpsalmi.rb [psalm.pslm] [pattern.gabc] [[outputfile]]
 
 psalmfile = ARGV.shift
 patternfile = ARGV.shift
 
-i = File.basename(patternfile).index('.')
-output_ending = '-initium-'+File.basename(patternfile)[0..i-1]+'.gabc'
-outputfile = File.basename(psalmfile).gsub(/\.pslm$/, output_ending)
+if ! ARGV.empty? then
+  of = ARGV.shift
+  if of == '-' then
+    outputfile = STDOUT
+  else
+    outputfile = of
+  end
+else
+  i = File.basename(patternfile).index('.')
+  output_ending = '-initium-'+File.basename(patternfile)[0..i-1]+'.gabc'
+  outputfile = File.basename(psalmfile).gsub(/\.pslm$/, output_ending)
+end
 
 first_verse = []
 
@@ -125,6 +134,10 @@ class PsalmVerse
   def last
     @third ? @third : @second
   end
+
+  def afterflex
+    @third ? @second : @first
+  end
   
   def has_flex?
     return @third != nil
@@ -134,31 +147,24 @@ end
 class PsalmodicPattern
   def initialize(key, initium, flex, mediation, termination)
     @key = key
-    @initium = initium
-    @flex = flex
-    @mediation = mediation
-    @termination = termination
+    @initium = NoteGroup.new initium
+    @flex = NoteGroup.new flex
+    @mediation = NoteGroup.new mediation
+    @termination = NoteGroup.new termination
+  end
+
+  class NoteGroup < Array
+    def accents
+      self.select {|n| n.index 'r1' }.size
+    end
+  
+    def preparatory_syls
+      first_accent = self.index {|n| n.index 'r1' }
+      return first_accent - 1 # the first note is tenor, but the array are indexed from 0
+    end
   end
 
   attr_reader :key, :initium, :flex, :mediation, :termination
-  
-  def mediation_accents
-    @mediation.select {|n| n.index 'r1' }.size
-  end
-  
-  def mediation_preparatory_syls
-    first_accent = @mediation.index {|n| n.index 'r1' }
-    return first_accent - 1 # the first note is tenor, but the array are indexed from 0
-  end
-  
-  def termination_accents
-    @termination.select {|n| n.index 'r1' }.size
-  end
-  
-  def termination_preparatory_syls
-    first_accent = @termination.index {|n| n.index 'r1' }
-    return first_accent - 1 # the first note is tenor
-  end
 
   def PsalmodicPattern.read_from_gabcfile(patternfile)
     key = initium = flex = mediation = termination = ''
@@ -198,153 +204,110 @@ psalmody = PsalmodicPattern.read_from_gabcfile patternfile
 
 ## Create output
 
-File.open(outputfile, 'w') do |of|
+if outputfile == STDOUT then
+  of = outputfile
+else
+  of = File.open(outputfile, 'w')
+end
   
-  of.puts "initial-style: 0;"
-  of.puts "%%"
-  of.puts psalmody.key
+of.puts "initial-style: 0;"
+of.puts "%%"
+of.puts psalmody.key
 
-  melody_i = 0
-  text_i = 0
+melody_i = 0
+text_i = 0
   
-  ## initium
-  psalmody.initium.each do |n|
-    s = verse.first.syllables[text_i]
-    if s == ' ' then
-      print " "
-      text_i += 1
-      redo
-    else
-      print s
-      print n
-      text_i += 1
-    end
-  end
-
-  if verse.has_flex? then
-    raise "Finish the script first! This functionality is still missing."
-  else
-    ## tenor
-    first_accent = (psalmody.mediation_accents == 2) ? 1 : 2
-    text_i.upto(verse.first.accent_pos(first_accent) - psalmody.mediation_preparatory_syls - 1) do |i|
-      text_i = i
-      s = strip_square_brackets verse.first.syllables[text_i]
-      if s == ' ' then
-        of.print " "
-        next
-      else
-        of.print s
-        of.print psalmody.mediation[0] # tenor note
-      end
-    end
+## initium
+psalmody.initium.each do |n|
+  s = verse.first.syllables[text_i]
+  if s == ' ' then
+    of.print " "
     text_i += 1
-    
-    ## preparatory syllables of the mediation
-    melody_i = 1
-    psalmody.mediation_preparatory_syls.times do |i|
-      s = strip_square_brackets verse.first.syllables[text_i]
-      text_i += 1
-      if s == ' ' then
-        of.print " "
-        redo
-      end
-      
-      of.print s
-      of.print psalmody.mediation[melody_i]
-      melody_i += 1
-    end
-    
-    ## mediation
-    psalmody.mediation_accents.times do |i|
-      3.times do |j|
-        unless verse.first.syllables[text_i]
-          break
-        end
-      
-        s = strip_square_brackets verse.first.syllables[text_i]
-        if s == ' ' then
-          text_i += 1
-          of.print " "
-          redo
-        end
-        
-        if j == 2 && s[0] == '[' then
-          # no superfluous syllable
-          melody_i += 1
-          break
-        end
-        
-        of.print strip_square_brackets(s)
-        of.print psalmody.mediation[melody_i]
-        melody_i += 1
-        text_i += 1
-      end
-    end
+    redo
+  else
+    of.print s
+    of.print n
+    text_i += 1
   end
-  
-  of.puts " (:)"
-  
-  ## tenor
+end
+
+if verse.has_flex? then
+  raise "Finish the script first! This functionality is still missing."
+end
+
+[:afterflex, :last].each do |versepart|
+
+  parttext = verse.send versepart
+  partmelody = psalmody.send(versepart == :afterflex ? :mediation : :termination)
+
   melody_i = 0
   text_i = 0
-  
-  first_accent = (psalmody.termination_accents == 2) ? 1 : 2
-  text_i.upto(verse.last.accent_pos(first_accent) - psalmody.termination_preparatory_syls - 2) do |i|
+
+  ## tenor
+  first_accent = (partmelody.accents == 2) ? 1 : 2
+  text_i.upto(parttext.accent_pos(first_accent) - partmelody.preparatory_syls - 1) do |i|
     text_i = i
-    s = strip_square_brackets verse.last.syllables[text_i]
+    s = strip_square_brackets parttext.syllables[text_i]
     if s == ' ' then
       of.print " "
       next
     else
       of.print s
-      of.print psalmody.termination[0] # tenor note
+      of.print partmelody[0] # tenor note
     end
   end
   text_i += 1
-  
-  ## preparatory syllables of the termination
+    
+  ## preparatory syllables
   melody_i = 1
-  psalmody.termination_preparatory_syls.times do |i|
-    s = strip_square_brackets verse.last.syllables[text_i]
+  partmelody.preparatory_syls.times do |i|
+    s = strip_square_brackets parttext.syllables[text_i]
     text_i += 1
     if s == ' ' then
       of.print " "
       redo
     end
-    
+      
     of.print s
-    of.print psalmody.termination[melody_i]
+    of.print partmelody[melody_i]
     melody_i += 1
   end
-  
-  ## mediation
-  psalmody.termination_accents.times do |i|
+    
+  ## end-cadence
+  partmelody.accents.times do |i|
     3.times do |j|
-      unless verse.last.syllables[text_i]
+      unless parttext.syllables[text_i]
         break
       end
       
-      s = strip_square_brackets verse.last.syllables[text_i]
+      s = strip_square_brackets parttext.syllables[text_i]
       if s == ' ' then
         text_i += 1
         of.print " "
         redo
       end
-      
+        
       if j == 2 && s[0] == '[' then
         # no superfluous syllable
         melody_i += 1
         break
       end
-      
+        
       of.print strip_square_brackets(s)
-      of.print psalmody.termination[melody_i]
+      of.print partmelody[melody_i]
       melody_i += 1
       text_i += 1
     end
   end
   
-  of.puts " (::)"
+  if versepart == :afterflex then
+    of.puts " (:)"
+  else
+    of.puts " (::)"
+  end
 
-  of.puts
 end
+
+of.puts
+
+of.close
