@@ -48,12 +48,19 @@
 % pars officii, i.e. "oratio", ...
 \newcommand{\pars}[1]{\textbf{#1}}
 
-\newenvironment{psalmus}{}{}
+\newenvironment{psalmus}{
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{5pt}
+}{
+  \setlength{\parindent}{10pt}
+  \setlength{\parskip}{10pt}
+}
 
 %%%% Prejmenovat na latinske:
 \newcommand{\nadpisZalmu}[1]{
   \hspace{2cm}\textbf{#1}\vspace{2mm}%
   \nopagebreak%
+
 }
 
 \setlength{\columnsep}{30pt} % prostor mezi sloupci
@@ -96,7 +103,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/amon33/ant1.tex}
-% \includescore{../tonipsalmorum/arom12/viii-G.tex}
+
 \includescore{temporalia/ps109-initium-viii-G-auto.tex}
 
 \input{temporalia/ps109.tex}
@@ -109,6 +116,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.}
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
 \includescore{cantus/amon33/ant2.tex}
 % \includescore{../tonipsalmorum/arom12/vii-c.tex}
+
 \includescore{temporalia/ps112-initium-vii-c-auto.tex}
 
 \input{temporalia/ps112.tex}
