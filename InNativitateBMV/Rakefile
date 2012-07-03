@@ -39,14 +39,22 @@ def geninitium(psalm, tone, directory='temporalia/')
   if i = ntone.index('.') then
     ntone = ntone[0..i-1].downcase+'-'+ntone[i+1..-1]
   end
-  patternfile = '../../tonipsalmorum/arom12/'+ntone+'-auto.gabc'
+  patternfile = '../tonipsalmorum/arom12/'+ntone+'-auto.gabc'
 
-  psalmfile = '../../psalmi/' + (psalm.is_a?(Fixnum) ? "ps#{psalm}" : psalm) + '.pslm'
+  psalmfile = '../psalmi/' + (psalm.is_a?(Fixnum) ? "ps#{psalm}" : psalm) + '.pslm'
   
   i = File.basename(patternfile).index('.')
   output_ending = '-initium-'+File.basename(patternfile)[0..i-1]+'.gabc'
   outputfile = File.basename(psalmfile).gsub(/\.pslm$/, output_ending)
 
+  file directory+outputfile => [psalmfile, patternfile, '../instrumenta/initiumpsalmi.rb'] do
+    wd = Dir.pwd
+    chdir directory
+    sh "ruby ../../instrumenta/initiumpsalmi.rb ../#{psalmfile} ../#{patternfile}"
+    chdir wd
+  end
+
+  return gregorio(directory+outputfile)
 end
 
 TONI_PSALMORUM = {
@@ -67,7 +75,7 @@ gloriapatri = File.readlines('../psalmi/gloriapatri.pslm').join ""
 
 nativitas_psalmi = []
 
-options_common = "--accents-style bold --append \"#{gloriapatri}\" "
+options_common = "--accents-style bold --append \"#{gloriapatri}\" --skip-verses 1 "
 
 def options_accents(psalmtone)
   accents = "#{TONI_PSALMORUM[psalmtone][0][0]}:#{TONI_PSALMORUM[psalmtone][1][0]}"
@@ -75,6 +83,8 @@ def options_accents(psalmtone)
 
   return "--accents #{accents} --preparatory-syllables #{preps}"
 end
+
+nativitas_cantus = []
 
 # zalmy (akcenty podle napevu)
 {62 => 'VI.F',
@@ -88,13 +98,13 @@ end
   147 => 'VII.c'}.each_pair do |n,t|
   
   nativitas_psalmi << genzalm("ps#{n}.pslm", options_common+options_accents(t))
+  nativitas_cantus << geninitium(n, t)
 end
 
 # Benedictus a Magnificat
 nativitas_psalmi << genzalmsuff("magnificat.pslm", options_common+options_accents('I.D2'), 'iD2')
 nativitas_psalmi << genzalmsuff("benedictus.pslm", options_common+options_accents('VIII.G'), 'viiiG')
 
-nativitas_cantus = []
 # antifony
 1.upto(5) {|i|
   nativitas_cantus << gregorio("cantus/amon33/ant#{i}.gabc")
