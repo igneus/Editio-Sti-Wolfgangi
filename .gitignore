@@ -2,6 +2,7 @@
 *.ps
 *.dvi
 *.aux
+*.gaux
 *.log
 *.out
 *.toc
