@@ -1,0 +1,80 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside, 12pt]{article}
+\usepackage[latin]{babel} 
+\usepackage[left=3cm, right=1.5cm, top=2cm, bottom=2cm]{geometry} % okraje stranky
+
+\usepackage{fontspec}
+% \setmainfont{Gentium Book Basic}
+% \setmainfont{Junicode}
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+\newcommand{\modusinfo}[1]{\gresetfirstlineaboveinitial{\small #1}{\small #1}}
+
+\newcommand{\rubrum}[1]{\textcolor{red}{#1}}
+
+\newcommand{\diesFesti}[1]{{\small #1} \vspace{2mm}}
+\newcommand{\nomenFesti}[1]{\textbf{\Large #1}\vspace{3mm}
+}
+\newcommand{\descriptioFesti}[1]{\rubrum{\textbf{#1}}
+}
+\newcommand{\dignitasFesti}[1]{\rubrum{\small #1}
+}
+
+\newenvironment{caputFesti}{\begin{center}}{\end{center}}
+
+\newcommand{\hora}[1]{\vspace{1cm}\noindent\textbf{#1}\vspace{5mm}
+}
+
+\begin{document}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{43}{43}\selectfont #1}%
+}
+
+
+\begin{caputFesti}
+\diesFesti{Die 15 Junii}
+
+\nomenFesti{S. Viti}
+
+\descriptioFesti{Martyris, Patroni Regni minus princ. et Titul. Eccl. Metrop.}
+
+\dignitasFesti{Duplex II classis
+(In archidioec. Pragen. duplex I classis cum Octava com.)}
+\end{caputFesti}
+
+\hora{In II Nocturno}
+
+\rubrum{Antiphonae.}
+
+\modusinfo{VIII.G}
+\includescore{cantus/vitus-noct2-a1.tex}
+
+\modusinfo{I.g}
+\includescore{cantus/vitus-noct2-a2.tex}
+
+\modusinfo{VII.a}
+\includescore{cantus/vitus-noct2-a3.tex}
+
+\vspace{5mm}
+\rubrum{Responsoria.}
+
+\includescore{cantus/vitus-noct2-r1.tex}
+
+\end{document}
