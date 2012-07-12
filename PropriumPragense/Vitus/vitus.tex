@@ -22,6 +22,9 @@
 
 \newcommand{\rubrum}[1]{\textcolor{red}{#1}}
 \newcommand{\rubrica}[1]{\vspace{3mm} \rubrum{\small #1}}
+\newcommand{\notitiaEditorialis}[1]{
+  \rubrum{\small \textsc{Notitia editorialis:} #1}
+}
 
 \newcommand{\diesFesti}[1]{{\small #1} \vspace{2mm}}
 \newcommand{\nomenFesti}[1]{\textbf{\Large #1}\vspace{3mm}
@@ -61,6 +64,14 @@
 (In archidioec. Pragen. duplex I classis cum Octava com.)}
 \end{caputFesti}
 
+\notitiaEditorialis{
+In manuscripto, de quo cantus sequentes sumpti sunt,
+in principio folia desunt, quae cantus ad vesperas I et ad matutinum
+usque ad responsorium II primi nocturni continent.
+Propterea cantus isti omittuntur usque ad diem inventionis manuscripti alii,
+quod eos continet.
+}
+
 \hora{In II Nocturno}
 
 \parsHorae{Antiphonae.}
@@ -83,6 +94,7 @@
 
 \includescore{cantus/vitus-noct2-r2.tex}
 
+\modusinfo{IV}
 \includescore{cantus/vitus-noct2-r3.tex}
 
 \rubrica{Sequitur Gloria Patri in modo ultimi responsorii. Postea repetitur
@@ -100,5 +112,22 @@ secunda pars responsi (\textit{Accelera}).}
 
 \modusinfo{IV.E}
 \includescore{cantus/vitus-noct3-a3.tex}
+
+\pagebreak
+
+Fontes:
+
+\vspace{1cm}
+\textbf{KA2} - Kolínský antifonář - II. díl; 
+Knihovna národního muzea v Praze, Praha, Česká republika, sig. XII A 21. 
+(www.manuscriptorium.com)
+
+\vspace{1cm}
+\textsc{Officia propria provinciae Pragensis}
+a S. Sede approbata et indulta,
+auctoritate reverendissimi ac celsissimi domini, domini Francisci Kordač,
+archiepiscopi Pragensis atque ill.morum et r.morum episcoporum
+provinciae Pragensis suffraganeorum denuo edita,
+\textit{pars aestiva}. Sumptibus et typis Friderici Pustet, Ratisbonae 1928.
 
 \end{document}
