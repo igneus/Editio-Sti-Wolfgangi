@@ -10,6 +10,17 @@
 \usepackage{graphicx} % support the \includegraphics command and options
 \usepackage{gregoriotex} % for gregorio score inclusion
 
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{43}{43}\selectfont #1}%
+}
+
+% ===================================================================
 
 % Definitions of common commands and environments
 % used in the Proprium Antiphonalis Provinciae Pragensis
@@ -44,4 +55,12 @@
 \newcommand{\postUltimumResponsoriumNocturniRubrica}[1]{
   \rubrica{Sequitur Gloria Patri in modo ultimi responsorii. Postea repetitur
     altera pars responsi (\textit{#1}).}
+}
+
+\newcommand{\EditioSanctiWolfgangiInFine}{
+  \vfill
+
+  \begin{center}
+    Editio Sancti Wolfgangi \annusPublicationis.
+  \end{center}
 }
