@@ -1,0 +1,18 @@
+def gregorio(srcf)
+  f2 = srcf.gsub(".gabc", ".tex")
+  file f2 => [srcf] do
+    sh "gregorio #{srcf}"
+  end
+  return f2
+end
+
+cantus = []
+
+Dir["./cantus/*.gabc"].each {|t|
+  cantus << gregorio(t)
+}
+
+file "procopius.pdf" => ['procopius.tex', '../definitionescommunes.tex']+cantus do |t|
+  sh "lualatex -interaction=nonstopmode "+t.prerequisites.first
+end
+ task :default => ['procopius.pdf']
