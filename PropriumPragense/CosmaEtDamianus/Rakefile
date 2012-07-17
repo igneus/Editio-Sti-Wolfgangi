@@ -1,0 +1,6 @@
+require '../../instrumenta/rakefile_simplex'
+
+s = texfile_cum_cantibus 'cosmaetdamianus.tex'
+
+task :default => [s]
+ 
