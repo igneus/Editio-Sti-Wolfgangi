@@ -1,5 +1,8 @@
 # Editio S(anc)ti Wolfgangi #
 
+See our Czech/Latin homepage:
+http://stiwolfgangi.xf.cz
+
 Booklets for Roman Catholic liturgy (office + sometimes mass)
 with gregorian chant. Some with Czech translations of the Latin
 texts.
@@ -20,4 +23,3 @@ To compile the booklets you will need:
 
 License: texts and chants are taken from liturgical books older than 70 years
 (unless specified otherwise) and are thus (as long as I know) public domain.
-My works based on them (i.e. transcription + typesetting) are also public domain.

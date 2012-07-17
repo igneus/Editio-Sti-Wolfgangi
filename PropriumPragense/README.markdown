@@ -1,4 +1,4 @@
-# Proprium Antiphonalis Provinciae Pragensis #
+# Proprium Provinciae Pragensis ad Antiphonale Romanum #
 
 Office chants for the proper feasts of the church province 
 of Prague (Czech Republic) according to manuscripts available online
