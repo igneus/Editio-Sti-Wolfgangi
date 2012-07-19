@@ -117,18 +117,6 @@ a požehnaný plod tvého lůna.}}
 
 \begin{document}
 
-\begin{titulusOfficii}
-\dies{Die 8. Septembris.}
-\nomenFesti{In Nativitate B. Mariae Virginis.}
-\celebratio{Duplex 2. classis.} % puvodne "cum Octava." Oktavy byly ale zruseny
-\end{titulusOfficii}
-
-\renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
-\fancyhf{}
-\pagestyle{fancy}
-
-\hora{In I. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
 \setspaceafterinitial{2.2mm plus 0em minus 0em}
@@ -139,7 +127,31 @@ a požehnaný plod tvého lůna.}}
 {\fontsize{43}{43}\selectfont #1}%
 }
 
+\pagestyle{empty}
+
+\begin{titulusOfficii}
+\dies{Die 8. Septembris.}
+\nomenFesti{In Nativitate B. Mariae Virginis.}
+\celebratio{Duplex 2. classis.} % puvodne "cum Octava." Oktavy byly ale zruseny
+\end{titulusOfficii}
+
+\vfill
+
+\begin{center}
+Editio Sancti Wolfgangi 2012
+\end{center}
+
+\pagebreak
+
+\renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
+\fancyhf{}
+\pagestyle{fancy}
+
+\hora{In I. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \includescore{../cantuscommunes/amon33/deusinadiutorium-communis.tex}
+
+\vfill
 
 \pagebreak
 
