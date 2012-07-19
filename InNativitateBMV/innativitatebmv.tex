@@ -84,6 +84,25 @@ aby se ona za nás přimlouvala u Pána Ježíše Krista.}}
 plná milosti: * Pán s tebou. ℣. Požehnaná jsi mezi ženami,
 a požehnaný plod tvého lůna.}}
 
+%%%% Vicekrat opakovane kousky
+
+\newcommand{\versusNativitasEst}{
+  \pars{Versus.}
+
+  % Versus. %%%
+  \label{versus}
+  \begin{multicols}{2}
+    ℣. Natívitas est hódie sanctae Maríae \textbf{Vír}ginis.\\
+    \indent ℟. Cujus vita ínclyta cunctas illústrat ec\textbf{clé}sias.
+
+    \columnbreak
+
+    % preklad J.P.
+    Dnes je Narození svaté Panny Marie.\\
+    \indent Jejíž předrahý život osvěcuje všechny církve.
+  \end{multicols}
+}
+
 \setlength{\columnsep}{30pt} % prostor mezi sloupci
 
 \begin{document}
@@ -210,6 +229,10 @@ Ve svatém Stanu jsem před ním konala službu.
 
 \translatioRespVesp
 
+\vfill
+
+\pagebreak
+
 % Hymnus. %%%
 \pars{Hymnus.}
 
@@ -217,20 +240,9 @@ Ve svatém Stanu jsem před ním konala službu.
 \includescore{cantus/amon33/hym-AveMarisStella.tex}
 \input{cantus/arom12/hymAveMarisStella-text.tex}
 
-\pars{Versus.}
+\versusNativitasEst
 
-% Versus. %%%
-\label{versus}
-\begin{multicols}{2}
-℣. Natívitas est hódie sanctae Maríae \textbf{Vír}ginis.\\
-\indent ℟. Cujus vita ínclyta cunctas illústrat ec\textbf{clé}sias.
-
-\columnbreak
-
-% preklad J.P.
-Dnes je Narození svaté Panny Marie.\\
-\indent Jejíž předrahý život osvěcuje všechny církve.
-\end{multicols}
+\pagebreak
 
 \pars{Canticum B. Mariae V.}
 
@@ -240,6 +252,8 @@ Dnes je Narození svaté Panny Marie.\\
 \includescore{../tonipsalmorum/arom12/i-D2.tex}
 
 \input{temporalia/magnificat-iD2.tex}
+
+\pagebreak
 
 \rubrica{Ante Orationem, cantatur a Superiore:}
 
@@ -258,6 +272,8 @@ Dnes je Narození svaté Panny Marie.\\
 \rubrica{In choro monialium loco Dominus vobiscum dicitur:}
 
 \includescore{../cantuscommunes/amon33/domineexaudi.tex}
+
+\pagebreak
 
 % Oratio. %%%
 \pars{Oratio.}
@@ -281,6 +297,8 @@ Skrze našeho Pána.
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
 
 \input{../cantuscommunes/amon33/benedicamus-duplex-vesperae.tex}
+
+\vfill
 
 \pagebreak
 
@@ -416,13 +434,21 @@ Skrze našeho Pána.
 \includescore{cantus/amon33/hym-OGloriosaDomina.tex}
 \includescore{cantus/amon33/hym-OGloriosaDomina-text.tex}
 
-\rubrica{Versus de I. vesperis.}
+\versusNativitasEst
+
+\vfill
+
+\pagebreak
 
 \pars{Canticum Zachariae.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
 \includescore{cantus/amon33/ant-ben-laud.tex}
 \input{temporalia/benedictus-viiiG.tex}
+
+\vfill
+
+\pagebreak
 
 \hora{In II. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -459,7 +485,7 @@ Jeruzalémská bible, Praha-Kostelní Vydří 2009.
 
 \vspace{1cm}
 
-https://github.com/igneus/Editio-Sti-Wolfgangi
+https://stiwolfgangi.xf.cz
 
 \end{center}
 
