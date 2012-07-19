@@ -9,7 +9,6 @@ Později
 
 Brzy
 
-* místo na neumy, a to i u víceřádkových zpěvů
 * ručně initia k Benedictus a Magnificat
 * verš musí být notovaný, anžto je v laudách a nešporách "cum neuma"
 * nahradit _všechny_ zpěvy AR12 odpovídajícími zpěvy AM33

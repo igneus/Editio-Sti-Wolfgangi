@@ -47,6 +47,16 @@
 % volne misto nad antifonami, kam si zpevaci dokresli neumy
 \newcommand{\hicSuntNeumae}{\vspace{1.3cm}}
 
+% prepinani mista mezi notovymi osnovami: pro neumovane a neneumovane zpevy
+\newcommand{\cantusCumNeumis}{
+  \setgrefactor{17}
+  \global\advance\grespaceabovelines by 10mm%
+}
+\newcommand{\cantusSineNeumas}{
+  \setgrefactor{17}
+  \global\advance\grespaceabovelines by -10mm%
+}
+
 % pars officii, i.e. "oratio", ...
 \newcommand{\pars}[1]{\textbf{#1}}
 
@@ -132,6 +142,8 @@ a požehnaný plod tvého lůna.}}
 \includescore{../cantuscommunes/amon33/deusinadiutorium-communis.tex}
 
 \pagebreak
+
+\cantusCumNeumis
 
 \pars{psalmus 1.}
 
@@ -222,6 +234,8 @@ potrvám věčně.
 Ve svatém Stanu jsem před ním konala službu.
 \end{multicols}
 
+\cantusSineNeumas
+
 \pars{Responsorium breve.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.}}}{\small \textsc{\textbf{VI.}}}
@@ -244,6 +258,8 @@ Ve svatém Stanu jsem před ním konala službu.
 
 \pagebreak
 
+\cantusCumNeumis
+
 \pars{Canticum B. Mariae V.}
 
 \hicSuntNeumae
@@ -254,6 +270,8 @@ Ve svatém Stanu jsem před ním konala službu.
 \input{temporalia/magnificat-iD2.tex}
 
 \pagebreak
+
+\cantusSineNeumas
 
 \rubrica{Ante Orationem, cantatur a Superiore:}
 
@@ -306,6 +324,8 @@ Skrze našeho Pána.
 
 % Psalmi festivi (AM33, pg. 721):
 % 66 // 92, 99, 62, Dan3, 148+149+150
+
+\cantusCumNeumis
 
 \pars{psalmus 1.}
 
