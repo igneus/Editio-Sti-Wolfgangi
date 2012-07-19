@@ -12,6 +12,7 @@ Brzy
 * ručně initia k Benedictus a Magnificat
 * verš musí být notovaný, anžto je v laudách a nešporách "cum neuma"
 * nahradit _všechny_ zpěvy AR12 odpovídajícími zpěvy AM33
+* doplnit chybějící překlady některých antifon
 * překlady hymnů
 * psalmodický vzorec podložit prvním veršem žalmu (vůbec se mi do toho nechce,
   ale je potřeba to udělat včas, protože to nikoli nevýznamně ovlivňuje 
