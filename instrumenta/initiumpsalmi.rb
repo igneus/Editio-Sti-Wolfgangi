@@ -119,6 +119,18 @@ class PsalmVerse
       end
     end
 
+    def nonempty_syls_before(before_i, how_many)
+      j = 0
+      i_now = before_i
+      while j < how_many do
+        i_now -= 1
+        if self.syllables[i_now] != ' ' then
+          j += 1
+        end
+      end
+      return i_now
+    end
+
   end # class PsalmVerse::VersePart
 
   def PsalmVerse.read_from_psalmfile(psalmfile)
@@ -263,7 +275,16 @@ end
 
   ## tenor
   first_accent = (partmelody.accents == 2) ? 1 : 2
-  text_i.upto(parttext.accent_pos(first_accent) - partmelody.preparatory_syls - 2) do |i|
+  last_tenor_syl = parttext.nonempty_syls_before(parttext.accent_pos(first_accent), partmelody.preparatory_syls) - 1 
+  
+  STDERR.puts
+  parttext.syllables.each_with_index {|s,i| STDERR.print "#{i}:'#{s}', "}
+  STDERR.puts
+  STDERR.puts "first accent: #{parttext.accent_pos(first_accent)}"
+  STDERR.puts "last tenor: #{last_tenor_syl} '#{parttext.syllables[last_tenor_syl]}' "
+  STDERR.puts "preparatories: #{partmelody.preparatory_syls}"
+
+  text_i.upto(last_tenor_syl) do |i|
     text_i = i
     s = parttext.syllables[text_i]
     if s == ' ' then
