@@ -140,7 +140,7 @@ nativitas_cantus << gregorio("../cantuscommunes/amon33/benedicamus-duplex-vesper
 
 file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas_psalmi do |t|
   # sh "xelatex #{t.prerequisites.first}"
-  sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}"
+  2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
 end
 
 task :nativitas => ["innativitatebmv.pdf"]

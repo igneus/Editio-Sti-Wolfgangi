@@ -18,5 +18,5 @@ Brzy
   rozložení stránky)
   * přesně popsat formát žalmů a formát žalmových vzorců pro automatické 
 	zpracování skriptem initiumpsalmi.rb
-  * FIX: některé první verše jsou označovány chybně. Najít a opravit chybu.
-* kde se v rubrikách odkazuje jinam, doplnit číslo stránky
+  * když jsou noty initia výškově blízko u klíče, vložit na začátek před
+    první notu mezeru
