@@ -334,7 +334,12 @@ end
            ! parttext.next_nonempty_syl(text_i) ||
            parttext.next_nonempty_syl(text_i)[0] == '[') then
         # no superfluous syllable
-        of.print " -"+partmelody[melody_i]+" "
+        if parttext.syllables[text_i-1] == ' ' then
+          of.print " "
+        else
+          of.print " -"
+        end
+        of.print partmelody[melody_i]+" "
         melody_i += 1
         next
       end
