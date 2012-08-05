@@ -1,0 +1,206 @@
+<?xml version='1.0'?>
+<!DOCTYPE book PUBLIC "-//Norman Walsh//DTD DocBk XML V3.1.4//EN"
+                         "http://nwalsh.com/docbook/xml/3.1.4/db3xml.dtd">
+
+<?xml-stylesheet type="text/xsl" href="db2xhtml/xsl/main.xsl" ?>
+
+<article>
+  <title>initiumpsalmi.rb</title>
+  <subtitle>tool to make a notated first verse of a psalm</subtitle>
+  
+  <articleinfo>
+    <author>
+      <firstname>Jakub</firstname>
+      <surname>Pavlík</surname>
+      <email>jkb.pavlik@gmail.com</email>
+    </author>
+  </articleinfo>
+
+  <para>
+    initiumpsalmi.rb is a simple Ruby script
+    created to make typesetting of office chant books a bit more comfortable.
+    One of the least entertaining works in the course of such a book
+    preparation is, to set the first verse of each psalm to the psalm
+    tone which should be used. 
+    (Experienced chanters don't need this, but the choir I prepare books
+    for stays always open for total newbies and needs thus this feature.)
+    So I automated the work. 
+  </para>
+
+  <section>
+    <title>Prerequisites</title>
+
+    <simplelist>
+      <member>Ruby 1.9.*</member>
+    </simplelist>
+  </section>
+
+  <section>
+    <title>Invocation</title>
+
+    <synopsis>
+      <command>ruby initiumpsalmi.rb</command> 
+      <filename>psalmfile.pslm</filename>
+      <filename>psalmtonefile.gabc</filename>
+      <optional>
+	<filename>outputfile.gabc</filename>
+      </optional>
+    </synopsis>
+
+    <para>
+      The command takes two to three arguments - the third one is 
+      optional. All must be valid file names.
+    </para>
+    <orderedlist>
+      <listitem>
+	<para>
+	  psalm-file - text of the psalm in a special format 
+	  I use to generate pointed texts (see below)
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  psalm-tone-file - psalm tone to be used - a valid 
+	  <application>Gregorio</application> input with special
+	  formatting (see below)
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  output-file - where to write the output; if no output
+	  file is given, the script selects an output file name
+	  itself; if a dash is given, the output is printed
+	  to the standard output.
+	</para>
+      </listitem>
+    </orderedlist>
+  </section>
+
+  <section>
+    <title>Known bugs</title>
+
+    <para>
+      If any of the input files is malformed in any way, the script behaves
+      in an unexpectable way and sometimes crashes, sometimes produces malformed
+      output.
+      I'm not going to work too hard to improve it, because the script
+      is just a helper tool in my own workflow, not intended to be
+      offered to anyone else. Anyone interested may use it too,
+      but on his/her own risk. Having any problems with it, just e-mail me.
+    </para>
+    <para>
+      Some less typical psalmodic formulas (like the termination I.D2
+      or the mediation of mode III) aren't supported.
+      (Don't know yet if I want to work on this.)
+    </para>
+    <para>
+      Psalm verses with flex aren't supported. (I want to fix this one day.)
+    </para>
+  </section>
+
+  <section>
+    <title>Psalm file (*.pslm) format</title>
+
+    <para>
+      A psalm file is a plain text file.
+    </para>
+    <para>
+      It's first line is considered a title and thus ignored by our script.
+    </para>
+    <para>
+      The second line is also ignored, it is usually empty.
+      (To make the title stand out.)
+    </para>
+    <para>
+      Any line beginning with # is ignored.
+      When anywhere on a line # appears, it is ignored as well as anything
+      comming after it.
+      (System of comments similar to that of Ruby and some other
+      programming languages.)
+    </para>
+    <para>
+      The first not ignored non-empty line is considered beginning of
+      the first verse. (And the first verse is the only one 
+      our script is interested in.)
+    </para>
+    <para>
+      Each psalm verse usually has two parts:
+      first and second halfverse. (Some verses may have three parts.
+      Bad news: these are not supported yet.) Like this:      
+    </para>
+    <blockquote>
+      <para>
+	Dixit Dóminus Dómino meo: * Sede a dextris meis:
+      </para>
+    </blockquote>
+    <para>
+      In the psalm file each of them needs to be on it's own line
+      and the first one must end with a space followed by an asterisk.
+      Like this:
+    </para>
+    <programlisting>Dixit Dóminus Dómino meo: * 
+Sede a dextris meis:</programlisting>
+    <para>
+      Accented syllables (one to two per part of the verse) important for the
+      psalm tone are to be enclosed in square brackets.
+    </para>
+    <programlisting>Dixit Dóminus [Dó]mino [me]o: * 
+Sede a [dex]tris [me]is:</programlisting>
+    <para>
+      And - in the first verse only, for the needs of our script -
+      all the other syllables need to be divided by slashes:
+    </para>
+    <programlisting>Di/xit Dó/mi/nus [Dó]mi/no [me]o: * 
+Se/de a [dex]tris [me]is:</programlisting>
+  </section>
+
+  <section>
+    <title>Psalm tone file (*.gabc) format</title>
+
+    <para>
+      Psalm tone file is, on the first place, a valid 
+      <application>Gregorio</application> GABC input file.
+      (On Gregorio and GABC see 
+      <ulink url="http://home.gna.org/gregorio/">Gregorio homepage</ulink>.)
+    </para>
+    <para>
+      <application>initiumpsalmi.rb</application> ignores the header
+      of the GABC file. However, it is very strict in expectations
+      concerning the musical content following the header.
+    </para>
+    <programlisting>initial-style: 0;
+%%
+
+(c4)
+(g) (h) (j)
+(j) (jr1) (hr0) (h.)  (,)
+(j) (kr1) (jr0) (j.) (:)
+(j) (i) (j) (hr1) (gr0) (g.) (::)</programlisting>
+    <para>
+      (Valid psalm tone file for tone VIII.G)
+    </para>
+    <para>
+      Any empty lines at the beginning of the music part are ignored.
+    </para>
+    <para>
+      The first non-empty line (here line 4) is expected to contain key
+      information.
+    </para>
+    <para>
+      The second, flex tone. (Not supported yet, so, ignored for now.)
+    </para>
+    <para>
+      The third line, tone of the first halfverse. The first note
+      is recitation note and will be repeated as many times as needed.
+      Note with flag r1 is accented note, note with flag r0 is "cave note"
+      (only used when needed).
+      There may be up to two accentuated notes per verse and each has to be
+      followed by two notes - one "cave" note and one normal note.
+    </para>
+    <para>
+      The fourth line contains tone of the second halfverse,
+      the rules are the same as for the first halfverse.
+    </para>
+  </section>
+
+</article>
