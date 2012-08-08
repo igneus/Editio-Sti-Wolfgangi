@@ -6,8 +6,8 @@ Závěrečné úpravy
 
 Později
 
-* překlady žalmů? (až budu mít texty)
-* vyřešit akcent u psalmodického nápěvu I.D2 (gregorio zjevně neumí závorku nad notami)
+* zpěvy mše
+* překlady žalmů (až budu mít texty)
 * psalmodický vzorec podložit prvním veršem žalmu (vůbec se mi do toho nechce,
   ale je potřeba to udělat včas, protože to nikoli nevýznamně ovlivňuje 
   rozložení stránky)
