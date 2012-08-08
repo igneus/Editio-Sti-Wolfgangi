@@ -60,6 +60,7 @@ end
 TONI_PSALMORUM = {
   'I.D' => [[2,0], [1,2]],
   'I.D2' => [[2,0], [1,2]],
+  'Isoll.D2' => [[1,3], [1,2]],
   'II.D' => [[1,0], [1,1]],
   'III.a' => [[2,0], [1,1]],
   'IV.E' => [[1,2], [1,3]],
@@ -76,6 +77,7 @@ gloriapatri = File.readlines('../psalmi/gloriapatri.pslm').join ""
 nativitas_psalmi = []
 
 options_common = "--accents-style bold --append \"#{gloriapatri}\" --skip-verses 1 "
+options_magnificat = options_common.gsub "--skip-verses 1", "--skip-verses 2"
 
 def options_accents(psalmtone)
   accents = "#{TONI_PSALMORUM[psalmtone][0][0]}:#{TONI_PSALMORUM[psalmtone][1][0]}"
@@ -112,31 +114,16 @@ nativitas_psalmi << genzalm('dan3.pslm', "--accents-style bold --skip-verses 1 "
 nativitas_cantus << geninitium('dan3', 'VIII.G')
 
 # Benedictus a Magnificat
-nativitas_psalmi << genzalmsuff("magnificat.pslm", options_common+options_accents('I.D2'), 'iD2')
+nativitas_psalmi << genzalmsuff("magnificat.pslm", options_magnificat+options_accents('Isoll.D2'), 'iD2')
 nativitas_psalmi << genzalmsuff("benedictus.pslm", options_common+options_accents('VIII.G'), 'viiiG')
 
-# antifony
-1.upto(5) {|i|
-  nativitas_cantus << gregorio("cantus/amon33/ant#{i}.gabc")
-}
-# napevy zalmu
-Dir["../tonipsalmorum/arom12/*.gabc"].each {|t|
-  nativitas_cantus << gregorio(t)
-}
-# hymny a spol
-nativitas_cantus << gregorio("cantus/amon33/resp1v.gabc")
-nativitas_cantus << gregorio("cantus/amon33/hym-AveMarisStella.gabc")
-nativitas_cantus << gregorio("cantus/amon33/hym-OGloriosaDomina.gabc")
-nativitas_cantus << gregorio("cantus/amon33/ant-magn-vesp1.gabc")
-nativitas_cantus << gregorio("cantus/amon33/ant-ben-laud.gabc")
-nativitas_cantus << gregorio("cantus/amon33/ant-magn-vesp2.gabc")
-nativitas_cantus << gregorio("cantus/amon33/versus-nativitasest.gabc")
-nativitas_cantus << gregorio("../cantuscommunes/amon33/deusinadiutorium-communis.gabc")
-nativitas_cantus << gregorio("../cantuscommunes/amon33/supplicatiolitaniae.gabc")
-nativitas_cantus << gregorio("../cantuscommunes/amon33/oratiodominica.gabc")
-nativitas_cantus << gregorio("../cantuscommunes/amon33/dominusvobiscum-solemnis.gabc")
-nativitas_cantus << gregorio("../cantuscommunes/amon33/domineexaudi.gabc")
-nativitas_cantus << gregorio("../cantuscommunes/amon33/benedicamus-duplex-vesperae.gabc")
+# noty
+Dir["cantus/amon33/*.gabc"].each do |s|
+  nativitas_cantus << gregorio(s)
+end
+Dir["../cantuscommunes/amon33/*.gabc"].each do |s|
+  nativitas_cantus << gregorio(s)
+end
 
 file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas_psalmi do |t|
   # sh "xelatex #{t.prerequisites.first}"
