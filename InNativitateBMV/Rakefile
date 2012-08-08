@@ -68,6 +68,7 @@ TONI_PSALMORUM = {
   'VII.a' => [[2,0], [2,0]],
   'VII.c' => [[2,0], [2,0]],
   'VIII.G' => [[1,0], [1,2]],
+  'VIIIsoll.G' => [[1,3], [1,2]],
   'per' => [[1,3], [1,1]],
   'dir' => [[1,2], [1,0]]
 }
@@ -115,7 +116,7 @@ nativitas_cantus << geninitium('dan3', 'VIII.G')
 
 # Benedictus a Magnificat
 nativitas_psalmi << genzalmsuff("magnificat.pslm", options_magnificat+options_accents('Isoll.D2'), 'iD2')
-nativitas_psalmi << genzalmsuff("benedictus.pslm", options_common+options_accents('VIII.G'), 'viiiG')
+nativitas_psalmi << genzalmsuff("benedictus.pslm", options_common+options_accents('VIIIsoll.G'), 'viiiG')
 
 # noty
 Dir["cantus/amon33/*.gabc"].each do |s|
@@ -124,6 +125,17 @@ end
 Dir["../cantuscommunes/amon33/*.gabc"].each do |s|
   nativitas_cantus << gregorio(s)
 end
+
+# initium k Benedictus:
+file "temporalia/benedictus-initium-viiiSoll-G-auto.gabc" => ["../psalmi/benedictus.pslm", "../tonipsalmorum/arom12/viiiSoll-G-auto.gabc", '../instrumenta/initiumpsalmi.rb'] do |t|
+  psalmfile = t.prerequisites[0]
+  patternfile = t.prerequisites[1]
+  wd = Dir.pwd
+  chdir "temporalia"
+  sh "ruby ../../instrumenta/initiumpsalmi.rb ../#{psalmfile} ../#{patternfile}"
+  chdir wd
+end
+nativitas_cantus << gregorio("temporalia/benedictus-initium-viiiSoll-G-auto.gabc")
 
 file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas_psalmi do |t|
   # sh "xelatex #{t.prerequisites.first}"
