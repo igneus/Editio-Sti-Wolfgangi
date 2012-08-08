@@ -1,5 +1,7 @@
 Závěrečné úpravy
 
+Deadline pro dokončení "čisté verze" a její odevzdání k připomínkování: 15.-18.8.
+
 * titulní stránka s grafikou
 
 Později
