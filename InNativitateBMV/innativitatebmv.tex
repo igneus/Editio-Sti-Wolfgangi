@@ -17,6 +17,7 @@
 \usepackage{luatextra}
 \usepackage{graphicx} % support the \includegraphics command and options
 \usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{wrapfig} % figures wrapped by the text
 
 \newenvironment{titulusOfficii}{\begin{center}}{\end{center}}
 \newcommand{\dies}[1]{#1
@@ -43,6 +44,16 @@
 \newcommand{\titCapitulum}[1]{\hfill \textit{#1}}
 
 \newcommand{\translatioCantus}[1]{\vspace{1mm}{\small #1}}
+
+% jeden argument: soubor s textem, ktery se ma vlozit
+\newcommand{\translatioPsalmi}[1]{
+  \begin{wrapfigure}{r}{7cm}
+    \begin{minipage}{7cm}
+      \small
+      \input{#1}
+    \end{minipage}
+  \end{wrapfigure}
+}
 
 % volne misto nad antifonami, kam si zpevaci dokresli neumy
 \newcommand{\hicSuntNeumae}{\vspace{1.3cm}}
@@ -179,6 +190,7 @@ Editio Sancti Wolfgangi 2012
 
 \includescore{temporalia/ps109-initium-viii-G-auto.tex}
 
+\translatioPsalmi{../bohemice_psalmi/Hejcl1922/ps109.pslm}
 \input{temporalia/ps109.tex}
 
 \vfill
