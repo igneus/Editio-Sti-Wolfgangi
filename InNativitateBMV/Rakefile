@@ -1,16 +1,38 @@
 RUBY_COMMAND = 'ruby' # was: 'ruby1.9.1'
 
-def genzalm(zalm, options="", adresar='temporalia/')
+def genpsalm_universal(zalm, options="", output_dir, input_dir)
   wd = Dir.pwd
-  syrovy = "../psalmi/"+zalm
-  peceny = adresar+zalm.gsub(/\.pslm/, '')+'.tex'
+  syrovy = input_dir+zalm
+  peceny = output_dir+zalm.gsub(/\.pslm/, '')+'.tex'
   preprocessor = "/home/igneus/In-adiutorium/nastroje/psalmpreprocessor.rb"
   file peceny => [syrovy, preprocessor] do
-    chdir adresar
+    chdir output_dir
     sh "#{RUBY_COMMAND} #{preprocessor} #{options} ../#{syrovy}"
     chdir wd
   end
   return peceny
+end
+
+def genpsalm(zalm, options="", output_dir='temporalia/')
+  input_dir = "../psalmi/"
+  genpsalm_universal(zalm, options, output_dir, input_dir)
+end
+
+def genczechpsalm(zalm, options="", output_dir='temporalia/')
+  input_dir = "../bohemice_psalmi/Hejcl1922/"
+  of = zalm.gsub(".pslm", "-boh.tex")
+  ofop = "--output "+of+" "
+  wd = Dir.pwd
+  syrovy = input_dir+zalm
+  of = zalm.gsub(".pslm", "-boh.tex")
+  ofop = "--output "+of+" "
+  preprocessor = "/home/igneus/In-adiutorium/nastroje/psalmpreprocessor.rb"
+  file output_dir+of => [syrovy, preprocessor] do
+    chdir output_dir
+    sh "#{RUBY_COMMAND} #{preprocessor} #{ofop} #{options} ../#{syrovy}"
+    chdir wd
+  end
+  return output_dir+of
 end
 
 def genzalmsuff(zalm, options="", suff="aaa", adresar='temporalia/')
@@ -80,6 +102,8 @@ nativitas_psalmi = []
 options_common = "--accents-style bold --append \"#{gloriapatri}\" --skip-verses 1 "
 options_magnificat = options_common.gsub "--skip-verses 1", "--skip-verses 2"
 
+options_translation = "--accents 0:0 --title-pattern \" \" "
+
 def options_accents(psalmtone)
   accents = "#{TONI_PSALMORUM[psalmtone][0][0]}:#{TONI_PSALMORUM[psalmtone][1][0]}"
   preps = "#{TONI_PSALMORUM[psalmtone][0][1]}:#{TONI_PSALMORUM[psalmtone][1][1]}"
@@ -98,20 +122,22 @@ nativitas_cantus = []
   112 => 'VII.c',
   121 => 'VI.F',
   126 => 'VIII.G',
-  147 => 'VII.c',
+  # 147 => 'VII.c',
   150 => 'VII.c'}.each_pair do |n,t|
   
-  nativitas_psalmi << genzalm("ps#{n}.pslm", options_common+options_accents(t))
+  nativitas_psalmi << genpsalm("ps#{n}.pslm", options_common+options_accents(t))
+  nativitas_psalmi << genczechpsalm("ps#{n}.pslm", options_translation)
   nativitas_cantus << geninitium(n, t)
 end
 
 # zalmy bez Gloria Patri
 [148, 149].each do |n|
-  nativitas_psalmi << genzalm("ps#{n}.pslm", "--accents-style bold --skip-verses 1 "+options_accents('VII.c'))
+  nativitas_psalmi << genpsalm("ps#{n}.pslm", "--accents-style bold --skip-verses 1 "+options_accents('VII.c'))
+  nativitas_psalmi << genczechpsalm("ps#{n}.pslm", options_translation)
   nativitas_cantus << geninitium(n, 'VII.c')
 end
 
-nativitas_psalmi << genzalm('dan3.pslm', "--accents-style bold --skip-verses 1 "+options_accents('VIII.G'))
+nativitas_psalmi << genpsalm('dan3.pslm', "--accents-style bold --skip-verses 1 "+options_accents('VIII.G'))
 nativitas_cantus << geninitium('dan3', 'VIII.G')
 
 # Benedictus a Magnificat
