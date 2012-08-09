@@ -8,19 +8,16 @@ Za dlouho
 Závěrečné úpravy
 
 * titulní stránka s grafikou
+* dozadu do "tiráže" zmínku o spolutvůrcích
+* a o všech použitých pramenech
 
 Později
 
 * zpěvy mše
 * překlady žalmů (až budu mít texty)
-* psalmodický vzorec podložit prvním veršem žalmu (vůbec se mi do toho nechce,
-  ale je potřeba to udělat včas, protože to nikoli nevýznamně ovlivňuje 
-  rozložení stránky)
-  * když jsou noty initia výškově blízko u klíče, vložit na začátek před
-    první notu mezeru
+* zkusit odstranit "přečnívající" prázdné zbytky notové osnovy
 * jsou toni communes použity náležitě s ohledem na rank svátku?
-* dozadu do "tiráže" zmínku o spolutvůrcích
-* a o všech použitých pramenech
+
 
 Brzy
 

@@ -246,7 +246,7 @@ melody_i = 0
 text_i = 0
   
 ## initium
-psalmody.initium.each do |n|
+psalmody.initium.each_with_index do |n,i|
   s = verse.first.syllables[text_i]
   if s == ' ' then
     of.print " "
@@ -254,7 +254,12 @@ psalmody.initium.each do |n|
     redo
   else
     of.print s
-    of.print n
+    if i == 0 then
+      # add space at the beginning
+      of.print n.gsub("(", "( ")
+    else
+      of.print n
+    end
     text_i += 1
   end
 end
