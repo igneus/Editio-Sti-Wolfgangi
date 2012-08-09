@@ -10,11 +10,12 @@ Závěrečné úpravy
 * titulní stránka s grafikou
 * dozadu do "tiráže" zmínku o spolutvůrcích
 * a o všech použitých pramenech
+* doladit zlom stránek, zejm. u evangelních kantik
 
 Později
 
 * zpěvy mše
-* překlady žalmů (až budu mít texty)
+* překlady Magnificat, Benedictus a Chvalozpěvu tří mládenců
 * zkusit odstranit "přečnívající" prázdné zbytky notové osnovy
 * jsou toni communes použity náležitě s ohledem na rank svátku?
 
