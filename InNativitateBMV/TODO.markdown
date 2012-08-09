@@ -1,5 +1,10 @@
 Deadline pro dokončení "čisté verze" a její odevzdání k připomínkování: 15.-18.8.
 
+Za dlouho
+
+* vyrobit upravenou verzi (bez místa na neumy, bez triplexové mše), 
+  která bude viset na stránkách
+
 Závěrečné úpravy
 
 * titulní stránka s grafikou
@@ -13,11 +18,10 @@ Později
   rozložení stránky)
   * když jsou noty initia výškově blízko u klíče, vložit na začátek před
     první notu mezeru
+* jsou toni communes použity náležitě s ohledem na rank svátku?
+* dozadu do "tiráže" zmínku o spolutvůrcích
+* a o všech použitých pramenech
 
 Brzy
 
-* ručně initia k Benedictus a Magnificat
-* nahradit _všechny_ zpěvy AR12 odpovídajícími zpěvy AM33
-* doplnit chybějící překlady některých antifon
-* překlady antifon, které jsou i v LH, podle DMC
 * překlady hymnů
