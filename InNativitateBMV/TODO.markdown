@@ -11,11 +11,14 @@ Závěrečné úpravy
 * dozadu do "tiráže" zmínku o spolutvůrcích
 * a o všech použitých pramenech
 * doladit zlom stránek, zejm. u evangelních kantik
+* poprosit nějakého latiníka o doladění překladů
+* jak se opravdu správně latinsky řekne "překlad"?
 
 Později
 
 * zpěvy mše
 * překlady Magnificat, Benedictus a Chvalozpěvu tří mládenců
+* přečíst překlady žalmů, zda dávají smysl
 * zkusit odstranit "přečnívající" prázdné zbytky notové osnovy
 * jsou toni communes použity náležitě s ohledem na rank svátku?
 
