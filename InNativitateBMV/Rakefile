@@ -137,6 +137,7 @@ end
 
 nativitas_psalmi << genpsalm('dan3.pslm', "--accents-style bold --skip-verses 1 "+options_accents('VIII.G'))
 nativitas_cantus << geninitium('dan3', 'VIII.G')
+nativitas_psalmi << genczechpsalm("dan3.pslm", options_translation, 'temporalia/', "../bohemice_psalmi/Pavlik/")
 
 # Benedictus a Magnificat
 nativitas_psalmi << genzalmsuff("magnificat.pslm", options_magnificat+options_accents('Isoll.D2'), 'iD2')

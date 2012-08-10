@@ -22,11 +22,14 @@ Později
 * přečíst překlady žalmů, zda dávají smysl
 * zkusit odstranit "přečnívající" prázdné zbytky notové osnovy
 * jsou toni communes použity náležitě s ohledem na rank svátku?
+* doladit šířku sloupku s překladem u žalmů, které zbytečně přetékají
+  na další stránku
 
 
 Brzy
 
 * zpěvy mše
-* překlad Chvalozpěvu tří mládenců
 * překlady hymnů
 * nemá po capitulu být Deo gratias?
+* zmenšit spodní okraj stránky
+* zmenšit volný prostor nad nadpisy žalmů
