@@ -13,13 +13,11 @@ def genpsalm_universal(zalm, options="", output_dir, input_dir)
   return peceny
 end
 
-def genpsalm(zalm, options="", output_dir='temporalia/')
-  input_dir = "../psalmi/"
+def genpsalm(zalm, options="", output_dir='temporalia/', input_dir="../psalmi/")
   genpsalm_universal(zalm, options, output_dir, input_dir)
 end
 
-def genczechpsalm(zalm, options="", output_dir='temporalia/')
-  input_dir = "../bohemice_psalmi/Hejcl1922/"
+def genczechpsalm(zalm, options="", output_dir='temporalia/', input_dir="../bohemice_psalmi/Hejcl1922/")
   of = zalm.gsub(".pslm", "-boh.tex")
   ofop = "--output "+of+" "
   wd = Dir.pwd
@@ -102,7 +100,7 @@ nativitas_psalmi = []
 options_common = "--accents-style bold --append \"#{gloriapatri}\" --skip-verses 1 "
 options_magnificat = options_common.gsub "--skip-verses 1", "--skip-verses 2"
 
-options_translation = "--accents 0:0 --title-pattern \" \" "
+options_translation = "--accents 0:0 --title-pattern \" \" --no-paragraph "
 
 def options_accents(psalmtone)
   accents = "#{TONI_PSALMORUM[psalmtone][0][0]}:#{TONI_PSALMORUM[psalmtone][1][0]}"
@@ -143,6 +141,9 @@ nativitas_cantus << geninitium('dan3', 'VIII.G')
 # Benedictus a Magnificat
 nativitas_psalmi << genzalmsuff("magnificat.pslm", options_magnificat+options_accents('Isoll.D2'), 'iD2')
 nativitas_psalmi << genzalmsuff("benedictus.pslm", options_common+options_accents('VIIIsoll.G'), 'viiiG')
+
+nativitas_psalmi << genczechpsalm("magnificat.pslm", options_translation, 'temporalia/', "../bohemice_psalmi/DMC199x/")
+nativitas_psalmi << genczechpsalm("benedictus.pslm", options_translation, 'temporalia/', "../bohemice_psalmi/DMC199x/")
 
 # noty
 Dir["cantus/amon33/*.gabc"].each do |s|

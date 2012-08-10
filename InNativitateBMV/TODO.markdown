@@ -7,6 +7,9 @@ Za dlouho
 
 Závěrečné úpravy
 
+* bonus: tahák pro celebranta s nápěvem orace a pro lektora
+  s nápěvem capitula
+
 * titulní stránka s grafikou
 * dozadu do "tiráže" zmínku o spolutvůrcích
 * a o všech použitých pramenech
@@ -16,8 +19,6 @@ Závěrečné úpravy
 
 Později
 
-* zpěvy mše
-* překlady Magnificat, Benedictus a Chvalozpěvu tří mládenců
 * přečíst překlady žalmů, zda dávají smysl
 * zkusit odstranit "přečnívající" prázdné zbytky notové osnovy
 * jsou toni communes použity náležitě s ohledem na rank svátku?
@@ -25,4 +26,7 @@ Později
 
 Brzy
 
+* zpěvy mše
+* překlad Chvalozpěvu tří mládenců
 * překlady hymnů
+* nemá po capitulu být Deo gratias?
