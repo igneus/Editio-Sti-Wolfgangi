@@ -31,5 +31,4 @@ Brzy
 * zpěvy mše
 * překlady hymnů
 * nemá po capitulu být Deo gratias?
-* zmenšit spodní okraj stránky
-* zmenšit volný prostor nad nadpisy žalmů
+(* zmenšit volný prostor nad nadpisy žalmů?)
