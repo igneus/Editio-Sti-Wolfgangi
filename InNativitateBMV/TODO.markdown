@@ -7,15 +7,11 @@ Za dlouho
 
 Závěrečné úpravy
 
-* bonus: tahák pro celebranta s nápěvem orace a pro lektora
-  s nápěvem capitula
-
 * titulní stránka s grafikou
 * dozadu do "tiráže" zmínku o spolutvůrcích
 * a o všech použitých pramenech
 * doladit zlom stránek, zejm. u evangelních kantik
 * poprosit nějakého latiníka o doladění překladů
-* jak se opravdu správně latinsky řekne "překlad"?
 
 Později
 
@@ -24,8 +20,6 @@ Později
 * jsou toni communes použity náležitě s ohledem na rank svátku?
 * doladit šířku sloupku s překladem u žalmů, které zbytečně přetékají
   na další stránku
-* nějaký speciální symbol uvádějící překlady? 
-
 
 Brzy
 

@@ -17,6 +17,7 @@
 \usepackage{luatextra}
 \usepackage{graphicx} % support the \includegraphics command and options
 \usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{gregoriosyms}
 \usepackage{wrapfig} % figures wrapped by the text
 \usepackage{parcolumns}
 
@@ -44,7 +45,7 @@
 
 \newcommand{\titCapitulum}[1]{\hfill \textit{#1}}
 
-\newcommand{\translatioCantus}[1]{\vspace{1mm}{\small #1}}
+\newcommand{\translatioCantus}[1]{\vspace{1mm}{\noindent\footnotesize #1}}
 
 % jeden argument: soubor s textem, ktery se ma vlozit
 \newcommand{\translatioPsalmi}[1]{
@@ -114,14 +115,14 @@ aby se ona za nás přimlouvala u Pána Ježíše Krista.}}
 \newcommand{\translatioRespVesp}{\translatioCantus{Buď zdráva, Maria,
 plná milosti: * Pán s tebou. ℣. Požehnaná jsi mezi ženami,
 a požehnaný plod života (ve smyslu lůna, břicha) tvého.}}
-\newcommand{\translatioAntMagnificatI}{\translatiocantus{Konejme památku
+\newcommand{\translatioAntMagnificatI}{\translatioCantus{Konejme památku
 nejdůstojnějšího narození slavné Panny Marie,
 jíž se dostalo mateřské důstojnosti bez ztráty panenské cudnosti.}}
-\newcommand{\translatioAntBenedictus}{\translatiocantus{Slavnostně slavme 
+\newcommand{\translatioAntBenedictus}{\translatioCantus{Slavnostně slavme 
 dnešní narození Marie, vždy Panny a Rodičky Boží: v něm se objevuje
 vysokost trůnu (totiž Marie, trůnu Božího Syna), aleluja. \notitia{Překlad
 krajně nejistý.}}}
-\newcommand{\translatioAntMagnificatII}{\translatiocantus{Tvé narození,
+\newcommand{\translatioAntMagnificatII}{\translatioCantus{Tvé narození,
 Bohorodičko Panno, vyhlásilo radost celému světu:
 z tebe totiž vzešlo Slunce spravedlnosti, Kristus, náš Bůh:
 jenž zrušil kletbu a dal nám požehnání: přemohl smrt a dal nám život věčný.}}
