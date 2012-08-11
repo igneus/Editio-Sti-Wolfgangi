@@ -24,11 +24,11 @@ Později
 * jsou toni communes použity náležitě s ohledem na rank svátku?
 * doladit šířku sloupku s překladem u žalmů, které zbytečně přetékají
   na další stránku
+* nějaký speciální symbol uvádějící překlady? 
 
 
 Brzy
 
 * zpěvy mše
-* překlady hymnů
 * nemá po capitulu být Deo gratias?
 (* zmenšit volný prostor nad nadpisy žalmů?)

@@ -165,7 +165,13 @@ file "temporalia/benedictus-initium-viiiSoll-G-auto.gabc" => ["../psalmi/benedic
 end
 nativitas_cantus << gregorio("temporalia/benedictus-initium-viiiSoll-G-auto.gabc")
 
-file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas_psalmi do |t|
+nativitas_hymni = ['hym-AveMarisStella-text.tex', 
+                   'hym-AveMarisStella-bohtext.tex',
+                   'hym-OGloriosaDomina-text.tex'].collect {|h| 
+  'cantus/amon33/'+h
+}
+
+file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas_psalmi+nativitas_hymni do |t|
   # sh "xelatex #{t.prerequisites.first}"
   2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
 end
