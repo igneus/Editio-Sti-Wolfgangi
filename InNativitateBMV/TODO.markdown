@@ -30,5 +30,4 @@ Později
 Brzy
 
 * zpěvy mše
-* nemá po capitulu být Deo gratias?
 (* zmenšit volný prostor nad nadpisy žalmů?)
