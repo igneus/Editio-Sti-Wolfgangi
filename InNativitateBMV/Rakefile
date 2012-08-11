@@ -176,5 +176,10 @@ file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas
   2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
 end
 
+file "supplementum.pdf" => ['supplementum.tex']+nativitas_cantus do |t|
+  sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}"
+end
+
 task :nativitas => ["innativitatebmv.pdf"]
+task :supplementum => ["supplementum.pdf"]
 task :default => [:nativitas]
