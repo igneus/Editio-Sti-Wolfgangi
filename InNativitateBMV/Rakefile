@@ -150,6 +150,9 @@ nativitas_psalmi << genczechpsalm("benedictus.pslm", options_translation, 'tempo
 Dir["cantus/amon33/*.gabc"].each do |s|
   nativitas_cantus << gregorio(s)
 end
+Dir["cantus/triplex76/*.gabc"].each do |s|
+  nativitas_cantus << gregorio(s)
+end
 Dir["../cantuscommunes/amon33/*.gabc"].each do |s|
   nativitas_cantus << gregorio(s)
 end
