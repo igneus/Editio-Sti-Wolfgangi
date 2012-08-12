@@ -9,6 +9,7 @@ Závěrečné úpravy
 
 * titulní stránka s grafikou
 * poprosit nějakého latiníka o doladění překladů
+* colophon na správné stránce
 
 Později
 
@@ -18,6 +19,3 @@ Později
 
 Brzy
 
-* doladit šířku sloupku s překladem u žalmů, které zbytečně přetékají
-  na další stránku
-* doladit zlom stránek, zejm. u evangelních kantik
