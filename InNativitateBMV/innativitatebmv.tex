@@ -47,12 +47,18 @@
 
 \newcommand{\translatioCantus}[1]{\vspace{1mm}{\noindent\footnotesize #1}}
 
-\newcommand{\psalmusEtTranslatio}[2]{
+% pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
+% s prekladem
+\newcommand{\psalmusEtTranslatioB}[3]{
   \vspace{0.5cm}
-  \begin{parcolumns}[colwidths={2=8.5cm}, nofirstindent=true]{2}
+  \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
     \colchunk{\input{#1}}
     \colchunk{\vspace{-0.5cm}{\footnotesize \input{#2}}}
   \end{parcolumns}
+}
+
+\newcommand{\psalmusEtTranslatio}[2]{
+  \psalmusEtTranslatioB{#1}{#2}{8.5cm}
 }
 
 % volne misto nad antifonami, kam si zpevaci dokresli neumy
@@ -339,7 +345,7 @@ Ve svatém Stanu jsem před ním konala službu.}
 \cantusSineNeumas
 \includescore{cantus/amon33/magnificat-initium-i-D2.tex}
 
-\psalmusEtTranslatio{temporalia/magnificat-iD2.tex}{temporalia/magnificat-boh.tex}
+\psalmusEtTranslatioB{temporalia/magnificat-iD2.tex}{temporalia/magnificat-boh.tex}
 
 \pagebreak
 
