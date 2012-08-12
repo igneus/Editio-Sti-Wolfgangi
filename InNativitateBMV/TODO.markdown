@@ -20,6 +20,4 @@ Brzy
 
 * doladit šířku sloupku s překladem u žalmů, které zbytečně přetékají
   na další stránku
-* dozadu do "tiráže" zmínku o spolutvůrcích
-* a o všech použitých pramenech
 * doladit zlom stránek, zejm. u evangelních kantik
