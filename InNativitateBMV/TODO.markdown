@@ -23,5 +23,5 @@ Později
 
 Brzy
 
-* zpěvy mše
+* překlady zpěvů mše
 (* zmenšit volný prostor nad nadpisy žalmů?)
