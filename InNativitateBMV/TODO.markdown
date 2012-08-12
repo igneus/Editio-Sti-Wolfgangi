@@ -8,9 +8,6 @@ Za dlouho
 Závěrečné úpravy
 
 * titulní stránka s grafikou
-* dozadu do "tiráže" zmínku o spolutvůrcích
-* a o všech použitých pramenech
-* doladit zlom stránek, zejm. u evangelních kantik
 * poprosit nějakého latiníka o doladění překladů
 
 Později
@@ -18,10 +15,11 @@ Později
 * přečíst překlady žalmů, zda dávají smysl
 * zkusit odstranit "přečnívající" prázdné zbytky notové osnovy
 * jsou toni communes použity náležitě s ohledem na rank svátku?
-* doladit šířku sloupku s překladem u žalmů, které zbytečně přetékají
-  na další stránku
 
 Brzy
 
-* překlady zpěvů mše
-(* zmenšit volný prostor nad nadpisy žalmů?)
+* doladit šířku sloupku s překladem u žalmů, které zbytečně přetékají
+  na další stránku
+* dozadu do "tiráže" zmínku o spolutvůrcích
+* a o všech použitých pramenech
+* doladit zlom stránek, zejm. u evangelních kantik

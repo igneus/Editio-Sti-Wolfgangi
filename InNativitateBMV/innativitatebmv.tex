@@ -127,6 +127,24 @@ Bohorodičko Panno, vyhlásilo radost celému světu:
 z tebe totiž vzešlo Slunce spravedlnosti, Kristus, náš Bůh:
 jenž zrušil kletbu a dal nám požehnání: přemohl smrt a dal nám život věčný.}}
 
+\newcommand{\translatioIntroitus}{\translatioCantus{Radujme se všichni
+v Pánu, slavíce svátek ke cti Panny Marie: z něj se radují andělé
+a spoluchválí Božího Syna. \textit{Žalm:} Má ústa vydala dobré slovo,
+přednáším svá díla králi.}}
+\newcommand{\translatioGraduale}{\translatioCantus{Požehnaná a ctihodná jsi,
+Panno Maria: nedotčená (co do panenství) jsi byla shledána matkou
+Spasitele. ℣. Panno Boží Rodičko, ten, jehož nepojme ani celý svět,
+se uzavřel do tvých útrob, když se stal člověkem.}}
+\newcommand{\translatioAlleluia}{\translatioCantus{Aleluja. ℣. Skvělá slavnost
+slavné Panny Marie, z pokolení (dosl. ze semene) Abrahámova, vzešlé z kmene 
+Judova, z rodu Davidova.}}
+\newcommand{\translatioOffertorium}{\translatioCantus{Blažená jsi, Panno Maria,
+tys nosila Stvořitele všeho; porodila jsi toho, který tě utvořil,
+a na věky zůstáváš Pannou.}}
+\newcommand{\translatioCommunio}{\translatioCantus{Budou mě blahoslavit
+všechna pokolení, protože mi učinil veliké věci ten, který je mocný.}}
+
+
 %%%% Vicekrat opakovane kousky
 
 \newcommand{\versusNativitasEst}{
@@ -577,11 +595,19 @@ sicut in I. Vesperis, pg. \pageref{oratio}.}
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I}}}{\small \textsc{\textbf{I}}}
 \includescore{cantus/triplex76/introitus-GaudeamusOmnes.tex}
 
+\translatioIntroitus
+
+\vspace{3mm}
+
 \pars{Graduale.}
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{IV}}}{\small \textsc{\textbf{IV}}}
 \includescore{cantus/triplex76/graduale-BenedictaEtVenerabilis.tex}
+
+\translatioGraduale
+
+\vspace{3mm}
 
 \pars{Alleluia.}
 
@@ -589,17 +615,27 @@ sicut in I. Vesperis, pg. \pageref{oratio}.}
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII}}}{\small \textsc{\textbf{VII}}}
 \includescore{cantus/triplex76/alleluia-SolemnitasGloriosae.tex}
 
+\translatioAlleluia
+
+\pagebreak
+
 \pars{Offertorium.}
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII}}}{\small \textsc{\textbf{VIII}}}
 \includescore{cantus/triplex76/offertorium-BeataEs.tex}
 
+\translatioOffertorium
+
+\vspace{3mm}
+
 \pars{Communio.}
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI}}}{\small \textsc{\textbf{VI}}}
 \includescore{cantus/triplex76/communio-BeatamMeDicent.tex}
+
+\translatioCommunio
 
 \titCapitulum{Canticum Magnificat: Luc. 1,46-47.50.51.52.53.54.55}
 
