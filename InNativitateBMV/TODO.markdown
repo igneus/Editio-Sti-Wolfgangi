@@ -19,4 +19,3 @@ Později
 
 Brzy
 
-- ještě před introit třeba vložit ordinárium - pokud možno IX (Graduale triplex str. 741)

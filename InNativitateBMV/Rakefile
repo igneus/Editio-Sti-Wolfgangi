@@ -147,14 +147,13 @@ nativitas_psalmi << genczechpsalm("magnificat.pslm", options_translation, 'tempo
 nativitas_psalmi << genczechpsalm("benedictus.pslm", options_translation, 'temporalia/', "../bohemice_psalmi/DMC199x/")
 
 # noty
-Dir["cantus/amon33/*.gabc"].each do |s|
-  nativitas_cantus << gregorio(s)
-end
-Dir["cantus/triplex76/*.gabc"].each do |s|
-  nativitas_cantus << gregorio(s)
-end
-Dir["../cantuscommunes/amon33/*.gabc"].each do |s|
-  nativitas_cantus << gregorio(s)
+["cantus/amon33/*.gabc", 
+ "cantus/triplex76/*.gabc", 
+ "cantus/kyriale76/*.gabc", 
+ "../cantuscommunes/amon33/*.gabc"].each do |d|
+  Dir[d].each do |s|
+    nativitas_cantus << gregorio(s)
+  end
 end
 
 # initium k Benedictus:
