@@ -20,5 +20,5 @@ Později
 Brzy
 
 - nešlo by "supplementum" zapracovat do vlastních not? hodně to zjednoduší pak vlastní přípravu na hodinky (rozdávání zvláštního papíru)
-- str. 12 - šlo by tam zkopírovat "Deus in adjut"? aby se nemuselo listovat. a podobně taky kapituli,responsorium a závěr na str. 20 a dál
+- a závěr na str. 20 a dál
 - ještě před introit třeba vložit ordinárium - pokud možno IX (Graduale triplex str. 741)
