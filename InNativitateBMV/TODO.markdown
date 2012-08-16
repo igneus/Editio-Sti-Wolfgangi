@@ -22,5 +22,3 @@ Brzy
 - nešlo by "supplementum" zapracovat do vlastních not? hodně to zjednoduší pak vlastní přípravu na hodinky (rozdávání zvláštního papíru)
 - str. 12 - šlo by tam zkopírovat "Deus in adjut"? aby se nemuselo listovat. a podobně taky kapituli,responsorium a závěr na str. 20 a dál
 - ještě před introit třeba vložit ordinárium - pokud možno IX (Graduale triplex str. 741)
-- navrhuju strčit listy 26 a 27 s antifonou a magnifikatem k prvním nešporám
-- jinak ti musím pokazit radost: ty kusy ze mše samozřejmě neumový zápis mají - když si je nalistuješ v GT, tak vždy po straně je připsána stránka, kde se nachází kus se stejnou melodií s neumami, ale s většinou lehce pozměněným textem. až to teda bude hotový, já bych ty neumy tam dopsal.
