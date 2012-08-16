@@ -172,6 +172,26 @@ všechna pokolení, protože mi učinil veliké věci ten, který je mocný.}}
   \translatioRespVesp
 }
 
+\newcommand{\anteOrationem}{
+  \rubrica{Ante Orationem, cantatur a Superiore:}
+
+  \pars{Supplicatio Litaniae.}
+
+  \includescore{../cantuscommunes/amon33/supplicatiolitaniae.tex}
+
+  \pars{Oratio Dominica.}
+
+  \includescore{../cantuscommunes/amon33/oratiodominica.tex}
+
+  \rubrica{Deinde dicitur ab Hebdomadario:}
+
+  \includescore{../cantuscommunes/amon33/dominusvobiscum-solemnis.tex}
+
+  \rubrica{In choro monialium loco Dominus vobiscum dicitur:}
+
+  \includescore{../cantuscommunes/amon33/domineexaudi.tex}
+}
+
 \setlength{\columnsep}{30pt} % prostor mezi sloupci
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -367,48 +387,26 @@ Editio Sancti Wolfgangi 2012
 \pagebreak
 
 \label{oratio}
-\rubrica{Ante Orationem, cantatur a Superiore:}
-
-\pars{Supplicatio Litaniae.}
-
-\includescore{../cantuscommunes/amon33/supplicatiolitaniae.tex}
-
-\pars{Oratio Dominica.}
-
-\includescore{../cantuscommunes/amon33/oratiodominica.tex}
-
-\rubrica{Deinde dicitur ab Hebdomadario:}
-
-\includescore{../cantuscommunes/amon33/dominusvobiscum-solemnis.tex}
-
-\rubrica{In choro monialium loco Dominus vobiscum dicitur:}
-
-\includescore{../cantuscommunes/amon33/domineexaudi.tex}
+\anteOrationem
 
 \pagebreak
 
 % Oratio. %%%
 \pars{Oratio.}
-\begin{multicols}{2}
-\lettrine{F}{amulis} tuis, quaésumus Dómine, coeléstis grátiae munus impertíre:~\dag\mbox{}
-ut quibus beátae Vírginis partus éxstitit salútis exórdium,~*
-Nativitátis ejus votíva solémnitas pacis tríbuat increméntum.
-Per Dóminum.
 
-\columnbreak
-
-% preklad J.P.
-{\footnotesize Prosíme tě, Bože, 
+\includescore{cantus/amon33/oratio.tex}
+\translatioCantus{Prosíme tě, Bože, 
 uděl nám, svým služebníkům, dar nebeské milosti,
 aby těm, kterým \notitia{?(}se porod blahoslavené Panny zjevil jako počátek spásy,\notitia{)?}
 \notitia{(co s \emph{votiva}?)} slavnost jejího narození přinesla
 rozhojnění pokoje.
 Skrze našeho Pána.}
-\end{multicols}
 
+\vspace{1cm}
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
+\vspace{2mm}
 
-\input{../cantuscommunes/amon33/benedicamus-duplex-vesperae.tex}
+\includescore{../cantuscommunes/amon33/benedicamus-duplex-vesperae.tex}
 
 \vfill
 
@@ -585,9 +583,6 @@ Skrze našeho Pána.}
 
 \vfill
 
-\rubrica{Post Canticum Zachariae, pg. sequens, sequitur Supplicatio litaniae 
-etc. usque ad finem horae sicut in I. Vesperis, pg. \pageref{oratio}.}
-
 \pagebreak
 
 \cantusCumNeumis
@@ -605,6 +600,32 @@ etc. usque ad finem horae sicut in I. Vesperis, pg. \pageref{oratio}.}
 \psalmusEtTranslatioB{temporalia/benedictus-viiiG.tex}{temporalia/benedictus-boh.tex}{10.5cm}
 
 \vspace{0.5cm}
+
+\vfill
+
+\pagebreak
+
+\label{oratio}
+\anteOrationem
+
+\pagebreak
+
+% Oratio. %%%
+\pars{Oratio.}
+
+\includescore{cantus/amon33/oratio.tex}
+\translatioCantus{Prosíme tě, Bože, 
+uděl nám, svým služebníkům, dar nebeské milosti,
+aby těm, kterým \notitia{?(}se porod blahoslavené Panny zjevil jako počátek spásy,\notitia{)?}
+\notitia{(co s \emph{votiva}?)} slavnost jejího narození přinesla
+rozhojnění pokoje.
+Skrze našeho Pána.}
+
+\vspace{1cm}
+\rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
+\vspace{2mm}
+
+\includescore{../cantuscommunes/amon33/benedicamus-duplex-laudes.tex}
 
 \vfill
 

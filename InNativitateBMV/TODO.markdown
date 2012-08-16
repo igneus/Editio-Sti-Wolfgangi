@@ -19,6 +19,4 @@ Později
 
 Brzy
 
-- nešlo by "supplementum" zapracovat do vlastních not? hodně to zjednoduší pak vlastní přípravu na hodinky (rozdávání zvláštního papíru)
-- a závěr na str. 20 a dál
 - ještě před introit třeba vložit ordinárium - pokud možno IX (Graduale triplex str. 741)
