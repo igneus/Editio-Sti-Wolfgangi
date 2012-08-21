@@ -148,8 +148,8 @@ nativitas_psalmi << genczechpsalm("benedictus.pslm", options_translation, 'tempo
 
 # noty
 ["cantus/amon33/*.gabc", 
- "cantus/triplex76/*.gabc", 
- "cantus/kyriale76/*.gabc", 
+ "../cantuscommunes/triplex76/*.gabc", 
+ "../cantuscommunes/kyriale76/*.gabc", 
  "../cantuscommunes/amon33/*.gabc"].each do |d|
   Dir[d].each do |s|
     nativitas_cantus << gregorio(s)
