@@ -173,7 +173,7 @@ nativitas_hymni = ['hym-AveMarisStella-text.tex',
   'cantus/amon33/'+h
 }
 
-file "innativitatebmv.pdf" => ['innativitatebmv.tex']+nativitas_cantus+nativitas_psalmi+nativitas_hymni do |t|
+file "innativitatebmv.pdf" => ['innativitatebmv.tex', 'translationes_cs.tex']+nativitas_cantus+nativitas_psalmi+nativitas_hymni do |t|
   # sh "xelatex #{t.prerequisites.first}"
   2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
 end
