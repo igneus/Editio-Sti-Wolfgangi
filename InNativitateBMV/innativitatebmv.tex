@@ -21,6 +21,10 @@
 \usepackage{wrapfig} % figures wrapped by the text
 \usepackage{parcolumns}
 
+\input{translationes_cs.tex} % Czech translations of the proper texts
+
+
+
 \newenvironment{titulusOfficii}{\begin{center}}{\end{center}}
 \newcommand{\dies}[1]{#1
 
@@ -92,54 +96,6 @@
 
 }
 
-%%%% Preklady jednotlivych zpevu (nektere se opakuji, a je dobre mit je
-% vsechny na jedne hromade)
-
-\newcommand{\translatioAntI}{\translatioCantus{Jasné narození slavné Panny Marie,
-z pokolení (dosl. ze semene) Abrahámova, vzešlé z kmene Judova, z rodu Davidova.}}
-\newcommand{\translatioAntII}{\translatioCantus{Dnes je Narození svaté Panny 
-Marie, jejíž předrahý život osvěcuje všechny církve.}}
-\newcommand{\translatioAntIII}{\translatioCantus{Maria, jež vzešla 
-z královského rodu, září; myslí i duchem ji v modlitbách zbožně prosíme, aby 
-nám pomáhala. \notitia{(Překlad druhé části poněkud nejistý.)}}}
-\newcommand{\translatioAntIV}{\translatioCantus{Srdcem i duchem pějme Kristu 
-k slávě o této svaté slavnosti vznešené Rodičky Boží Marie.}}
-\newcommand{\translatioAntV}{\translatioCantus{Příjemně \notitia{?} 
-oslavujme Narození blahoslavené Marie,
-aby se ona za nás přimlouvala u Pána Ježíše Krista.}}
-\newcommand{\translatioRespVesp}{\translatioCantus{Buď zdráva, Maria,
-plná milosti: * Pán s tebou. ℣. Požehnaná jsi mezi ženami,
-a požehnaný plod života (ve smyslu lůna, břicha) tvého.}}
-\newcommand{\translatioAntMagnificatI}{\translatioCantus{Konejme památku
-nejdůstojnějšího narození slavné Panny Marie,
-jíž se dostalo mateřské důstojnosti bez ztráty panenské cudnosti.}}
-\newcommand{\translatioAntBenedictus}{\translatioCantus{Slavnostně slavme 
-dnešní narození Marie, vždy Panny a Rodičky Boží: v něm se objevuje
-vysokost trůnu (totiž Marie, trůnu Božího Syna), aleluja. \notitia{Překlad
-krajně nejistý.}}}
-\newcommand{\translatioAntMagnificatII}{\translatioCantus{Tvé narození,
-Bohorodičko Panno, vyhlásilo radost celému světu:
-z tebe totiž vzešlo Slunce spravedlnosti, Kristus, náš Bůh:
-jenž zrušil kletbu a dal nám požehnání: přemohl smrt a dal nám život věčný.}}
-
-\newcommand{\translatioIntroitus}{\translatioCantus{Radujme se všichni
-v Pánu, slavíce svátek ke cti Panny Marie: z něj se radují andělé
-a spoluchválí Božího Syna. \textit{Žalm:} Má ústa vydala dobré slovo,
-přednáším svá díla králi.}}
-\newcommand{\translatioGraduale}{\translatioCantus{Požehnaná a ctihodná jsi,
-Panno Maria: nedotčená (co do panenství) jsi byla shledána matkou
-Spasitele. ℣. Panno Boží Rodičko, ten, jehož nepojme ani celý svět,
-se uzavřel do tvých útrob, když se stal člověkem.}}
-\newcommand{\translatioAlleluia}{\translatioCantus{Aleluja. ℣. Skvělá slavnost
-slavné Panny Marie, z pokolení (dosl. ze semene) Abrahámova, vzešlé z kmene 
-Judova, z rodu Davidova.}}
-\newcommand{\translatioOffertorium}{\translatioCantus{Blažená jsi, Panno Maria,
-tys nosila Stvořitele všeho; porodila jsi toho, který tě utvořil,
-a na věky zůstáváš Pannou.}}
-\newcommand{\translatioCommunio}{\translatioCantus{Budou mě blahoslavit
-všechna pokolení, protože mi učinil veliké věci ten, který je mocný.}}
-
-
 %%%% Vicekrat opakovane kousky
 
 \newcommand{\versusNativitasEst}{
@@ -150,7 +106,7 @@ všechna pokolení, protože mi učinil veliké věci ten, který je mocný.}}
     % \vspace{-5mm}
     \noindent ℟.\hspace{0.5mm}Cujus vita ínclyta cunctas illústrat ecclési\textit{as.}
     
-    \noindent \translatioCantus{℣. Dnes je Narození svaté Panny Marie. ℟. Jejíž předrahý život osvěcuje všechny církve.}
+    \noindent \translatioVersus
 }
 
 \newcommand{\capitulumAbInitioEtResponsorium}{
@@ -159,8 +115,7 @@ všechna pokolení, protože mi učinil veliké věci ten, který je mocný.}}
   \includescore{cantus/amon33/capitulum-AbInitio.tex}
 
   % preklad Jeruz. bible
-  \translatioCantus{Před věky, na počátku mě stvořil, potrvám věčně. 
-    Ve svatém Stanu jsem před ním konala službu.}
+  \translatioCapituli
 
   \vspace{1cm}
   \pars{Responsorium breve.}
@@ -396,12 +351,7 @@ Editio Sancti Wolfgangi 2012
 \pars{Oratio.}
 
 \includescore{cantus/amon33/oratio.tex}
-\translatioCantus{Prosíme tě, Bože, 
-uděl nám, svým služebníkům, dar nebeské milosti,
-aby těm, kterým \notitia{?(}se porod blahoslavené Panny zjevil jako počátek spásy,\notitia{)?}
-\notitia{(co s \emph{votiva}?)} slavnost jejího narození přinesla
-rozhojnění pokoje.
-Skrze našeho Pána.}
+\translatioOrationis
 
 \vspace{1cm}
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
@@ -617,12 +567,7 @@ Skrze našeho Pána.}
 \pars{Oratio.}
 
 \includescore{cantus/amon33/oratio.tex}
-\translatioCantus{Prosíme tě, Bože, 
-uděl nám, svým služebníkům, dar nebeské milosti,
-aby těm, kterým \notitia{?(}se porod blahoslavené Panny zjevil jako počátek spásy,\notitia{)?}
-\notitia{(co s \emph{votiva}?)} slavnost jejího narození přinesla
-rozhojnění pokoje.
-Skrze našeho Pána.}
+\translatioOrationis
 
 \vspace{1cm}
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
