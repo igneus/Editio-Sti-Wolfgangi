@@ -1,0 +1,11 @@
+task :cantus do
+  chdir "cantus"
+  sh "rake"
+  chdir ".."
+end
+
+file "psalterium_dominica_matutinum.pdf" => ['psalterium_dominica_matutinum.tex', :cantus] do |t|
+  sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}"
+end
+
+task :default => ["psalterium_dominica_matutinum.pdf"]

@@ -1,0 +1,12 @@
+name: Dominum qui fecit nos;
+office-part: matutinum, invitatorium;
+occasion: psalterium, dominica;
+book: CANTUS CH-E 611 - Einsiedeln, Stiftsbibliothek, Codex 611(89), 149v;
+% p. 
+mode: 6;
+initial-style: 1;
+%%
+
+(c4)
+Do(f)mi(f)num(fg) qui(g) fe(gf)cit(g) nos(gh) *(;) 
+Ve(h)ni(g)te(gh) a(ghGF)do(g)re(g)mus.(f) (::)

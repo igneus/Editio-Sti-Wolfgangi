@@ -1,0 +1,43 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside, 12pt]{article}
+\usepackage[latin]{babel} 
+\usepackage[left=1.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry} % okraje stranky
+
+\usepackage{fontspec}
+\setmainfont{Junicode}
+
+\usepackage{color}
+
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{43}{43}\selectfont #1}%
+}
+
+\newcommand{\superTitulus}[1]{
+  {\small #1}
+  \vspace{2mm}
+}
+\newcommand{\titulusPrincipalis}[1]{
+  {\Large #1}
+}
+
+\newcommand{\modusinfo}[1]{\gresetfirstlineaboveinitial{\small #1}{\small #1}}
+\newcommand{\hora}[1]{
+  \vspace{4mm}
+  \noindent\textbf{#1}
+  \vspace{4mm}
+}
+\newcommand{\psalmi}[1]{
+  \hfill #1
+  \vspace{5mm}
+}
