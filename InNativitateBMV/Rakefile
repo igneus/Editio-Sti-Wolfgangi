@@ -189,6 +189,12 @@ file "innativitate-neumae.pdf" => ["innativitatebmv.pdf", "paginaeneumatae/pg30-
 end
 
 task :nativitas => ["innativitatebmv.pdf"]
+desc "produce the chant book"
+
 task :nativitas_neumae => ["innativitate-neumae.pdf"]
+desc "produce the chant book with scanned hand-written neumes for the Mass"
+
 task :supplementum => ["supplementum.pdf"]
+desc "produce a sheet with notated chapter and prayer"
+
 task :default => [:nativitas]
