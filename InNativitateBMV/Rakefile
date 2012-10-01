@@ -182,7 +182,7 @@ file "supplementum.pdf" => ['supplementum.tex']+nativitas_cantus do |t|
   sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}"
 end
 
-file "innativitate-neumae.pdf" => ["innativitatebmv.pdf", "paginaeneumatae/pg30-33-rotated.pdf"] do |t|
+file "innativitatebmv-neumae.pdf" => ["innativitatebmv.pdf", "paginaeneumatae/pg30-33-rotated.pdf"] do |t|
   # make a copy of the main output file with pages 30-33 replaced
   # by their scans containing neumes
   sh "pdfjoin --outfile #{t.name} #{t.prerequisites.first} '1-29' #{t.prerequisites[1]} '-' #{t.prerequisites.first} '34-'"
@@ -191,7 +191,7 @@ end
 task :nativitas => ["innativitatebmv.pdf"]
 desc "produce the chant book"
 
-task :nativitas_neumae => ["innativitate-neumae.pdf"]
+task :nativitas_neumae => ["innativitatebmv-neumae.pdf"]
 desc "produce the chant book with scanned hand-written neumes for the Mass"
 
 task :supplementum => ["supplementum.pdf"]
