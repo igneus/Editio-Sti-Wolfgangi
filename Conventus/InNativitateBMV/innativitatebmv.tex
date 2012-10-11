@@ -24,6 +24,10 @@
 \input{translationes_cs.tex} % Czech translations of the proper texts
 
 
+\newcommand{\cantusCommunesAM}{../../cantuscommunes/amon33}
+\newcommand{\cantusCommunesGT}{../../cantuscommunes/kyriale76}
+\newcommand{\cantusProprii}{cantus}
+
 
 \newenvironment{titulusOfficii}{\begin{center}}{\end{center}}
 \newcommand{\dies}[1]{#1
@@ -102,7 +106,7 @@
   \pars{Versus.}
 
   % Versus. %%%
-    \includescore{cantus/amon33/versus-nativitasest.tex}
+    \includescore{\cantusProprii/amon33/versus-nativitasest.tex}
     % \vspace{-5mm}
     \noindent ℟.\hspace{0.5mm}Cujus vita ínclyta cunctas illústrat ecclési\textit{as.}
     
@@ -112,7 +116,7 @@
 \newcommand{\capitulumAbInitioEtResponsorium}{
   \pars{Capitulum.} \titCapitulum{Eccli. 24. b}
 
-  \includescore{cantus/amon33/capitulum-AbInitio.tex}
+  \includescore{\cantusProprii/amon33/capitulum-AbInitio.tex}
 
   % preklad Jeruz. bible
   \translatioCapituli
@@ -121,7 +125,7 @@
   \pars{Responsorium breve.}
 
   \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.}}}{\small \textsc{\textbf{VI.}}}
-  \includescore{cantus/amon33/resp1v.tex}
+  \includescore{\cantusProprii/amon33/resp1v.tex}
 
   \translatioRespVesp
 }
@@ -131,19 +135,19 @@
 
   \pars{Supplicatio Litaniae.}
 
-  \includescore{../cantuscommunes/amon33/supplicatiolitaniae.tex}
+  \includescore{\cantusCommunesAM/supplicatiolitaniae.tex}
 
   \pars{Oratio Dominica.}
 
-  \includescore{../cantuscommunes/amon33/oratiodominica.tex}
+  \includescore{\cantusCommunesAM/oratiodominica.tex}
 
   \rubrica{Deinde dicitur ab Hebdomadario:}
 
-  \includescore{../cantuscommunes/amon33/dominusvobiscum-solemnis.tex}
+  \includescore{\cantusCommunesAM/dominusvobiscum-solemnis.tex}
 
   \rubrica{In choro monialium loco Dominus vobiscum dicitur:}
 
-  \includescore{../cantuscommunes/amon33/domineexaudi.tex}
+  \includescore{\cantusCommunesAM/domineexaudi.tex}
 }
 
 \setlength{\columnsep}{30pt} % prostor mezi sloupci
@@ -194,7 +198,7 @@ Editio Sancti Wolfgangi 2012
 
 \label{deusinadiutorium}
 
-\includescore{../cantuscommunes/amon33/deusinadiutorium-communis.tex}
+\includescore{\cantusCommunesAM/deusinadiutorium-communis.tex}
 
 \vfill
 
@@ -206,7 +210,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{cantus/amon33/ant1.tex}
+\includescore{\cantusProprii/amon33/ant1.tex}
 
 \translatioAntI
 
@@ -227,7 +231,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
-\includescore{cantus/amon33/ant2.tex}
+\includescore{\cantusProprii/amon33/ant2.tex}
 
 \translatioAntII
 
@@ -248,7 +252,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
-\includescore{cantus/amon33/ant3.tex}
+\includescore{\cantusProprii/amon33/ant3.tex}
 
 \translatioAntIII
 
@@ -269,7 +273,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{cantus/amon33/ant4.tex}
+\includescore{\cantusProprii/amon33/ant4.tex}
 
 \translatioAntIV
 
@@ -301,7 +305,7 @@ Editio Sancti Wolfgangi 2012
 \pars{Hymnus.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I.}}}{\small \textsc{\textbf{I.}}}
-\includescore{cantus/amon33/hym-AveMarisStella.tex}
+\includescore{\cantusProprii/amon33/hym-AveMarisStella.tex}
 \psalmusEtTranslatio{cantus/amon33/hym-AveMarisStella-text.tex}{cantus/amon33/hym-AveMarisStella-bohtext.tex}
 
 \versusNativitasEst
@@ -314,12 +318,12 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I.D2}}}{\small \textsc{\textbf{I.D2}}}
-\includescore{cantus/amon33/ant-magn-vesp1.tex}
+\includescore{\cantusProprii/amon33/ant-magn-vesp1.tex}
 
 \translatioAntMagnificatI
 
 \cantusSineNeumas
-\includescore{cantus/amon33/magnificat-initium-i-D2.tex}
+\includescore{\cantusProprii/amon33/magnificat-initium-i-D2.tex}
 
 \psalmusEtTranslatioB{temporalia/magnificat-iD2.tex}{temporalia/magnificat-boh.tex}{10cm}
 
@@ -332,7 +336,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I.f}}}{\small \textsc{\textbf{I.f}}}
-\includescore{cantus/amon33/ant-magn-vesp2.tex}
+\includescore{\cantusProprii/amon33/ant-magn-vesp2.tex}
 
 \translatioAntMagnificatII
 
@@ -341,7 +345,7 @@ Editio Sancti Wolfgangi 2012
 \pagebreak 
 
 \cantusSineNeumas
-\includescore{cantus/amon33/magnificat-initium-i-f.tex}
+\includescore{\cantusProprii/amon33/magnificat-initium-i-f.tex}
 
 % maly svindl, ale prizvukova struktura Isoll-D2 a Isoll-f je stejna
 \psalmusEtTranslatio{temporalia/magnificat-iD2.tex}{temporalia/magnificat-boh.tex}
@@ -356,14 +360,14 @@ Editio Sancti Wolfgangi 2012
 % Oratio. %%%
 \pars{Oratio.}
 
-\includescore{cantus/amon33/oratio.tex}
+\includescore{\cantusProprii/amon33/oratio.tex}
 \translatioOrationis
 
 \vspace{1cm}
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
 \vspace{2mm}
 
-\includescore{../cantuscommunes/amon33/benedicamus-duplex-vesperae.tex}
+\includescore{\cantusCommunesAM/benedicamus-duplex-vesperae.tex}
 
 \vfill
 
@@ -375,7 +379,7 @@ Editio Sancti Wolfgangi 2012
 % 66 // 92, 99, 62, Dan3, 148+149+150
 
 \vspace{1cm}
-\includescore{../cantuscommunes/amon33/deusinadiutorium-communis.tex}
+\includescore{\cantusCommunesAM/deusinadiutorium-communis.tex}
 \vspace{1cm}
 
 \cantusCumNeumis
@@ -398,7 +402,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{cantus/amon33/ant1.tex}
+\includescore{\cantusProprii/amon33/ant1.tex}
 
 \translatioAntI
 
@@ -418,7 +422,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
-\includescore{cantus/amon33/ant2.tex}
+\includescore{\cantusProprii/amon33/ant2.tex}
 
 \translatioAntII
 
@@ -438,7 +442,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
-\includescore{cantus/amon33/ant3.tex}
+\includescore{\cantusProprii/amon33/ant3.tex}
 
 \translatioAntIII
 
@@ -458,7 +462,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{cantus/amon33/ant4.tex}
+\includescore{\cantusProprii/amon33/ant4.tex}
 
 \translatioAntIV
 
@@ -472,7 +476,7 @@ Editio Sancti Wolfgangi 2012
 \vspace{1cm}
 
 \hicSuntNeumae
-\includescore{cantus/amon33/ant4.tex} % repeat the antiphon - new page
+\includescore{\cantusProprii/amon33/ant4.tex} % repeat the antiphon - new page
 
 \vfill
 
@@ -482,7 +486,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
-\includescore{cantus/amon33/ant5.tex}
+\includescore{\cantusProprii/amon33/ant5.tex}
 
 \translatioAntV
 
@@ -531,7 +535,7 @@ Editio Sancti Wolfgangi 2012
 
 \pars{Hymnus.}
 
-\includescore{cantus/amon33/hym-OGloriosaDomina.tex}
+\includescore{\cantusProprii/amon33/hym-OGloriosaDomina.tex}
 \psalmusEtTranslatio{cantus/amon33/hym-OGloriosaDomina-text.tex}{cantus/amon33/hym-OGloriosaDomina-bohtext.tex}
 
 \vspace{0.5cm}
@@ -548,7 +552,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{cantus/amon33/ant-ben-laud.tex}
+\includescore{\cantusProprii/amon33/ant-ben-laud.tex}
 
 \translatioAntBenedictus
 
@@ -572,14 +576,14 @@ Editio Sancti Wolfgangi 2012
 % Oratio. %%%
 \pars{Oratio.}
 
-\includescore{cantus/amon33/oratio.tex}
+\includescore{\cantusProprii/amon33/oratio.tex}
 \translatioOrationis
 
 \vspace{1cm}
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
 \vspace{2mm}
 
-\includescore{../cantuscommunes/amon33/benedicamus-duplex-laudes.tex}
+\includescore{\cantusCommunesAM/benedicamus-duplex-laudes.tex}
 
 \vfill
 
@@ -590,7 +594,7 @@ Editio Sancti Wolfgangi 2012
 \pars{Kyrie.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I}}}{\small \textsc{\textbf{I}}}
-\includescore{../cantuscommunes/kyriale76/ix-kyrie.tex}
+\includescore{\cantusCommunesGT/ix-kyrie.tex}
 
 \vfill
 \pagebreak
@@ -598,7 +602,7 @@ Editio Sancti Wolfgangi 2012
 \pars{Gloria.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII}}}{\small \textsc{\textbf{VII}}}
-\includescore{../cantuscommunes/kyriale76/ix-gloria.tex}
+\includescore{\cantusCommunesGT/ix-gloria.tex}
 
 \vfill
 \pagebreak
@@ -606,13 +610,13 @@ Editio Sancti Wolfgangi 2012
 \pars{Sanctus.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{V}}}{\small \textsc{\textbf{V}}}
-\includescore{../cantuscommunes/kyriale76/ix-sanctus.tex}
+\includescore{\cantusCommunesGT/ix-sanctus.tex}
 
 \vspace{1cm}
 \pars{Agnus Dei.}
 
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{V}}}{\small \textsc{\textbf{V}}}
-\includescore{../cantuscommunes/kyriale76/ix-agnusdei.tex}
+\includescore{\cantusCommunesGT/ix-agnusdei.tex}
 
 \vfill
 \pagebreak
@@ -625,7 +629,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{I}}}{\small \textsc{\textbf{I}}}
-\includescore{cantus/triplex76/introitus-GaudeamusOmnes.tex}
+\includescore{\cantusProprii/triplex76/introitus-GaudeamusOmnes.tex}
 
 \translatioIntroitus
 
@@ -636,7 +640,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{IV}}}{\small \textsc{\textbf{IV}}}
-\includescore{cantus/triplex76/graduale-BenedictaEtVenerabilis.tex}
+\includescore{\cantusProprii/triplex76/graduale-BenedictaEtVenerabilis.tex}
 
 \translatioGraduale
 
@@ -647,7 +651,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VII}}}{\small \textsc{\textbf{VII}}}
-\includescore{cantus/triplex76/alleluia-SolemnitasGloriosae.tex}
+\includescore{\cantusProprii/triplex76/alleluia-SolemnitasGloriosae.tex}
 
 \translatioAlleluia
 
@@ -658,7 +662,7 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII}}}{\small \textsc{\textbf{VIII}}}
-\includescore{cantus/triplex76/offertorium-BeataEs.tex}
+\includescore{\cantusProprii/triplex76/offertorium-BeataEs.tex}
 
 \translatioOffertorium
 
@@ -668,14 +672,14 @@ Editio Sancti Wolfgangi 2012
 
 \hicSuntNeumae
 \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI}}}{\small \textsc{\textbf{VI}}}
-\includescore{cantus/triplex76/communio-BeatamMeDicent.tex}
+\includescore{\cantusProprii/triplex76/communio-BeatamMeDicent.tex}
 
 \translatioCommunio
 
 \titCapitulum{Canticum Magnificat: Luc. 1,46-47.50.51.52.53.54.55}
 
 \cantusSineNeumas
-\includescore{cantus/triplex76/communio-versus-Magnificat.tex}
+\includescore{\cantusProprii/triplex76/communio-versus-Magnificat.tex}
 
 \vspace{2cm}
 
