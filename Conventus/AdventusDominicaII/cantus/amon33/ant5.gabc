@@ -1,0 +1,15 @@
+name: Ecce Dóminus noster;
+office-part: laudes, 5. ant.;
+occasion: Dominica II Adventus;
+book: Antiphonale Monasticum 1933, pg. 197;
+mode: 3;
+initial-style: 1;
+%%
+
+% III.a
+
+(c4)
+EC(g)ce(g) Dó(hi)mi(i)nus(i') nos(i)ter(i_') *(,) 
+cum(i) vir(i')tú(j)te(h') vé(i)ni(hg)et,(g.) (;)
+ut(g) il(h)lú(j')mi(i)net(g) ó(h)cu(g)los(g_') (,) 
+ser(g)vó(g_h)rum(f') su(g)ó(f)rum,(f_d) al(e_f)le(g)lú(ge~)ia.(e.) (::)

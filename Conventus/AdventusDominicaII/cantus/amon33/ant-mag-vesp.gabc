@@ -1,0 +1,20 @@
+name: Tu es qui ventúrus es;
+office-part: vesperae, ad Magnificat ant.;
+occasion: Dominica II Adventus;
+book: Antiphonale Monasticum 1933, pg. 199;
+mode: 8;
+initial-style: 1;
+%%
+
+% VIII.G2
+
+(c4)
+TU(f_g) es(g_') *() qui(h) ven(g')tú(j)rus(ji) es,(h_') (,)
+an(j_) á(ji)li(hg)um(g_h) ex(i)spec(hi)tá(g.)mus?(g.) (:)
+Dí(j)ci(ij)te(h) Jo(gf)án(gh~)ni(h_g'/gf) quae(h) vi(hji)dís(g.)tis:(g.) (:)
+Ad(h) lu(j_')men(i) réd(jk)e(hg)unt(g') cae(h)ci,(g.) (,)
+mór(h')tu(g)i(hg) re(f)súr(gh~)gunt,(h.) (;) 
+páu(ji~)pe(j/jk)res(kj'/jvIH) e(ji)van(h)ge(hg)li(f)zán(gh~)tur,(h_') (,) 
+% here one more long transversum episema is needed over the whole
+% chant of 'le', some dirty hack will be necessary
+al(j>)le(h_iHF')lú(h>)ia.(g.) (::)
