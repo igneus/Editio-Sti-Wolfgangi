@@ -11,7 +11,8 @@ I prepare them for one specific choir, but maybe someone else can also
 use them.
 
 Each subdirectory beginning with an uppercase letter contains
-one booklet. To compile it simply run 'rake' in that subdirectory.
+one ore more booklets. (Possibly in further subdirectories.) 
+To compile it simply run 'rake' in that subdirectory.
 
 To compile the booklets you will need:
 * Ruby 1.9.* + rake
