@@ -7,9 +7,6 @@ Booklets for Roman Catholic liturgy (office + sometimes mass)
 with gregorian chant. Some with Czech translations of the Latin
 texts.
 
-I prepare them for one specific choir, but maybe someone else can also
-use them.
-
 Each subdirectory beginning with an uppercase letter contains
 one ore more booklets. (Possibly in further subdirectories.) 
 To compile it simply run 'rake' in that subdirectory.
