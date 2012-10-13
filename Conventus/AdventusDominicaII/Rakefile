@@ -1,0 +1,66 @@
+RUBY_COMMAND = 'ruby' 
+TMP_DIR = "temporalia"
+
+EDITIO_ROOTDIR = "../.."
+TOOLS_DIR = EDITIO_ROOTDIR + "/instrumenta"
+PSALMS_DIR = EDITIO_ROOTDIR + "/psalmi"
+PSALMTONES_DIR = EDITIO_ROOTDIR + "/tonipsalmorum/arom12"
+CZECH_PSALMS_DIR = EDITIO_ROOTDIR + "/bohemice_psalmi"
+COMMON_CHANTS_DIR = EDITIO_ROOTDIR + "/cantuscommunes"
+
+PSALM_PREPROCESSOR = TOOLS_DIR + "/psalmpreprocessor.rb"
+
+require "./utils_rake.rb"
+
+TONI_PSALMORUM = {
+  'I.D' => [[2,0], [1,2]],
+  'I.f' => [[2,0], [1,2]],
+  'I.D2' => [[2,0], [1,2]],
+  'I.g' => [[2,0], [1,2]],
+  'Isoll.D2' => [[1,3], [1,2]],
+  'II.D' => [[1,0], [1,1]],
+  'III.a' => [[2,0], [2,0]],
+  'IV.E' => [[1,2], [1,3]],
+  'VI.F' => [[1,1], [1,2]],
+  'VII.a' => [[2,0], [2,0]],
+  'VII.c' => [[2,0], [2,0]],
+  'VII.d' => [[2,0], [2,0]],
+  'VIII.G' => [[1,0], [1,2]],
+  'VIIIsoll.G' => [[1,3], [1,2]],
+  'per' => [[1,3], [1,1]],
+  'dir' => [[1,2], [1,0]]
+}
+
+##### End of common definitions
+
+cantus = []
+psalmi = []
+
+# zalmy (akcenty podle napevu)
+{50 => 'I.g', # k laudam
+  62 => 'VII.a',
+  150 => 'III.a'}.each_pair do |n,t|
+  
+  psalmi << genpsalm("ps#{n}.pslm", $options_common+options_accents(t))
+  # psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
+  cantus << geninitium(n, t)
+end
+
+# zalmy bez Gloria Patri
+[148, 149].each do |n|
+  psalmi << genpsalm("ps#{n}.pslm", $options_common+options_accents('III.a'))
+  # nativitas_psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
+  cantus << geninitium(n, 'III.a')
+end
+
+psalmi << genpsalm('dan3.pslm', "--accents-style bold --skip-verses 1 "+options_accents('VII.a'))
+cantus << geninitium('dan3', 'I.f')
+psalmi << genczechpsalm("dan3.pslm", $options_translation, TMP_DIR, CZECH_PSALMS_DIR+"/Pavlik/")
+
+#####
+file "adventusdominicaii.pdf" => ['adventusdominicaii.tex',
+                                  'conventuscommune.tex'] + cantus + psalmi do |t|
+  2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
+end
+
+task :default => ["adventusdominicaii.pdf"]
