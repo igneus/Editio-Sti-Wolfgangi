@@ -1,11 +1,14 @@
 % LuaLaTeX
 
 \documentclass[a4paper, twoside, 12pt]{article}
+
 \usepackage[latin]{babel} 
+\usepackage{ecclesiastic}
+
 \usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry}
 
 \usepackage{fontspec}
-\setmainfont{Junicode}
+\setmainfont[Ligatures={Common, TeX, Rare}]{Junicode}
 
 \usepackage{multicol}
 \usepackage{color}
@@ -20,6 +23,9 @@
 \usepackage{parcolumns}
 
 \input{conventuscommune.tex}
+
+% directories
+\newcommand{\cantusCommunesAM}{../../cantuscommunes/amon33}
 
 \begin{document}
 
@@ -54,11 +60,29 @@ Editio Sancti Wolfgangi 2012
 \fancyhf{}
 \pagestyle{fancy}
 
-\hora{Sabbato ad Vesperas.}
+\hora{Sabbato ad Vesperas.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagebreak
 
-\hora{Ad Laudes.}
+\hora{Ad Laudes.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{1cm}
+\includescore{\cantusCommunesAM/deusinadiutorium-communis.tex}
+\vspace{1cm}
+
+\cantusCumNeumis
+
+\pars{psalmus 1.}
+
+\scriptura{Psalmus 66.}
+
+\includescore{temporalia/ps66-initium-dir-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps66.tex}{empty.tex}
+
+\vfill
+
+\pagebreak
 
 \pars{psalmus 2.}
 
@@ -74,7 +98,24 @@ Editio Sancti Wolfgangi 2012
 
 \psalmusEtTranslatio{temporalia/ps50.tex}{empty.tex}
 
-% Todo: psalm 3: ps. 117 + ant. 2
+% \pagebreak
+\vspace{1cm}
+
+\pars{psalmus 3.}
+
+\hicSuntNeumae
+\superInitialam{VII d}
+\includescore{cantus/amon33/ant2.tex}
+
+\translatioAntI
+
+\scriptura{Psalmus 117.}
+
+\includescore{temporalia/ps117-initium-vii-d-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps117.tex}{empty.tex}
+
+\pagebreak
 
 \pars{psalmus 4.}
 
@@ -150,6 +191,75 @@ Editio Sancti Wolfgangi 2012
 
 \pagebreak
 
-\hora{Ad Vesperas.}
+\hora{Ad Vesperas.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pars{psalmus 1.}
+
+\hicSuntNeumae
+\superInitialam{I g}
+\includescore{cantus/amon33/ant1.tex}
+
+\translatioAntI
+
+\scriptura{Psalmus 109.}
+
+\includescore{temporalia/ps109-initium-i-g-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps109.tex}{empty.tex}
+
+\vfill
+
+\pagebreak
+
+\pars{psalmus 2.}
+
+\hicSuntNeumae
+\superInitialam{VII d}
+\includescore{cantus/amon33/ant2.tex}
+
+\translatioAntI
+
+\scriptura{Psalmus 110.}
+
+\includescore{temporalia/ps110-initium-vii-d-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps110.tex}{empty.tex}
+
+\vfill
+
+\pagebreak
+
+\pars{psalmus 3.}
+
+\hicSuntNeumae
+\superInitialam{VII a}
+\includescore{cantus/amon33/ant3.tex}
+
+\translatioAntI
+
+\scriptura{Psalmus 111.}
+
+\includescore{temporalia/ps111-initium-vii-a-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps111.tex}{empty.tex}
+
+\pagebreak
+
+\pars{psalmus 4.}
+
+\hicSuntNeumae
+\superInitialam{I f}
+\includescore{cantus/amon33/ant4.tex}
+
+\translatioAntIV
+
+\scriptura{Psalmus 112.}
+
+\includescore{temporalia/ps112-initium-i-f-auto.tex}
+
+\psalmusEtTranslatioB{temporalia/ps112.tex}{empty.tex}{10cm} 
+
+\vfill
+
 
 \end{document}

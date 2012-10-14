@@ -37,9 +37,15 @@ cantus = []
 psalmi = []
 
 # zalmy (akcenty podle napevu)
-{50 => 'I.g', # k laudam
+{66 => 'dir',
+  50 => 'I.g', # k laudam
+  117 => 'VII.d',
   62 => 'VII.a',
-  150 => 'III.a'}.each_pair do |n,t|
+  150 => 'III.a',
+  109 => 'I.g', # k nesporam
+  110 => 'VII.d',
+  111 => 'VII.a',
+  112 => 'I.f'}.each_pair do |n,t|
   
   psalmi << genpsalm("ps#{n}.pslm", $options_common+options_accents(t))
   # psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
