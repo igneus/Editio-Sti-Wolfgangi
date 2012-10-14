@@ -37,8 +37,13 @@ cantus = []
 psalmi = []
 
 # zalmy (akcenty podle napevu)
-{66 => 'dir',
-  50 => 'I.g', # k laudam
+{
+  'ps144ii' => 'I.g', # k sobotnim nesporam
+  145 => 'VII.d',
+  146 => 'VII.a',
+  147 => 'I.f',
+  66 => 'dir',# k laudam
+  50 => 'I.g', 
   117 => 'VII.d',
   62 => 'VII.a',
   150 => 'III.a',
