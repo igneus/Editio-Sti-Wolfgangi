@@ -264,10 +264,67 @@ psalmody.initium.each_with_index do |n,i|
   end
 end
 
+## flex
 if verse.has_flex? then
-  raise "Finish the script first! This functionality is still missing."
+  parttext = verse.first
+  partmelody = psalmody.flex
+  last_tenor_syl = parttext.accent_pos(1) - 2 
+
+  text_i.upto(last_tenor_syl) do |i|
+    text_i = i
+    s = parttext.syllables[text_i]
+    if s == ' ' then
+      of.print " "
+      next
+    else
+      of.print strip_square_brackets s
+      of.print partmelody[0] # tenor note
+    end
+  end
+  text_i += 1
+
+  melody_i += 1
+  3.times do |j|
+    unless parttext.syllables[text_i]
+      break
+    end
+      
+    s = parttext.syllables[text_i]
+    if s == ' ' then
+      text_i += 1
+      of.print " "
+      redo
+    end
+        
+    if j == 1 && 
+        (parttext.syllables[text_i+1].nil? || 
+         ! parttext.next_nonempty_syl(text_i) ||
+         parttext.next_nonempty_syl(text_i)[0] == '[') then
+      # no superfluous syllable
+      if parttext.syllables[text_i-1] == ' ' then
+        of.print " "
+      else
+        of.print " -"
+      end
+      of.print partmelody[melody_i]+" "
+      melody_i += 1
+      next
+    end
+      
+    of.print "<b>" if j == 0
+    of.print strip_square_brackets(s)
+    of.print "</b>" if j == 0
+    of.print partmelody[melody_i]
+    melody_i += 1
+    text_i += 1
+  end
+
+  of.puts "+(,)"
+
+  text_i = 0
 end
 
+## mediatio & terminatio
 [:afterflex, :last].each do |versepart|
 
   parttext = verse.send versepart
