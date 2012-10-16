@@ -1,1 +1,9 @@
-* initium.rb a vsechny datove soubory: r misto r0
+* Deus in adiutorium
+* capitulum
+* hymny
+* vers
+* Magnificat, Benedictus
+* oratio
+* poskladat zaver
+
+* initium.rb: u napevu jako I.D2 a III.* delat zavorku automaticky
