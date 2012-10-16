@@ -16,8 +16,6 @@ To compile the booklets you will need:
 * gregorio (tested with gregorio 2.0)
 * LuaLaTeX (tested with TeXLive 2012)
 * Junicode font
-* and psalmpreprocessor.rb - a cute tool from my project In-adiutorium
-  (later I will include it's copy here too)
 
 License: texts and chants are taken from liturgical books older than 70 years
 (unless specified otherwise) and are thus (as long as I know) public domain.
