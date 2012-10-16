@@ -38,7 +38,7 @@ psalmi = []
 
 # zalmy (akcenty podle napevu)
 {
-  'ps144ii' => 'I.g', # k sobotnim nesporam
+  '144ii' => 'I.g', # k sobotnim nesporam
   145 => 'VII.d',
   146 => 'VII.a',
   147 => 'I.f',
@@ -54,7 +54,7 @@ psalmi = []
   
   psalmi << genpsalm("ps#{n}.pslm", $options_common+options_accents(t))
   # psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
-  cantus << geninitium(n, t)
+  cantus << geninitium("ps#{n}", t)
 end
 
 # zalmy bez Gloria Patri
