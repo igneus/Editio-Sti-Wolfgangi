@@ -1,7 +1,3 @@
-* Deus in adiutorium
-* capitulum
-* hymny
-* vers
 * Magnificat, Benedictus
 * oratio
 * poskladat zaver
