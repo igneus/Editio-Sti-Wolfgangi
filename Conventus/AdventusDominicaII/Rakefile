@@ -35,7 +35,6 @@ TONI_PSALMORUM = {
 
 cantus = []
 psalmi = []
-hymni = []
 
 # zalmy (akcenty podle napevu)
 {
@@ -81,14 +80,18 @@ psalmi << genczechpsalm("dan3.pslm", $options_translation, TMP_DIR, CZECH_PSALMS
     sh "#{RUBY_COMMAND} ../../instrumenta/hymnographus.rb #{t.prerequisites[1]} #{t.prerequisites[0]} #{t.name}"
   end
 
-  hymni << gregorio("temporalia/"+out)
+  cantus << gregorio("temporalia/"+out)
 end
+
+# other chants
+cantus << gregorio("cantus/amon33/oratio.gabc")
+cantus << gregorio("../../cantuscommunes/amon33/benedicamus-dominica-advequad.gabc")
 
 #####
 file "adventusdominicaii.pdf" => ['adventusdominicaii.tex',
                                   'conventuscommune.tex',
                                   'translationes.tex',
-                                  'textusrepetiti.tex'] + cantus + psalmi + hymni do |t|
+                                  'textusrepetiti.tex'] + cantus + psalmi do |t|
   2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
 end
 

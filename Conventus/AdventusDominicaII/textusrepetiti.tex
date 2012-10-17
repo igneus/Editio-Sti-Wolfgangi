@@ -38,14 +38,14 @@
 }
 
 \newcommand{\hymnusAdVesperas}{
-  \pars{Hymnus}
+  \pars{Hymnus.}
 
   \superInitialam{IV}
   \includescore{temporalia/hymnus-ConditorAlme.tex}
 }
 
 \newcommand{\hymnusAdLaudes}{
-  \pars{Hymnus}
+  \pars{Hymnus.}
 
   % no mode info in AM1933
   \includescore{temporalia/hymnus-VoxClara.tex}
@@ -83,5 +83,29 @@
 }
 
 \newcommand{\oratioDiei}{
+  \pars{Oratio.}
 
+  \includescore{cantus/amon33/oratio.tex}
+}
+
+\newcommand{\benedicamusDomino}{
+  \includescore{\cantusCommunesAM/benedicamus-dominica-advequad.tex}
+}
+
+\newcommand{\inFineHorarum}{
+  \pars{In fine horarum.}
+
+  \rubrica{Post \textnormal{Benedicamus Domino} dicitur voce recta
+  et paululum depressa:}
+
+  \includescore{\cantusCommunesAM/fideliumanimae.tex}
+
+  Pater noster \rubrica{totum secreto. Deinde, si discedendum est a Choro:}
+
+  \includescore{\cantusCommunesAM/dominusdet.tex}
+
+  \rubrica{Tunc dicitur Antiphona B.M.V. pro tempore,
+  cum ℣. et Oratione in Tono simplici. Deinde:}
+
+  \includescore{\cantusCommunesAM/divinumauxilium.tex}
 }
