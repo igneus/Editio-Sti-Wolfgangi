@@ -11,17 +11,6 @@
 \newcommand{\antiphonaV}{
   \antiphona{III a}{cantus/amon33/ant5.tex}{\translatioAntV}}
 
-\newcommand{\versiculusDiei}{
-  \pars{Versus.}
-
-  % Versus. %%%
-    \includescore{cantus/amon33/versus-voxclamantis.tex}
-    % \vspace{-5mm}
-    \noindent ℟.\hspace{0.5mm}Rectas fácite sémitas e\textit{jus.}
-    
-    \noindent \translatioVersus
-}
-
 \newcommand{\capitulumDiei}{
   \pars{Capitulum.} \titCapitulum{Rom. 15,4.}
 
@@ -46,6 +35,31 @@
   \includescore{cantus/amon33/resp-laud.tex}
 
   \translatioRespVesp
+}
+
+\newcommand{\hymnusAdVesperas}{
+  \pars{Hymnus}
+
+  \superInitialam{IV}
+  \includescore{temporalia/hymnus-ConditorAlme.tex}
+}
+
+\newcommand{\hymnusAdLaudes}{
+  \pars{Hymnus}
+
+  % no mode info in AM1933
+  \includescore{temporalia/hymnus-VoxClara.tex}
+}
+
+\newcommand{\versiculusDiei}{
+  \pars{Versiculus.}
+
+  % Versus. %%%
+    \includescore{cantus/amon33/versus-voxclamantis.tex}
+    % \vspace{-5mm}
+    \noindent ℟.\hspace{0.5mm}Rectas fácite sémitas e\textit{jus.}
+    
+    \noindent \translatioVersus
 }
 
 \newcommand{\anteOrationem}{

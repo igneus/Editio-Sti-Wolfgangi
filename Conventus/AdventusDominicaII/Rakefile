@@ -35,6 +35,7 @@ TONI_PSALMORUM = {
 
 cantus = []
 psalmi = []
+hymni = []
 
 # zalmy (akcenty podle napevu)
 {
@@ -68,11 +69,26 @@ psalmi << genpsalm('dan3.pslm', "--accents-style bold --skip-verses 1 "+options_
 cantus << geninitium('dan3', 'I.f')
 psalmi << genczechpsalm("dan3.pslm", $options_translation, TMP_DIR, CZECH_PSALMS_DIR+"/Pavlik/")
 
+[['textushymni-ConditorAlme.txt', 'musica-ConditorAlme.gabc'],
+ ['textushymni-VoxClara.txt', 'musica-VoxClara.gabc']].each do |h|
+  textus = h[0]
+  musica = h[1]
+  i = textus.index '-'
+  ii = textus.index '.'
+  out = "hymnus-"+textus[i+1..ii-1]+".gabc"
+
+  file "temporalia/"+out => ['cantus/amon33/'+textus, 'cantus/amon33/'+musica, '../../instrumenta/hymnographus.rb'] do |t|
+    sh "#{RUBY_COMMAND} ../../instrumenta/hymnographus.rb #{t.prerequisites[1]} #{t.prerequisites[0]} #{t.name}"
+  end
+
+  hymni << gregorio("temporalia/"+out)
+end
+
 #####
 file "adventusdominicaii.pdf" => ['adventusdominicaii.tex',
                                   'conventuscommune.tex',
                                   'translationes.tex',
-                                  'textusrepetiti.tex'] + cantus + psalmi do |t|
+                                  'textusrepetiti.tex'] + cantus + psalmi + hymni do |t|
   2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
 end
 
