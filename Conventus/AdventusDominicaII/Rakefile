@@ -86,6 +86,8 @@ end
 # other chants
 cantus << gregorio("cantus/amon33/oratio.gabc")
 cantus << gregorio("../../cantuscommunes/amon33/benedicamus-dominica-advequad.gabc")
+cantus << gregorio("../../cantuscommunes/amon33/an_alma_redemptoris_mater.gabc")
+cantus << gregorio("../../cantuscommunes/amon33/oratio-AlmaRedemptorisAdvent.gabc")
 
 #####
 file "adventusdominicaii.pdf" => ['adventusdominicaii.tex',
