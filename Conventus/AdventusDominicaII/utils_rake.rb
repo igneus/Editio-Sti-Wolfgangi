@@ -1,7 +1,7 @@
 def genpsalm_universal(zalm, options="", output_dir, input_dir)
   wd = Dir.pwd
   syrovy = input_dir+"/"+zalm
-  peceny = output_dir+zalm.gsub(/\.pslm/, '')+'.tex'
+  peceny = output_dir+'/'+zalm.gsub(/\.pslm/, '')+'.tex'
   file peceny => [syrovy, PSALM_PREPROCESSOR] do
     chdir output_dir
     sh "#{RUBY_COMMAND} ../#{PSALM_PREPROCESSOR} #{options} ../#{syrovy}"
