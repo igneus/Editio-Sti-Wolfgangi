@@ -1,6 +1,8 @@
 # hymnographus.rb MELODYFILE.gabc TEXTFILE.txt [OUTPUTFILE]
 
 class HymnMelody
+  NOTES = %w(a b c d e f g h i j k l m n)
+
   def initialize
     @lines = []
     @key = nil
@@ -8,6 +10,28 @@ class HymnMelody
 
   attr_reader :lines
   attr_accessor :key
+
+  def final
+    last_neume = lines.last[-2]
+    i = last_neume.size - 1
+    while ! NOTES.include?(last_neume[i].downcase) do
+      i -= 1
+      if i <= 0 then
+        raise "Final note not found in last neume '#{last_neume}'."
+      end
+    end
+    return last_neume[i]
+  end
+
+  # amen melody in gregorio notation
+  def amen
+    f = NOTES.index(self.final)
+    if f == nil then
+      raise "Invalid final '#{self.final}'."
+    end
+
+    return "A("+NOTES[f]+NOTES[f+1]+NOTES[f]+")men.("+NOTES[f-1]+"."+NOTES[f]+".)"
+  end
 
   def HymnMelody.load(filename)
     m = HymnMelody.new
@@ -151,9 +175,14 @@ text = HymnText.load textfile
 
 of.puts "%%"
 of.puts melody.key
-text.stanzas.each do |s|
-  of.puts s.set(melody)
+text.stanzas.each_with_index do |s,si|
+  of.print s.set(melody)
+  if si != text.stanzas.size - 1 then
+    of.puts " (z)"
+  end
   of.puts
 end
+
+of.puts melody.amen+" (::)"
 
 of.close
