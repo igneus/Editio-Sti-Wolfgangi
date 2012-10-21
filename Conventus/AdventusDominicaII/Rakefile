@@ -29,6 +29,7 @@ TONI_PSALMORUM = {
   'VIIsoll.a' => [[2,0], [2,0]],
   'VIII.G' => [[1,0], [1,2]],
   'VIIIsoll.G' => [[1,3], [1,2]],
+  'VIIIsoll.G2' => [[1,3], [1,2]],
   'per' => [[1,3], [1,1]],
   'dir' => [[1,2], [1,0]]
 }
@@ -72,6 +73,7 @@ psalmi << genczechpsalm("dan3.pslm", $options_translation, TMP_DIR, CZECH_PSALMS
 
 # Benedictus & Magnificat
 psalmi << genzalmsuff("magnificat.pslm", $options_magnificat+options_accents('VIIsoll.a'), 'vii-a')
+psalmi << genzalmsuff("magnificat.pslm", $options_magnificat+options_accents('VIIIsoll.G2'), 'viii-g2')
 psalmi << genzalmsuff("benedictus.pslm", $options_common+options_accents('Isoll.g'), 'i-g')
 
 psalmi << genczechpsalm("magnificat.pslm", $options_translation, TMP_DIR, CZECH_PSALMS_DIR+"/DMC199x/")
@@ -82,6 +84,7 @@ cantus << geninitium('benedictus', 'Isoll.g')
 
 # Magnificat - notated initium
 cantus << gregorio("../../tonipsalmorum/arom12/magnificat-initium-vii-a.gabc")
+cantus << gregorio("../../tonipsalmorum/arom12/magnificat-initium-viii-G2.gabc")
 
 # hymns
 [['textushymni-ConditorAlme.txt', 'musica-ConditorAlme.gabc'],
@@ -104,6 +107,10 @@ cantus << gregorio("cantus/amon33/oratio.gabc")
 cantus << gregorio("../../cantuscommunes/amon33/benedicamus-dominica-advequad.gabc")
 cantus << gregorio("../../cantuscommunes/amon33/an_alma_redemptoris_mater.gabc")
 cantus << gregorio("../../cantuscommunes/amon33/oratio-AlmaRedemptorisAdvent.gabc")
+
+(Dir['cantus/amon33/ant*.gabc'] + Dir['cantus/amon33/resp*.gabc']).each do |c|
+  cantus << gregorio(c)
+end
 
 #####
 file "adventusdominicaii.pdf" => ['adventusdominicaii.tex',
