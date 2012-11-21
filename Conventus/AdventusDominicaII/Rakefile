@@ -56,14 +56,14 @@ psalmi = []
   112 => 'I.f'}.each_pair do |n,t|
   
   psalmi << genpsalm("ps#{n}.pslm", $options_common+options_accents(t))
-  # psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
+  psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
   cantus << geninitium("ps#{n}", t)
 end
 
 # zalmy bez Gloria Patri
 [148, 149].each do |n|
   psalmi << genpsalm("ps#{n}.pslm", $options_common+options_accents('III.a'))
-  # psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
+  psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
   cantus << geninitium(n, 'III.a')
 end
 
