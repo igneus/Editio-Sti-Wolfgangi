@@ -188,7 +188,18 @@ class PsalmodicPattern
   
     def preparatory_syls
       first_accent = self.index {|n| n.index 'r1' }
-      return first_accent - 1 # the first note is tenor, but the array are indexed from 0
+      if movable_accent? then
+        return first_accent - 2
+      else 
+        return first_accent - 1 # the first note is tenor, but the array are indexed from 0
+      end
+    end
+
+    # says if the last accent is movable,
+    # like in the mediation III.* and termination I.D2
+    def movable_accent?
+      # accent on the 2nd last (instead of 3rd last) syllable?
+      self[-3].include? 'r1'
     end
   end
 
@@ -377,6 +388,7 @@ end
   end
     
   ## end-cadence
+
   partmelody.accents.times do |i|
     3.times do |j|
       unless parttext.syllables[text_i]
@@ -390,7 +402,6 @@ end
         redo
       end
         
-      # if partmelody[melody_i].index('r0') && s[0] == '[' then
       if j == 1 && 
           (parttext.syllables[text_i+1].nil? || 
            ! parttext.next_nonempty_syl(text_i) ||
@@ -401,7 +412,20 @@ end
         else
           of.print " -"
         end
-        of.print partmelody[melody_i]+" "
+
+        neume = partmelody[melody_i].dup
+
+        # tones with a movable accent: remove the accent indication,
+        # add the accent indication with a curly bracket
+        if partmelody.movable_accent? && i == partmelody.accents - 1 then
+          if j == 0 then
+            neume.gsub! 'r', 'r[ocba:1;4mm]'
+          elsif j == 1 then
+            neume.gsub! 'r1', ''
+          end
+        end
+
+        of.print neume+" "
         melody_i += 1
         next
       end
@@ -409,7 +433,20 @@ end
       of.print "<b>" if j == 0
       of.print strip_square_brackets(s)
       of.print "</b>" if j == 0
-      of.print partmelody[melody_i]
+
+      neume = partmelody[melody_i].dup
+
+      # tones with a movable accent: remove the accent indication,
+      # add the accent indication with a curly bracket
+      if partmelody.movable_accent? && i == partmelody.accents - 1 then
+        if j == 0 then
+          neume.gsub! 'r', 'r[ocba:1;4mm]'
+        elsif j == 1 then
+          neume.gsub! 'r1', ''
+        end
+      end
+
+      of.print neume
       melody_i += 1
       text_i += 1
     end
