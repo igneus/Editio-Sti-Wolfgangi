@@ -19,8 +19,6 @@ def genczechpsalm(zalm, options="", output_dir=TMP_DIR, input_dir=CZECH_PSALMS_D
   ofop = "--output "+of+" "
   wd = Dir.pwd
   syrovy = input_dir+zalm
-  of = zalm.gsub(".pslm", "-boh.tex")
-  ofop = "--output "+of+" "
   file output_dir+of => [syrovy, PSALM_PREPROCESSOR] do
     chdir output_dir
     sh "#{RUBY_COMMAND} ../#{PSALM_PREPROCESSOR} #{ofop} #{options} ../#{syrovy}"
