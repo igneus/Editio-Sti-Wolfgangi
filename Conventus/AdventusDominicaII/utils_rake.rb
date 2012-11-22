@@ -19,12 +19,13 @@ def genczechpsalm(zalm, options="", output_dir=TMP_DIR, input_dir=CZECH_PSALMS_D
   ofop = "--output "+of+" "
   wd = Dir.pwd
   syrovy = input_dir+zalm
-  file output_dir+of => [syrovy, PSALM_PREPROCESSOR] do
+  of_fullpath = output_dir+'/'+of
+  file of_fullpath => [syrovy, PSALM_PREPROCESSOR] do
     chdir output_dir
     sh "#{RUBY_COMMAND} ../#{PSALM_PREPROCESSOR} #{ofop} #{options} ../#{syrovy}"
     chdir wd
   end
-  return output_dir+of
+  return of_fullpath
 end
 
 def genzalmsuff(zalm, options="", suff="aaa", adresar=TMP_DIR)
