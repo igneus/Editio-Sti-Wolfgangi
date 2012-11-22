@@ -24,6 +24,7 @@
 \usepackage{gregoriotex} % for gregorio score inclusion
 \usepackage{gregoriosyms}
 \usepackage{parcolumns}
+\usepackage{multicol}
 
 \input{conventuscommune.tex}
 \input{translationes_cs.tex}
@@ -166,6 +167,12 @@ persólvo.
 \responsoriumAdVesperas
 
 \vfill
+
+% translation of the hymn (on the facing page)
+\begin{multicols}{3}
+\nlfont
+\translatioHymnusVesp
+\end{multicols}
 
 \pagebreak
 
@@ -323,7 +330,12 @@ persólvo.
 
 \hymnusAdLaudes
 
-\vfill
+\begin{multicols}{5}
+\nlfont
+\translatioHymnusLaud
+\end{multicols}
+
+%\vfill
 
 \versiculusDiei
 
@@ -419,6 +431,12 @@ persólvo.
 
 \vfill
 
+% translation of the hymn (on the facing page)
+\begin{multicols}{3}
+\nlfont
+\translatioHymnusVesp
+\end{multicols}
+
 \pagebreak
 
 \hymnusAdVesperas
@@ -454,6 +472,8 @@ persólvo.
 \pagebreak
 
 \oratioDiei
+
+\translatioOrationis
 
 \benedicamusDomino
 
