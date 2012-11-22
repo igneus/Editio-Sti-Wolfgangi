@@ -112,7 +112,7 @@ persólvo.
 
 \includescore{temporalia/ps144ii-initium-i-g-auto.tex}
 
-\psalmusEtTranslatio{temporalia/ps144ii.tex}{temporalia/ps144ii-boh.tex}
+\psalmusEtTranslatioB{temporalia/ps144ii.tex}{temporalia/ps144ii-boh.tex}{11cm}
 
 \vfill
 
@@ -126,7 +126,7 @@ persólvo.
 
 \includescore{temporalia/ps145-initium-vii-d-auto.tex}
 
-\psalmusEtTranslatio{temporalia/ps145.tex}{temporalia/ps145-boh.tex}
+\psalmusEtTranslatioB{temporalia/ps145.tex}{temporalia/ps145-boh.tex}{10cm}
 
 \vfill
 
@@ -140,7 +140,7 @@ persólvo.
 
 \includescore{temporalia/ps146-initium-vii-a-auto.tex}
 
-\psalmusEtTranslatio{temporalia/ps146.tex}{temporalia/ps146-boh.tex}
+\psalmusEtTranslatioB{temporalia/ps146.tex}{temporalia/ps146-boh.tex}{11cm}
 
 \vfill
 
@@ -232,9 +232,10 @@ persólvo.
 
 \includescore{temporalia/ps50-initium-i-g-auto.tex}
 
-\psalmusEtTranslatio{temporalia/ps50.tex}{temporalia/ps50-boh.tex}
+\psalmusEtTranslatioB{temporalia/ps50.tex}{temporalia/ps50-boh.tex}{12cm}
 
-\pagebreak
+% \pagebreak
+\vspace{5mm}
 
 \pars{psalmus 3.}
 
@@ -244,7 +245,7 @@ persólvo.
 
 \includescore{temporalia/ps117-initium-vii-d-auto.tex}
 
-\psalmusEtTranslatio{temporalia/ps117.tex}{temporalia/ps117-boh.tex}
+\psalmusEtTranslatioB{temporalia/ps117.tex}{temporalia/ps117-boh.tex}{11cm}
 
 \pagebreak
 
@@ -273,6 +274,9 @@ persólvo.
 \psalmusEtTranslatioB{temporalia/dan3.tex}{temporalia/dan3-boh.tex}{10cm} % Canticum trium
 
 \rubrica{Hic non dicitur Gloria Patri, neque Amen.}
+
+% page break occured - repeat the antiphon
+\antiphona{}{cantus/amon33/ant4.tex}{}
 
 \vfill
 
@@ -313,6 +317,11 @@ persólvo.
 \includescore{temporalia/ps150-initium-iii-a-auto.tex}
 
 \psalmusEtTranslatioB{temporalia/ps150.tex}{temporalia/ps150-boh.tex}{\psVItransW}
+
+% repeat the antiphon (to prevent turning a page back),
+% but without the tone info (this is normal in the antiphonaries)
+% and without a translation (which would not fit in the page)
+\antiphona{}{cantus/amon33/ant5.tex}{}
 
 \vfill
 
@@ -361,9 +370,9 @@ persólvo.
 
 \hora{Ad Vesperas.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{1cm}
+\vspace{5mm}
 \includescore{\cantusCommunesAM/deusinadiutorium-communis.tex}
-\vspace{1cm}
+\vspace{5mm}
 
 \cantusCumNeumis
 
@@ -375,7 +384,7 @@ persólvo.
 
 \includescore{temporalia/ps109-initium-i-g-auto.tex}
 
-\psalmusEtTranslatio{temporalia/ps109.tex}{temporalia/ps109-boh.tex}
+\psalmusEtTranslatioB{temporalia/ps109.tex}{temporalia/ps109-boh.tex}{9.5cm}
 
 \vfill
 
@@ -389,7 +398,7 @@ persólvo.
 
 \includescore{temporalia/ps110-initium-vii-d-auto.tex}
 
-\psalmusEtTranslatio{temporalia/ps110.tex}{temporalia/ps110-boh.tex}
+\psalmusEtTranslatioB{temporalia/ps110.tex}{temporalia/ps110-boh.tex}{10cm}
 
 \vfill
 
@@ -403,7 +412,7 @@ persólvo.
 
 \includescore{temporalia/ps111-initium-vii-a-auto.tex}
 
-\psalmusEtTranslatio{temporalia/ps111.tex}{temporalia/ps111-boh.tex}
+\psalmusEtTranslatioB{temporalia/ps111.tex}{temporalia/ps111-boh.tex}{10cm}
 
 \vfill
 
@@ -478,5 +487,57 @@ persólvo.
 \benedicamusDomino
 
 \inFineHorarum
+
+\pagebreak
+
+% colophon
+\pagestyle{empty}
+
+Fontes. 
+Textus et cantus officii divini secundum 
+Antiphonale Monasticum, Solesmis~1933. /
+%Textus et cantus missae secundum
+%Graduale triplex, Solesmis 1979. /
+Translationes psalmorum ex
+Hejčl Jan: Žaltář čili Kniha žalmů, Praha~1922.
+
+Collaborantes.
+Textus latinos cantusque transcripsit et omnem laborem typographicum peregit
+Jakub Pavlík. /
+Proprios cantus festi in linguam bohemicam Václav Ondráček transtulit. /
+Psalmos in lingua bohemica de libro supra dicto transcripsit
+Barbora Maturová. /
+Filip Srovnal librum istum praeparare mandavit et laborem exprobrationibus
+utilissimis comitabatur. /
+Imaginem, quae paginam tituli ornat, Klára Jirsová pinxit.
+
+Instrumenta adhibita.
+LuaTeX, %http://www.luatex.org / 
+Gregorio, %http://home.gna.org/gregorio /
+typi Junicode. %http://junicode.sourceforge.net
+
+\begin{center}
+Liber hic imprimis ad usum chori 
+\guillemotright Conventus Choralis\guillemotleft\ 
+paratus est
+et secundum eius consuetudines.
+http://www.introitus.cz
+
+\vspace{1cm}
+
+{\large Editio Sancti Wolfgangi 2012.}
+
+\vspace{2mm}
+
+Series \guillemotright Conventus\guillemotleft, vol. II.
+
+\vspace{1cm}
+
+http://stiwolfgangi.xf.cz
+
+\end{center}
+
+\vfill
+
 
 \end{document}
