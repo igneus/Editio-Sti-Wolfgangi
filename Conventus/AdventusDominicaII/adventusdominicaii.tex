@@ -9,7 +9,9 @@
 
 \usepackage{fontspec}
 \setmainfont[Ligatures={Common, TeX, Rare}]{Junicode}
-\setsansfont{CMU Sans Serif}
+
+% shortcut for Junicode without ligatures (for the Czech texts)
+\newfontfamily\nlfont[Ligatures={Common, TeX}]{Junicode}
 
 \usepackage{multicol}
 \usepackage{color}

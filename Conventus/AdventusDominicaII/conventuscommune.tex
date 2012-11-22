@@ -25,7 +25,7 @@
 \newcommand{\scriptura}[1]{\hfill \small\textit{#1}}
 
 \newcommand{\translatioCantus}[1]{\vspace{1mm}%
-{\noindent\footnotesize \sffamily{#1}}}
+{\noindent\footnotesize \nlfont{#1}}}
 
 % pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
 % s prekladem
@@ -33,7 +33,7 @@
   \vspace{0.5cm}
   \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
     \colchunk{\input{#1}}
-    \colchunk{\vspace{-0.5cm}{\footnotesize \input{#2}}}
+    \colchunk{\vspace{-0.5cm}{\footnotesize \nlfont\input{#2}}}
   \end{parcolumns}
 }
 
