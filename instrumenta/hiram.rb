@@ -13,7 +13,18 @@
 # filename specified), build and execute Rake rules according to its
 # description.
 
+require 'yaml'
+require 'rake'
 
+module Hiram
+end
+
+editio_instrumenta_dir = File.dirname __FILE__
+
+require editio_instrumenta_dir+'/hiram/taskgenerator.rb'
+require editio_instrumenta_dir+'/hiram/hiramfile.rb'
+
+include Hiram
 
 ### Read arguments
 
@@ -28,55 +39,8 @@ end
 
 ### Read the project description file
 
-require 'yaml'
-
-# Wraps a YAML document and provides a clever interface to it's expected
-# contents
-class HiramFile
-  def initialize(fname)
-    @yaml = YAML.load(File.open(fname))
-  end
-
-  def main
-    return @yaml['main']
-  end
-
-  def main?
-    self.main != nil
-  end
-
-  def moretex
-    return @yaml['moretex']
-  end
-
-  def moretex?
-    @yaml.has_key?('moretex') && @yaml['moretex'].is_a?(Array)
-  end
-
-  def chants
-    chs = []
-    # expand wildcards
-    @yaml['chants'].each do |c|
-      if c.index '*' then
-        chs += Dir[c]
-      else
-        chs << c
-      end
-    end
-
-    return chs
-  end
-
-  def chants?
-    self.chants != nil
-  end
-end
-
 proj = HiramFile.new hiramfile
-
-### Start building rake rules
-
-require 'rake'
+taskgen = TaskGenerator.new
 
 ### Chants
 
@@ -89,10 +53,36 @@ if proj.chants? then
     chant_targets << c_t
 
     task_c = file c_t => [c] do |t|
-      sh "gregorio #{t.prerequisites.first}"
+      gregorio t.prerequisites.first
     end
 
-    task_c.invoke
+    # task_c.invoke
+  end
+end
+
+### Psalms - text pointing, initia
+
+initia_targets = []
+psalms_targets = []
+
+proj.psalms.each_pair do |psalm, tone|
+  if psalm.is_a? Fixnum then
+    psfname = 'ps' + psalm.to_s + '.pslm'
+  else
+    psfname = psalm + '.pslm'
+  end
+
+  options = taskgen.default_psalm_options + options_accents(tone)
+  if psalm == 'magnificat' then
+    options.gsub! "--skip-verses 1", "--skip-verses 2"
+  end
+
+  psalms_targets << taskgen.genpsalm(psfname, options)
+
+  psalms_targets << taskgen.genczechpsalm(psfname)
+
+  if psalm != 'magnificat' then
+    initia_targets << taskgen.geninitium(psfname, tone)
   end
 end
 
@@ -102,7 +92,7 @@ if proj.main? then
   maintex = proj.main
   maintex_target = maintex.gsub /\.tex$/, '.pdf'
 
-  maindeps = [maintex] + chant_targets
+  maindeps = [maintex] + chant_targets + initia_targets + psalms_targets
 
   if proj.moretex? then
     maindeps += proj.moretex
@@ -117,5 +107,7 @@ if proj.main? then
   rescue RuntimeError => re
     STDERR.puts
     STDERR.puts "build ERROR: "+re.message
+    STDERR.puts
+    # Rake::Task.tasks.each {|t| p t }
   end
 end
