@@ -1,0 +1,208 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside, 12pt]{article}
+
+\usepackage[latin]{babel} 
+\usepackage{ecclesiastic}
+
+\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common, TeX, Rare}]{Junicode}
+
+% shortcut for Junicode without ligatures (for the Czech texts)
+\newfontfamily\nlfont[Ligatures={Common, TeX}]{Junicode}
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{gregoriosyms}
+\usepackage{parcolumns}
+\usepackage{multicol}
+
+\input{conventuscommune.tex}
+\input{translationes_cs.tex}
+\input{textusrepetiti.tex}
+
+% directories
+\newcommand{\ccommunesAM}{../../cantuscommunes/amon33}
+\newcommand{\ccommunesAR}{../../cantuscommunes/arom12}
+
+\begin{document}
+
+% GREGORIO general settings:
+% space around the initial.
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+% initial font. 
+\def\greinitialformat#1{%
+{\fontsize{43}{43}\selectfont #1}%
+}
+
+\pagestyle{empty}
+
+%%%% Titulni stranka
+\begin{titulusOfficii}
+\nomenFesti{Officium Parvum Beatæ Mariæ Virginis.}
+\end{titulusOfficii}
+
+\vfill
+
+\begin{center}
+Ad usum et secundum consuetudines chori \guillemotright Conventus Choralis\guillemotleft.
+
+Editio Sancti Wolfgangi 2012
+\end{center}
+
+\pagebreak
+
+\renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
+\fancyhf{}
+\pagestyle{fancy}
+
+In Adventu.
+
+\hora{Ad Vesperas.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{1cm}
+\includescore{\ccommunesAR/deusinadiutorium-ferialis.tex}
+\vspace{1cm}
+
+\vfill
+
+\pagebreak
+
+\cantusCumNeumis
+
+\pars{psalmus 1.}
+
+\antiphonaI
+
+\scriptura{Psalmus 109.}
+
+\includescore{temporalia/ps109-initium-viii-G-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps109.tex}{temporalia/ps109-boh.tex}
+
+\vfill
+
+\pagebreak
+
+\cantusCumNeumis
+
+\pars{psalmus 2.}
+
+\antiphonaII
+
+\scriptura{Psalmus 112.}
+
+\includescore{temporalia/ps112-initium-i-g-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps112.tex}{temporalia/ps112-boh.tex}
+
+\vfill
+
+\pagebreak
+
+\cantusCumNeumis
+
+\pars{psalmus 3.}
+
+\antiphonaIII
+
+\scriptura{Psalmus 121.}
+
+\includescore{temporalia/ps121-initium-viii-G-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps121.tex}{temporalia/ps121-boh.tex}
+
+\vfill
+
+\pagebreak
+
+\cantusCumNeumis
+
+\pars{psalmus 4.}
+
+\antiphonaIV
+
+\scriptura{Psalmus 126.}
+
+\includescore{temporalia/ps126-initium-i-f-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps126.tex}{temporalia/ps126-boh.tex}
+
+\vfill
+
+\pagebreak
+
+\cantusCumNeumis
+
+\pars{psalmus 5.}
+
+\antiphonaV
+
+\scriptura{Psalmus 147.}
+
+\includescore{temporalia/ps147-initium-viii-c-auto.tex}
+
+\psalmusEtTranslatio{temporalia/ps147.tex}{temporalia/ps147-boh.tex}
+
+\vfill
+
+\pagebreak
+
+% colophon
+\pagestyle{empty}
+
+Fontes. 
+%Textus et cantus officii divini secundum 
+%Antiphonale Monasticum, Solesmis~1933. /
+Translationes psalmorum ex
+Hejčl Jan: Žaltář čili Kniha žalmů, Praha~1922.
+
+Collaborantes.
+Textus latinos cantusque transcripsit et omnem laborem typographicum peregit
+Jakub Pavlík. /
+Psalmos in lingua bohemica de libro supra dicto transcripsit
+Barbora Maturová. /
+%Filip Srovnal librum istum pr"aeparare mandavit et laborem exprobrationibus
+%utilissimis comitabatur. /
+%Imaginem, qu"ae paginam tituli ornat, Klára Jirsová pinxit.
+
+Instrumenta adhibita.
+LuaTeX, %http://www.luatex.org / 
+Gregorio, %http://home.gna.org/gregorio /
+typi Junicode. %http://junicode.sourceforge.net
+
+\begin{center}
+Liber hic imprimis ad usum chori 
+\guillemotright Conventus Choralis\guillemotleft\ 
+paratus est
+et secundum eius consuetudines.
+http://www.introitus.cz
+
+\vspace{1cm}
+
+{\large Editio Sancti Wolfgangi 2012.}
+
+\vspace{2mm}
+
+Series \guillemotright Conventus\guillemotleft, vol. II.
+
+\vspace{1cm}
+
+http://stiwolfgangi.xf.cz
+
+\end{center}
+
+\vfill
+
+
+\end{document}

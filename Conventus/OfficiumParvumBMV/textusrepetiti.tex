@@ -1,0 +1,128 @@
+% Parts used several times in the booklet
+
+\newcommand{\antiphonaI}{
+  \antiphona{VIII G}{cantus/arom12/adv_ant1.tex}{\translatioAntI}}
+\newcommand{\antiphonaII}{
+  \antiphona{I g}{cantus/arom12/adv_ant2.tex}{\translatioAntII}}
+\newcommand{\antiphonaIII}{
+  \antiphona{VIII G}{cantus/arom12/adv_ant3.tex}{\translatioAntIII}}
+\newcommand{\antiphonaIV}{
+  \antiphona{I f}{cantus/arom12/adv_ant4.tex}{\translatioAntIV}}
+\newcommand{\antiphonaV}{
+  \antiphona{VIII c}{cantus/arom12/adv_ant5.tex}{\translatioAntV}}
+
+\newcommand{\capitulumDiei}{
+  \pars{Capitulum.} \scriptura{}
+
+  \includescore{cantus/amon33/capitulum-FratresQuaecumque.tex}
+
+  % preklad Jeruz. bible
+  \translatioCapituli
+
+  \vspace{1cm}
+  \pars{Responsorium breve.}
+}
+
+\newcommand{\responsoriumAdVesperas}{
+  \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.}}}{\small \textsc{\textbf{VI.}}}
+  \includescore{cantus/amon33/resp-vesp.tex}
+
+  \translatioRespVesp
+}
+
+\newcommand{\responsoriumAdLaudes}{
+  \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.}}}{\small \textsc{\textbf{VI.}}}
+  \includescore{cantus/amon33/resp-laud.tex}
+
+  \translatioRespVesp
+}
+
+\newcommand{\hymnusAdVesperas}{
+  \pars{Hymnus.}
+
+  \superInitialam{IV}
+  \includescore{temporalia/hymnus-ConditorAlme.tex}
+}
+
+\newcommand{\hymnusAdLaudes}{
+  \pars{Hymnus.}
+
+  % no mode info in AM1933
+  \includescore{temporalia/hymnus-VoxClara.tex}
+}
+
+\newcommand{\versiculusDiei}{
+  \pars{Versiculus.}
+
+  % Versus. %%%
+    \includescore{cantus/amon33/versus-voxclamantis.tex}
+    % \vspace{-5mm}
+    \noindent ℟.\hspace{0.5mm}Rectas fácite sémitas e\textit{jus.}
+    
+    \noindent \translatioVersus
+}
+
+\newcommand{\anteOrationem}{
+  \rubrica{Ante Orationem, cantatur a Superiore:}
+
+  \pars{Supplicatio Litaniæ.}
+
+  \includescore{\cantusCommunesAM/supplicatiolitaniae.tex}
+
+  \pars{Oratio Dominica.}
+
+  \includescore{\cantusCommunesAM/oratiodominica.tex}
+
+  \rubrica{Deinde dicitur ab Hebdomadario:}
+
+  \includescore{\cantusCommunesAM/dominusvobiscum-solemnis.tex}
+
+  \rubrica{In choro monialium loco Dominus vobiscum dicitur:}
+
+  \includescore{\cantusCommunesAM/domineexaudi.tex}
+}
+
+\newcommand{\oratioDiei}{
+  \pars{Oratio.}
+
+  \includescore{cantus/amon33/oratio.tex}
+}
+
+\newcommand{\benedicamusDomino}{
+  \includescore{\cantusCommunesAM/benedicamus-dominica-advequad.tex}
+}
+
+\newcommand{\inFineHorarum}{
+  \pars{In fine horarum.}
+
+  \rubrica{Post \textnormal{Benedicamus Domino} dicitur voce recta
+  et paululum depressa:}
+
+  \includescore{\cantusCommunesAM/fideliumanimae.tex}
+
+  Pater noster \rubrica{totum secreto. Deinde, si discedendum est a Choro:}
+
+  \includescore{\cantusCommunesAM/dominusdet.tex}
+
+  \pagebreak
+
+  \includescore{\cantusCommunesAM/an_alma_redemptoris_mater.tex}
+
+  \vspace{5mm}
+
+  \rubrica{Versiculus tono simplici:}
+
+  \noindent ℣. Angelus Dómini nuntiávit Ma\textbf{rí}æ.\\
+  ℟. Et concépit de Spíritu \textbf{Sanc}to.
+
+  \vspace{5mm}
+
+  \includescore{\cantusCommunesAM/oratio-AlmaRedemptorisAdvent.tex}
+
+  \includescore{\cantusCommunesAM/divinumauxilium.tex}
+}
+
+\newcommand{\rubricaOratio}{
+  \rubrica{Sequitur Supplicatio Litani"ae et cetera usque ad finem hor"ae,
+  pg. \pageref{oratioetc}.}
+}
