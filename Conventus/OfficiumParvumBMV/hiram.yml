@@ -1,5 +1,5 @@
 main: officiumparvumbmv.tex
-moretex: []
+moretex: [conventuscommune.tex, textusrepetiti.tex, translationes_cs.tex]
 
 chants: [
 'cantus/arom12/*.gabc',
@@ -7,17 +7,27 @@ chants: [
 ]
 
 psalms: {
-  # Advent, vespers
-  109: VIII.G, # in AR12: VIII.G*
-  112: I.g,
-  121: VIII.G,
-  126: I.f,
-  147: VIII.c,
+  'extra Adventum, Vespers': {
+    109: III.a,
+    112: IV.A,
+    121: III.b,
+    126: VIII.G,
+    147: IV.A
+  },
 
-  # Advent, laudes
-  92: VIII.G, # in AR12: VIII.G*
-  99: I.g,
-  62: VIII.G,
-  dan3: I.f,
-  148: VIII.c
+  'Advent, vespers': {
+    109: VIII.G, # in AR12: VIII.G*
+    112: I.g,
+    121: VIII.G,
+    126: I.f,
+    147: VIII.c,
+  },
+
+  'Advent, laudes': {
+    92: VIII.G, # in AR12: VIII.G*
+    99: I.g,
+    62: VIII.G,
+    dan3: I.f,
+    148: VIII.c
+  }
 }
