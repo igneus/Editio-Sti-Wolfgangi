@@ -38,10 +38,10 @@ class Hiram::TaskGenerator
   attr_accessor :output_dir
 
   # General function generating a Rake task to point a psalm text
-  def genpsalm_universal(zalm, options, output_dir, input_dir)
+  def genpsalm_universal(zalm, outputname, options, output_dir, input_dir)
     wd = Dir.pwd
     syrovy = input_dir+"/"+zalm
-    peceny = output_dir+zalm.gsub(/\.pslm/, '')+'.tex'
+    peceny = output_dir + outputname
     file peceny => [syrovy, @psalm_preprocessor] do
       chdir output_dir
       sh "#{RUBY_COMMAND} ../#{@psalm_preprocessor} #{options} ../#{syrovy}"
@@ -51,8 +51,8 @@ class Hiram::TaskGenerator
   end
 
   # Rake task to point a psalm text
-  def genpsalm(zalm, options=@default_psalm_options)
-    genpsalm_universal(zalm, options, @output_dir, @psalms_dir)
+  def genpsalm(zalm, outputname, options=@default_psalm_options)
+    genpsalm_universal(zalm, outputname, options, @output_dir, @psalms_dir)
   end
 
   # translations not intended to be sung: no pointing at all, no title, ...
