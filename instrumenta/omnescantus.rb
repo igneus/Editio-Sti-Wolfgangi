@@ -38,11 +38,12 @@ EOS
     # info from the gabc file
     File.open(c, 'r') do |fc|
       f.puts
-      f.puts "\\textbf{#{c}}"
+      ctexified = c.gsub('_', '\_')
+      f.puts "\\textbf{#{ctexified}}"
       f.puts
       while l = fc.gets do
         break if l =~ /^%%\s*$/
-        f.puts '\\noindent '+l.rstrip + '\\\\'
+        f.puts '\\noindent '+l.rstrip.gsub('_', '\_') + '\\\\'
       end
     end
 
