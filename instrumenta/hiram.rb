@@ -65,24 +65,33 @@ end
 initia_targets = []
 psalms_targets = []
 
-proj.psalms.each_pair do |psalm, tone|
-  if psalm.is_a? Fixnum then
-    psfname = 'ps' + psalm.to_s + '.pslm'
-  else
-    psfname = psalm + '.pslm'
-  end
+proj.psalms.each_value do |section|
+  section.each_pair do |psalm, tone|
+    tonesuff =  '-' + tone.downcase.gsub('.', '-')
+    if psalm.is_a? Fixnum ||
+        (psalm.is_a? String && psalm =~ /^\d+/) then
+      psfname = 'ps' + psalm.to_s + '.pslm'
+      psoutname = 'ps' + psalm.to_s + tonesuff + '.tex'
+    else
+      psfname = psalm + '.pslm'
+      psoutname = psalm + tonesuff + '.pslm'
+    end
 
-  options = taskgen.default_psalm_options + options_accents(tone)
-  if psalm == 'magnificat' then
-    options.gsub! "--skip-verses 1", "--skip-verses 2"
-  end
+    options = taskgen.default_psalm_options + 
+      options_accents(tone) +
+      " --output #{psoutname} "
 
-  psalms_targets << taskgen.genpsalm(psfname, options)
+    if psalm == 'magnificat' then
+      options.gsub! "--skip-verses 1", "--skip-verses 2"
+    end
 
-  psalms_targets << taskgen.genczechpsalm(psfname)
+    psalms_targets << taskgen.genpsalm(psfname, psoutname, options)
 
-  if psalm != 'magnificat' then
-    initia_targets << taskgen.geninitium(psfname, tone)
+    psalms_targets << taskgen.genczechpsalm(psfname)
+
+    if psalm != 'magnificat' then
+      initia_targets << taskgen.geninitium(psfname, tone)
+    end
   end
 end
 
