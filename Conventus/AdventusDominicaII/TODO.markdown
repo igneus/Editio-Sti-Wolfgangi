@@ -1,9 +1,5 @@
 * preklad orace
 
-* spravny preklad s. 28
-
-* Magnificat: opravit deleni slabik
-
 * biblicke citace u cteni, antifon, responsorii atd.
 
 ---
