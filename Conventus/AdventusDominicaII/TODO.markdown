@@ -1,6 +1,6 @@
-* preklad orace
+* stylisticka kontrola prekladu
 
-* biblicke citace u cteni, antifon, responsorii atd.
+* blok zalmu pod jednim Gloria Patri: jen prvni ma inchoatio!
 
 ---
 
