@@ -49,22 +49,35 @@ psalmi = []
   50 => 'I.g', 
   117 => 'VII.d',
   62 => 'VII.a',
+  148 => 'III.a',
+  149 => 'III.a',
   150 => 'III.a',
   109 => 'I.g', # k nesporam
   110 => 'VII.d',
   111 => 'VII.a',
   112 => 'I.f'}.each_pair do |n,t|
   
-  psalmi << genpsalm("ps#{n}.pslm", $options_common+options_accents(t))
-  psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
-  cantus << geninitium("ps#{n}", t)
-end
+  if [148,149].include? n then
+    # no Gloria Patri
+    genpsalm_opts = "--accents-style bold --skip-verses 1 "+options_accents(t)
+  else
+    genpsalm_opts = $options_common+options_accents(t)
+  end
 
-# zalmy bez Gloria Patri
-[148, 149].each do |n|
-  psalmi << genpsalm("ps#{n}.pslm", $options_common+options_accents('III.a'))
+  # i.
+  psalmi << genpsalm("ps#{n}.pslm", genpsalm_opts)
+  # ii.
   psalmi << genczechpsalm("ps#{n}.pslm", $options_translation)
-  cantus << geninitium(n, 'III.a')
+
+  if [149, 150].include? n then
+    # no inchoatio
+    options_ini = '--no-inchoatio'
+  else
+    options_ini = ''
+  end
+
+  # iii.
+  cantus << geninitium("ps#{n}", t, options_ini)
 end
 
 psalmi << genpsalm('dan3.pslm', "--accents-style bold --skip-verses 1 "+options_accents('I.f'))
