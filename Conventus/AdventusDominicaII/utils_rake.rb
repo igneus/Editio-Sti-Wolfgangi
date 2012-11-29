@@ -48,7 +48,7 @@ def gregorio(srcf)
   return f2
 end
 
-def geninitium(psalm, tone, directory=TMP_DIR+"/")
+def geninitium(psalm, tone, options='', directory=TMP_DIR+"/")
   ntone = tone
   if i = ntone.index('.') then
     ntone = ntone[0..i-1].downcase+'-'+ntone[i+1..-1]
@@ -66,7 +66,7 @@ def geninitium(psalm, tone, directory=TMP_DIR+"/")
   file directory+outputfile => [psalmfile, patternfile, initium_tool] do
     wd = Dir.pwd
     chdir directory
-    sh "ruby ../#{initium_tool} ../#{psalmfile} ../#{patternfile}"
+    sh "ruby ../#{initium_tool} #{options} ../#{psalmfile} ../#{patternfile}"
     chdir wd
   end
 
