@@ -2,7 +2,19 @@
 # produces a new .gabc containing the first verse of the psalm
 # fitted to the pattern.
 #
-# initiumpsalmi.rb [psalm.pslm] [pattern.gabc] [[outputfile]]
+# initiumpsalmi.rb <options> [psalm.pslm] [pattern.gabc] [[outputfile]]
+
+require 'optparse'
+
+setup = {:inchoatio => true}
+
+optparse = OptionParser.new do|opts|
+  opts.on "-i", "--no-inchoatio", "Don't set an inchoatio, start on the reciting tone" do
+    setup[:inchoatio] = false
+  end
+end
+
+optparse.parse!
 
 psalmfile = ARGV.shift
 patternfile = ARGV.shift
@@ -257,21 +269,24 @@ melody_i = 0
 text_i = 0
   
 ## initium
-psalmody.initium.each_with_index do |n,i|
-  s = verse.first.syllables[text_i]
-  if s == ' ' then
-    of.print " "
-    text_i += 1
-    redo
-  else
-    of.print s
-    if i == 0 then
-      # add space at the beginning
-      of.print n.gsub("(", "( ")
+
+if setup[:inchoatio] then
+  psalmody.initium.each_with_index do |n,i|
+    s = verse.first.syllables[text_i]
+    if s == ' ' then
+      of.print " "
+      text_i += 1
+      redo
     else
-      of.print n
+      of.print s
+      if i == 0 then
+        # add space at the beginning
+        of.print n.gsub("(", "( ")
+      else
+        of.print n
+      end
+      text_i += 1
     end
-    text_i += 1
   end
 end
 
