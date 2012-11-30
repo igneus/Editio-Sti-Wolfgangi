@@ -44,7 +44,7 @@ psalmi = []
   '144ii' => 'I.g', # k sobotnim nesporam
   145 => 'VII.d',
   146 => 'VII.a',
-  147 => 'I.f',
+  147 => 'III.a',
   66 => 'dir',# k laudam
   50 => 'I.g', 
   117 => 'VII.d',
@@ -55,7 +55,7 @@ psalmi = []
   109 => 'I.g', # k nesporam
   110 => 'VII.d',
   111 => 'VII.a',
-  112 => 'I.f'}.each_pair do |n,t|
+  112 => 'III.a'}.each_pair do |n,t|
   
   if [148,149].include? n then
     # no Gloria Patri
