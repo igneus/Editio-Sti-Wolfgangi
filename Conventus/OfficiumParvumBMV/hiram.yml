@@ -15,7 +15,15 @@ psalms: {
     147: IV.A
   },
 
-  'Advent, vespers': {
+  'extra Adventum, Laudes': {
+    92: III.a,
+    99: IV.A,
+    62: III.b,
+    dan3: VIII.G,
+    148: IV.A
+  },
+
+  'Advent, Vespers': {
     109: VIII.G, # in AR12: VIII.G*
     112: I.g,
     121: VIII.G,
@@ -23,7 +31,7 @@ psalms: {
     147: VIII.c,
   },
 
-  'Advent, laudes': {
+  'Advent, Laudes': {
     92: VIII.G, # in AR12: VIII.G*
     99: I.g,
     62: VIII.G,
