@@ -74,7 +74,7 @@ proj.psalms.each_value do |section|
       psoutname = 'ps' + psalm.to_s + tonesuff + '.tex'
     else
       psfname = psalm + '.pslm'
-      psoutname = psalm + tonesuff + '.pslm'
+      psoutname = psalm + tonesuff + '.tex'
     end
 
     options = taskgen.default_psalm_options + 
