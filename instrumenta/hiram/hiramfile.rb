@@ -14,7 +14,7 @@ class Hiram::HiramFile
   end
 
   def moretex
-    return @yaml['moretex']
+    return expand_wildcards(@yaml['moretex'])
   end
 
   def moretex?
@@ -22,17 +22,7 @@ class Hiram::HiramFile
   end
 
   def chants
-    chs = []
-    # expand wildcards
-    @yaml['chants'].each do |c|
-      if c.index '*' then
-        chs += Dir[c]
-      else
-        chs << c
-      end
-    end
-
-    return chs
+    return expand_wildcards(@yaml['chants'])
   end
 
   def chants?
@@ -45,5 +35,21 @@ class Hiram::HiramFile
 
   def psalms?
     self.psalms != nil
+  end
+
+  private
+
+  def expand_wildcards(ar)
+    expanded = []
+    # expand wildcards
+    ar.each do |c|
+      if c.index '*' then
+        expanded += Dir[c]
+      else
+        expanded << c
+      end
+    end
+
+    return expanded
   end
 end
