@@ -43,7 +43,7 @@ EOS
       f.puts
       while l = fc.gets do
         break if l =~ /^%%\s*$/
-        f.puts '\\noindent '+l.rstrip.gsub('_', '\_') + '\\\\'
+        f.puts '\\noindent '+l.rstrip.gsub('_', '\_').gsub('%', '\%') + '\\\\'
       end
     end
 
