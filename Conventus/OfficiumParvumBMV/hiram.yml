@@ -1,8 +1,14 @@
 main: officiumparvumbmv.tex
-moretex: [conventuscommune.tex, textusrepetiti.tex, translationes_cs.tex]
+moretex: [
+conventuscommune.tex, 
+textusrepetiti.tex, 
+translationes_cs.tex,
+'partes/*.tex'
+]
 
 chants: [
 'cantus/arom12/*.gabc',
+'cantus/manuscripti/*.gabc',
 '../../cantuscommunes/arom12/*.gabc'
 ]
 
