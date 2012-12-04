@@ -11,19 +11,23 @@
 
 }
 
-\newcommand{\hora}[1]{\vspace{0.5cm}{\large \textbf{#1}}
-% from some reason the following doesn't work:
+\newcommand{\hora}[1]{%
+\phantomsection
+\vspace{0.5cm}{\large \textbf{#1}}
+
 \fancyhead[LE]{\thepage\ / #1}
 \fancyhead[RO]{#1 / \thepage}
-
+\addcontentsline{toc}{subsection}{#1}
 }
 
 % larger unit than a hora
-\newcommand{\divisio}[1]{
+\newcommand{\divisio}[1]{%
+\phantomsection
 \begin{center}
 {\Large \textsc{#1}}
 \end{center}
 \fancyhead[CO,CE]{#1}
+\addcontentsline{toc}{section}{#1}
 }
 
 \newcommand{\rubrica}[1]{\vspace{3mm}\textit{#1}}
