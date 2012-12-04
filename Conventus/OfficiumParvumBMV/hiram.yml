@@ -9,7 +9,8 @@ translationes_cs.tex,
 chants: [
 'cantus/arom12/*.gabc',
 'cantus/manuscripti/*.gabc',
-'../../cantuscommunes/arom12/*.gabc'
+'../../cantuscommunes/arom12/*.gabc',
+'../../tonipsalmorum/arom12/magnificat*.gabc'
 ]
 
 hymns: [
@@ -22,7 +23,8 @@ psalms: {
     112: IV.A,
     121: III.b,
     126: VIII.G,
-    147: IV.A
+    147: IV.A,
+    magnificat: II.D
   },
 
   'extra Adventum, Laudes': {
