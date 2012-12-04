@@ -95,13 +95,35 @@ proj.psalms.each_value do |section|
   end
 end
 
+### Hymns - set a text to a tune
+
+hymn_targets = []
+
+if proj.hymns? then
+  proj.hymns.each do |h|
+    textus = h[0]
+    musica = h[1]
+
+    i = textus.index '-'
+    ii = textus.index '.'
+    out = "hymnus-"+textus[i+1..ii-1]+".gabc"
+
+    file "temporalia/"+out => [textus, musica, '../../instrumenta/hymnographus.rb'] do |t|
+      sh "#{TaskGenerator::RUBY_COMMAND} ../../instrumenta/hymnographus.rb #{t.prerequisites[1]} #{t.prerequisites[0]} #{t.name}"
+    end
+
+    hymn_targets << gregorio("temporalia/"+out)
+  end
+end
+
 ### Main file
 
 if proj.main? then
   maintex = proj.main
   maintex_target = maintex.gsub /\.tex$/, '.pdf'
 
-  maindeps = [maintex] + chant_targets + initia_targets + psalms_targets
+  maindeps = [maintex] + 
+    chant_targets + initia_targets + psalms_targets + hymn_targets
 
   if proj.moretex? then
     maindeps += proj.moretex

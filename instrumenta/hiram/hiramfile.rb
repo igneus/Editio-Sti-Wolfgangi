@@ -37,6 +37,14 @@ class Hiram::HiramFile
     self.psalms != nil
   end
 
+  def hymns
+    return @yaml['hymns']
+  end
+
+  def hymns?
+    self.hymns != nil
+  end
+
   private
 
   def expand_wildcards(ar)
