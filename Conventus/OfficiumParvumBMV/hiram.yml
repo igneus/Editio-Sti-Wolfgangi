@@ -27,6 +27,12 @@ psalms: {
     magnificat: II.D
   },
 
+  'Completory': {
+    128: dir,
+    129: dir,
+    130: dir
+  },
+
   'extra Adventum, Laudes': {
     92: III.a,
     99: IV.A,
