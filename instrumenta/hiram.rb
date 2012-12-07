@@ -87,7 +87,11 @@ proj.psalms.each_value do |section|
 
     psalms_targets << taskgen.genpsalm(psfname, psoutname, options)
 
-    psalms_targets << taskgen.genczechpsalm(psfname)
+    begin
+      psalms_targets << taskgen.genczechpsalm(psfname)
+    rescue RuntimeError => re
+      STDERR.puts "ERROR: translation not generated for psalm '#{psfname}': "+re.message
+    end
 
     if psalm != 'magnificat' then
       initia_targets << taskgen.geninitium(psfname, tone)
