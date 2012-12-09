@@ -8,6 +8,9 @@
   * jak je to s duplikaci antifon? byla zavedena uplna? ANO, Campbell 29
   * byla zrusena prima? - ano, SC; ale byl to okamzite platny prikaz nebo byl proveden az vydanim noveho breviare?
   * komemorace? ANO, uz 1955 - Campbell 26
+  
+* rubriky officia parva
+  * ma byt po kompletari Fidelium animae a antifona?
 
 # Extra Adventum
 
