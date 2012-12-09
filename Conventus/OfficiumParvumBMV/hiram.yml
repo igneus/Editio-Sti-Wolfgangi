@@ -31,7 +31,8 @@ psalms: {
   'Completory': {
     128: dir,
     129: dir,
-    130: dir
+    130: dir,
+    nuncdimittis: VII.a
   },
 
   'extra Adventum, Laudes': {
