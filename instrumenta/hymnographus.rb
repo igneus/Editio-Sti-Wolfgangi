@@ -37,7 +37,10 @@ class HymnMelody
     m = HymnMelody.new
 
     fr = File.open(filename, 'r')
-    fr.gets # %%
+    begin
+      l = fr.gets 
+    end while l != "%%\n"
+
     m.key = fr.gets
 
     while line = fr.gets do 
