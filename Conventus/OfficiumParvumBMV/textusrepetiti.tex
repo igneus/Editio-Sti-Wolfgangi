@@ -4,14 +4,38 @@
 
 \newcommand{\scripturaMagnificat}{\scriptura{Lucæ 1, 46-55}}
 
+\newcommand{\kyrieEleison}{\includescore{\ccommunesAR/kyrieeleison.tex}}
+
+\newcommand{\dominusVobiscum}{
+  
+  \rubrica{Recto tono:}
+
+  ℣. Dóminus vobíscum.
+  ℟. Et cum spíritu tuo.
+
+  \rubrica{In choro monialium loco \textnormal{Dominus vobiscum} dicitur:}
+
+  ℣. Dómine exáudi oratiónem meam.
+  ℟. Et clamor meus ad te véniat.
+  
+}
+
+% when the Dominus vobiscum is repeated on the same page.
+\newcommand{\dominusVobiscumRep}{
+  \rubrica{Iterum dicitur \textnormal{Dóminus vobíscum} aut 
+    \textnormal{Dómine exáudi}.}
+}
+
+\newcommand{\benedicamusDomino}{
+  \includescore{\ccommunesAR/benedicamus-feria.tex}
+}
+
 \newcommand{\fideliumAnimae}{
   \rubrica{Voce recta et paululum depressa:}
 
   ℣. Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
   ℟. Amen.
 }
-
-\newcommand{\kyrieEleison}{\includescore{\ccommunesAR/kyrieeleison.tex}}
 
 \newcommand{\perDominum}{
   Per Dóminum nostrum Jesum Christum Fílium tuum,
@@ -124,36 +148,6 @@
     \noindent ℟.\hspace{0.5mm}Rectas fácite sémitas e\textit{jus.}
     
     \noindent \translatioVersus
-}
-
-\newcommand{\anteOrationem}{
-  \rubrica{Ante Orationem, cantatur a Superiore:}
-
-  \pars{Supplicatio Litaniæ.}
-
-  \includescore{\cantusCommunesAM/supplicatiolitaniae.tex}
-
-  \pars{Oratio Dominica.}
-
-  \includescore{\cantusCommunesAM/oratiodominica.tex}
-
-  \rubrica{Deinde dicitur ab Hebdomadario:}
-
-  \includescore{\cantusCommunesAM/dominusvobiscum-solemnis.tex}
-
-  \rubrica{In choro monialium loco Dominus vobiscum dicitur:}
-
-  \includescore{\cantusCommunesAM/domineexaudi.tex}
-}
-
-\newcommand{\oratioDiei}{
-  \pars{Oratio.}
-
-  \includescore{cantus/amon33/oratio.tex}
-}
-
-\newcommand{\benedicamusDomino}{
-  \includescore{\cantusCommunesAM/benedicamus-dominica-advequad.tex}
 }
 
 \newcommand{\inFineHorarum}{

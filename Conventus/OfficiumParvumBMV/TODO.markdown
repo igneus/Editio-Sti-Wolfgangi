@@ -1,20 +1,19 @@
 * najit vhodnou mensi velikost notovych osnov
-* AR12 ma tonus III jen s recitacni notou c - byt tomu verny nebo nechat
-  jak jsme zvykli z AM34?
 * naucit Hirama delat zalmy bez Gloria Patri a opravit Canticum trium p.
+* odstranit poznamky "recto tono" a "tono feriali" a dat o napevu modliteb a versiku jednu rubriku na zacatek?
 
 
 * co vsechno zmenil Codex rubricarum?
   * jak je to s duplikaci antifon? byla zavedena uplna? ANO, Campbell 29
   * byla zrusena prima? - ano, SC; ale byl to okamzite platny prikaz nebo byl proveden az vydanim noveho breviare?
   * komemorace? ANO, uz 1955 - Campbell 26
-  
-* rubriky officia parva
-  * ma byt po kompletari Fidelium animae a antifona?
 
 # Extra Adventum
 
 * completorium - dokoncit
+  * antiphona finalis cum oratione
+	* revize melodii
+* completorium - mimo advent
 
 * responsorium 2: Gloria Patri
 * rozsirit prostor kolem uzke inicialy J
@@ -24,3 +23,7 @@
 # Tempore Nativitatis
 
 * vse
+
+# Dalsi
+
+* hiram by mel na konci behu zopakovat vsechny detekovane nedostatky
