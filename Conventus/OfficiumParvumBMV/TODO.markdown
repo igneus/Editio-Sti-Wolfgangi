@@ -7,6 +7,7 @@
   * jak je to s duplikaci antifon? byla zavedena uplna? ANO, Campbell 29
   * byla zrusena prima? - ano, SC; ale byl to okamzite platny prikaz nebo byl proveden az vydanim noveho breviare?
   * komemorace? ANO, uz 1955 - Campbell 26
+  * závěrečná antifona po laudách a nešporách?
 
 # Extra Adventum
 
@@ -14,6 +15,10 @@
   * antiphona finalis cum oratione
 	* revize melodii
 * completorium - mimo advent
+
+* matutinum
+  * Domine labia mea + Domine in adiutorium
+  * hymnus
 
 * responsorium 2: Gloria Patri
 * rozsirit prostor kolem uzke inicialy J

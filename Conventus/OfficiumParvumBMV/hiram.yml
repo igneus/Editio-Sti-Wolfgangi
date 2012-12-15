@@ -9,6 +9,7 @@ translationes_cs.tex,
 chants: [
 'cantus/arom12/*.gabc',
 'cantus/manuscripti/*.gabc',
+'cantus/manuscripti/venite7/*.gabc',
 '../../cantuscommunes/arom12/*.gabc',
 '../../tonipsalmorum/arom12/magnificat*.gabc'
 ]
