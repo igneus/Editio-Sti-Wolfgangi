@@ -302,21 +302,33 @@ module PsalmPreprocessor
       ai = s.rindex "[" # beginning of the first accent
       i = ai
       begin
-        raise "too short" if i == 0
+
+        # find where the preparatory syllables start
         num_syllables.times {
+          raise "too short" if i == 0 || i == nil
+
           bi = i-1
           if s[bi] == " " then
             bi -= 1
           end
-          i = s.rindex(/[\s\/\[\]]/, bi)
-          while i > 0 && s[i-1] =~ /[\s\/\[\]]/ do
+
+          syllable_divider = /[\s\/\[\]]/
+          # find the next syllable divider:
+          i = s.rindex(syllable_divider, bi)
+          # more syllable dividers next to each other (e.g. ' ' and '[') 
+          # count as one:
+          while i > 0 && s[i-1] =~ syllable_divider do
             i -= 1
           end
-
-          unless i 
-            raise "too short"
-          end
         }
+
+        # emphasize the preparatory syllables
+        s[ai] = cl+'['
+        if i == 0 then
+          s = op+s
+        else
+          s[i] = (s[i] == " " ? " " : "") + op
+        end
       rescue
         # verse too short; do nothing, return it, as it is
         # STDOUT.puts s
@@ -325,12 +337,6 @@ module PsalmPreprocessor
         i = 0
       end
 
-      s[ai] = cl+'['
-      if i == 0 then
-        s = op+s
-      else
-        s[i] = (s[i] == " " ? " " : "") + op
-      end
       s.gsub!('/', '') # remove all remaining syllable-separating slashes
       
       # STDOUT.puts s
