@@ -15,6 +15,7 @@
 
 require 'yaml'
 require 'rake'
+require 'optparse'
 
 module Hiram
 end
@@ -28,9 +29,24 @@ include Hiram
 
 ### Read arguments
 
-hiramfile = ARGV.shift
-unless hiramfile 
-  hiramfile = 'hiram.yml'
+hiramfile = 'hiram.yml'
+action = :run_main # also possible: :run_selected, :show_tasks
+selected_tasks = []
+
+optparser = OptionParser.new do |opts|
+  opts.on "-f", "--hiramfile FILE", "Use FILE as the hiramfile." do |f|
+    hiramfile = f
+  end
+
+  opts.on "-T", "--tasks", "Show available tasks" do 
+    action = :show_tasks
+  end
+end
+optparser.parse!
+
+unless ARGV.empty?
+  action = :run_selected
+  selected_tasks = ARGV
 end
 
 unless File.exists? hiramfile
@@ -58,6 +74,9 @@ if proj.chants? then
 
     # task_c.invoke
   end
+
+  task 'chants' => chant_targets
+  Rake::Task['chants'].comment = "compile all necessary chants notated in gregorio"
 end
 
 ### Psalms - text pointing, initia
@@ -99,6 +118,12 @@ proj.psalms.each_value do |section|
   end
 end
 
+task 'initia' => initia_targets
+Rake::Task['initia'].comment = "Generate notated first verse of each psalm"
+
+task 'psalms' => psalms_targets
+Rake::Task['psalms'].comment = "Point psalm texts"  
+
 ### Hymns - set a text to a tune
 
 hymn_targets = []
@@ -118,6 +143,9 @@ if proj.hymns? then
 
     hymn_targets << gregorio("temporalia/"+out)
   end
+
+  task 'hymns' => hymn_targets
+  Rake::Task['hymns'].comment = "Set hymn texts to their respective tunes"  
 end
 
 ### Main file
@@ -133,16 +161,37 @@ if proj.main? then
     maindeps += proj.moretex
   end
 
-  task_main = file maintex_target => maindeps do |t|
+  file maintex_target => maindeps do |t|
     2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
   end
 
+  task 'main' => [maintex_target]
+  Rake::Task['main'].comment = "Run all tasks and finally compile the main book"  
+end
+
+case action 
+
+when :run_main
   begin
-    task_main.invoke
+    Rake::Task['main'].invoke
   rescue RuntimeError => re
     STDERR.puts
     STDERR.puts "build ERROR: "+re.message
     STDERR.puts
     # Rake::Task.tasks.each {|t| p t }
+  end
+
+when :run_selected
+  selected_tasks.each do |tname|
+    Rake::Task[tname].invoke
+  end
+
+when :show_tasks
+  puts "Available tasks:\n\n"
+  Rake::Task.tasks.each do |task|
+    # only show commented tasks
+    if task.comment then
+      puts task.name.ljust(10) + task.comment.to_s
+    end
   end
 end
