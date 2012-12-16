@@ -22,10 +22,14 @@
   * hymnus
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
   * Te Deum
-  * responsorium 2: Gloria Patri pro svatky
+  * responsorium 2: Gloria Patri pro svatky a rubrika, kdy se zpiva Gloria a pak Te Deum a kdy treti responsorium se svym Gloria
   * responsorium 3 Felix namque
   
 * rozsirit prostor kolem uzke inicialy J
+
+* laudes
+  * vlastni antifony (z Nanebevzeti) - hrome, to jsem prehledl!
+  * vsechno od konce psalmodie
 
 # In Adventu
 
