@@ -36,6 +36,12 @@ psalms: {
     nuncdimittis: VII.a
   },
 
+  'Matins': {
+    8: IV.A,
+    18: IV.A,
+    23: IV.A
+  },
+
   'extra Adventum, Laudes': {
     92: III.a,
     99: IV.A,
