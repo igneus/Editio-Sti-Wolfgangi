@@ -22,8 +22,9 @@
   * hymnus
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
   * Te Deum
-
-* responsorium 2: Gloria Patri
+  * responsorium 2: Gloria Patri pro svatky
+  * responsorium 3 Felix namque
+  
 * rozsirit prostor kolem uzke inicialy J
 
 # In Adventu
