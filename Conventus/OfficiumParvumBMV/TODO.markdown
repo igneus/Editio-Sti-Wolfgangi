@@ -19,6 +19,8 @@
 * matutinum
   * Domine labia mea + Domine in adiutorium
   * hymnus
+  * nejak rozumne vyznacit oddily, co se ktere dny zpiva
+  * versiculus
 
 * responsorium 2: Gloria Patri
 * rozsirit prostor kolem uzke inicialy J

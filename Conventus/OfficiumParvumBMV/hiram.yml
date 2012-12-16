@@ -39,7 +39,15 @@ psalms: {
   'Matins': {
     8: IV.A,
     18: IV.A,
-    23: IV.A
+    23: IV.A,
+
+    44: VII.c,
+    45: VII.c,
+    86: VII.c,
+
+    95: IV.A,
+    96: IV.A,
+    97: IV.A
   },
 
   'extra Adventum, Laudes': {
