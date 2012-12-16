@@ -1,6 +1,8 @@
 * najit vhodnou mensi velikost notovych osnov
 * naucit Hirama delat zalmy bez Gloria Patri a opravit Canticum trium p.
 * odstranit poznamky "recto tono" a "tono feriali" a dat o napevu modliteb a versiku jednu rubriku na zacatek?
+* spravne rozmistit prikazy o umistovani a neumistovani vzduchu na dopsani neum
+* sjednotit male ci velke pismeno na zacatku nadpisu casti
 
 
 * co vsechno zmenil Codex rubricarum?
@@ -12,15 +14,14 @@
 # Extra Adventum
 
 * completorium - dokoncit
-  * antiphona finalis cum oratione
-	* revize melodii
+  * revize melodii zaverecnych antifon
 * completorium - mimo advent
 
 * matutinum
   * Domine labia mea + Domine in adiutorium
   * hymnus
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
-  * versiculus
+  * Te Deum
 
 * responsorium 2: Gloria Patri
 * rozsirit prostor kolem uzke inicialy J
