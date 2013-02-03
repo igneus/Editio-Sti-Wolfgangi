@@ -51,11 +51,11 @@ psalms: {
   },
 
   'extra Adventum, Laudes': {
-    92: III.a,
-    99: IV.A,
-    62: III.b,
-    dan3: VIII.G,
-    148: IV.A
+    92: VII.a,
+    99: VIII.G,
+    62: IV.A,
+    dan3: VII.c2,
+    148: I.g2
   },
 
   'Advent, Vespers': {
