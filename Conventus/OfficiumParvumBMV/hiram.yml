@@ -72,5 +72,11 @@ psalms: {
     62: VIII.G,
     dan3: I.f,
     148: VIII.c
+  },
+
+  'Tempore Paschali': {
+    magnificat: I.D2,
+    benedictus: I.D2,
+    nuncdimittis: I.D2
   }
 }
