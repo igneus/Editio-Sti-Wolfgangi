@@ -28,7 +28,6 @@
 * rozsirit prostor kolem uzke inicialy J
 
 * laudes
-  * vlastni antifony (z Nanebevzeti) - hrome, to jsem prehledl!
   * vsechno od konce psalmodie
 
 # In Adventu
@@ -36,6 +35,10 @@
 # Tempore Nativitatis
 
 * vse
+
+# Tempore Paschali
+
+* initia
 
 # Dalsi
 
