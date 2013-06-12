@@ -33,7 +33,7 @@ psalms: {
     128: dir,
     129: dir,
     130: dir,
-    nuncdimittis: VII.a
+    nuncdimittis: VII.a,
   },
 
   'Matins': {
@@ -64,6 +64,10 @@ psalms: {
     121: VIII.G,
     126: I.f,
     147: VIII.c,
+  },
+
+  'Advent, Completory': {
+    nuncdimittis: VIII.G
   },
 
   'Advent, Laudes': {
