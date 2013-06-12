@@ -4,6 +4,12 @@
 * spravne rozmistit prikazy o umistovani a neumistovani vzduchu na dopsani neum
 * sjednotit male ci velke pismeno na zacatku nadpisu casti
 
+* prepsat chybejici ceske zalmy
+* v pramenech vyjmenovat prameny vsech antifon vzatych z manuskriptu
+* zminit, ze jsem pouzil marianske antifony od nekoho jineho
+
+# Rubricisticke
+
 
 * co vsechno zmenil Codex rubricarum?
   * jak je to s duplikaci antifon? byla zavedena uplna? ANO, Campbell 29
@@ -13,22 +19,19 @@
 
 # Extra Adventum
 
-* completorium - dokoncit
-  * revize melodii zaverecnych antifon
-* completorium - mimo advent
-
 * matutinum
-  * Domine labia mea + Domine in adiutorium
-  * hymnus
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
   * Te Deum
-  * responsorium 2: Gloria Patri pro svatky a rubrika, kdy se zpiva Gloria a pak Te Deum a kdy treti responsorium se svym Gloria
-  * responsorium 3 Felix namque
+  * responsorium 2: Gloria Patri pro svatky 
+  * rubrika, kdy se zpiva Gloria a pak Te Deum a kdy treti responsorium se svym Gloria
+  * responsorium 3 Felix namque - kontrola podle manuskriptu
   
 * rozsirit prostor kolem uzke inicialy J
 
 * laudes
   * vsechno od konce psalmodie
+  
+* completorium - revize
 
 # In Adventu
 
