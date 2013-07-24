@@ -1,9 +1,7 @@
 name: Beata es Maria;
 office-part: matutinum, 2. resp.;
 occasion: In festis B.M.V. per annum;
-manuscript: Antiphonarium Fratrum Minorum Secundum Consuetudinem Romanae Curiae, f 202r;
-% manuscript-reference: CANTUS CH-Fco 2;
-manuscript-storage-place: Fribourg/Freiburg, Couvent des Cordeliers/Franziskanerkloster (Ms. 2);
+book: Nocturnale Romanum, 2002, pg. [160];
 mode: 1;
 initial-style: 1;
 %%
