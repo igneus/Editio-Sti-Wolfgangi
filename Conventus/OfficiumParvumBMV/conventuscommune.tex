@@ -28,7 +28,11 @@
 \addcontentsline{toc}{section}{#1}
 }
 
-\newcommand{\rubrica}[1]{\vspace{3mm}\textit{#1}}
+% rubricated inline text
+\newcommand{\rubricatum}[1]{\textit{#1}}
+
+% standalone rubric
+\newcommand{\rubrica}[1]{\vspace{3mm}\rubricatum{#1}}
 
 \newcommand{\notitia}[1]{\textcolor{red}{#1}}
 
