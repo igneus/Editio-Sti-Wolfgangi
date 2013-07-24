@@ -7,6 +7,7 @@
 * prepsat chybejici ceske zalmy
 * v pramenech vyjmenovat prameny vsech antifon vzatych z manuskriptu
 * zminit, ze jsem pouzil marianske antifony od nekoho jineho
+* zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 
 # Rubricisticke
 
@@ -21,10 +22,10 @@
 
 * matutinum
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
-  * Te Deum
+  * Te Deum - kontrola
   * responsorium 2: Gloria Patri pro svatky 
   * rubrika, kdy se zpiva Gloria a pak Te Deum a kdy treti responsorium se svym Gloria
-  * responsorium 3 Felix namque - kontrola podle manuskriptu
+  * responsorium 3 Felix namque - kontrola podle manuskriptu, Gloria Patri
   
 * rozsirit prostor kolem uzke inicialy J
 
@@ -44,5 +45,7 @@
 * initia
 
 # Dalsi
+
+* i ve zpevech nahradit ae atd.
 
 * hiram by mel na konci behu zopakovat vsechny detekovane nedostatky
