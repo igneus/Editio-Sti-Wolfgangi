@@ -1,11 +1,11 @@
 name: Te Deum;
 office-part: matutinum;
-book: Antiphonale Romanum 1912,  pg. [77];
+book: Antiphonale Romanum 1912,  pg. 57*;
 mode: 3;
 initial-style: 1;
 %%
 (c4)
-Te(e) De(gh)um(h) lau(hg)dá(hiwj)mus:(ih) *(;)
+Te(e) De(gh)um(h) lau(hg)dá(h!iwj)mus:(ih) *(;)
 te(h) Dó(h)mi(h)num(g) con(h)fi(i)té(h)mur.(g) (::)
 
 Te(j) æ(j)tér(j)num(i) Pa(hi)trem(h)
@@ -17,8 +17,8 @@ ti(h)bi(h) Cæ(h)li(h) et(h) u(h)ni(h)vér(h)sæ(g) Po(h)tes(i)tá(h)tes:(g) (::
 Ti(j)bi(j) Ché(j)ru(j)bim(j) et(i) Sé(hi)ra(h)phim(h) (;)
 in(h)ces(h)sá(h)bi(h)li(h) vo(g)ce(h) pro(i)clá(h)mant:(g) (::)
 
-San(ghiwj)ctus:(ih) (::)
-San(ghiwj)ctus:(ih) (::)
+San(gh!iwj)ctus:(ih) (::)
+San(gh!iwj)ctus:(ih) (::)
 San(he/gh)ctus(h) (,) Dó(h)mi(h)nus(g) De(h)us(i) Sá(h)ba(h)oth.(g) (::)
 
 Ple(j)ni(j) sunt(j) cæ(j)li(j) et(i) ter(hi)ra(h) (;)
@@ -33,10 +33,10 @@ lau(h)dá(g)bi(h)lis(i) nu(h)me(h)rus:(g) (::)
 Te(j) Már(j)ty(j)rum(j) can(j)di(i)dá(hi)tus(h) (;)
 lau(g)dat(h) e(i)xér(h)ci(h)tus.(g) (::)
 
-Te(j) per(j) or(j)bem(j) ter(i)rá(hi)rum(h)
+Te(j) per(j) or(j)bem(j) ter(i)rá(hi)rum(h) (;)
 sanc(h)ta(h) con(h)fi(h)té(g)tur(h) Ec(i)clé(h)si(h)a:(g) (::)
 
-Pa(ghiwj)trem(ih) (;)
+Pa(gh!iwj)trem(ih) (;)
 im(h)mén(h)sæ(g) ma(h)jes(i)tá(h)tis:(g) (::)
 
 Ve(j)ne(j)rán(j)dum(j) tu(j)um(i) ve(hi)rum(h) (;)
@@ -71,9 +71,9 @@ cum(c) Sanc(e)tis(f) tu(g)is(g) in(g) gló(g)ri(g)a(g) nu(h)me(f)rá(gvFE)ri.(e)
 Sal(c)vum(df) fac(f) pó(f)pu(f)lum(f) tu(f)um(f) Dó(d)mi(f)ne,(evDC) (;)
 et(c) bé(df)ne(f)dic(f) hæ(f)re(fe)di(d)tá(f)ti(gh) tu(gvFE)æ.(e) (::)
 
-Et(f) re(fe)ge(d) e(f)os,(eDC) (;)
+Et(f) re(fe)ge(d) e(f)os,(evDC) (;)
 et(c) ex(df)tól(fe)le(d) il(g)los(g) (,)
-us(g)que(g) in(h) æ(f)tér(gFE)num.(e) (::)
+us(g)que(g) in(h) æ(f)tér(gvFE)num.(e) (::)
 
 Per(h) sín(h)gu(h)los(g) di(ij)es,(ih) (;)
 be(h)ne(g)dí(h)ci(i)mus(g) te.(e) (::)
@@ -90,5 +90,5 @@ mi(h)se(g)ré(h)re(i) nos(g)tri.(e) (::)
 Fi(h)at(h) mi(h)se(h)ri(h)cór(h)di(h)a(h) tu(h)a(h) Dó(h)mi(h)ne(g) su(ij)per(i) nos,(h) (::)
 quem(h)ád(h)mo(h)dum(h) spe(h)rá(g)vi(h)mus(i) in(g) te.(e) (::)
 
-In(c) te(df) Dó(fe)mi(d)ne(f) spe(gh)rá(gfgf)vi:(ed) (;)
+In(c) te(df) Dó(fe)mi(d)ne(f) spe(gh)rá(gf/gf)vi:(ed) (;)
 non(c) con(df)fún(fe)dar(dc) in(f) æ(gh)tér(gfgvFE)num.(e) (::)
