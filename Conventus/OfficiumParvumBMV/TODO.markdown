@@ -1,13 +1,14 @@
 * najit vhodnou mensi velikost notovych osnov
 * naucit Hirama delat zalmy bez Gloria Patri a opravit Canticum trium p.
 * odstranit poznamky "recto tono" a "tono feriali" a dat o napevu modliteb a versiku jednu rubriku na zacatek?
-* spravne rozmistit prikazy o umistovani a neumistovani vzduchu na dopsani neum
+* spravne rozmistit prikazy o umistovani a neumistovani vzduchu na dopsani neum (jsou vubec v techto notach zadouci?)
 * sjednotit male ci velke pismeno na zacatku nadpisu casti
 
 * prepsat chybejici ceske zalmy
 * v pramenech vyjmenovat prameny vsech antifon vzatych z manuskriptu
 * zminit, ze jsem pouzil marianske antifony od nekoho jineho
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
+* pro Benedictus a Magnificat zdobnejsi napevy?
 
 # Rubricisticke
 
@@ -22,15 +23,13 @@
 
 * matutinum
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
-  * Te Deum - kontrola
   * rubrika, kdy se zpiva Gloria a pak Te Deum a kdy treti responsorium se svym Gloria
   
 * rozsirit prostor kolem uzke inicialy J
-
-* laudes
-  * vsechno od konce psalmodie
   
 * completorium - revize
+
+
 
 # In Adventu
 
