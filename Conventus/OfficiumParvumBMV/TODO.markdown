@@ -23,9 +23,7 @@
 * matutinum
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
   * Te Deum - kontrola
-  * responsorium 2: Gloria Patri pro svatky 
   * rubrika, kdy se zpiva Gloria a pak Te Deum a kdy treti responsorium se svym Gloria
-  * responsorium 3 Felix namque - kontrola podle manuskriptu, Gloria Patri
   
 * rozsirit prostor kolem uzke inicialy J
 
