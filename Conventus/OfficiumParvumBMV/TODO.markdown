@@ -15,7 +15,6 @@
 
 * co vsechno zmenil Codex rubricarum?
   * jak je to s duplikaci antifon? byla zavedena uplna? ANO, Campbell 29
-  * byla zrusena prima? - ano, SC; ale byl to okamzite platny prikaz nebo byl proveden az vydanim noveho breviare?
   * komemorace? ANO, uz 1955 - Campbell 26
   * závěrečná antifona po laudách a nešporách?
 
@@ -23,13 +22,10 @@
 
 * matutinum
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
-  * rubrika, kdy se zpiva Gloria a pak Te Deum a kdy treti responsorium se svym Gloria
-  
+    
 * rozsirit prostor kolem uzke inicialy J
   
 * completorium - revize
-
-
 
 # In Adventu
 
@@ -40,6 +36,8 @@
 # Tempore Paschali
 
 * initia
+
+* asi odstranit zvlastni sekci a alternativni evangelni kantika nechat v Extra Adventum
 
 # Dalsi
 
