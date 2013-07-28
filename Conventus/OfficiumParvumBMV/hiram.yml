@@ -62,6 +62,12 @@ psalms: {
     benedictus: VIII.G
   },
 
+  'extra Adventum, Tertia': {
+    122: IV.A,
+    123: IV.A,
+    124: IV.A
+  },
+
   'Advent, Vespers': {
     109: VIII.G, # in AR12: VIII.G*
     112: I.g,
