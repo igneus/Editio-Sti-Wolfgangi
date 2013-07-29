@@ -108,7 +108,13 @@
   \includescore{cantus/arom12/versiculus-DiffusaEst.tex}
 }
 
-\newcommand{\oratio}{
+\newcommand{\inFineHorarumExtraAdventum}{
+  \kyrieEleison
+
+  \vspace{7mm}
+
+  \pars{Oratio.}
+
   \rubrica{Tono feriali, i.e. tono recto:}
 
   Concéde nos fámulos tuos, quǽsumus, Dómine Deus,
@@ -117,6 +123,18 @@
   a præsénti liberáti tristítia et ætérna pérfrui lætítia.
 
   \perDominum
+
+  %%% finis
+
+  \dominusVobiscum
+
+  \vspace{7mm}
+
+  \includescore{\ccommunesAR/benedicamus-feria.tex}
+
+  \vspace{7mm}
+
+  \fideliumAnimae
 }
 
 %%%% IN ADVENTU
@@ -135,6 +153,34 @@
   \antiphona{I f}{cantus/arom12/adv_ant4.tex}{\translatioAntIV}}
 \newcommand{\adventAntiphonaV}{
   \antiphona{VIII c}{cantus/arom12/adv_ant5.tex}{\translatioAntV}}
+
+\newcommand{\inFineHorarumInAdventu}{
+  \kyrieEleison
+
+  \vspace{7mm}
+
+  \pars{Oratio.}
+
+  Deus, qui de beátæ Maríæ Vírginis útero Verbum tuum,
+  Angelo nuntiánte, carnem suscípere voluísti: †
+  præsta supplícibus tuis;
+  ut qui vere eam Genitrícem Dei crédimus, *
+  ejus apud te intercessiónibus adjuvémur.
+
+  Per eúmdem Christum Dóminum nostrum.
+
+  %%% finis
+
+  \dominusVobiscum
+
+  \vspace{7mm}
+
+  \includescore{\ccommunesAR/benedicamus-feria.tex}
+
+  \vspace{7mm}
+
+  \fideliumAnimae
+}
 
 %%%% TEMPORE NATIVITATIS
 
@@ -184,37 +230,12 @@
     \noindent \translatioVersus
 }
 
-\newcommand{\inFineHorarum}{
-  \pars{In fine horarum.}
-
-  \rubrica{Post \textnormal{Benedicamus Domino} dicitur voce recta
-  et paululum depressa:}
-
-  \includescore{\cantusCommunesAM/fideliumanimae.tex}
-
-  Pater noster \rubrica{totum secreto. Deinde, si discedendum est a Choro:}
-
-  \includescore{\cantusCommunesAM/dominusdet.tex}
-
-  \pagebreak
-
-  \includescore{\cantusCommunesAM/an_alma_redemptoris_mater.tex}
-
-  \vspace{5mm}
-
-  \rubrica{Versiculus tono simplici:}
-
-  \noindent ℣. Angelus Dómini nuntiávit Ma\textbf{rí}æ.\\
-  ℟. Et concépit de Spíritu \textbf{Sanc}to.
-
-  \vspace{5mm}
-
-  \includescore{\cantusCommunesAM/oratio-AlmaRedemptorisAdvent.tex}
-
-  \includescore{\cantusCommunesAM/divinumauxilium.tex}
-}
-
 \newcommand{\rubricaOratio}{
   \rubrica{Sequitur Supplicatio Litani"ae et cetera usque ad finem hor"ae,
   pg. \pageref{oratioetc}.}
+}
+
+\newcommand{\rubricaAnnuntiatioQuadragesimaAlleluja}{
+  \rubrica{In Festo Annuntiationis, quoties ipsum Tempore Quadragesimæ
+    celebretur, \textnormal{Allelúja} omittitur.}
 }
