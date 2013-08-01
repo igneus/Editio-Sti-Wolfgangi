@@ -1,0 +1,99 @@
+% Commands used to produce a typical "Conventus" booklet
+
+\newenvironment{titulusOfficii}{\begin{center}}{\end{center}}
+\newcommand{\dies}[1]{#1
+
+}
+\newcommand{\nomenFesti}[1]{\textbf{\Large #1}
+
+}
+\newcommand{\celebratio}[1]{#1
+
+}
+
+\newcommand{\hora}[1]{%
+\vspace{0.5cm}{\large \textbf{#1}}
+
+\fancyhead[LE]{\thepage\ / #1}
+\fancyhead[RO]{#1 / \thepage}
+\addcontentsline{toc}{subsection}{#1}
+}
+
+% larger unit than a hora
+\newcommand{\divisio}[1]{%
+\begin{center}
+{\Large \textsc{#1}}
+\end{center}
+\fancyhead[CO,CE]{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+% rubricated inline text
+\newcommand{\rubricatum}[1]{\textit{#1}}
+
+% standalone rubric
+\newcommand{\rubrica}[1]{\vspace{3mm}\rubricatum{#1}}
+
+\newcommand{\notitia}[1]{\textcolor{red}{#1}}
+
+\newcommand{\scriptura}[1]{\hfill \small\textit{#1}}
+
+\newcommand{\translatioCantus}[1]{\vspace{1mm}%
+{\noindent\footnotesize \nlfont{#1}}}
+
+% pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
+% s prekladem
+\newcommand{\psalmusEtTranslatioB}[3]{
+  \vspace{0.5cm}
+  \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
+    \colchunk{\input{#1}}
+    \colchunk{\vspace{-0.5cm}{\footnotesize \nlfont\input{#2}}}
+  \end{parcolumns}
+}
+
+\newcommand{\psalmusEtTranslatio}[2]{
+  \psalmusEtTranslatioB{#1}{#2}{8.5cm}
+}
+
+% volne misto nad antifonami, kam si zpevaci dokresli neumy
+\newcommand{\hicSuntNeumae}{\vspace{0.5cm}}
+
+% prepinani mista mezi notovymi osnovami: pro neumovane a neneumovane zpevy
+\newcommand{\cantusCumNeumis}{
+  \setgrefactor{17}
+  \global\advance\grespaceabovelines by 5mm%
+}
+\newcommand{\cantusSineNeumas}{
+  \setgrefactor{17}
+  \global\advance\grespaceabovelines by -5mm%
+}
+
+% znaky k umisteni nad inicialu zpevu
+\newcommand{\superInitialam}[1]{\gresetfirstlineaboveinitial{\small {\textbf{#1}}}{\small {\textbf{#1}}}}
+
+% pars officii, i.e. "oratio", ...
+\newcommand{\pars}[1]{\textbf{#1}}
+
+\newenvironment{psalmus}{
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{5pt}
+}{
+  \setlength{\parindent}{10pt}
+  \setlength{\parskip}{10pt}
+}
+
+%%%% Prejmenovat na latinske:
+\newcommand{\nadpisZalmu}[1]{
+  \hspace{2cm}\textbf{#1}\vspace{2mm}%
+  \nopagebreak%
+
+}
+
+% mode, score, translation
+\newcommand{\antiphona}[3]{%
+\hicSuntNeumae
+\superInitialam{#1}
+\includescore{#2}
+
+#3
+}
