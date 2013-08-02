@@ -6,8 +6,10 @@ class HymnMelody
   def initialize
     @lines = []
     @key = nil
+    @header = ""
   end
 
+  attr_accessor :header
   attr_reader :lines
   attr_accessor :key
 
@@ -37,9 +39,11 @@ class HymnMelody
     m = HymnMelody.new
 
     fr = File.open(filename, 'r')
-    begin
-      l = fr.gets 
-    end while l != "%%\n"
+    loop do
+      l = fr.gets
+      break if l == "%%\n"
+      m.header += l
+    end
 
     m.key = fr.gets
 
@@ -118,24 +122,29 @@ class HymnText
       @lines.each_with_index do |textl,i|
         mell = melody.lines[i]
 
-        texti = 0
-        mell.each do |neuma|
-          if textl[texti] == ' ' then
+        begin
+          texti = 0
+          mell.each do |neuma|
+            if textl[texti] == ' ' then
+              texti += 1
+              output += " "
+              redo
+            end
+
+            if texti >= textl.size then
+              output += " "+mell.last
+              break
+            end
+
+            output += textl[texti].gsub('{', '<i>').gsub('}', '</i>')
+            output += neuma
             texti += 1
-            output += " "
-            redo
           end
-
-          if texti >= textl.size then
-            output += " "+mell.last
-            break
-          end
-
-          output += textl[texti].gsub('{', '<i>').gsub('}', '</i>')
-          output += neuma
-          texti += 1
+          output += "\n"
+        rescue
+          STDERR.puts "Error occurred while setting line #{i}:"
+          raise
         end
-        output += "\n"
       end
       
       return output
@@ -176,10 +185,26 @@ melody = HymnMelody.load melodyfile
 text = HymnText.load textfile
 # p text
 
+if melody.lines.size != text.stanzas.first.lines.size then
+  STDERR.puts "Warning: lines count in melody (#{melody.lines.size}) and text (#{text.stanzas.first.lines.size}) do not match."
+end
+
+of.puts melody.header
 of.puts "%%"
 of.puts melody.key
 text.stanzas.each_with_index do |s,si|
-  of.print s.set(melody)
+  begin
+    of.print s.set(melody)
+  rescue
+    STDERR.puts "Error occured while setting stanza #{si}."
+    STDERR.puts
+    STDERR.puts melody.inspect
+    STDERR.puts
+    STDERR.puts text.inspect
+    STDERR.puts
+    raise
+  end
+
   if si != text.stanzas.size - 1 then
     of.puts " (z)"
   end
