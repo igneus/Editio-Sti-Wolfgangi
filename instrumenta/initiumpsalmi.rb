@@ -200,6 +200,10 @@ class PsalmodicPattern
   
     def preparatory_syls
       first_accent = self.index {|n| n.index 'r1' }
+      if first_accent.nil? then
+        raise "Accent (r1) not found."
+      end
+
       if movable_accent? then
         return first_accent - 2
       else 
