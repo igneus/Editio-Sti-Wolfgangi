@@ -13,4 +13,14 @@ hymns: [
 ['cantus/amon33/textushymni-LustrisSex.txt', 'cantus/amon33/musica-LustrisSex.gabc']
 ]
 
-psalms: {}
+psalms: {
+  vesperae: {
+    109: VII.c, 110: III.a, 111: I.f, 112: II.D
+  },
+
+  laudes: {
+    66: dir,
+    92: VII.c, 99: III.a, 62: I.f, dan3: VII.c, 
+    148: II.D, 149: II.D, 150: II.D
+  }
+}
