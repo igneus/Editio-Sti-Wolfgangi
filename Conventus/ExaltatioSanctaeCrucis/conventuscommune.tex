@@ -1,4 +1,8 @@
-% Commands used to produce a typical "Conventus" booklet
+% Macros used to produce a typical "Conventus" booklet
+
+%
+% title page
+% 
 
 \newenvironment{titulusOfficii}{\begin{center}}{\end{center}}
 \newcommand{\dies}[1]{#1
@@ -11,6 +15,10 @@
 
 }
 
+%
+% book sections
+%
+
 \newcommand{\hora}[1]{%
 \vspace{0.5cm}{\large \textbf{#1}}
 
@@ -19,7 +27,7 @@
 \addcontentsline{toc}{subsection}{#1}
 }
 
-% larger unit than a hora
+% larger unit than a hora (a day, ...)
 \newcommand{\divisio}[1]{%
 \begin{center}
 {\Large \textsc{#1}}
@@ -28,21 +36,34 @@
 \addcontentsline{toc}{section}{#1}
 }
 
+% part of an hour, i.e. "oratio", ...
+\newcommand{\pars}[1]{\textbf{#1}}
+
+%
+% special text units
+%
+
 % rubricated inline text
 \newcommand{\rubricatum}[1]{\textit{#1}}
 
 % standalone rubric
 \newcommand{\rubrica}[1]{\vspace{3mm}\rubricatum{#1}}
 
+% notice
 \newcommand{\notitia}[1]{\textcolor{red}{#1}}
 
+% Scripture reference (standalone, right-aligned)
 \newcommand{\scriptura}[1]{\hfill \small\textit{#1}}
 
+% translation (standalone, small)
 \newcommand{\translatioCantus}[1]{\vspace{1mm}%
 {\noindent\footnotesize \nlfont{#1}}}
 
-% pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
-% s prekladem
+%
+% chant pieces
+%
+
+% psalm and translation with variable width
 \newcommand{\psalmusEtTranslatioB}[3]{
   \vspace{0.5cm}
   \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
@@ -51,6 +72,7 @@
   \end{parcolumns}
 }
 
+% psalm and translation with fixed width
 \newcommand{\psalmusEtTranslatio}[2]{
   \psalmusEtTranslatioB{#1}{#2}{8.5cm}
 }
@@ -70,9 +92,6 @@
 
 % znaky k umisteni nad inicialu zpevu
 \newcommand{\superInitialam}[1]{\gresetfirstlineaboveinitial{\small {\textbf{#1}}}{\small {\textbf{#1}}}}
-
-% pars officii, i.e. "oratio", ...
-\newcommand{\pars}[1]{\textbf{#1}}
 
 \newenvironment{psalmus}{
   \setlength{\parindent}{0pt}

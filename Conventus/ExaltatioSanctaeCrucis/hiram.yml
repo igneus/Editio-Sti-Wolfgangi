@@ -1,10 +1,12 @@
 main: exaltatio.tex
 moretex: [
-conventuscommune.tex
+conventuscommune.tex,
+textusrepetiti.tex
 ]
 
 chants: [
 'cantus/amon33/*.gabc',
+'../../cantuscommunes/amon33/*.gabc',
 '../../tonipsalmorum/arom12/magnificat*.gabc'
 ]
 
