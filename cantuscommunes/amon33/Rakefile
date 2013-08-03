@@ -1,22 +1,5 @@
-# makes one document with all the chants from this directory
+$path_to_instrumenta = '../../instrumenta'
 
-script = '../../instrumenta/omnescantus.rb'
+require $path_to_instrumenta+'/rakefile_omnescantus.rb'
 
-chants = Dir['*.gabc']
-compiledchants = chants.map do |c|
-  cc = c.gsub(/\.gabc$/, '.tex')
-  file cc => [c] do |t|
-    sh "gregorio #{c}"
-  end
-  cc # return value
-end
-
-file 'cantuscommunes_amon33.tex' => chants+[script] do |t|
-  sh "ruby #{script} #{Dir.pwd} #{t.name}"
-end
-
-file 'cantuscommunes_amon33.pdf' => ['cantuscommunes_amon33.tex']+compiledchants do |t|
-  sh "lualatex -interaction=nonstopmode "+t.prerequisites[0]
-end
-
-task :default => ['cantuscommunes_amon33.pdf']
+task :default => [:chantsoverview]
