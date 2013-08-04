@@ -12,7 +12,7 @@ chants: [
 
 hymns: [
 ['cantus/amon33/textushymni-VexillaRegis.txt', 'cantus/amon33/musica-VexillaRegis.gabc'],
-['cantus/amon33/textushymni-LustrisSex.txt', 'cantus/amon33/musica-LustrisSex.gabc']
+['cantus/amon33/textushymni-LustrisSex.txt', 'cantus/amon33/musica-LustrisSex.gabc', '--no-linebreaks']
 ]
 
 psalms: {
