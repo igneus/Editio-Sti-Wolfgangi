@@ -156,8 +156,21 @@ end
 
 options = {
   :outputfile => nil,
-  :makeamen => true
+  :amen => true,
+  :linebreaks => true
 }
+
+require 'optparse'
+optparser = OptionParser.new do |opts|
+  opts.on "-a", "--no-amen", "Don't append amen to the last stanza." do |f|
+    options[:amen] = false
+  end
+
+  opts.on "-l", "--no-linebreaks", "Don't break lines after each stanza." do 
+    options[:linebreaks] = false
+  end
+end
+optparser.parse!
 
 melodyfile = ARGV.shift
 textfile = ARGV.shift
@@ -205,12 +218,15 @@ text.stanzas.each_with_index do |s,si|
     raise
   end
 
-  if si != text.stanzas.size - 1 then
+  if si != text.stanzas.size - 1 and options[:linebreaks] then
     of.puts " (z)"
   end
   of.puts
 end
 
-of.puts melody.amen+" (::)"
+if options[:amen] then
+  of.print melody.amen
+end
+of.puts " (::)"
 
 of.close

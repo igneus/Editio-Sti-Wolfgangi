@@ -194,13 +194,14 @@ module Hiram
         @proj.hymns.each do |h|
           textus = h[0]
           musica = h[1]
+          options = h[2] or ''
 
           i = textus.index '-'
           ii = textus.index '.'
           out = "hymnus-"+textus[i+1..ii-1]+".gabc"
 
           file "temporalia/"+out => [textus, musica, '../../instrumenta/hymnographus.rb'] do |t|
-            sh "#{TaskGenerator::RUBY_COMMAND} ../../instrumenta/hymnographus.rb #{t.prerequisites[1]} #{t.prerequisites[0]} #{t.name}"
+            sh "#{TaskGenerator::RUBY_COMMAND} ../../instrumenta/hymnographus.rb #{options} #{t.prerequisites[1]} #{t.prerequisites[0]} #{t.name}"
           end
 
           @hymn_targets << gregorio("temporalia/"+out)
