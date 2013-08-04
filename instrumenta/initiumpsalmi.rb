@@ -275,22 +275,30 @@ text_i = 0
 ## initium
 
 if setup[:inchoatio] then
-  psalmody.initium.each_with_index do |n,i|
-    s = verse.first.syllables[text_i]
-    if s == ' ' then
-      of.print " "
-      text_i += 1
-      redo
+  initium = psalmody.initium
+else
+  # if the ichoatio is to be omitted, let the following routine
+  # set a fake inchoatio made of one tenor note
+  # (space is always added before the first note of the inchoatio
+  # and we want this space always)
+  initium = [psalmody.mediation.first]
+end
+  
+initium.each_with_index do |n,i|
+  s = verse.first.syllables[text_i]
+  if s == ' ' then
+    of.print " "
+    text_i += 1
+    redo
+  else
+    of.print s
+    if i == 0 then
+      # add space at the beginning
+      of.print n.gsub("(", "( ")
     else
-      of.print s
-      if i == 0 then
-        # add space at the beginning
-        of.print n.gsub("(", "( ")
-      else
-        of.print n
-      end
-      text_i += 1
+      of.print n
     end
+    text_i += 1
   end
 end
 
