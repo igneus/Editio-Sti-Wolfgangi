@@ -20,7 +20,9 @@
 %
 
 \newcommand{\hora}[1]{%
-\vspace{0.5cm}{\large \textbf{#1}}
+\vspace*{0.5cm}
+{\large \textbf{#1}}
+\vspace{0.5cm}
 
 \fancyhead[LE]{\thepage\ / #1}
 \fancyhead[RO]{#1 / \thepage}
@@ -37,7 +39,10 @@
 }
 
 % part of an hour, i.e. "oratio", ...
-\newcommand{\pars}[1]{\textbf{#1}}
+\newcommand{\pars}[1]{
+  \vspace{3mm}
+  \textbf{#1}
+}
 
 %
 % special text units
