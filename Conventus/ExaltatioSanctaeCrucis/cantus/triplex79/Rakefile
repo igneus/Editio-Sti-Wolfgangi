@@ -1,0 +1,5 @@
+$path_to_instrumenta = '../../../../instrumenta'
+
+require $path_to_instrumenta+'/rakefile_omnescantus.rb'
+
+task :default => [:chantsoverview]
