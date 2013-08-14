@@ -38,6 +38,8 @@
 \begin{document}
 
 % GREGORIO general settings:
+% staff size
+\setgrefactor{15}
 % space around the initial.
 \setspaceafterinitial{2.2mm plus 0em minus 0em}
 \setspacebeforeinitial{2.2mm plus 0em minus 0em}
@@ -86,9 +88,13 @@ Sabbati post Cineres inclusive.}
 
 \pagebreak
 
+\label{pars:completorium}
+
 \input{partes/completorium.tex}
 
 \pagebreak
+
+\label{pars:matutinum}
 
 \input{partes/extradv_matutinum.tex}
 
@@ -115,8 +121,11 @@ usque ad Nonam Vigiliae Nativitatis Domini inclusive.}
 
 \hora{Completorium}
 
-\rubrica{Completorium fit ut Extra Adventum, tantum Capitulum
+\rubrica{Completorium fit ut Extra Adventum, pg. \pageref{pars:completorium}, 
+tantum Capitulum
 cum Versiculo suo, Antiphona pro Nunc dimittis et Oratio sunt propria.}
+
+\input{partes/advent_matutinum.tex}
 
 \pagebreak
 

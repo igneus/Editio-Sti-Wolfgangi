@@ -81,6 +81,10 @@ psalms: {
     nuncdimittis: VIII.G
   },
 
+  'Advent, Matins': {
+    97: I.f
+  },
+
   'Advent, Laudes': {
     92: VIII.G, # in AR12: VIII.G*
     99: I.g,
