@@ -166,7 +166,9 @@ module Hiram
         " --output #{psoutname} "
 
       skip = (psalm == 'magnificat') ? 2 : 1
-      options += "--skip-verses #{skip} "
+      if ingroup == false or firstingroup == true then
+        options += "--skip-verses #{skip} "
+      end
 
       if psalm != 'dan3' and 
           (ingroup == false or lastingroup == true) then

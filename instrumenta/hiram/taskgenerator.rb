@@ -92,7 +92,7 @@ class Hiram::TaskGenerator
 
     @gloriapatri = File.readlines(@psalms_dir + 'gloriapatri.pslm').join ""
 
-    @default_psalm_options = "--accents-style bold "
+    @default_psalm_options = "--accents-style bold --skip-title "
     @output_dir = './temporalia/'
   end
 
