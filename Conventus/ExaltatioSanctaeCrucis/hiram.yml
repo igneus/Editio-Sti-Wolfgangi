@@ -6,6 +6,7 @@ textusrepetiti.tex
 
 chants: [
 'cantus/amon33/*.gabc',
+'cantus/triplex79/*.gabc',
 '../../cantuscommunes/amon33/*.gabc',
 '../../tonipsalmorum/arom12/magnificat*.gabc'
 ]
@@ -26,5 +27,9 @@ psalms: {
     92: VII.c, 99: III.a, 62: I.f, dan3: VII.c, 
     '148,149,150': II.D,
     benedictus: Isoll.D2
+  },
+
+  missa: {
+    'cantus/triplex79/communio_versus.pslm': [[1,3], [1,2]]
   }
 }

@@ -8,7 +8,7 @@
 \usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry}
 
 \usepackage{fontspec}
-\setmainfont[Ligatures={Common, TeX, Rare}]{Junicode}
+\setmainfont[Ligatures={Common, TeX}]{Junicode}
 
 % shortcut for Junicode without ligatures (for the Czech texts)
 \newfontfamily\nlfont[Ligatures={Common, TeX}]{Junicode}
@@ -90,8 +90,6 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \vfill
 
-\pagebreak
-
 \pars{Psalmus 1.}
 
 \antiphonaI
@@ -100,7 +98,7 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \input{temporalia/ps109-initium-vii-c-auto}
 
-\psalmusEtTranslatio{temporalia/ps109-vii-c}{temporalia/ps109-boh}
+\psalmusEtTranslatioB{temporalia/ps109-vii-c}{temporalia/ps109-boh}{11cm}
 
 \vfill
 
@@ -301,10 +299,12 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \psalmusEtTranslatioB{temporalia/ps148-ii-d}{temporalia/ps148-boh}{11cm}
 
+\vspace{5mm}
 \scriptura{Psalmus 149}
 
 \psalmusEtTranslatioB{temporalia/ps149-ii-d}{temporalia/ps149-boh}{11cm}
 
+\vspace{5mm}
 \scriptura{Psalmus 150}
 
 \psalmusEtTranslatioB{temporalia/ps150-ii-d}{temporalia/ps150-boh}{11cm}
@@ -423,6 +423,12 @@ Editio Sancti Wolfgangi \annusEditionis
 \superInitialam{IV}
 
 \includescore{cantus/triplex79/crux_missa_communio}
+
+\scriptura{Psalmus 17, 2-3a. 3bc. 4. 18. 38. 39. 41. 48. 49. 50}
+
+\includescore{cantus/triplex79/initium-ps17-iv-comm}
+
+\input{temporalia/communio_versus}
 
 \pagebreak
 
