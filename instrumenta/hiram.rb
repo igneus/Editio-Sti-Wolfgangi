@@ -73,6 +73,11 @@ module Hiram
             puts task.name.ljust(10) + task.comment.to_s
           end
         end
+
+      when :dump_tasks
+        Rake::Task.tasks.each do |task|
+          p task
+        end
       end
     end
 
@@ -86,6 +91,10 @@ module Hiram
 
         opts.on "-T", "--tasks", "Show available tasks" do 
           @action = :show_tasks
+        end
+
+        opts.on "-d", "--dump", "Dump tasks for debugging" do 
+          @action = :dump_tasks
         end
       end
       optparser.parse!
@@ -151,8 +160,18 @@ module Hiram
 
     # helper for the previous method
     def create_psalm_task(psalm, tone, ingroup=false, firstingroup=false, lastingroup=false)
-      tonesuff =  '-' + tone.downcase.gsub('.', '-')
-      if psalm.is_a? Fixnum or
+      if tone.is_a? String then
+        tonesuff =  '-' + tone.downcase.gsub('.', '-')
+      else
+        tonesuff = ''
+      end
+
+      
+
+      if psalm.is_a? String and File.exist? psalm then
+        psfname = psalm
+        psoutname = File.basename(psfname).gsub(/\.pslm$/, '.tex')
+      elsif psalm.is_a? Fixnum or
         (psalm.is_a? String and psalm =~ /^\d+/) then
         psfname = 'ps' + psalm.to_s + '.pslm'
         psoutname = 'ps' + psalm.to_s + tonesuff + '.tex'
@@ -185,7 +204,11 @@ module Hiram
 
       if psalm != 'magnificat' then
         inchoatio = ingroup == false or firstingroup
-        @initia_targets << @taskgen.geninitium(psfname, tone, inchoatio)
+        begin
+          @initia_targets << @taskgen.geninitium(psfname, tone, inchoatio)
+        rescue RuntimeError => re
+          STDERR.puts "ERROR: initium not generated for psalm '#{psfname}': "+re.message
+        end
       end
     end
 

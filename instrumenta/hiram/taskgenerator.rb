@@ -51,16 +51,22 @@ module Hiram::HiramUtils
   # takes a psalmtone (String like 'I.g') and returns options
   # for psalmpreprocessor.rb to point a psalm for this tone
   def options_accents(psalmtone)
-    if TONI_PSALMORUM[psalmtone] == nil then
-      raise ArgumentError, "Unknown psalm tone '#{psalmtone}'."
+    if psalmtone.is_a? Array then
+      tone_spec = psalmtone
+    else
+      if TONI_PSALMORUM[psalmtone] == nil then
+        raise ArgumentError, "Unknown psalm tone '#{psalmtone}'."
+      end
+
+      tone_spec = TONI_PSALMORUM[psalmtone]
     end
 
     accents = 
-      TONI_PSALMORUM[psalmtone][0][0].to_s + ':' + 
-      TONI_PSALMORUM[psalmtone][1][0].to_s
+      tone_spec[0][0].to_s + ':' + 
+      tone_spec[1][0].to_s
     preps = 
-      TONI_PSALMORUM[psalmtone][0][1].to_s + ':' + 
-      TONI_PSALMORUM[psalmtone][1][1].to_s
+      tone_spec[0][1].to_s + ':' + 
+      tone_spec[1][1].to_s
     
     return "--accents #{accents} --preparatory-syllables #{preps}"
   end
@@ -99,10 +105,19 @@ class Hiram::TaskGenerator
   attr_accessor :default_psalm_options
   attr_accessor :output_dir
 
+  def psalm_file(psalm, input_dir)
+    if psalm.include? '/' or File.exist? psalm then
+      return psalm
+    else
+      return input_dir+"/"+psalm
+    end
+  end
+
   # General function generating a Rake task to point a psalm text
-  def genpsalm_universal(zalm, outputname, options, output_dir, input_dir)
+  def genpsalm_universal(zalm, outputname, options, output_dir=@output_dir, input_dir=@psalms_dir)
     wd = Dir.pwd
-    syrovy = input_dir+"/"+zalm
+    
+    syrovy = psalm_file(zalm, input_dir)
     peceny = output_dir + outputname
 
     # expand a fake option (this solution is pretty dirty!)
@@ -152,13 +167,21 @@ class Hiram::TaskGenerator
 
   # Rake task to notate first verse of a psalm
   def geninitium(psalm, tone, inchoatio=true)
+    unless tone.is_a? String
+      tone = ''
+    end
+
     ntone = tone
     if i = ntone.index('.') then
       ntone = ntone[0..i-1].downcase+'-'+ntone[i+1..-1]
     end
     patternfile = @psalmtones_dir+ntone+'-auto.gabc'
+    if not File.exist?(patternfile) then
+      raise "Psalm tone file #{patternfile} not found."
+    end
 
-    psalmfile = @psalms_dir + '/' + psalm
+    
+    psalmfile = psalm_file(psalm, @psalms_dir)
   
     i = File.basename(patternfile).index('.')
     output_ending = '-initium-'+File.basename(patternfile)[0..i-1]+'.gabc'
