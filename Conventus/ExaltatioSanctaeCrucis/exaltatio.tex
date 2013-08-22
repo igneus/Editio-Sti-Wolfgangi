@@ -82,7 +82,14 @@ Editio Sancti Wolfgangi \annusEditionis
 \fancyhf{}
 \pagestyle{fancy}
 
+\begin{multicols}{2}
+\anteOfficiumOratio
+\columnbreak
 
+\postOfficiumOratio
+\end{multicols}
+
+\pagebreak
 
 \hora{In I. Vesperis.}
 
@@ -386,6 +393,13 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \hora{Ad Missam.}
 
+% I wasn't able to determine from the 1969 Graduale which ordinarium
+% ought to be chosen, so I looked in the 1961 Graduale:
+% in 1961 Exaltatio S. C. was a II. class feast
+% and II. class feasts had "Cunctipotens Genitor Deus".
+
+\scriptura{(Ordinarium IV Cunctipotens Genitor Deus; Credo I)}
+
 \pars{Introitus.}
 
 \scriptura{Cf. Gal. 6, 14; Psalmus 66}
@@ -395,6 +409,20 @@ Editio Sancti Wolfgangi \annusEditionis
 \includescore{cantus/triplex79/crux_missa_introitus}
 
 
+\pars{Kyrie.}
+
+\superInitialam{I}
+
+\includescore{../../cantuscommunes/kyriale76/iv-kyrie}
+
+
+\pars{Gloria.}
+
+\superInitialam{IV}
+
+\includescore{../../cantuscommunes/kyriale76/iv-gloria}
+
+
 \pars{Graduale.}
 
 \scriptura{Phil. 2, 8. \textnormal{℣.} 9}
@@ -402,6 +430,13 @@ Editio Sancti Wolfgangi \annusEditionis
 \superInitialam{V}
 
 \includescore{cantus/triplex79/crux_missa_graduale}
+
+
+\pars{Credo.}
+
+\superInitialam{IV}
+
+\includescore{../../cantuscommunes/kyriale76/credo-i}
 
 
 \pars{Alleluia.}
@@ -416,6 +451,20 @@ Editio Sancti Wolfgangi \annusEditionis
 \superInitialam{II}
 
 \includescore{cantus/triplex79/crux_missa_offertorium}
+
+
+\pars{Sanctus.}
+
+\superInitialam{VIII}
+
+\includescore{../../cantuscommunes/kyriale76/iv-sanctus}
+
+
+\pars{Agnus Dei.}
+
+\superInitialam{VI}
+
+\includescore{../../cantuscommunes/kyriale76/iv-agnusdei}
 
 
 \pars{Communio}
@@ -469,8 +518,8 @@ typi Junicode. %http://junicode.sourceforge.net
 Liber hic ad usum chori 
 \guillemotright Conventus Choralis\guillemotleft\ 
 paratus est
-et secundum eius consuetudines.
-http://www.introitus.cz
+et secundum eius consuetudines -
+specialiter pro die nuptiarum Zuzana Malá et Jan Horák.
 
 \vspace{1cm}
 

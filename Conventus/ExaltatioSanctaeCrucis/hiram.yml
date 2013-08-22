@@ -8,6 +8,8 @@ chants: [
 'cantus/amon33/*.gabc',
 'cantus/triplex79/*.gabc',
 '../../cantuscommunes/amon33/*.gabc',
+'../../cantuscommunes/kyriale76/iv-*.gabc',
+'../../cantuscommunes/kyriale76/credo-i.gabc',
 '../../tonipsalmorum/arom12/magnificat*.gabc'
 ]
 
