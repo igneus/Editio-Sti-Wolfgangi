@@ -27,7 +27,7 @@
 \usepackage{multicol}
 
 \input{conventuscommune.tex}
-%\input{translationes_cs.tex}
+\input{translationes_cs.tex}
 \input{textusrepetiti.tex}
 
 \newcommand{\annusEditionis}{2013}
@@ -88,6 +88,9 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \postOfficiumOratio
 \end{multicols}
+
+% multicols setting
+\setlength{\columnseprule}{0pt} % cara oddelujici sloupce
 
 \pagebreak
 
@@ -162,9 +165,7 @@ Editio Sancti Wolfgangi \annusEditionis
 \superInitialam{VI}
 \includescore{cantus/amon33/crux_vespi_resp.tex}
 
-\vfill
-
-\pagebreak
+\trResponsoriumVesperae
 
 \pars{Hymnus}
 
@@ -173,19 +174,25 @@ Editio Sancti Wolfgangi \annusEditionis
 \superInitialam{I}
 \includescore{temporalia/hymnus-VexillaRegis.tex}
 
+\begin{multicols}{4}
+
+\trHymnusVexillaRegis
+
+\end{multicols}
+
 \vspace{1cm}
 
 \includescore{cantus/amon33/versiculus-HocSignum}
+
+\trVersiculusVesperae
 
 \vfill
 
 \pagebreak
 
-\pagebreak
-
 \pars{Canticum Beatæ Mariæ Virginis}
 
-\antiphona{I D2}{cantus/amon33/crux_vespi_antmag.tex}{}
+\antiphona{I D2}{cantus/amon33/crux_vespi_antmag.tex}{\trAntiphonaMagnificat}
 
 \scriptura{Luc. 1, 46-55.}
 
@@ -333,6 +340,8 @@ Editio Sancti Wolfgangi \annusEditionis
 \superInitialam{VI}
 \includescore{cantus/amon33/crux_laud_resp}
 
+\trResponsoriumLaudes
+
 \vspace{5mm}
 
 \pars{Hymnus}
@@ -340,9 +349,17 @@ Editio Sancti Wolfgangi \annusEditionis
 \superInitialam{I}
 \includescore{temporalia/hymnus-LustrisSex}
 
+\begin{multicols}{6}
+
+\trHymnusLustraSex
+
+\end{multicols}
+
 \vspace{1cm}
 
 \includescore{cantus/amon33/versiculus-AdoramusTe}
+
+\trVersiculusLaudes
 
 \vfill
 
@@ -350,7 +367,7 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \pars{Canticum Zachariæ.}
 
-\antiphona{I D2}{cantus/amon33/crux_laud_antben}
+\antiphona{I D2}{cantus/amon33/crux_laud_antben}{\trAntiphonaBenedictus}
 
 \scriptura{Luc 1, 68-79.}
 
@@ -489,16 +506,23 @@ Editio Sancti Wolfgangi \annusEditionis
 \vspace{3cm}
 
 Fontes. 
-Textus et cantus officii divini secundum 
-Antiphonale Monasticum, Solesmis~1934. /
-Textus et cantus missæ secundum
-Graduale Triplex, Solesmis~1979. /
-Translationes psalmorum ex
-Hejčl Jan: Žaltář čili Kniha žalmů, Praha~1922.
+Textus et cantus officii divini secundum Antiphonale Monasticum, Solesmis~1934. /
+Orationes ante et post officium ex: 
+Breviarium monasticum, Romae 1831 (apud GoogleBooks). /
+Textus et cantus missæ secundum Graduale Triplex, Solesmis~1979. /
+Translationes psalmorum ex Hejčl Jan: Žaltář čili Kniha žalmů, Praha~1922. /
+Translationes canticorum evangelicorum ex translatione liturgica officiali
+Liturgiae horarum - Denní modlitba církve, Kostelní Vydří 1994. /
+Translatio capituli sumpta est ex: 
+Jeruzalémská bible, Praha-Kostelní Vydří 2009. /
+Translatio hymni Vexilla Regis cum permissione auctoris sumpta est ex:
+Koronthályová Markéta: Vexilla Regis. Výbor z latinské duchovní poesie,
+Praha 2004. 
 
 Collaborantes.
 Textus latinos cantusque transcripsit et omnem laborem typographicum peregit
 Jakub Pavlík. /
+Proprios cantus festi in linguam bohemicam Václav Ondráček transtulit. /
 Psalmos in lingua bohemica de libro supra dicto transcripsit
 Barbora Maturová. /
 Filip Srovnal laborem exprobrationibus utilissimis comitabatur,
@@ -506,7 +530,8 @@ librumque diligenter inspexit, plurimos errores inveniens atque corrigens. /
 Xavier Chancerelle consilio adiutus est et nonnullum errorem invenit
 correxitque. /
 Cantus proprii et ordinarii missæ 
-iam \guillemotright typis impressos \guillemotleft apud GregoBase
+iam \guillemotright typis impressos\guillemotleft\mbox{ }
+apud GregoBase
 http://gregobase.selapa.net invenimus et grati utimur. Hic laborem typographicum
 peregit Andrew Hinkley, nos autem correctiones minores fecimus
 iuxta Graduale Triplex. /
