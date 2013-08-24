@@ -83,17 +83,15 @@
 }
 
 % volne misto nad antifonami, kam si zpevaci dokresli neumy
-\newcommand{\hicSuntNeumae}{\vspace{0.2cm}}
-% this booklet won't have neumes, but we still want at least some space
-% above the antiphons
+\newcommand{\hicSuntNeumae}{\vspace{0.5cm}}
 
 % prepinani mista mezi notovymi osnovami: pro neumovane a neneumovane zpevy
 \newcommand{\cantusCumNeumis}{
-  \setgrefactor{17}
+  %\setgrefactor{17}
   \global\advance\grespaceabovelines by 5mm%
 }
 \newcommand{\cantusSineNeumas}{
-  \setgrefactor{17}
+  %\setgrefactor{17}
   \global\advance\grespaceabovelines by -5mm%
 }
 
@@ -117,7 +115,8 @@
 
 % mode, score, translation
 \newcommand{\antiphona}[3]{%
-\hicSuntNeumae
+%\hicSuntNeumae
+\vspace{2mm}
 \superInitialam{#1}
 \includescore{#2}
 
