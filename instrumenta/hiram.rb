@@ -143,7 +143,7 @@ module Hiram
           if psalm.is_a? String and psalm.index(',') then
             psalms = psalm.split(/\s*,\s*/)
             psalms.each_with_index do |p,i|
-              create_psalm_task(p, tone, true, i == 0, i >= psalms.size-1)
+              create_psalm_task(p, tone, true, (i == 0), (i >= psalms.size-1))
             end
           else
             create_psalm_task(psalm, tone)
@@ -203,7 +203,7 @@ module Hiram
       end
 
       if psalm != 'magnificat' then
-        inchoatio = ingroup == false or firstingroup
+        inchoatio = ((not ingroup) or firstingroup)
         begin
           @initia_targets << @taskgen.geninitium(psfname, tone, inchoatio)
         rescue RuntimeError => re
