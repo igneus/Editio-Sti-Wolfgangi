@@ -898,6 +898,10 @@ module PsalmPreprocessor
       end
 
       # first line contains the title
+      if @setup[:skip_title] and 
+          @setup[:skip_verses] and @setup[:skip_verses] > 0 then
+        @setup[:skip_title] = false
+      end
       if @setup[:has_title] then
         if @setup[:title_pattern] then
           output = TitleOutputStrategy.new output, @setup[:skip_title], @setup[:title_pattern]
