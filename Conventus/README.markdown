@@ -11,4 +11,4 @@ standards of office booklets of the latter ensemble.
 
 To compile the booklet, look in the respective directory.
 * if you find a Rakefile, run 'rake'
-* if you find a 'hiram.yml', run 'ruby instrumenta/hiram.rb'
+* if you find a 'hiram.yml', run 'ruby ../../instrumenta/hiram.rb'
