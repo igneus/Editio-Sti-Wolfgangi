@@ -6,9 +6,10 @@
 
 * prepsat chybejici ceske zalmy
 * v pramenech vyjmenovat prameny vsech antifon vzatych z manuskriptu
-* zminit, ze jsem pouzil marianske antifony od nekoho jineho
+* zminit, ze jsem pouzil zaverecne marianske antifony od nekoho jineho
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 * pro Benedictus a Magnificat zdobnejsi napevy?
+* Benedicamus by mozna spravne mely byt vsechny varianty
 
 # Rubricisticke
 
@@ -22,12 +23,19 @@
 
 * matutinum
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
+  
+* male hodinky
+  * u druheho a tretiho zalmu nema byt inchoatio
     
 * rozsirit prostor kolem uzke inicialy J
   
 * completorium - revize
 
 # In Adventu
+
+* u antifon, kde se o Zvestovani v poste vynechava aleluja, bezalelujove varianty
+
+* matutinum: responsoria
 
 # Tempore Nativitatis
 
@@ -39,8 +47,12 @@
 
 * asi odstranit zvlastni sekci a alternativni evangelni kantika nechat v Extra Adventum
 
+# `grep -ri TODO *` !
+
 # Dalsi
 
 * i ve zpevech nahradit ae atd.
+
+* konec hodinek vsude cely?
 
 * hiram by mel na konci behu zopakovat vsechny detekovane nedostatky
