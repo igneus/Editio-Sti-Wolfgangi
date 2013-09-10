@@ -2,7 +2,8 @@ main: exaltatio.tex
 moretex: [
 conventuscommune.tex,
 textusrepetiti.tex,
-translationes_cs.tex
+translationes_cs.tex,
+imagines/crux.jpg
 ]
 
 chants: [
