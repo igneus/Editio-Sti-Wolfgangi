@@ -34,6 +34,10 @@
 
 * matutinum: responsoria
 
+* laudes
+
+* jak horae minores?
+
 # Tempore Nativitatis
 
 * vse
@@ -53,3 +57,5 @@
 * konec hodinek vsude cely?
 
 * hiram by mel na konci behu zopakovat vsechny detekovane nedostatky
+
+* mozna Deus in adiutorium a Benedicamus vsechny moznosti do samostatneho oddilu?
