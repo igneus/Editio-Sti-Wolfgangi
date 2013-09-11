@@ -63,27 +63,19 @@ psalms: {
   },
 
   'extra Adventum, Prima': {
-    53: VII.a,
-    84: VII.a,
-    116: VII.a
+    '53,84,116': VII.a
   },
 
   'extra Adventum, Tertia': {
-    119: VIII.G,
-    120: VIII.G,
-    121: VIII.G
+    '119,120,121': VIII.G
   },
 
   'extra Adventum, Sexta': {
-    122: IV.A,
-    123: IV.A,
-    124: IV.A
+    '122,123,124': IV.A
   },
 
   'extra Adventum, Nona': {
-    125: I.g2,
-    126: I.g2,
-    127: I.g2
+    '125,126,127': I.g2
   },
 
   'Advent, Vespers': {

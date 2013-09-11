@@ -24,9 +24,6 @@
 * matutinum
   * nejak rozumne vyznacit oddily, co se ktere dny zpiva
   
-* male hodinky
-  * u druheho a tretiho zalmu nema byt inchoatio
-    
 * rozsirit prostor kolem uzke inicialy J
   
 * completorium - revize
