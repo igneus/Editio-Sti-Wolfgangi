@@ -141,9 +141,14 @@ module Hiram
       @proj.psalms.each_value do |section|
         section.each_pair do |psalm, tone|
           if psalm.is_a? String and psalm.index(',') then
+            options = []
+            if psalm.index(';') then
+              psalm, options = psalm.split ';'
+              options = options.split(/[\s,]+/)
+            end
             psalms = psalm.split(/\s*,\s*/)
             psalms.each_with_index do |p,i|
-              create_psalm_task(p, tone, true, (i == 0), (i >= psalms.size-1))
+              create_psalm_task(p, tone, true, (i == 0), (i >= psalms.size-1), options)
             end
           else
             create_psalm_task(psalm, tone)
@@ -159,7 +164,7 @@ module Hiram
     end
 
     # helper for the previous method
-    def create_psalm_task(psalm, tone, ingroup=false, firstingroup=false, lastingroup=false)
+    def create_psalm_task(psalm, tone, ingroup=false, firstingroup=false, lastingroup=false, psalm_options=[])
       if tone.is_a? String then
         tonesuff =  '-' + tone.downcase.gsub('.', '-')
       else
@@ -190,7 +195,9 @@ module Hiram
       end
 
       if psalm != 'dan3' and 
-          (ingroup == false or lastingroup == true) then
+          (ingroup == false or 
+           ! psalm_options.include?('singledoxology') or 
+           lastingroup == true) then
         options += "--gloriapatri "
       end
       

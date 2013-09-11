@@ -29,7 +29,7 @@ psalms: {
   laudes: {
     66: dir,
     92: VII.c, 99: III.a, 62: I.f, dan3: VII.c, 
-    '148,149,150': II.D,
+    '148,149,150;singledoxology': II.D,
     benedictus: Isoll.D2
   },
 
