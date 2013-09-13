@@ -32,10 +32,6 @@
 
 * u antifon, kde se o Zvestovani v poste vynechava aleluja, bezalelujove varianty
 
-* matutinum: responsoria
-
-* laudes
-
 * jak horae minores?
 
 # Tempore Nativitatis

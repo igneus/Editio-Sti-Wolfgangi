@@ -148,6 +148,11 @@
   \fideliumAnimae
 }
 
+\newcommand{\rubricaAnnuntiatioQuadragesimaAlleluja}{
+  \rubrica{In Festo Annuntiationis, quoties ipsum Tempore Quadragesimæ
+    celebretur, \textnormal{Allelúja} omittitur.}
+}
+
 %%%% IN ADVENTU
 
 \newcommand{\adventDeusInAdiutorium}{
@@ -164,6 +169,10 @@
   \antiphona{I f}{cantus/arom12/adv_ant4.tex}{\translatioAntIV}}
 \newcommand{\adventAntiphonaV}{
   \antiphona{VIII c}{cantus/arom12/adv_ant5.tex}{\translatioAntV}}
+
+% ad Magnificat, Benedictus, Nunc Dimittis
+\newcommand{\adventAntiphonaSpiritusSanctus}{
+  \antiphona{VIII G}{cantus/arom12/adv_antmag.tex}{}}
 
 \newcommand{\inFineHorarumInAdventu}{
   \kyrieEleison
@@ -193,6 +202,10 @@
   \fideliumAnimae
 }
 
+\newcommand{\rubricaFinisHoraeAdvent}{
+  \rubrica{Sequitur \textnormal{Kýrie eléison} etc. usque ad finem horæ
+    ut in Vesperis, p. \pageref{vesperaefinisadvent}.}}
+
 %%%% TEMPORE NATIVITATIS
 
 %%%% TEMPORE PASCHALI
@@ -200,53 +213,3 @@
 \newcommand{\paschaAntiphona}{
   \antiphona{I D2}{cantus/arom12/pasch_antevang.tex}{}}
 
-%%%%%%%%%%%%%%%%% OBSOLETE
-
-\newcommand{\responsoriumAdVesperas}{
-  \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.}}}{\small \textsc{\textbf{VI.}}}
-  \includescore{cantus/amon33/resp-vesp.tex}
-
-  \translatioRespVesp
-}
-
-\newcommand{\responsoriumAdLaudes}{
-  \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.}}}{\small \textsc{\textbf{VI.}}}
-  \includescore{cantus/amon33/resp-laud.tex}
-
-  \translatioRespVesp
-}
-
-\newcommand{\hymnusAdVesperas}{
-  \pars{Hymnus.}
-
-  \superInitialam{IV}
-  \includescore{temporalia/hymnus-ConditorAlme.tex}
-}
-
-\newcommand{\hymnusAdLaudes}{
-  \pars{Hymnus.}
-
-  % no mode info in AM1933
-  \includescore{temporalia/hymnus-VoxClara.tex}
-}
-
-\newcommand{\versiculusDiei}{
-  \pars{Versiculus.}
-
-  % Versus. %%%
-    \includescore{cantus/amon33/versus-voxclamantis.tex}
-    % \vspace{-5mm}
-    \noindent ℟.\hspace{0.5mm}Rectas fácite sémitas e\textit{jus.}
-    
-    \noindent \translatioVersus
-}
-
-\newcommand{\rubricaOratio}{
-  \rubrica{Sequitur Supplicatio Litani"ae et cetera usque ad finem hor"ae,
-  pg. \pageref{oratioetc}.}
-}
-
-\newcommand{\rubricaAnnuntiatioQuadragesimaAlleluja}{
-  \rubrica{In Festo Annuntiationis, quoties ipsum Tempore Quadragesimæ
-    celebretur, \textnormal{Allelúja} omittitur.}
-}
