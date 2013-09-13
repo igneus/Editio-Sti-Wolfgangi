@@ -1,7 +1,4 @@
-* najit vhodnou mensi velikost notovych osnov
-* naucit Hirama delat zalmy bez Gloria Patri a opravit Canticum trium p.
 * odstranit poznamky "recto tono" a "tono feriali" a dat o napevu modliteb a versiku jednu rubriku na zacatek?
-* spravne rozmistit prikazy o umistovani a neumistovani vzduchu na dopsani neum (jsou vubec v techto notach zadouci?)
 * sjednotit male ci velke pismeno na zacatku nadpisu casti
 
 * prepsat chybejici ceske zalmy
@@ -20,9 +17,6 @@
   * závěrečná antifona po laudách a nešporách?
 
 # Extra Adventum
-
-* matutinum
-  * nejak rozumne vyznacit oddily, co se ktere dny zpiva
   
 * rozsirit prostor kolem uzke inicialy J
   

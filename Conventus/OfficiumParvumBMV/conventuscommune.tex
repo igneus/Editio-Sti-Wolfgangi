@@ -28,6 +28,15 @@
 \addcontentsline{toc}{section}{#1}
 }
 
+% a part of a hora, larger than pars
+\newcommand{\subhora}[1]{
+\begin{center}
+{\large \textit{#1}}
+\end{center}
+%\fancyhead[CO,CE]{#1}
+\addcontentsline{toc}{subsubsection}{#1}
+}
+
 % rubricated inline text
 \newcommand{\rubricatum}[1]{\textit{#1}}
 
