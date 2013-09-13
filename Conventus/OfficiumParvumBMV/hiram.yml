@@ -78,6 +78,8 @@ psalms: {
     '125,126,127': I.g2
   },
 
+  # --------------------------------
+
   'Advent, Vespers': {
     109: VIII.G, # in AR12: VIII.G*
     112: I.g,
@@ -102,6 +104,24 @@ psalms: {
     dan3: I.f,
     148: VIII.c
   },
+
+  'Advent, Prima': {
+    '53,84,116': VIII.G
+  },
+
+  'Advent, Tertia': {
+    '119,120,121': I.g
+  },
+
+  'Advent, Sexta': {
+    '122,123,124': VIII.G
+  },
+
+  'Advent, Nona': {
+    '125,126,127': VIII.c
+  },
+
+  # --------------------------
 
   'Tempore Paschali': {
     magnificat: I.D2,

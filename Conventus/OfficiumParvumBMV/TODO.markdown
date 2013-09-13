@@ -32,8 +32,6 @@
 
 * u antifon, kde se o Zvestovani v poste vynechava aleluja, bezalelujove varianty
 
-* jak horae minores?
-
 # Tempore Nativitatis
 
 * vse
