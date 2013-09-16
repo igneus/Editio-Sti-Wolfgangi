@@ -7,6 +7,7 @@
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 * pro Benedictus a Magnificat zdobnejsi napevy?
 * Benedicamus by mozna spravne mely byt vsechny varianty
+* vsude nahradit "in choro monialium" za neklasterni formulaci 
 
 # Rubricisticke
 
@@ -20,15 +21,15 @@
   
 * rozsirit prostor kolem uzke inicialy J
   
-* completorium - revize
-
 # In Adventu
 
 * u antifon, kde se o Zvestovani v poste vynechava aleluja, bezalelujove varianty
 
 # Tempore Nativitatis
 
-* vse
+* completorium
+* laudes
+* horae minores
 
 # Tempore Paschali
 

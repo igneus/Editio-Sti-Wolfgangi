@@ -123,6 +123,46 @@ psalms: {
 
   # --------------------------
 
+  'post Nativitatem, Vespers': {
+    109: VI.F,
+    112: III.a3,
+    121: IV.E,
+    126: I.f,
+    147: II.D,
+    magnificat: II.A
+  },
+
+  'post Nativitatem, Completory': {
+    nuncdimittis: II.A
+  },
+
+  'post Nativitatem, Laudes': {
+    92: VI.F,
+    99: III.a3,
+    62: IV.E,
+    dan3: I.f,
+    148: II.D,
+    benedictus: VIII.G
+  },
+
+  'post Nativitatem, Prima': {
+    '53,84,116': VI.F
+  },
+
+  'post Nativitatem, Tertia': {
+    '119,120,121': III.a3
+  },
+
+  'post Nativitatem, Sexta': {
+    '122,123,124': IV.E
+  },
+
+  'post Nativitatem, Nona': {
+    '125,126,127': II.D
+  },
+
+  # --------------------------
+
   'Tempore Paschali': {
     magnificat: I.D2,
     benedictus: I.D2,
