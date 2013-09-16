@@ -40,6 +40,8 @@ module Hiram
     end
 
     def run
+      make_dirs
+
       read_options
       read_hiramfile
 
@@ -262,6 +264,12 @@ module Hiram
 
         task 'main' => [maintex_target]
         Rake::Task['main'].comment = "Run all tasks and finally compile the main book"  
+      end
+    end
+
+    def make_dirs
+      unless File.directory? 'temporalia'
+        Dir.mkdir 'temporalia'
       end
     end
   end # class Hiram
