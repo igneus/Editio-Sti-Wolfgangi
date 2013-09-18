@@ -25,17 +25,9 @@
 
 * u antifon, kde se o Zvestovani v poste vynechava aleluja, bezalelujove varianty
 
-# Tempore Nativitatis
-
-* completorium
-* laudes
-* horae minores
-
 # Tempore Paschali
 
 * initia
-
-* asi odstranit zvlastni sekci a alternativni evangelni kantika nechat v Extra Adventum
 
 # `grep -ri TODO *` !
 
