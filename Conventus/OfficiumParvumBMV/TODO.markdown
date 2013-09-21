@@ -4,8 +4,7 @@
 * v pramenech vyjmenovat prameny vsech antifon vzatych z manuskriptu
 * zminit, ze jsem pouzil zaverecne marianske antifony od nekoho jineho
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
-* pro Benedictus a Magnificat zdobnejsi napevy?
-* Benedicamus by mozna spravne mely byt vsechny varianty
+* pro Benedictus a Magnificat i zdobnejsi napevy?
 * vsude nahradit "in choro monialium" za neklasterni formulaci 
 
 # Rubricisticke
@@ -33,8 +32,6 @@
 # Dalsi
 
 * i ve zpevech nahradit ae atd.
-
-* konec hodinek vsude cely?
 
 * hiram by mel na konci behu zopakovat vsechny detekovane nedostatky
 
