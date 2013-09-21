@@ -1,7 +1,5 @@
 * odstranit poznamky "recto tono" a "tono feriali" a dat o napevu modliteb a versiku jednu rubriku na zacatek?
-* sjednotit male ci velke pismeno na zacatku nadpisu casti
 
-* v pramenech vyjmenovat prameny vsech antifon vzatych z manuskriptu
 * zminit, ze jsem pouzil zaverecne marianske antifony od nekoho jineho
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 * pro Benedictus a Magnificat i zdobnejsi napevy?
