@@ -3,7 +3,6 @@
 * zminit, ze jsem pouzil zaverecne marianske antifony od nekoho jineho
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 * pro Benedictus a Magnificat i zdobnejsi napevy?
-* vsude nahradit "in choro monialium" za neklasterni formulaci 
 
 # Rubricisticke
 
