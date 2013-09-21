@@ -28,8 +28,6 @@
 
 # Dalsi
 
-* i ve zpevech nahradit ae atd.
-
 * hiram by mel na konci behu zopakovat vsechny detekovane nedostatky
 
 * mozna Deus in adiutorium a Benedicamus vsechny moznosti do samostatneho oddilu?
