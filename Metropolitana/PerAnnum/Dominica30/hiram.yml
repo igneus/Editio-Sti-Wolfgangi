@@ -1,0 +1,15 @@
+main: dominica30.tex
+
+chants: 
+  - cantus/*.gabc
+  - ../../cantus/psalterium/*.gabc
+  - ../../../cantuscommunes/arom09/*.gabc
+
+hymns:
+  - ['../../cantus/hymni/textushymni-OLuxBeata', '../../cantus/hymni/musica-OLuxBeata']
+
+psalms:
+  'vesperae ii':
+    109: VIII.G
+    113b: per
+  
