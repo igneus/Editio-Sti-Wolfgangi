@@ -39,11 +39,12 @@ module Hiram
       read_options
       read_hiramfile
 
-      editio_dir = Pathname.new(__FILE__).dirname.dirname
+      editio_dir = Pathname.new(__FILE__).dirname.dirname.to_s
+
       @taskgen = TaskGenerator.new({
-                                     :psalmtones_dir => editio_dir+'tonipsalmorum/arom12/',
-                                     :psalms_dir => (@proj.psalms_dir or editio_dir+'psalmi/'),
-                                     :czech_psalms_dir => editio_dir+'bohemice_psalmi/'
+                                     :psalmtones_dir => editio_dir+'/tonipsalmorum/arom12/',
+                                     :psalms_dir => (@proj.psalms_dir or editio_dir+'/psalmi/amon33/'),
+                                     :czech_psalms_dir => editio_dir+'/bohemice_psalmi/'
                                    })
     end
 
