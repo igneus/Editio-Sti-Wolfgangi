@@ -178,7 +178,6 @@ class Hiram::TaskGenerator
       ntone = ntone[0..i-1].downcase+'-'+ntone[i+1..-1]
     end
     patternfile = "#{@psalmtones_dir}#{ntone}-auto.gabc"
-    puts "#{tone}: #{ntone}, #{patternfile}, #@psalmtones_dir"
     if not File.exist?(patternfile) then
       raise "Psalm tone file #{patternfile} not found."
     end
@@ -208,9 +207,10 @@ class Hiram::TaskGenerator
   end
 
   def genhymn(textfile, musicfile, options)
-    i = textfile.index '-'
-    ii = textfile.index '.'
-    out = "hymnus-"+textfile[i+1..ii-1]+".gabc"
+    basename = File.basename textfile
+    i = basename.rindex '-'
+    ii = basename.rindex '.'
+    out = "hymnus-"+basename[i+1..ii-1]+".gabc"
 
     hymnographus = @instrumenta_dir + 'hymnographus.rb'
     compiled_hymn = @output_dir+out
