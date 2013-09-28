@@ -29,6 +29,14 @@ class Hiram::HiramFile
     self.chants != nil
   end
 
+  def psalms_dir
+    if @yaml.has_key?('psalms-dir') then
+      return @yaml['psalms-dir']
+    else
+      return nil
+    end
+  end
+
   def psalms
     return @yaml['psalms']
   end

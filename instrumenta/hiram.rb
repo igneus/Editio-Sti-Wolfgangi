@@ -35,15 +35,20 @@ module Hiram
       @action = :run_main # also possible: :run_selected, :show_tasks
       @selected_tasks = []
 
-      @taskgen = TaskGenerator.new
       @proj = nil # loaded hiramfile
+      read_options
+      read_hiramfile
+
+      editio_dir = Pathname.new(__FILE__).dirname.dirname
+      @taskgen = TaskGenerator.new({
+                                     :psalmtones_dir => editio_dir+'tonipsalmorum/arom12/',
+                                     :psalms_dir => (@proj.psalms_dir or editio_dir+'psalmi/'),
+                                     :czech_psalms_dir => editio_dir+'bohemice_psalmi/'
+                                   })
     end
 
     def run
       make_dirs
-
-      read_options
-      read_hiramfile
 
       load_chant_targets
       load_psalm_targets
@@ -230,15 +235,7 @@ module Hiram
           musica = h[1]
           options = h[2] or ''
 
-          i = textus.index '-'
-          ii = textus.index '.'
-          out = "hymnus-"+textus[i+1..ii-1]+".gabc"
-
-          file "temporalia/"+out => [textus, musica, '../../instrumenta/hymnographus.rb'] do |t|
-            sh "#{TaskGenerator::RUBY_COMMAND} ../../instrumenta/hymnographus.rb #{options} #{t.prerequisites[1]} #{t.prerequisites[0]} #{t.name}"
-          end
-
-          @hymn_targets << gregorio("temporalia/"+out)
+          @hymn_targets << @taskgen.genhymn(textus, musica, options)
         end
 
         task 'hymns' => @hymn_targets

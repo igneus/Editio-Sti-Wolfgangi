@@ -82,7 +82,7 @@ class Hiram::TaskGenerator
 
   RUBY_COMMAND = 'ruby'
 
-  def initialize
+  def initialize(settings)
     here = Pathname.new Dir.pwd
 
     @instrumenta_dir = Pathname.new(__FILE__).dirname.dirname
@@ -94,11 +94,11 @@ class Hiram::TaskGenerator
     # puts @instrumenta_dir, @editio_dir
 
     @psalm_preprocessor = @instrumenta_dir+'psalmpreprocessor.rb'
-    @psalmtones_dir = @editio_dir+'tonipsalmorum/arom12/'
-    @psalms_dir = @editio_dir+'psalmi/'
-    @czech_psalms_dir = @editio_dir+'bohemice_psalmi/'
+    @psalmtones_dir = settings[:psalmtones_dir]
+    @psalms_dir = settings[:psalms_dir]
+    @czech_psalms_dir = settings[:czech_psalms_dir]
 
-    @gloriapatri = File.readlines(@psalms_dir + 'gloriapatri.pslm').join ""
+    @gloriapatri = File.readlines(@psalms_dir + '/gloriapatri.pslm').join ""
 
     @default_psalm_options = "--accents-style bold --skip-title "
     @output_dir = './temporalia/'
@@ -204,5 +204,19 @@ class Hiram::TaskGenerator
     end
 
     return gregorio(@output_dir+outputfile)
+  end
+
+  def genhymn(textfile, musicfile, options)
+    i = textfile.index '-'
+    ii = textfile.index '.'
+    out = "hymnus-"+textfile[i+1..ii-1]+".gabc"
+
+    hymnographus = @instrumenta_dir + 'hymnographus.rb'
+    compiled_hymn = @output_dir+out
+    file compiled_hymn => [textfile, musicfile, hymnographus] do |t|
+      sh "#{RUBY_COMMAND} #{hymnographus} #{options} #{t.prerequisites[1]} #{t.prerequisites[0]} #{t.name}"
+    end
+
+    return gregorio(compiled_hymn)
   end
 end
