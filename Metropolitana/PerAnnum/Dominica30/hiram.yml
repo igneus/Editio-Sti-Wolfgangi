@@ -6,7 +6,9 @@ chants:
   - ../../../cantuscommunes/arom09/*.gabc
 
 hymns:
-  - ['../../cantus/hymni/textushymni-OLuxBeata', '../../cantus/hymni/musica-OLuxBeata']
+  - ['../../cantus/hymni/textus-OLuxBeata.txt', '../../cantus/hymni/musica-OLuxBeata.gabc']
+
+psalms-dir: ../../../psalmi/lh
 
 psalms:
   'vesperae ii':
