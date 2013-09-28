@@ -177,7 +177,8 @@ class Hiram::TaskGenerator
     if i = ntone.index('.') then
       ntone = ntone[0..i-1].downcase+'-'+ntone[i+1..-1]
     end
-    patternfile = @psalmtones_dir+ntone+'-auto.gabc'
+    patternfile = "#{@psalmtones_dir}#{ntone}-auto.gabc"
+    puts "#{tone}: #{ntone}, #{patternfile}, #@psalmtones_dir"
     if not File.exist?(patternfile) then
       raise "Psalm tone file #{patternfile} not found."
     end
