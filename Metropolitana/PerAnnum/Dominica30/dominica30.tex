@@ -5,7 +5,7 @@
 \usepackage[latin]{babel} 
 \usepackage{ecclesiastic}
 
-\usepackage[left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=1.5cm]{geometry}
 
 \usepackage{fontspec}
 \setmainfont[Ligatures={Common}]{Junicode}
@@ -22,12 +22,55 @@
 \usepackage{parcolumns}
 \usepackage{multicol}
 
+\input{metropolitanacommune.tex}
+
+% GREGORIO general settings:
+% staff size
+\setgrefactor{15}
+% space around the initial.
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+% initial font. 
+\def\greinitialformat#1{%
+{\fontsize{43}{43}\selectfont #1}%
+}
+
+\newcommand{\psalteriumDir}{../../cantus/psalterium}
+
 \begin{document}
+
+\pagestyle{empty}
 
 Dominica XXX per annum
 
 Annus C
 
 Ad II Vesperas
+
+\cleardoublepage
+
+\pagestyle{plain}
+
+\antiphona{VIII g}{\psalteriumDir/h2dom_ve2_a1}{}
+
+\scriptura{Psalmus 109}
+
+\input{temporalia/ps109-initium-viii-G-auto}
+
+\psalmusEtTranslatio{temporalia/ps109-viii-g}{temporalia/ps109-boh}
+
+\vfill
+
+\pagebreak
+
+\antiphona{per}{\psalteriumDir/h2dom_ve2_a2}{}
+
+\scriptura{Psalmus 113B}
+
+\input{temporalia/ps113b-initium-per-auto}
+
+\psalmusEtTranslatio{temporalia/ps113b-per}{empty.tex}
+
+\vfill
 
 \end{document}

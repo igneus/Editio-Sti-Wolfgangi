@@ -1,5 +1,8 @@
 main: dominica30.tex
 
+moretex:
+  - metropolitanacommune.tex
+
 chants: 
   - cantus/*.gabc
   - ../../cantus/psalterium/*.gabc
