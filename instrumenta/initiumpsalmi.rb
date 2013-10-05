@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Takes a psalm file (my .pslm format) and a psalmodic pattern (.gabc);
 # produces a new .gabc containing the first verse of the psalm
 # fitted to the pattern.
@@ -6,11 +7,18 @@
 
 require 'optparse'
 
-setup = {:inchoatio => true}
+setup = {
+  :inchoatio => true,
+  :flex => false
+}
 
 optparse = OptionParser.new do|opts|
   opts.on "-i", "--no-inchoatio", "Don't set an inchoatio, start on the reciting tone" do
     setup[:inchoatio] = false
+  end
+
+  opts.on "-F", "--flex", "Provide the flex pattern if flex appears in the psalm" do
+    setup[:flex] = true
   end
 end
 
@@ -251,6 +259,138 @@ def strip_square_brackets(str)
   return s
 end
 
+def psalm_contains_flex?(psalmfile)
+  File.open psalmfile, 'r' do |fr|
+    fr.each_line do |l|
+      if l =~ /\+\s*$/ then
+        return true
+      end
+    end
+  end
+
+  return false
+end
+
+# set mediation / termination
+def set_verse_part(parttext, partmelody, text_offset, of)
+  melody_i = 0
+  text_i = 0 + text_offset
+
+  ## tenor
+  first_accent = (partmelody.accents == 2) ? 1 : 2
+  if first_accent == 2 and 
+      parttext.accents_count == 1 and
+      partmelody.accents == 1 then
+    first_accent = 1
+  end
+  last_tenor_syl = parttext.nonempty_syls_before(parttext.accent_pos(first_accent), partmelody.preparatory_syls) - 1 
+  
+  STDERR.puts
+  parttext.syllables.each_with_index {|s,i| STDERR.print "#{i}:'#{s}', "}
+  STDERR.puts
+  STDERR.puts "first accent: #{parttext.accent_pos(first_accent)}"
+  STDERR.puts "last tenor: #{last_tenor_syl} '#{parttext.syllables[last_tenor_syl]}' "
+  STDERR.puts "preparatories: #{partmelody.preparatory_syls}"
+
+  text_i.upto(last_tenor_syl) do |i|
+    text_i = i
+    s = parttext.syllables[text_i]
+    if s == ' ' then
+      of.print " "
+      next
+    else
+      of.print strip_square_brackets s
+      of.print partmelody[0] # tenor note
+    end
+  end
+  text_i += 1
+    
+  ## preparatory syllables
+  melody_i = 1
+  partmelody.preparatory_syls.times do |i|
+    s = strip_square_brackets parttext.syllables[text_i]
+    text_i += 1
+    if s == ' ' then
+      of.print " "
+      redo
+    end
+      
+    of.print "<i>"
+    of.print s
+    of.print "</i>"
+    of.print partmelody[melody_i]
+    melody_i += 1
+  end
+    
+  ## end-cadence
+
+  partmelody.accents.times do |i|
+    3.times do |j|
+      unless parttext.syllables[text_i]
+        break
+      end
+      
+      s = parttext.syllables[text_i]
+      if s == ' ' then
+        text_i += 1
+        of.print " "
+        redo
+      end
+        
+      if j == 1 && 
+          (parttext.syllables[text_i+1].nil? || 
+           ! parttext.next_nonempty_syl(text_i) ||
+           parttext.next_nonempty_syl(text_i)[0] == '[') then
+        # no superfluous syllable
+        if parttext.syllables[text_i-1] == ' ' then
+          of.print " "
+        else
+          of.print " -"
+        end
+
+        neume = partmelody[melody_i].dup
+
+        # tones with a movable accent: remove the accent indication,
+        # add the accent indication with a curly bracket
+        if partmelody.movable_accent? && i == partmelody.accents - 1 then
+          if j == 0 then
+            neume.gsub! 'r', 'r[ocba:1;4mm]'
+          elsif j == 1 then
+            neume.gsub! 'r1', ''
+          end
+        end
+
+        of.print neume+" "
+        melody_i += 1
+        next
+      end
+      
+      of.print "<b>" if j == 0
+      of.print strip_square_brackets(s)
+      of.print "</b>" if j == 0
+
+      neume = partmelody[melody_i].dup
+
+      # tones with a movable accent: remove the accent indication,
+      # add the accent indication with a curly bracket
+      if partmelody.movable_accent? && i == partmelody.accents - 1 then
+        if j == 0 then
+          neume.gsub! 'r', 'r[ocba:1;4mm]'
+        elsif j == 1 then
+          neume.gsub! 'r1', ''
+        end
+      end
+
+      of.print neume
+      melody_i += 1
+      text_i += 1
+    end
+  end
+end
+
+
+
+
 ## Read the psalmfile
 verse = PsalmVerse.read_from_psalmfile psalmfile
 
@@ -357,7 +497,7 @@ if verse.has_flex? then
     text_i += 1
   end
 
-  of.puts "+(,)"
+  of.puts "†(,)"
 
   text_i = 0
 end
@@ -367,117 +507,9 @@ end
 
   parttext = verse.send versepart
   partmelody = psalmody.send(versepart == :afterflex ? :mediation : :termination)
+  offset = (versepart == :last ? 0 : text_i)
 
-  melody_i = 0
-  if versepart == :last then
-    text_i = 0
-  end
-
-  ## tenor
-  first_accent = (partmelody.accents == 2) ? 1 : 2
-  last_tenor_syl = parttext.nonempty_syls_before(parttext.accent_pos(first_accent), partmelody.preparatory_syls) - 1 
-  
-  STDERR.puts
-  parttext.syllables.each_with_index {|s,i| STDERR.print "#{i}:'#{s}', "}
-  STDERR.puts
-  STDERR.puts "first accent: #{parttext.accent_pos(first_accent)}"
-  STDERR.puts "last tenor: #{last_tenor_syl} '#{parttext.syllables[last_tenor_syl]}' "
-  STDERR.puts "preparatories: #{partmelody.preparatory_syls}"
-
-  text_i.upto(last_tenor_syl) do |i|
-    text_i = i
-    s = parttext.syllables[text_i]
-    if s == ' ' then
-      of.print " "
-      next
-    else
-      of.print strip_square_brackets s
-      of.print partmelody[0] # tenor note
-    end
-  end
-  text_i += 1
-    
-  ## preparatory syllables
-  melody_i = 1
-  partmelody.preparatory_syls.times do |i|
-    s = strip_square_brackets parttext.syllables[text_i]
-    text_i += 1
-    if s == ' ' then
-      of.print " "
-      redo
-    end
-      
-    of.print "<i>"
-    of.print s
-    of.print "</i>"
-    of.print partmelody[melody_i]
-    melody_i += 1
-  end
-    
-  ## end-cadence
-
-  partmelody.accents.times do |i|
-    3.times do |j|
-      unless parttext.syllables[text_i]
-        break
-      end
-      
-      s = parttext.syllables[text_i]
-      if s == ' ' then
-        text_i += 1
-        of.print " "
-        redo
-      end
-        
-      if j == 1 && 
-          (parttext.syllables[text_i+1].nil? || 
-           ! parttext.next_nonempty_syl(text_i) ||
-           parttext.next_nonempty_syl(text_i)[0] == '[') then
-        # no superfluous syllable
-        if parttext.syllables[text_i-1] == ' ' then
-          of.print " "
-        else
-          of.print " -"
-        end
-
-        neume = partmelody[melody_i].dup
-
-        # tones with a movable accent: remove the accent indication,
-        # add the accent indication with a curly bracket
-        if partmelody.movable_accent? && i == partmelody.accents - 1 then
-          if j == 0 then
-            neume.gsub! 'r', 'r[ocba:1;4mm]'
-          elsif j == 1 then
-            neume.gsub! 'r1', ''
-          end
-        end
-
-        of.print neume+" "
-        melody_i += 1
-        next
-      end
-      
-      of.print "<b>" if j == 0
-      of.print strip_square_brackets(s)
-      of.print "</b>" if j == 0
-
-      neume = partmelody[melody_i].dup
-
-      # tones with a movable accent: remove the accent indication,
-      # add the accent indication with a curly bracket
-      if partmelody.movable_accent? && i == partmelody.accents - 1 then
-        if j == 0 then
-          neume.gsub! 'r', 'r[ocba:1;4mm]'
-        elsif j == 1 then
-          neume.gsub! 'r1', ''
-        end
-      end
-
-      of.print neume
-      melody_i += 1
-      text_i += 1
-    end
-  end
+  set_verse_part parttext, partmelody, offset, of
   
   if versepart == :afterflex then
     of.puts " *(:)"
@@ -485,6 +517,17 @@ end
     of.puts " (::)"
   end
 
+end
+
+## set the flex pattern after the verse
+if (not verse.has_flex?) and 
+    setup[:flex] and 
+    psalm_contains_flex?(psalmfile) then
+
+  flex_text = PsalmVerse::VersePart.new 'Sic [fléc]ti/tur. +'
+  set_verse_part flex_text, psalmody.flex, 0, of
+
+  of.puts " †(,) (::)"
 end
 
 of.puts
