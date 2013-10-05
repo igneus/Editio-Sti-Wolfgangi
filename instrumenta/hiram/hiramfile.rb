@@ -1,9 +1,17 @@
 # Wraps a YAML document and provides a clever interface to it's expected
 # contents
 class Hiram::HiramFile
-  def initialize(fname)
+  def initialize(fname, default_settings={})
     @yaml = YAML.load(File.open(fname))
+    @default_settings = default_settings
+    @settings = if @yaml.has_key?('settings') then
+                  @default_settings.dup.update(@yaml['settings'])
+                else
+                  @default_settings.dup
+                end
   end
+
+  attr_reader :settings
 
   def main
     return @yaml['main']
@@ -27,14 +35,6 @@ class Hiram::HiramFile
 
   def chants?
     self.chants != nil
-  end
-
-  def psalms_dir
-    if @yaml.has_key?('psalms-dir') then
-      return @yaml['psalms-dir']
-    else
-      return nil
-    end
   end
 
   def psalms

@@ -37,14 +37,27 @@ module Hiram
 
       @proj = nil # loaded hiramfile
       read_options
-      read_hiramfile
 
       editio_dir = Pathname.new(__FILE__).dirname.dirname.to_s
 
+      # default values of settings which might be specified in the hiramfile
+      @default_settings = {
+        'psalms-dir' => editio_dir+'/psalmi/amon33/',
+        'psalmtones-dir' => editio_dir+'/tonipsalmorum/arom12/',
+        # this may be either a single path or an Array of paths
+        # searched for a psalm in a given order
+        'translations-dir' => [
+                               editio_dir+'/bohemice_psalmi/Hejcl1922', 
+                               editio_dir+'/bohemice_psalmi/DMC199x', 
+                               editio_dir+'/bohemice_psalmi/Pavlik'
+                              ]
+      }
+      read_hiramfile
+
       @taskgen = TaskGenerator.new({
-                                     :psalmtones_dir => editio_dir+'/tonipsalmorum/arom12/',
-                                     :psalms_dir => (@proj.psalms_dir or editio_dir+'/psalmi/amon33/'),
-                                     :czech_psalms_dir => editio_dir+'/bohemice_psalmi/'
+                                     :psalmtones_dir => @proj.settings['psalmtones-dir'],
+                                     :psalms_dir => @proj.settings['psalms-dir'],
+                                     :czech_psalms_dir => @proj.settings['translations-dir']
                                    })
     end
 

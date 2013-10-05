@@ -144,19 +144,20 @@ class Hiram::TaskGenerator
   # Rake task to process a Czech psalm translation
   def genczechpsalm(zalm)
     # find in which set translation of this psalm is
-    input_dir = ['Hejcl1922', 'DMC199x', 'Pavlik'].find do|d|
-      File.exists? @czech_psalms_dir+'/'+d+'/'+zalm
+    unless @czech_psalms_dir.is_a? Array
+      @czech_psalms_dir = [@czech_psalms_dir]
+    end
+    input_dir = @czech_psalms_dir.find do|d|
+      File.exists? d+'/'+zalm
     end
     
-    if input_dir then
-      input_dir = @czech_psalms_dir+'/'+input_dir+'/'
-    else
+    unless input_dir
       raise "Czech translation of the psalm '#{zalm}' not found."
     end
 
     of = zalm.gsub(".pslm", "-boh.tex")
     ofop = "--output "+of+" "
-    syrovy = input_dir+zalm
+    syrovy = input_dir+'/'+zalm
     of_fullpath = @output_dir+of
     file of_fullpath => [syrovy, @psalm_preprocessor] do
       wd = Dir.pwd
