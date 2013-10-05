@@ -50,7 +50,8 @@ module Hiram
                                editio_dir+'/bohemice_psalmi/Hejcl1922', 
                                editio_dir+'/bohemice_psalmi/DMC199x', 
                                editio_dir+'/bohemice_psalmi/Pavlik'
-                              ]
+                              ],
+        'hymnographus-options' => ''
       }
       read_hiramfile
 
@@ -247,7 +248,7 @@ module Hiram
         @proj.hymns.each do |h|
           textus = h[0]
           musica = h[1]
-          options = h[2] or ''
+          options = h[2] || @proj.settings['hymnographus-options'].collect {|s| "--#{s}"}.join(' ')
 
           @hymn_targets << @taskgen.genhymn(textus, musica, options)
         end
