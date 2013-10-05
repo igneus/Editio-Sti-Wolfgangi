@@ -26,13 +26,13 @@
 
 % GREGORIO general settings:
 % staff size
-\setgrefactor{15}
+\setgrefactor{14}
 % space around the initial.
 \setspaceafterinitial{2.2mm plus 0em minus 0em}
 \setspacebeforeinitial{2.2mm plus 0em minus 0em}
 % initial font. 
 \def\greinitialformat#1{%
-{\fontsize{43}{43}\selectfont #1}%
+{\fontsize{38}{38}\selectfont #1}%
 }
 
 \newcommand{\psalteriumDir}{../../cantus/psalterium}
@@ -50,6 +50,10 @@ Ad II Vesperas
 \cleardoublepage
 
 \pagestyle{plain}
+
+\includescore{../../../cantuscommunes/arom09/deusinadiutorium-communis}
+
+\vfill
 
 \superInitialam{VIII}
 \includescore{temporalia/hymnus-OLuxBeata}
