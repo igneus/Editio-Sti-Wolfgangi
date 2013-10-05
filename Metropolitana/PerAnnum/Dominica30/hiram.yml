@@ -3,6 +3,8 @@ settings:
   translations-dir: ../../../bohemice_psalmi/DMC199x
   hymnographus-options:
     - no-linebreaks
+  initia-options:
+    - flex
 
 main: dominica30.tex
 
