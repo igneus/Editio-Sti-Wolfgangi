@@ -41,14 +41,18 @@
 \newcommand{\rubricatum}[1]{\textit{#1}}
 
 % standalone rubric
-\newcommand{\rubrica}[1]{\vspace{3mm}\rubricatum{#1}}
+\newcommand{\rubrica}[1]{
+  \vspace{3mm} 
+  \noindent \rubricatum{#1} 
+  \vspace{3mm}
+}
 
 \newcommand{\notitia}[1]{\textcolor{red}{#1}}
 
 \newcommand{\scriptura}[1]{\hfill \small\textit{#1}}
 
 \newcommand{\translatioCantus}[1]{\vspace{1mm}%
-{\noindent\footnotesize \nlfont{#1}}}
+{\noindent\footnotesize #1}}
 
 % pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
 % s prekladem
@@ -73,10 +77,12 @@
 }
 
 % znaky k umisteni nad inicialu zpevu
-\newcommand{\superInitialam}[1]{\gresetfirstlineaboveinitial{\small {\textbf{#1}}}{\small {\textbf{#1}}}}
+\newcommand{\superInitialam}[1]{\gresetfirstlineaboveinitial{\small {#1}}{\small {#1}}}
 
 % pars officii, i.e. "oratio", ...
-\newcommand{\pars}[1]{\textbf{#1}}
+\newcommand{\pars}[1]{
+  \hfill \small{#1} \hfill
+}
 
 \newenvironment{psalmus}{
   \setlength{\parindent}{0pt}
@@ -99,4 +105,5 @@
 \includescore{#2}
 
 #3
+\vspace{2mm}
 }

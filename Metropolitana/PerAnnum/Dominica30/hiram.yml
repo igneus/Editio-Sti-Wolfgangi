@@ -1,11 +1,14 @@
 settings:
   psalms-dir: ../../../psalmi/lh
   translations-dir: ../../../bohemice_psalmi/DMC199x
+  hymnographus-options:
+    - no-linebreaks
 
 main: dominica30.tex
 
 moretex:
   - metropolitanacommune.tex
+  - ../../cantus/psalterium/h2dom_trans.tex
 
 chants: 
   - cantus/*.gabc

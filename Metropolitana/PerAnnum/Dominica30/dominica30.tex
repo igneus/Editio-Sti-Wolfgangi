@@ -23,6 +23,7 @@
 \usepackage{multicol}
 
 \input{metropolitanacommune.tex}
+\input{../../cantus/psalterium/h2dom_trans.tex}
 
 % GREGORIO general settings:
 % staff size
@@ -36,6 +37,12 @@
 }
 
 \newcommand{\psalteriumDir}{../../cantus/psalterium}
+
+\newcommand{\trAngMag}{
+Ten se vrátil domů ospravedlněn.
+Neboť každý, kdo se povyšuje, bude ponížen;
+a kdo se povyšuje, ponížen.
+}
 
 \begin{document}
 
@@ -55,6 +62,8 @@ Ad II Vesperas
 
 \vfill
 
+\pars{Hymnus}
+
 \superInitialam{VIII}
 \includescore{temporalia/hymnus-OLuxBeata}
 
@@ -62,9 +71,11 @@ Ad II Vesperas
 
 \pagebreak
 
-\antiphona{VIII g}{\psalteriumDir/h2dom_ve2_a1}{}
+\pars{Antiphona I}
 
-\scriptura{Psalmus 109}
+\antiphona{VIII g}{\psalteriumDir/h2dom_ve2_a1}{\trAntI}
+
+\pars{Psalmus 109}
 
 \input{temporalia/ps109-initium-viii-G-auto}
 
@@ -74,9 +85,11 @@ Ad II Vesperas
 
 \pagebreak
 
-\antiphona{per}{\psalteriumDir/h2dom_ve2_a2}{}
+\pars{Antiphona II}
 
-\scriptura{Psalmus 113B}
+\antiphona{per}{\psalteriumDir/h2dom_ve2_a2}{\trAntII}
+
+\pars{Psalmus 113B}
 
 \input{temporalia/ps113b-initium-per-auto}
 
@@ -86,20 +99,40 @@ Ad II Vesperas
 
 \pagebreak
 
-\scriptura{Cf. Ap 19, 1-2. 5-7}
+\pars{Canticum Cf. Ap 19, 1-2. 5-7}
 
 \includescore{\psalteriumDir/canticum-ap19-d}
 
+\vspace{1cm}
+
+\rubrica{Sequitur Lectio brevis. Deinde:}
+
+
+\pars{Responsorium breve}
+
+\superInitialam{℟. br.}
 \includescore{\psalteriumDir/h2dom_ve2_r}
+
+\trResp
 
 \vfill
 
 \pagebreak
 
-\antiphona{VIII g}{cantus/dom30_annC_ve2}{}
+\pars{Antiphona ad Magnificat}
+
+\antiphona{VIII g}{cantus/dom30_annC_ve2}{\trAntMag}
+
+\pars{Magnificat}
 
 \includescore{../../../tonipsalmorum/arom12/magnificat-initium-viii-G}
 
+\sci
+
 \input{temporalia/magnificat-viiisoll-g}
+
+\vfill
+
+\rubrica{Sequuntur Preces, Oratio Dominica, Oratio diei et Benedictio.}
 
 \end{document}
