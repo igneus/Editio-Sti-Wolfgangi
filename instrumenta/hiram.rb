@@ -51,7 +51,8 @@ module Hiram
                                editio_dir+'/bohemice_psalmi/DMC199x', 
                                editio_dir+'/bohemice_psalmi/Pavlik'
                               ],
-        'hymnographus-options' => ''
+        'hymnographus-options' => '',
+        'initia-options' => ''
       }
       read_hiramfile
 
@@ -132,7 +133,7 @@ module Hiram
         raise "Input file '#{@hiramfile}' not found."
       end
 
-      @proj = HiramFile.new @hiramfile
+      @proj = HiramFile.new @hiramfile, @default_settings
     end
 
     def load_chant_targets
@@ -234,7 +235,8 @@ module Hiram
       if psalm != 'magnificat' then
         inchoatio = ((not ingroup) or firstingroup)
         begin
-          @initia_targets << @taskgen.geninitium(psfname, tone, inchoatio)
+          opts = @proj.settings['initia-options'].collect {|o| "--#{o}"}.join(" ")
+          @initia_targets << @taskgen.geninitium(psfname, tone, inchoatio, opts)
         rescue RuntimeError => re
           STDERR.puts "ERROR: initium not generated for psalm '#{psfname}': "+re.message
         end

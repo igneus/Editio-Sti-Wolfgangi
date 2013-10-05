@@ -91,8 +91,6 @@ class Hiram::TaskGenerator
     @instrumenta_dir = @instrumenta_dir.relative_path_from(here).to_s+'/'
     @editio_dir = @editio_dir.relative_path_from(here).to_s+'/'
 
-    # puts @instrumenta_dir, @editio_dir
-
     @psalm_preprocessor = @instrumenta_dir+'psalmpreprocessor.rb'
     @psalmtones_dir = settings[:psalmtones_dir]
     @psalms_dir = settings[:psalms_dir]
@@ -169,7 +167,7 @@ class Hiram::TaskGenerator
   end
 
   # Rake task to notate first verse of a psalm
-  def geninitium(psalm, tone, inchoatio=true)
+  def geninitium(psalm, tone, inchoatio=true, options='')
     unless tone.is_a? String
       tone = ''
     end
@@ -180,7 +178,7 @@ class Hiram::TaskGenerator
     end
     patternfile = "#{@psalmtones_dir}#{ntone}-auto.gabc"
     if not File.exist?(patternfile) then
-      raise "Psalm tone file #{patternfile} not found."
+      raise "Psalm tone file #{patternfile} not found. (#{patternfile})"
     end
 
     
@@ -190,9 +188,8 @@ class Hiram::TaskGenerator
     output_ending = '-initium-'+File.basename(patternfile)[0..i-1]+'.gabc'
     outputfile = File.basename(psalmfile).gsub(/\.pslm$/, output_ending)
 
-    options = ""
     unless inchoatio
-      options += '--no-inchoatio '
+      options += ' --no-inchoatio '
     end
 
     initium_tool = @instrumenta_dir+'initiumpsalmi.rb'
