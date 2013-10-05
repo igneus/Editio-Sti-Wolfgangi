@@ -1,3 +1,7 @@
+settings:
+  psalms-dir: ../../../psalmi/lh
+  translations-dir: ../../../bohemice_psalmi/DMC199x
+
 main: dominica30.tex
 
 moretex:
@@ -10,8 +14,6 @@ chants:
 
 hymns:
   - ['../../cantus/hymni/textus-OLuxBeata.txt', '../../cantus/hymni/musica-OLuxBeata.gabc']
-
-psalms-dir: ../../../psalmi/lh
 
 psalms:
   'vesperae ii':
