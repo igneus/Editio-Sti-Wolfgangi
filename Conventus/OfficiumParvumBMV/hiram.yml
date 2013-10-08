@@ -16,7 +16,7 @@ chants: [
 ]
 
 hymns: [
-['cantus/arom12/textushymni-AveMarisStella.txt', 'cantus/arom12/musica-AveMarisStella.gabc'],
+['cantus/arom12/textushymni-AveMarisStella.txt', 'cantus/arom12/musica-AveMarisStella.gabc', '--no-linebreaks'],
 ['cantus/arom12/textushymni-MementoRerumConditor.txt', 'cantus/arom12/musica-MementoRerumConditor.gabc'],
 ['cantus/nrom02/textushymni-QuemTerra.txt', 'cantus/nrom02/musica-QuemTerra.gabc'],
 ['cantus/arom12/textushymni-OGloriosaVirginum.txt', 'cantus/arom12/musica-OGloriosaVirginum.gabc']
