@@ -104,7 +104,11 @@
 \newcommand{\antiphonaIII}{
   \antiphona{III b}{cantus/arom12/ant3.tex}{\translatioAntIII}}
 \newcommand{\antiphonaIV}{
-  \antiphona{VIII G}{cantus/arom12/ant4.tex}{\translatioAntIV}}
+  \setspaceafterinitial{4mm plus 0em minus 0em}
+  \setspacebeforeinitial{4mm plus 0em minus 0em}
+  \antiphona{VIII G}{cantus/arom12/ant4.tex}{\translatioAntIV}
+  \spacearoundinitialNormal
+}
 \newcommand{\antiphonaV}{
   \antiphona{IV A*}{cantus/arom12/ant5.tex}{\translatioAntV}}
 

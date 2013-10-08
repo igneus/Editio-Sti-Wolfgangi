@@ -40,9 +40,15 @@
 % GREGORIO general settings:
 % staff size
 \setgrefactor{15}
-% space around the initial.
-\setspaceafterinitial{2.2mm plus 0em minus 0em}
-\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
+\newcommand{\spacearoundinitialNormal}{
+  % space around the initial.
+  \setspaceafterinitial{2.2mm plus 0em minus 0em}
+  \setspacebeforeinitial{2.2mm plus 0em minus 0em}
+}
+
+\spacearoundinitialNormal
+
 % initial font. 
 \def\greinitialformat#1{%
 {\fontsize{43}{43}\selectfont #1}%
@@ -83,7 +89,7 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \rubrica{Quod dicitur a Matutino diei 3 Februarii usque ad Nonam
 Sabbati ante Dominicam I Adventus inclusive, 
-præterquam in Festo Annuntiationis B. M. V., in quo dicitur,
+præterquam in Festo Annuntiationis B.~M.~V., in quo dicitur,
 ut in Adventu, pg. \pageref{tempus:adventus}.}
 
 \input{partes/extradv_vesperae.tex}
