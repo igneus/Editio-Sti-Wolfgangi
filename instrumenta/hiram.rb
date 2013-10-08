@@ -51,8 +51,8 @@ module Hiram
                                editio_dir+'/bohemice_psalmi/DMC199x', 
                                editio_dir+'/bohemice_psalmi/Pavlik'
                               ],
-        'hymnographus-options' => '',
-        'initia-options' => ''
+        'hymnographus-options' => [],
+        'initia-options' => []
       }
       read_hiramfile
 
@@ -263,20 +263,29 @@ module Hiram
     def load_main_target
       if @proj.main? then
         maintex = @proj.main
-        maintex_target = maintex.gsub /\.tex$/, '.pdf'
-
-        maindeps = [maintex] + 
-          @chant_targets + @initia_targets + @psalms_targets + @hymn_targets
-
-        if @proj.moretex? then
-          maindeps += @proj.moretex
+        unless maintex.is_a? Array
+          maintex = [maintex]
         end
 
-        file maintex_target => maindeps do |t|
-          2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
+        main_targets = []
+
+        maintex.each do |m|
+          target = m.gsub /\.tex$/, '.pdf'
+          main_targets << target
+
+          maindeps = [m] + 
+            @chant_targets + @initia_targets + @psalms_targets + @hymn_targets
+
+          if @proj.moretex? then
+            maindeps += @proj.moretex
+          end
+
+          file target => maindeps do |t|
+            2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
+          end
         end
 
-        task 'main' => [maintex_target]
+        task 'main' => main_targets
         Rake::Task['main'].comment = "Run all tasks and finally compile the main book"  
       end
     end
