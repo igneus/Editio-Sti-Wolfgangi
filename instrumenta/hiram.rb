@@ -161,6 +161,10 @@ module Hiram
       @psalms_targets = []
       @initia_targets = []
       
+      unless @proj.psalms
+        return
+      end
+
       @proj.psalms.each_value do |section|
         section.each_pair do |psalm, tone|
           if psalm.is_a? String and psalm.index(',') then
