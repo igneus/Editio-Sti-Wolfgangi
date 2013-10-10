@@ -6,6 +6,8 @@ translationes_cs.tex,
 'partes/*.tex'
 ]
 
+initia-options: [flex]
+
 chants: [
 'cantus/arom12/*.gabc',
 'cantus/nrom02/*.gabc',
