@@ -35,9 +35,7 @@ psalms: {
   },
 
   'Completory': {
-    128: dir,
-    129: dir,
-    130: dir,
+    '128,129,130': dir,
     nuncdimittis: VII.a,
   },
 
