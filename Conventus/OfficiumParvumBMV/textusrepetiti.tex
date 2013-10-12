@@ -68,6 +68,10 @@
     ut in Vesperis, p. \pageref{vesperaefinis}. Sed Oratio fit ut infra.}
 }
 
+\newcommand{\rubricaLaudesPrincipium}{
+  \rubrica{Si Laudes separentur a Matutino:}
+}
+
 %%%% EXTRA ADVENTUM
 
 \newcommand{\domineLabiaMea}{
@@ -126,7 +130,8 @@
   \includescore{cantus/arom12/versiculus-DiffusaEst.tex}
 }
 
-\newcommand{\inFineHorarumExtraAdventum}{
+
+\newcommand{\finisAnteOrationem}{
   \kyrieEleison
 
   \vspace{2mm}
@@ -136,6 +141,21 @@
   \vspace{3mm}
 
   \pars{Oratio.}
+}
+\newcommand{\finisPostOrationem}{
+  \dominusVobiscumRep
+
+  \vspace{7mm}
+}
+\newcommand{\finisPostBenedicamus}{
+  \vspace{7mm}
+
+  \fideliumAnimae
+}
+
+% end of the hours - extra Adventum ut in Vesperis
+\newcommand{\inFineHorarumExtraAdventum}{
+  \finisAnteOrationem
 
   \rubrica{Tono feriali, i.e. tono recto:}
 
@@ -144,20 +164,33 @@
   et, gloriósa beátæ Maríæ semper Vírginis intercessióne,
   a præsénti liberáti tristítia et ætérna pérfrui lætítia.
 
-  \perDominum
-
-  %%% finis
-
-  \dominusVobiscumRep
-
-  \vspace{7mm}
+  \finisPostOrationem
 
   \includescore{\ccommunesAR/benedicamus-feria.tex}
 
-  \vspace{7mm}
-
-  \fideliumAnimae
+  \finisPostBenedicamus
 }
+
+% end of the hours - extra Adventum ut in Laudibus
+\newcommand{\inFineHorarumExtraAdventumLaudes}{
+  \finisAnteOrationem
+
+  \rubrica{Tono feriali, i.e. tono recto:}
+
+  Deus, qui de beátæ Maríæ Vírginis útero Verbum tuum,
+  Angelo nuntiánte, carnem suscípere voluísti: †
+  præsta supplícibus tuis; ut qui vere eam Genitrícem Dei crédimus, *
+  ejus apud te intercessiónibus adjuvémur.
+  Per eúmdem Christum Dóminum nostrum. 
+  ℟. Amen.
+
+  \finisPostOrationem
+
+  \includescore{\ccommunesAR/benedicamus-feria.tex}
+
+  \finisPostBenedicamus
+}
+
 
 \newcommand{\rubricaAnnuntiatioQuadragesimaAlleluja}{
   \rubrica{In Festo Annuntiationis, quoties ipsum Tempore Quadragesimæ
