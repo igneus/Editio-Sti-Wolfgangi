@@ -28,8 +28,6 @@
 
 # Extra Adventum
   
-* nespory - hymnus je roztazeny fuj
-
 * kompletar - zaverecne marianske antifony upravit podle AR19
 
 # Tempore Paschali
