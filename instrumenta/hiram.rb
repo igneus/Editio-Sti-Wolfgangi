@@ -52,7 +52,9 @@ module Hiram
                                editio_dir+'/bohemice_psalmi/Pavlik'
                               ],
         'hymnographus-options' => [],
-        'initia-options' => []
+        'initia-options' => [],
+        # should the preprocessed psalms be in subdirectories?
+        'temporalia-structured' => false
       }
       read_hiramfile
 
@@ -157,6 +159,8 @@ module Hiram
       end
     end
 
+    
+
     def load_psalm_targets
       @psalms_targets = []
       @initia_targets = []
@@ -165,7 +169,18 @@ module Hiram
         return
       end
 
-      @proj.psalms.each_value do |section|
+      @psalm_subdirnames = {}
+      if @proj.settings['temporalia-structured'] then
+        # create directories for preprocessed psalms
+        @proj.psalms.each_key do |k|
+          @psalm_subdirnames[k] = k.gsub(/[\.,]/, '').gsub(' ', '-').downcase
+          unless File.directory?('temporalia/' + @psalm_subdirnames[k])
+            Dir.mkdir('temporalia/' + @psalm_subdirnames[k])
+          end
+        end
+      end
+
+      @proj.psalms.each_pair do |section_name, section|
         section.each_pair do |psalm, tone|
           if psalm.is_a? String and psalm.index(',') then
             options = []
@@ -175,10 +190,12 @@ module Hiram
             end
             psalms = psalm.split(/\s*,\s*/)
             psalms.each_with_index do |p,i|
-              create_psalm_task(p, tone, true, (i == 0), (i >= psalms.size-1), options)
+              create_psalm_task(p, tone, true, (i == 0), (i >= psalms.size-1), options, section_name)
             end
           else
-            create_psalm_task(psalm, tone)
+            create_psalm_task(psalm, tone, 
+                              false, false, false, [], # defaults repeated
+                              section_name)
           end
         end
       end  
@@ -191,7 +208,7 @@ module Hiram
     end
 
     # helper for the previous method
-    def create_psalm_task(psalm, tone, ingroup=false, firstingroup=false, lastingroup=false, psalm_options=[])
+    def create_psalm_task(psalm, tone, ingroup=false, firstingroup=false, lastingroup=false, psalm_options=[], hour='')
       if tone.is_a? String then
         tonesuff =  '-' + tone.downcase.gsub('.', '-')
       else
@@ -210,6 +227,12 @@ module Hiram
       else
         psfname = psalm + '.pslm'
         psoutname = psalm + tonesuff + '.tex'
+      end
+
+      outdir = nil
+      if @proj.settings['temporalia-structured'] then
+        outdir = @psalm_subdirnames[hour]
+        psoutname = outdir + '/' + psoutname
       end
 
       options = @taskgen.default_psalm_options + 
@@ -231,7 +254,7 @@ module Hiram
       @psalms_targets << @taskgen.genpsalm(psfname, psoutname, options)
 
       begin
-        @psalms_targets << @taskgen.genczechpsalm(psfname)
+        @psalms_targets << @taskgen.genczechpsalm(psfname, outdir)
       rescue RuntimeError => re
         STDERR.puts "ERROR: translation not generated for psalm '#{psfname}': "+re.message
       end
@@ -240,7 +263,7 @@ module Hiram
         inchoatio = ((not ingroup) or firstingroup)
         begin
           opts = @proj.settings['initia-options'].collect {|o| "--#{o}"}.join(" ")
-          @initia_targets << @taskgen.geninitium(psfname, tone, inchoatio, opts)
+          @initia_targets << @taskgen.geninitium(psfname, tone, inchoatio, opts, @taskgen.output_dir + '/' + outdir)
         rescue RuntimeError => re
           STDERR.puts "ERROR: initium not generated for psalm '#{psfname}': "+re.message
         end

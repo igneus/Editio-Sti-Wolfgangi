@@ -140,7 +140,7 @@ class Hiram::TaskGenerator
   @@czech_psalm_options = "--accents 0:0 --title-pattern \" \" --no-paragraph "
 
   # Rake task to process a Czech psalm translation
-  def genczechpsalm(zalm)
+  def genczechpsalm(zalm, outdir=nil)
     # find in which set translation of this psalm is
     unless @czech_psalms_dir.is_a? Array
       @czech_psalms_dir = [@czech_psalms_dir]
@@ -150,10 +150,13 @@ class Hiram::TaskGenerator
     end
     
     unless input_dir
-      raise "Czech translation of the psalm '#{zalm}' not found."
+      raise "Translation of the psalm '#{zalm}' not found."
     end
 
     of = zalm.gsub(".pslm", "-boh.tex")
+    if outdir then
+      of = outdir + '/' + of
+    end
     ofop = "--output "+of+" "
     syrovy = input_dir+'/'+zalm
     of_fullpath = @output_dir+of
@@ -167,7 +170,7 @@ class Hiram::TaskGenerator
   end
 
   # Rake task to notate first verse of a psalm
-  def geninitium(psalm, tone, inchoatio=true, options='')
+  def geninitium(psalm, tone, inchoatio=true, options='', outdir=nil)
     unless tone.is_a? String
       tone = ''
     end
@@ -187,21 +190,24 @@ class Hiram::TaskGenerator
     i = File.basename(patternfile).index('.')
     output_ending = '-initium-'+File.basename(patternfile)[0..i-1]+'.gabc'
     outputfile = File.basename(psalmfile).gsub(/\.pslm$/, output_ending)
+    if outdir then
+      outputfile = outdir + '/' + outputfile
+    else
+      outputfile = @output_dir + '/' + outputfile
+    end
+    options += " --output #{outputfile}"
 
     unless inchoatio
-      options += ' --no-inchoatio '
+      options += ' --no-inchoatio'
     end
 
     initium_tool = @instrumenta_dir+'initiumpsalmi.rb'
 
-    file @output_dir+outputfile => [psalmfile, patternfile, initium_tool] do
-      wd = Dir.pwd
-      chdir @output_dir
-      sh "ruby ../#{initium_tool} #{options} ../#{psalmfile} ../#{patternfile}"
-      chdir wd
+    file outputfile => [psalmfile, patternfile, initium_tool] do
+      sh "ruby #{initium_tool} #{options} #{psalmfile} #{patternfile}"
     end
 
-    return gregorio(@output_dir+outputfile)
+    return gregorio(outputfile)
   end
 
   def genhymn(textfile, musicfile, options)
