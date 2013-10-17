@@ -9,9 +9,11 @@
 
 * Ante et Post officium
 
-* zalmy by mely mit inicialu (hodi se zvlast v seriich tri zalmu)
-
 * mozna by se hodilo vice napevu Ave maris stella, ktere jsou v Antiphonale
+
+* zvlast: vsechny laudy (pro Salvatora)
+
+* doplnit preklady
 
 # Rubricisticke
 
@@ -28,17 +30,13 @@
 
 # Extra Adventum
   
-* kompletar - zaverecne marianske antifony upravit podle AR19
+* kompletar - zaverecne marianske antifony upravit podle AR12
+
+* completorium post nativitatem?
 
 # Tempore Paschali
 
 * initia
-
-# Mse
-
-* votivni mse De Beata
-
-# `grep -ri TODO *` !
 
 # Dalsi
 

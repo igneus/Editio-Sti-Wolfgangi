@@ -8,6 +8,9 @@ translationes_cs.tex,
 
 initia-options: [flex]
 
+settings:
+  temporalia-structured: true
+
 chants: [
 'cantus/arom12/*.gabc',
 'cantus/nrom02/*.gabc',
@@ -102,7 +105,8 @@ psalms: {
     99: I.g,
     62: VIII.G,
     dan3: I.f,
-    148: VIII.c
+    148: VIII.c,
+    benedictus: VIII.G
   },
 
   'Advent, Prima': {
