@@ -9,10 +9,15 @@ require 'optparse'
 
 setup = {
   :inchoatio => true,
-  :flex => false
+  :flex => false,
+  :output_file => nil
 }
 
 optparse = OptionParser.new do|opts|
+  opts.on "-o", "--output FILE", "Path of an output file" do |path|
+    setup[:output_file] = path
+  end
+
   opts.on "-i", "--no-inchoatio", "Don't set an inchoatio, start on the reciting tone" do
     setup[:inchoatio] = false
   end
@@ -27,13 +32,8 @@ optparse.parse!
 psalmfile = ARGV.shift
 patternfile = ARGV.shift
 
-if ! ARGV.empty? then
-  of = ARGV.shift
-  if of == '-' then
-    outputfile = STDOUT
-  else
-    outputfile = of
-  end
+if setup[:output_file] then
+  outputfile = setup[:output_file]
 else
   i = File.basename(patternfile).index('.')
   output_ending = '-initium-'+File.basename(patternfile)[0..i-1]+'.gabc'
