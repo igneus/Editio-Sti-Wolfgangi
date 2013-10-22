@@ -32,8 +32,6 @@
   
 * kompletar - zaverecne marianske antifony upravit podle AR12
 
-* completorium post nativitatem?
-
 # Tempore Paschali
 
 * initia
@@ -41,5 +39,3 @@
 # Dalsi
 
 * hiram by mel na konci behu zopakovat vsechny detekovane nedostatky
-* idealne by mel kazdy nagenerovany zalm mit unikatni znamku
-* !!! prozatimni reseni problemu kolize zalmu: v nazvu rozlisit, jestli ma prvni vers - viz zalm 121 VIII.G - jednou ho mame v nesporach, jednou v male hodince
