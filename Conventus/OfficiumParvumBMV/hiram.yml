@@ -62,7 +62,7 @@ psalms: {
     62: IV.A,
     dan3: VII.c2,
     148: I.g2,
-    benedictus: VIII.G
+    benedictus: VIIIsoll.G
   },
 
   'extra Adventum, Prima': {
@@ -89,7 +89,7 @@ psalms: {
     121: VIII.G,
     126: I.f,
     147: VIII.c,
-    magnificat: VIII.G
+    magnificat: VIIIsoll.G
   },
 
   'Advent, Completory': {
@@ -106,7 +106,7 @@ psalms: {
     62: VIII.G,
     dan3: I.f,
     148: VIII.c,
-    benedictus: VIII.G
+    benedictus: VIIIsoll.G
   },
 
   'Advent, Prima': {
@@ -133,7 +133,7 @@ psalms: {
     121: IV.E,
     126: I.f,
     147: II.D,
-    magnificat: II.A
+    magnificat: IIsoll.A
   },
 
   'post Nativitatem, Completory': {
@@ -146,7 +146,7 @@ psalms: {
     62: IV.E,
     dan3: I.f,
     148: II.D,
-    benedictus: VIII.G
+    benedictus: VIIIsoll.G
   },
 
   'post Nativitatem, Prima': {
