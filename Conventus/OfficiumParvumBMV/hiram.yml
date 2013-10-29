@@ -168,8 +168,8 @@ psalms: {
   # --------------------------
 
   'Tempore Paschali': {
-    magnificat: I.D2,
-    benedictus: I.D2,
+    magnificat: Isoll.D2,
+    benedictus: Isoll.D2,
     nuncdimittis: I.D2
   }
 }

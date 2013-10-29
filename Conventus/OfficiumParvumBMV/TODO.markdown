@@ -11,8 +11,6 @@
 
 * odstranit poznamky "recto tono" a "tono feriali" a dat o napevu modliteb a versiku jednu rubriku na zacatek?
 
-* zminit, ze jsem pouzil zaverecne marianske antifony od nekoho jineho
-
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 
 * pro Benedictus a Magnificat zdobnejsi napevy
@@ -33,10 +31,3 @@
   
 * opravdu versiky a orace recto tono?
 
-# Extra Adventum
-  
-* kompletar - zaverecne marianske antifony upravit podle AR12
-
-# Tempore Paschali
-
-* initia
