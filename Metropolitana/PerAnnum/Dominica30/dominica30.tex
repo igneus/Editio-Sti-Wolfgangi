@@ -28,13 +28,19 @@
 % GREGORIO general settings:
 % staff size
 \setgrefactor{14}
-% space around the initial.
-\setspaceafterinitial{2.2mm plus 0em minus 0em}
-\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
 % initial font. 
 \def\greinitialformat#1{%
 {\fontsize{38}{38}\selectfont #1}%
 }
+
+\newcommand{\spacearoundinitialNormal}{
+  % space around the initial.
+  \setspaceafterinitial{2.2mm plus 0em minus 0em}
+  \setspacebeforeinitial{2.2mm plus 0em minus 0em}
+}
+
+\spacearoundinitialNormal
 
 \newcommand{\psalteriumDir}{../../cantus/psalterium}
 
@@ -82,7 +88,13 @@ Annus C
 
 \pars{Antiphona I}
 
+% initial I - adjust space
+\setspaceafterinitial{4mm plus 0em minus 0em}
+\setspacebeforeinitial{4mm plus 0em minus 0em}
+
 \antiphona{VIII g}{\psalteriumDir/h2dom_ve2_a1}{\trAntI}
+
+\spacearoundinitialNormal
 
 \pars{Psalmus 109}
 
@@ -96,7 +108,13 @@ Annus C
 
 \pars{Antiphona II}
 
+% note under the staff colliding with the text - adjust space
+%\global\advance\grespacelinestext by 1mm%
+% - temporarily discarded; it produces an unwanted side affect I can't get rid of
+
 \antiphona{per}{\psalteriumDir/h2dom_ve2_a2}{\trAntII}
+
+%\global\advance\grespacelinestext by -1mm%
 
 \pars{Psalmus 113B}
 
@@ -130,7 +148,12 @@ Annus C
 
 \pars{Antiphona ad Magnificat}
 
+% more lines, too tight - adjust space
+\global\advance\grespaceabovelines by 2mm%
+
 \antiphona{VIII g}{cantus/dom30_annC_ve2}{\trAntMag}
+
+\global\advance\grespaceabovelines by -2mm%
 
 \pars{Magnificat}
 

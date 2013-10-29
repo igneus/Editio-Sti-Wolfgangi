@@ -6,7 +6,9 @@ settings:
   initia-options:
     - flex
 
-main: dominica30.tex
+main: 
+  - dominica30.tex
+  - dominica30_a4.tex
 
 moretex:
   - metropolitanacommune.tex
