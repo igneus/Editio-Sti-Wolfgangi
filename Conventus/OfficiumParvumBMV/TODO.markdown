@@ -13,8 +13,6 @@
 
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 
-* pro Benedictus a Magnificat zdobnejsi napevy
-
 * Deus in adiutorium a Benedicamus vsechny moznosti do samostatneho oddilu
 
 
