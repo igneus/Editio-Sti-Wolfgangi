@@ -1,7 +1,5 @@
 * Ante et Post officium
 
-x mozna by se hodilo vice napevu Ave maris stella, ktere jsou v Antiphonale
-
 
 * zvlast: vsechny laudy (pro Salvatora)
 
