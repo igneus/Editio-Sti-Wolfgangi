@@ -1,0 +1,80 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside, 12pt]{article}
+
+\usepackage[latin]{babel} 
+\usepackage{ecclesiastic}
+
+\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common, TeX}]{Junicode}
+
+% shortcut for Junicode without ligatures (for the Czech texts)
+\newfontfamily\nlfont[Ligatures={Common, TeX}]{Junicode}
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{gregoriosyms}
+\usepackage{parcolumns}
+\usepackage{multicol}
+
+\input{conventuscommune.tex}
+\input{translationes_cs.tex}
+\input{textusrepetiti.tex}
+
+\newcommand{\annusEditionis}{2013}
+% directories
+\newcommand{\ccommunesAM}{../../cantuscommunes/amon33}
+\newcommand{\ccommunesAR}{../../cantuscommunes/arom12}
+
+\begin{document}
+
+% GREGORIO general settings:
+% staff size
+\setgrefactor{15}
+
+\newcommand{\spacearoundinitialNormal}{
+  % space around the initial.
+  \setspaceafterinitial{2.2mm plus 0em minus 0em}
+  \setspacebeforeinitial{2.2mm plus 0em minus 0em}
+}
+
+\spacearoundinitialNormal
+
+% initial font. 
+\def\greinitialformat#1{%
+{\fontsize{43}{43}\selectfont #1}%
+}
+
+\pagestyle{empty}
+
+% multicols setting
+\setlength{\columnseprule}{1pt} % cara oddelujici sloupce
+\setlength{\columnsep}{20pt} % prostor mezi sloupci
+
+\renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
+\fancyhf{}
+\pagestyle{fancy}
+
+%%%%%%%%%%%% <<<
+
+\divisio{Extra Adventum.}
+
+\rubrica{Quod dicitur a Matutino diei 3 Februarii usque ad Nonam
+Sabbati ante Dominicam I Adventus inclusive, 
+præterquam in Festo Annuntiationis B.~M.~V., in quo dicitur,
+ut in Adventu, pg. \pageref{tempus:adventus}.}
+
+\input{partes/extradv_vesperae.tex}
+
+%%%%%%%%%%%% >>>
+
+\end{document}

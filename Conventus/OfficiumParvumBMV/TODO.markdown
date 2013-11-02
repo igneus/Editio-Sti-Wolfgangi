@@ -11,7 +11,7 @@
 
 # Rubricisticke
 
-* co vsechno zmenil Codex rubricarum? 
+* co vsechno zmenil Codex rubricarum?
   AAS 52 (1960), 593nn
   AAS ? (1955), brezen
   * jak je to s duplikaci antifon? byla zavedena uplna? ANO, Campbell 29
