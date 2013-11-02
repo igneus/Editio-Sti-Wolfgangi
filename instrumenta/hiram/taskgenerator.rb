@@ -138,7 +138,7 @@ class Hiram::TaskGenerator
   end
 
   # translations not intended to be sung: no pointing at all, no title, ...
-  @@czech_psalm_options = "--accents 0:0 --title-pattern \" \" --no-paragraph "
+  @@czech_psalm_options = "--accents 0:0 --skip-title --no-paragraph "
 
   # Rake task to process a Czech psalm translation
   def genczechpsalm(zalm, outdir=nil)
