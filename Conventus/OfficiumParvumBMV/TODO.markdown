@@ -1,6 +1,6 @@
 * Ante et Post officium
 
-* mozna by se hodilo vice napevu Ave maris stella, ktere jsou v Antiphonale
+x mozna by se hodilo vice napevu Ave maris stella, ktere jsou v Antiphonale
 
 
 * zvlast: vsechny laudy (pro Salvatora)
@@ -8,8 +8,6 @@
 * doplnit preklady
 
 
-
-* odstranit poznamky "recto tono" a "tono feriali" a dat o napevu modliteb a versiku jednu rubriku na zacatek?
 
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 
@@ -27,5 +25,4 @@
   
   *! závěrečná antifona po laudách?
   
-* opravdu versiky a orace recto tono?
-
+* in principio - opravit rubriky podle novych norem
