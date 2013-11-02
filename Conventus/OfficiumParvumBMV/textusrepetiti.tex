@@ -26,9 +26,8 @@
     \textnormal{Dómine exáudi}.}
 }
 
-\newcommand{\benedicamusDomino}{
-  \includescore{\ccommunesAR/benedicamus-feria.tex}
-}
+\newcommand{\benedicamusDomino}{%
+  Benedicámus Dómino. \rubricatum{Pg. \pageref{tc:benedicamus:minor}.}}
 
 \newcommand{\fideliumAnimae}{
   \rubrica{Voce recta et paululum depressa:}
@@ -56,8 +55,9 @@
 }
 
 \newcommand{\initiumHoraeMinores}{
-  \rubrica{Versus \textnormal{Deus, in adjutórium} et 
-    Hymnus \textnormal{Meménto, rerum Cónditor} 
+  \deusInAdiutorium
+
+  \rubrica{Hymnus \textnormal{Meménto, rerum Cónditor} 
     ut ad Primam, pg. \pageref{prima}.}
 }
 
@@ -72,18 +72,14 @@
 
 %%%% EXTRA ADVENTUM
 
-\newcommand{\domineLabiaMea}{
-  \includescore{../../cantuscommunes/arom12/dominelabiamea.tex}
+\newcommand{\domineLabiaMea}{%
+  Dómine lábia mea apéries.
+  \rubricatum{Pg. \pageref{tc:dominelabia}.}
 }
 
-\newcommand{\deusInAdiutorium}{
-  \includescore{\ccommunesAR/deusinadiutorium-ferialis.tex}
-
-  \rubrica{A Completorio Sabbati ante Dominicam Septuagesimæ 
-    usque ad Nonam Sabbati sancti inclusive dicitur loco Alleluia:}
-
-  \includescore{\ccommunesAR/laustibi-ferialis.tex}
-}
+\newcommand{\deusInAdiutorium}{%
+  Deus in adjutórium meum inténde.
+  \rubricatum{Pg. \pageref{tc:deusinadiutorium}.}}
 
 % antiphonae ad laudes
 
@@ -256,8 +252,9 @@
     ut in Vesperis, p. \pageref{vesperaefinisadvent}.}}
 
 \newcommand{\initiumHoraeMinoresAdvent}{
-  \rubrica{Versus \textnormal{Deus, in adjutórium} et 
-    Hymnus \textnormal{Meménto, rerum Cónditor} 
+  \deusInAdiutorium
+
+  \rubrica{Hymnus \textnormal{Meménto, rerum Cónditor} 
     ut ad Primam Extra Adventum, pg. \pageref{prima}.}
 }
 
