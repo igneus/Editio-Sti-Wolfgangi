@@ -55,10 +55,12 @@
 }
 
 \newcommand{\initiumHoraeMinores}{
+  \vspace{2mm}
   \deusInAdiutorium
 
   \rubrica{Hymnus \textnormal{Meménto, rerum Cónditor} 
     ut ad Primam, pg. \pageref{prima}.}
+  \vspace{5mm}
 }
 
 \newcommand{\finisHoraeMinores}{
@@ -68,6 +70,9 @@
 
 \newcommand{\rubricaLaudesPrincipium}{
   \rubrica{Si Laudes separentur a Matutino:}
+
+  \deusInAdiutorium
+  \vspace{5mm}
 }
 
 %%%% EXTRA ADVENTUM
@@ -80,6 +85,13 @@
 \newcommand{\deusInAdiutorium}{%
   Deus in adjutórium meum inténde.
   \rubricatum{Pg. \pageref{tc:deusinadiutorium}.}}
+
+% Deus in adiutorium with spaces around for places where it stands
+% alone before the hour title and the beginning of it's proper content.
+\newcommand{\deusInAdiutoriumS}{%
+  \vspace{2mm}
+  \deusInAdiutorium
+  \vspace{5mm}}
 
 % antiphonae ad laudes
 
@@ -254,10 +266,12 @@
     ut in Vesperis, p. \pageref{vesperaefinisadvent}.}}
 
 \newcommand{\initiumHoraeMinoresAdvent}{
+  \vspace{2mm}
   \deusInAdiutorium
 
   \rubrica{Hymnus \textnormal{Meménto, rerum Cónditor} 
     ut ad Primam Extra Adventum, pg. \pageref{prima}.}
+  \vspace{5mm}
 }
 
 %%%% TEMPORE NATIVITATIS
