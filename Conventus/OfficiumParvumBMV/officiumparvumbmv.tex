@@ -39,7 +39,10 @@
 
 % GREGORIO general settings:
 % staff size
-\setgrefactor{15}
+\newcommand{\setgrefactorNormal}{%
+  \setgrefactor{15}}
+
+\setgrefactorNormal
 
 \newcommand{\spacearoundinitialNormal}{
   % space around the initial.
@@ -49,7 +52,7 @@
 
 \spacearoundinitialNormal
 
-% initial font. 
+% initial font.
 \def\greinitialformat#1{%
 {\fontsize{43}{43}\selectfont #1}%
 }

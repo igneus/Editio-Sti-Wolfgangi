@@ -21,3 +21,7 @@
   *! závěrečná antifona po laudách?
   
 * toni communes - opravit rubriky podle novych norem (ranky svatku)
+
+# Fajnovosti
+
+* kompletar - tam co jsou mensi noty vyladit velikost inicial
