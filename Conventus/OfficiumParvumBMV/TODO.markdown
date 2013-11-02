@@ -11,8 +11,9 @@ x mozna by se hodilo vice napevu Ave maris stella, ktere jsou v Antiphonale
 
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 
-* Deus in adiutorium a Benedicamus vsechny moznosti do samostatneho oddilu
+* u oraci, kde chybi, doplnit zaver
 
+* z oraci vymazat + a * - ty jsou pro starsi napevy oraci, pro "moderni" zde uvadeny jsou relevantni : a ;
 
 # Rubricisticke
 
@@ -25,4 +26,4 @@ x mozna by se hodilo vice napevu Ave maris stella, ktere jsou v Antiphonale
   
   *! závěrečná antifona po laudách?
   
-* in principio - opravit rubriky podle novych norem
+* toni communes - opravit rubriky podle novych norem (ranky svatku)
