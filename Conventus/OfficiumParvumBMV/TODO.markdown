@@ -11,10 +11,6 @@ x mozna by se hodilo vice napevu Ave maris stella, ktere jsou v Antiphonale
 
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 
-* u oraci, kde chybi, doplnit zaver
-
-* z oraci vymazat + a * - ty jsou pro starsi napevy oraci, pro "moderni" zde uvadeny jsou relevantni : a ;
-
 # Rubricisticke
 
 * co vsechno zmenil Codex rubricarum? 
