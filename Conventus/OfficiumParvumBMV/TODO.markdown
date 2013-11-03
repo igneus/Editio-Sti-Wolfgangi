@@ -9,6 +9,10 @@
 
 * zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
 
+* antifonam matutina doplnit nejake smysluplne deleni 
+
+* vyresit vzpurne zalmy matutina
+
 # Rubricisticke
 
 * co vsechno zmenil Codex rubricarum?
