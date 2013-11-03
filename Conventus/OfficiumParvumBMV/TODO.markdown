@@ -15,6 +15,8 @@
 
 * v malych hodinkach podle potreby opakovani antifony po zalmech
 
+* o maly kousek zmensit inicialky
+
 # Rubricisticke
 
 * co vsechno zmenil Codex rubricarum?
