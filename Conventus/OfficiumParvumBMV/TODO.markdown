@@ -13,6 +13,8 @@
 
 * vyresit vzpurne zalmy matutina
 
+* v malych hodinkach podle potreby opakovani antifony po zalmech
+
 # Rubricisticke
 
 * co vsechno zmenil Codex rubricarum?
