@@ -17,6 +17,8 @@
 
 * o maly kousek zmensit inicialky
 
+* do matutina preci jen antifony z Nocturnale?
+
 # Rubricisticke
 
 * co vsechno zmenil Codex rubricarum?
