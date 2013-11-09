@@ -1,0 +1,6 @@
+
+file "officiapropria_praga.pdf" => Dir["*.tex"] do 
+  2.times { sh "xelatex officiapropria_praga.tex" }
+end
+
+task :default => ["officiapropria_praga.pdf"]

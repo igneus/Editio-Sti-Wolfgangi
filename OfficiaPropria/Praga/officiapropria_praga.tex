@@ -1,0 +1,76 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside, 10pt]{article}
+
+\usepackage[latin]{babel} 
+\usepackage{ecclesiastic}
+
+\usepackage{geometry}
+%\geometry{papersize={7.444in,9.681in},total={4.8in,6.8in}}
+\geometry{papersize={10.5cm,17.3cm},left=1cm,right=1cm,top=1.2cm,bottom=1.2cm}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common, TeX}]{Junicode}
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+
+\newcommand{\rubricatum}[1]{\textcolor{red}{#1}}
+
+% kalendarium
+\newenvironment{kalendarium}{\setlength{\parindent}{0cm}}{}
+\newcommand{\kMensis}[1]{
+  \vspace{2mm}
+  \hfill {\large\rubricatum{#1}} \hfill
+  \vspace{1mm}}
+\newcommand{\kDies}[3]{#1 \hspace{2mm} #2 \rubricatum{#3}
+
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\Huge 
+  Officia propria
+
+  Provinciæ Pragensis}
+
+{\Large 
+  a S. Sede approbata et indulta}
+
+\vfill
+
+tomus alter
+
+\vfill
+
+Editio Sancti Wolfgangi
+\end{center}
+
+\cleardoublepage
+
+\section*{Kalendarium perpetuum\\Provinciæ Pragensis}
+
+\begin{kalendarium}
+% TODO - 1962 reformed feast ranks
+% TODO - commemorationes?
+
+% 1928, aestiva, without commemorations and suppressed octaves
+\kMensis{Majus}
+
+\kDies{17}{S. Paschalis Baylon Conf.}{duplex}
+\kDies{18}{S. Venantii Mart.}{duplex}
+\kDies{19}{S. Petri Cælestini Papæ et Conf.}{duplex}
+\kDies{20}{S. Bernardini Senensis Conf.}{semiduplex}
+\kDies{25}{S. Gregorii VII. Papæ et Conf.}{duplex}
+\kDies{26}{S. Philippi Nerii Conf.}{duplex}
+\kDies{27}{S. Bedæ Venerabilis Conf. et Eccl. Doct.}{duplex}
+
+\end{kalendarium}
+
+
+\end{document}
