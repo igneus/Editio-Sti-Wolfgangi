@@ -72,7 +72,11 @@
 
 \pars{Canticum Simeonis}
 
+% staff and initials temporarily smaller
 \setgrefactor{14}
+\def\greinitialformat#1{%
+{\fontsize{38}{38}\selectfont #1}%
+}
 
 %%%
 \rubrica{Extra Adventum.}\vspace{7mm}
@@ -97,6 +101,9 @@
 \pagebreak
 
 \setgrefactorNormal % reset staff size
+\def\greinitialformat#1{%
+{\fontsize{41}{41}\selectfont #1}% TODO: hardcoded initial size - could this be done DRYer?
+}
 
 %%%
 \rubrica{Post Nativitatem.}
