@@ -148,8 +148,6 @@ class HymnText
             end
 
             syll = textl[texti]
-            # superficial syllables - contracted
-            syll = syll.gsub('{', '<i>').gsub('}', '</i>')
 
             # superficial syllables - notated
             if syll[0] == '<' then
@@ -161,6 +159,9 @@ class HymnText
             else
               mi += 1
             end
+
+            # superficial syllables - contracted
+            syll = syll.gsub('{', '<i>').gsub('}', '</i>')
 
             output += syll
             output += neuma
