@@ -1,5 +1,13 @@
 # hymnographus.rb MELODYFILE.gabc TEXTFILE.txt [OUTPUTFILE]
 
+# the text file:
+# * each verse is on a new line
+# * an empty line means a beginning of a new stanza
+# * syllables must be separated by /
+# * part of a syllable enclosed in curly brackets {} will be italicized (contracted syllable)
+# * syllable preceded by a < takes melody piece from the previous syllable
+# * syllable ending with > analogically from the following syllable
+
 class HymnMelody
   NOTES = %w(a b c d e f g h i j k l m n)
 
