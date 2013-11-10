@@ -124,7 +124,10 @@ class HymnText
 
         begin
           texti = 0
-          mell.each do |neuma|
+          mi = 0
+          begin
+            neuma = mell[mi]
+            
             if textl[texti] == ' ' then
               texti += 1
               output += " "
@@ -136,10 +139,25 @@ class HymnText
               break
             end
 
-            output += textl[texti].gsub('{', '<i>').gsub('}', '</i>')
+            syll = textl[texti]
+            # superficial syllables - contracted
+            syll = syll.gsub('{', '<i>').gsub('}', '</i>')
+
+            # superficial syllables - notated
+            if syll[0] == '<' then
+              syll = syll[1..-1]
+              neuma = mell[mi-1]
+            elsif syll[-1] == '>' then
+              syll = syll[0..-2]
+              # just don't increment the mellody counter
+            else
+              mi += 1
+            end
+
+            output += syll
             output += neuma
             texti += 1
-          end
+          end while mi < mell.size
           output += "\n"
         rescue
           STDERR.puts "Error occurred while setting line #{i}:"
