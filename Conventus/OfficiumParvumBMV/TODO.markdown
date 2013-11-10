@@ -15,7 +15,7 @@
 
 * o maly kousek zmensit inicialky
 
-* do matutina preci jen antifony z Nocturnale?
+* do matutina antifony a invitatorium z Nocturnale?
 
 # Rubricisticke
 
