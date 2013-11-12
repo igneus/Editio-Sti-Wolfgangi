@@ -1,6 +1,6 @@
 # Officium parvum B.M.V.
 
-according to the Antiphonale Romanum 1912.
+according to the Antiphonale Romanum 1912 (but see some important exceptions
+in the colophon) with later modifications of the rubrics reflected.
 
-Nocturnal chants taken from digitized manuscripts (see headers
-and comments in the gabc files for sources).
+Nocturnal chants taken from the Nocturnale Romanum (2002).
