@@ -13,9 +13,7 @@
 
 * v malych hodinkach podle potreby opakovani antifony po zalmech
 
-* o maly kousek zmensit inicialky
-
-* do matutina antifony a invitatorium z Nocturnale?
+* kompletar a matutinum: z hlavicky pryc Extra Adventum
 
 # Rubricisticke
 

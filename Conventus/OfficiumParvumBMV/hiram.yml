@@ -15,6 +15,7 @@ settings:
 chants: [
 'cantus/arom12/*.gabc',
 'cantus/nrom02/*.gabc',
+'cantus/nrom02/venite7/*.gabc',
 'cantus/manuscripti/*.gabc',
 'cantus/manuscripti/venite7/*.gabc',
 '../../cantuscommunes/arom12/*.gabc',
