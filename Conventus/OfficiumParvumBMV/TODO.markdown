@@ -15,6 +15,13 @@
 
 * kompletar a matutinum: z hlavicky pryc Extra Adventum
 
+* Filip k sazbe ze 4.11.: 
+  53 * et rectis corde. - "et rectis" do kurzivy
+  53 * pax super Israel. - "pax super" též do kurzívy
+  Je to chyba v psalmpreprocessoru - neoznaci pripravne slabiky, kdyz prvni slabika verse je zaroven prvni pripravnou slabikou
+
+
+
 # Rubricisticke
 
 * co vsechno zmenil Codex rubricarum?
