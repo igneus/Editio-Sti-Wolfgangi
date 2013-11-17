@@ -20,7 +20,7 @@
   53 * pax super Israel. - "pax super" též do kurzívy
   Je to chyba v psalmpreprocessoru - neoznaci pripravne slabiky, kdyz prvni slabika verse je zaroven prvni pripravnou slabikou
 
-
+* dedikace
 
 # Rubricisticke
 
