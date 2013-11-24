@@ -13,6 +13,7 @@ To compile it simply run 'rake' in that subdirectory.
 
 To compile the booklets you will need:
 * Ruby 1.9.* + rake
+* gem [pslm](https://github.com/igneus/pslm)
 * gregorio (tested with gregorio 2.0)
 * LuaLaTeX (tested with TeXLive 2012)
 * Junicode font
