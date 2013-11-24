@@ -92,14 +92,12 @@ class Hiram::TaskGenerator
     @instrumenta_dir = @instrumenta_dir.relative_path_from(here).to_s+'/'
     @editio_dir = @editio_dir.relative_path_from(here).to_s+'/'
 
-    @psalm_preprocessor = @instrumenta_dir+'psalmpreprocessor.rb'
+    @psalm_preprocessor = 'pslm.rb'
     @psalmtones_dir = settings[:psalmtones_dir]
     @psalms_dir = settings[:psalms_dir]
     @czech_psalms_dir = settings[:czech_psalms_dir]
 
-    @gloriapatri = File.readlines(@psalms_dir + '/gloriapatri.pslm').join ""
-
-    @default_psalm_options = "--accents-style bold --skip-title "
+    @default_psalm_options = "--join --accents-style bold --skip-title "
     @output_dir = './temporalia/'
   end
 
@@ -122,11 +120,15 @@ class Hiram::TaskGenerator
     peceny = output_dir + outputname
 
     # expand a fake option (this solution is pretty dirty!)
-    options.gsub!('--gloriapatri', "--append \"#{@gloriapatri}\" ")
+    append = ''
+    if options.include? '--gloriapatri' then
+      options.gsub!('--gloriapatri', "")
+      append = ' ../'+psalm_file('gloriapatri.pslm', input_dir)
+    end
 
-    file peceny => [syrovy, @psalm_preprocessor] do
+    file peceny => [syrovy] do
       chdir output_dir
-      sh "#{RUBY_COMMAND} ../#{@psalm_preprocessor} #{options} ../#{syrovy}"
+      sh "#{@psalm_preprocessor} #{options} ../#{syrovy} #{append}"
       chdir wd
     end
     return peceny
@@ -161,10 +163,10 @@ class Hiram::TaskGenerator
     ofop = "--output "+of+" "
     syrovy = input_dir+'/'+zalm
     of_fullpath = @output_dir+of
-    file of_fullpath => [syrovy, @psalm_preprocessor] do
+    file of_fullpath => [syrovy] do
       wd = Dir.pwd
       chdir @output_dir
-      sh "#{RUBY_COMMAND} ../#{@psalm_preprocessor} #{ofop} #{@@czech_psalm_options} ../#{syrovy}"
+      sh "#{@psalm_preprocessor} #{ofop} #{@@czech_psalm_options} ../#{syrovy}"
       chdir wd
     end
     return of_fullpath
