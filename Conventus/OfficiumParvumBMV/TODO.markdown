@@ -29,7 +29,7 @@
   AAS ? (1955), 218nn
   * jak je to s duplikaci antifon? byla zavedena uplna? ANO, Campbell 29
   * komemorace? ANO, uz 1955 - Campbell 26
-  * predpostni dobu?
+  * predpostni dobu? - ne
   
   *! závěrečná antifona po laudách?
   
