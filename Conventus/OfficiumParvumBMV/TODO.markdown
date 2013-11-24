@@ -1,4 +1,4 @@
-* Ante et Post officium
+* doplnit commemoratio de sanctis
 
 
 * zvlast: vsechny laudy (pro Salvatora)
@@ -28,7 +28,7 @@
   AAS 52 (1960), 593nn
   AAS ? (1955), 218nn
   * jak je to s duplikaci antifon? byla zavedena uplna? ANO, Campbell 29
-  * komemorace? ANO, uz 1955 - Campbell 26
+  * komemorace? - ne
   * predpostni dobu? - ne
   
   *! závěrečná antifona po laudách?
