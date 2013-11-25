@@ -1,24 +1,14 @@
-* doplnit commemoratio de sanctis
-
-
 * zvlast: vsechny laudy (pro Salvatora)
 
 * doplnit preklady
 
 
 
-* zminit upravy na zaklade predpisu pozdejsich nez jsou pouzite knihy
-
 * vyresit vzpurne zalmy matutina
 
 * v malych hodinkach podle potreby opakovani antifony po zalmech
 
 * kompletar a matutinum: z hlavicky pryc Extra Adventum
-
-* Filip k sazbe ze 4.11.: 
-  53 * et rectis corde. - "et rectis" do kurzivy
-  53 * pax super Israel. - "pax super" též do kurzívy
-  Je to chyba v psalmpreprocessoru - neoznaci pripravne slabiky, kdyz prvni slabika verse je zaroven prvni pripravnou slabikou
 
 * dedikace
 
@@ -33,8 +23,3 @@
   
   *! závěrečná antifona po laudách?
   
-* toni communes - opravit rubriky podle novych norem (ranky svatku)
-
-# Fajnovosti
-
-* kompletar - tam co jsou mensi noty vyladit velikost inicial
