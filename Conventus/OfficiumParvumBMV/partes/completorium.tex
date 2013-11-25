@@ -38,8 +38,15 @@
 
 \pars{Hymnus}
 
+\noindent
+\begin{minipage}{20cm}
 \superInitialam{II}
 \includescore{temporalia/hymnus-MementoRerumConditor.tex}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{5cm}
+\trHymMementoRerumConditor
+\end{minipage}
 
 \vfill
 \pagebreak
@@ -51,9 +58,15 @@
 
 \includescore{cantus/arom12/capitulum-EgoMater.tex}
 
-℣. Ora pro nobis sancta Dei \textbf{Gé}nitrix.
-
+\vspace{3mm}
+\noindent
+℣. Ora pro nobis sancta Dei \textbf{Gé}nitrix.\\
 ℟. Ut digni efficiámur promissiónibus \textbf{Chris}ti.
+\vspace{3mm}
+
+\trCapitEgoMater
+
+\trVersOraProNobis
 
 \vspace{1cm}
 
@@ -63,9 +76,15 @@
 
 \includescore{cantus/arom12/capitulum-EcceVirgo.tex}
 
-℣. Angelus Dómini nuntiávit Ma\textbf{rí}æ.
-
+\vspace{3mm}
+\noindent
+℣. Angelus Dómini nuntiávit Ma\textbf{rí}æ.\\
 ℟. Et concépit de Spíritu \textbf{Sanc}to.
+\vspace{3mm}
+
+\trCapitEcceVirgo
+
+\trVersOraProNobis
 
 \vfill
 \pagebreak
@@ -81,8 +100,7 @@
 %%%
 \rubrica{Extra Adventum.}\vspace{7mm}
 
-\superInitialam{VII a}
-\includescore{cantus/arom12/antnuncdim.tex}
+\antiphona{VII a}{cantus/arom12/antnuncdim.tex}{\trAntSubTuum}
 
 \includescore{temporalia/completory/nuncdimittis-initium-vii-a-auto.tex}
 
@@ -98,13 +116,12 @@
 
 \psalmusEtTranslatioB{temporalia/advent-completory/nuncdimittis-viii-g.tex}{temporalia/advent-completory/nuncdimittis-boh.tex}{11cm}
 
-\pagebreak
-
 \setgrefactorNormal % reset staff size
 \def\greinitialformat#1{%
 {\fontsize{38}{38}\selectfont #1}% TODO: hardcoded initial size - could this be done DRYer?
 }
 
+\vspace{1cm}
 %%%
 \rubrica{Post Nativitatem.}
 
@@ -148,19 +165,23 @@
 
 \rubrica{Extra Adventum.}
 
-Beátæ et gloriósæ semper Vírginis Maríæ, quǽsumus Dómine,
-intercéssio gloriósa nos prótegat, *
-et ad vitam perdúcat ætérnam. \hspace{0.5cm} \perDominum
+\textusEtTranslatio{
+  Beátæ et gloriósæ semper Vírginis Maríæ, quǽsumus Dómine,
+  intercéssio gloriósa nos prótegat, *
+  et ad vitam perdúcat ætérnam. \hspace{0.5cm} \perDominum
+}{\trOratioCompletorium}{7cm}
 
 
 \rubrica{Tempore Adventus.}
 
-Deus, qui de beátæ Maríæ Vírginis útero Verbum tuum,
-Angelo nuntiánte, carnem suscípere voluísti: †
-præsta supplícibus tuis; ut qui vere eam Genitrícem Dei crédimus, *
-ejus apud te intercessiónibus adjuvémur.
-Per eúmdem Christum Dóminum nostrum. 
-℟. Amen.
+\textusEtTranslatio{
+  Deus, qui de beátæ Maríæ Vírginis útero Verbum tuum,
+  Angelo nuntiánte, carnem suscípere voluísti: †
+  præsta supplícibus tuis; ut qui vere eam Genitrícem Dei crédimus, *
+  ejus apud te intercessiónibus adjuvémur.
+  Per eúmdem Christum Dóminum nostrum. 
+  ℟. Amen.
+}{\trAdvOratioCompletorium}{7cm}
 
 \vfill
 
