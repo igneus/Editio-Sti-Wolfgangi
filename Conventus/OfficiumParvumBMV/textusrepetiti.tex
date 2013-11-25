@@ -74,6 +74,28 @@
   \vspace{5mm}
 }
 
+\newcommand{\laudesAntiphonaBMV}{
+  \rubrica{Si terminatur Officium, alioquin, si alia subsequatur Hora,
+    in fine ultimæ Horæ dicitur:}
+
+  \rubrica{\textnormal{Pater noster,} totum secreto,
+    eoque recitato subjungitur}
+
+  ℣. Dóminus det nobis suam pacem.
+  ℟. Et vitam ætérnam. Amen.
+
+  \rubrica{Et immediate dicitur, cum suis Versu et Oratione,
+    una ex finalibus beatæ Mariæ Virginis Antiphonis, pro diversitate Temporis,
+    pg. \pageref{antiphonaefinales}, flexis quidem genibus;
+    diebus autem Dominicis, a Vesperis Sabbati inclusive et Tempore Paschali,
+    stando.}
+
+  \rubrica{Postea concluditur:}
+
+  ℣. Divínum auxílium maneat semper nobíscum.
+  ℟. Amen.
+}
+
 %%%% EXTRA ADVENTUM
 
 \newcommand{\domineLabiaMea}{%
@@ -155,6 +177,32 @@
 \newcommand{\finisPostBenedicamus}{
 }
 
+\newcommand{\commemoratioExtraAdventum}{
+  \superInitialam{VII}
+  \includescore{cantus/arom12/comm.tex}
+
+  \vspace{3mm}
+
+  \noindent ℣. Lætámini in Dómino et exsultáte, justi.\\
+  ℟. Et gloriámini, omnes recti corde.
+
+  \vspace{3mm}
+
+  Prótege, Dómine, pópulum tuum, et, Apostolórum tuórum
+  Petri et Pauli et aliórum Apostolórum patrocínio confidéntem,
+  perpétua defensióne consérva.
+
+  Omnes Sancti tui, quǽsumus, Dómine, nos ubíque ádjuvent:
+  ut, dum eórum mérita recólimus, patrocínia sentiámus:
+  et pacem tuam nostris concéde tempóribus, et ab Ecclésia tua cunctam
+  repélle nequítiam:
+  iter, actus et voluntátes nostras, et ómnium famulórum tuórum,
+  in salútis tuæ prosperitáte dispóne, benefactóribus nostris sempitérna bona
+  retríbue, et ómnibus fidélibus defúnctis réquiem ætérnam concéde.
+  
+  \perDominum
+}
+
 % end of the hours - extra Adventum ut in Vesperis
 \newcommand{\inFineHorarumExtraAdventum}{
   \finisAnteOrationem
@@ -164,6 +212,14 @@
   et gloriósa beátæ Maríæ semper Vírginis intercessióne,
   a præsénti liberári tristítia, et ætérna pérfrui lætítia.\hspace{0.5cm}
   \perChristum
+
+  \vfill
+
+  \pars{Commemoratio de Sanctis} \rubricatum{(pro Vesperis et Laudibus tantum).}
+
+  \commemoratioExtraAdventum
+
+  \vfill
 
   \finisPostOrationem
 
@@ -183,11 +239,21 @@
   Per eúmdem Christum Dóminum nostrum. 
   ℟. Amen.
 
+  \vfill
+
+  \pars{Commemoratio de Sanctis}
+
+  \commemoratioExtraAdventum
+
+  \vfill
+
   \finisPostOrationem
 
   \benedicamusDomino
 
   \finisPostBenedicamus
+
+  \laudesAntiphonaBMV
 }
 
 
@@ -226,12 +292,27 @@
 
   \antiphona{VIII G}{cantus/arom12/adv_antmag.tex}{}}
 
+\newcommand{\commemoratioInAdventu}{
+  \superInitialam{V}
+  \includescore{cantus/arom12/adv_comm.tex}
+
+  \vspace{3mm}
+
+  \noindent ℣. Ecce apparébit Dóminus super nubem cándidam.\\
+  ℟. Et cum eo sanctórum míllia.
+
+  \vspace{3mm}
+
+  Consciéntias nostras, quǽsumus, Dómine, visitándo purífica:
+  ut, véniens Jesus Christus, Fílius tuus, Dóminus noster,
+  cum ómnibus Sanctis, parátam sibi in nobis invéniat mansiónem:
+  Qui tecum vivit et regnat in unitáte Spíritus Sancti Deus,
+  per ómnia sǽcula sæculórum.
+  ℟. Amen.
+}
+
 \newcommand{\inFineHorarumInAdventu}{
-  \kyrieEleison
-
-  \vspace{7mm}
-
-  \pars{Oratio.}
+  \finisAnteOrationem
 
   Deus, qui de beátæ Maríæ Vírginis útero Verbum tuum,
   Angelo nuntiánte, carnem suscípere voluísti: 
@@ -242,14 +323,19 @@
   Per eúmdem Christum Dóminum nostrum.
   ℟. Amen.
 
-  %%% finis
+  \vfill
 
-  \dominusVobiscum
+  \pars{Commemoratio de Sanctis} \rubricatum{(pro Vesperis et Laudibus tantum).}
 
-  \vspace{7mm}
+  \commemoratioInAdventu
+
+  \vfill
+
+  \finisPostOrationem
 
   \benedicamusDomino
 
+  \finisPostBenedicamus
 }
 
 \newcommand{\rubricaFinisHoraeAdvent}{
@@ -286,11 +372,7 @@
   \antiphona{VIII G}{cantus/arom12/nat_antben.tex}{}}
 
 \newcommand{\inFineHorarumPostNativitatem}{
-  \kyrieEleison
-
-  \vspace{7mm}
-
-  \pars{Oratio.}
+  \finisAnteOrationem
 
   Deus, qui salútis ætérnæ, beátæ Maríæ virginitáte fecúnda,
   humáno géneri prǽmia præstitísti:
@@ -304,11 +386,19 @@
   ℟. Amen.
   %%% finis
 
-  \dominusVobiscum
+  \vfill
 
-  \vspace{7mm}
+  \pars{Commemoratio de Sanctis} \rubricatum{(pro Vesperis et Laudibus tantum).}
+
+  \commemoratioExtraAdventum
+
+  \vfill
+
+  \finisPostOrationem
 
   \benedicamusDomino
+
+  \finisPostBenedicamus
 }
 
 \newcommand{\rubricaFinisHoraePostNativitatem}{
