@@ -10,8 +10,6 @@
 
 * kompletar a matutinum: z hlavicky pryc Extra Adventum
 
-* dedikace
-
 # Rubricisticke
 
 * co vsechno zmenil Codex rubricarum?
