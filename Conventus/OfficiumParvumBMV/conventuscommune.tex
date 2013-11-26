@@ -50,6 +50,13 @@
 \newcommand{\translatioCantus}[1]{\vspace{1mm}%
 {\noindent\footnotesize \nlfont{#1}}}
 
+\newenvironment{translatioMulticol}[1]{
+  \begin{multicols}{#1}
+    \footnotesize
+    \setlength{\parindent}{0pt}
+    \setlength{\columnseprule}{0pt}
+}{\end{multicols}}
+
 % pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
 % s prekladem
 \newcommand{\psalmusEtTranslatioB}[3]{
@@ -137,3 +144,6 @@
 
 #3
 }
+
+% a semantic alias of the previous
+\newcommand{\responsorium}[3]{\antiphona{#1}{#2}{#3}}

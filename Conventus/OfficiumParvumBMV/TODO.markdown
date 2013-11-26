@@ -2,6 +2,7 @@
 
 * doplnit preklady
 
+* doplnit spolupracovniky a zdroje prekladu
 
 
 * vyresit vzpurne zalmy matutina
