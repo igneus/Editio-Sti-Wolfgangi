@@ -1,15 +1,9 @@
 * zvlast: vsechny laudy (pro Salvatora)
 
-* doplnit preklady
-
 * doplnit spolupracovniky a zdroje prekladu
 
 
 * vyresit vzpurne zalmy matutina
-
-* v malych hodinkach podle potreby opakovani antifony po zalmech
-
-* kompletar a matutinum: z hlavicky pryc Extra Adventum
 
 # Rubricisticke
 
@@ -20,5 +14,5 @@
   * komemorace? - ne
   * predpostni dobu? - ne
   
-  *! závěrečná antifona po laudách?
+  * závěrečná antifona po laudách? - zustava
   
