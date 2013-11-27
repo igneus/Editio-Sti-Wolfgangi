@@ -1,8 +1,5 @@
 * zvlast: vsechny laudy (pro Salvatora)
 
-* doplnit spolupracovniky a zdroje prekladu
-
-
 * vyresit vzpurne zalmy matutina
 
 # Rubricisticke
