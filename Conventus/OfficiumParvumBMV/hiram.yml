@@ -1,5 +1,5 @@
-#main: officiumparvumbmv.tex
-main: breakbox.tex
+main: officiumparvumbmv.tex
+#main: breakbox.tex
 moretex: [
 conventuscommune.tex, 
 textusrepetiti.tex, 
