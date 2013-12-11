@@ -1,4 +1,4 @@
-main: officiumparvumbmv.tex
+main: [officiumparvumbmv.tex, laudes_officiumparvumbmv.tex]
 #main: breakbox.tex
 moretex: [
 conventuscommune.tex, 
@@ -36,7 +36,7 @@ psalms: {
     121: III.b,
     126: VIII.G,
     147: IV.A,
-    magnificat: II.D
+    magnificat: IIsoll.D
   },
 
   'Completory': {

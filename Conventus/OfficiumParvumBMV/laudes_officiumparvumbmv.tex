@@ -29,10 +29,17 @@
 \input{translationes_cs.tex}
 \input{textusrepetiti.tex}
 
+% there are only Laudes in this booklet so it would look weird to have
+% each Laudes started with title ``Ad Laudes.'' :)
+\renewcommand{\hora}[1]{\vspace{1cm}}
+
 \newcommand{\annusEditionis}{2013}
 % directories
 \newcommand{\ccommunesAM}{../../cantuscommunes/amon33}
 \newcommand{\ccommunesAR}{../../cantuscommunes/arom12}
+
+% TOC: sections only
+\setcounter{tocdepth}{1}
 
 \begin{document}
 
@@ -65,6 +72,8 @@
 %%%% Titulni stranka
 \begin{titulusOfficii}
 \nomenFesti{Officium Parvum Beatæ Mariæ Virginis.}
+\vspace{3mm}
+\nomenFesti{Ad Laudes.}
 \end{titulusOfficii}
 
 % graphic
@@ -83,24 +92,7 @@ Ad usum et secundum consuetudines chori \guillemotright Conventus Choralis\guill
 Editio Sancti Wolfgangi \annusEditionis
 \end{center}
 
-\pagebreak
-
-\hfill
-
-\begin{center}
-\it
-Illustri viro,\\
-domino 
-Louis-Marie Vigne,\\
-in anniversario LX
-eius nativitatis\\
-Conventus Choralis 
-hunc librum dedicat.
-\end{center}
-
-\hfill\mbox{}
-
-\pagebreak
+\cleardoublepage
 
 \input{partes/regulae.tex}
 
@@ -124,6 +116,9 @@ hunc librum dedicat.
 \fancyhf{}
 \pagestyle{fancy}
 
+% in the complete edition this is done by the \hora command
+\fancyhead[LE,RO]{\thepage}
+
 \divisio{Extra Adventum.}
 
 \rubrica{Quod dicitur a Matutino diei 3 Februarii usque ad Nonam
@@ -131,44 +126,13 @@ Sabbati ante Dominicam I Adventus inclusive,
 præterquam in Festo Annuntiationis B.~M.~V., in quo dicitur,
 ut in Adventu, pg. \pageref{tempus:adventus}.}
 
-\input{partes/extradv_vesperae.tex}
-
-\pagebreak
-
-\label{pars:completorium}
-
-\input{partes/completorium.tex}
-\vfill
-
-\pagebreak
-
-\input{partes/antiphonaefinales.tex}
-
-\pagebreak
-
-\label{pars:matutinum}
-
-\input{partes/extradv_matutinum.tex}
-
-\pagebreak
-
 \input{partes/extradv_laudes.tex}
 
 \pagebreak
 
-\input{partes/extradv_prima.tex}
+\divisio{Antiphonae finales B.~M.~V.}
 
-\pagebreak
-
-\input{partes/extradv_tertia.tex}
-
-\pagebreak
-
-\input{partes/extradv_sexta.tex}
-
-\pagebreak
-
-\input{partes/extradv_nona.tex}
+\input{partes/antiphonaefinales.tex}
 
 \pagebreak
 
@@ -181,31 +145,9 @@ ut in Adventu, pg. \pageref{tempus:adventus}.}
 \rubrica{Quod dicitur a Vesperis Sabbati ante Dominicam I Adventus 
 usque ad Nonam Vigiliae Nativitatis Domini inclusive.}
 
-\input{partes/advent_vesperae.tex}
-
-\pagebreak
-
-\input{partes/advent_matutinum.tex}
-
-\pagebreak
-
 \input{partes/advent_laudes.tex}
 
-%\pagebreak
-
-\input{partes/advent_prima.tex}
-
-\pagebreak
-
-\input{partes/advent_tertia.tex}
-
-\pagebreak
-
-\input{partes/advent_sexta.tex}
-
-\pagebreak
-
-\input{partes/advent_nona.tex}
+\vfill
 
 \pagebreak
 
@@ -216,38 +158,13 @@ usque ad Nonam Vigiliae Nativitatis Domini inclusive.}
 \rubrica{Quod dicitur a Vesperis diei 24 Decembris usque ad Completorium
 diei 2 Februarii inclusive.}
 
-\input{partes/nativitas_vesperae.tex}
-
-\pagebreak
-
-\hora{Ad Matutinum.}
-
-\rubrica{Totum ut Extra Adventum, pg. \pageref{matutinum}, cum Oratione
-de Vesperis, pg. \pageref{vesperaefinisnativitas}.}
-
-\vfill
-
 \input{partes/nativitas_laudes.tex}
 
 %\pagebreak
 
-\input{partes/nativitas_prima.tex}
-
-\pagebreak
-
-\input{partes/nativitas_tertia.tex}
-
-\pagebreak
-
-\input{partes/nativitas_sexta.tex}
-
-\pagebreak
-
-\input{partes/nativitas_nona.tex}
-
-% \pagebreak
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{2cm}
 
 \divisio{Tempore Paschali.}
 
@@ -263,7 +180,7 @@ de Vesperis, pg. \pageref{vesperaefinisnativitas}.}
 
 \divisio{Toni Communes.}
 
-\input{partes/tonicommunes.tex}
+\input{partes/tonicommunes_laudes.tex}
 
 \pagebreak
 
@@ -276,8 +193,6 @@ de Vesperis, pg. \pageref{vesperaefinisnativitas}.}
 
 \vfill
 
-%\pagebreak
-
 Fontes. 
 Textus secundum 
 \textit{Officium parvum beatæ Mariæ Virginis et Officium
@@ -285,20 +200,22 @@ defunctorum cum Psalmis gradualibus et pænitentialibus ac Litaniis sanctorum
 e Breviario romano a Pio papa X reformato excerpta.}
 Editio I juxta typicam III Vaticanam Breviarii romani. 
 Ratisbonæ, sumptibus et typis Friderici Pustet 1925. /
-Ordo horarum incipiens a Vesperis et non a Matutino est secundum
-\textit{Antiphonale Romanum.} Ut infra. /
-Omnes cantus Horarum cursus diurni atque Completorii 
-necnon prima Antiphona Matutini secundum
+%Ordo horarum incipiens a Vesperis et non a Matutino est secundum
+%\textit{Antiphonale Romanum.} Ut infra. 
+/
+Omnes cantus Horarum cursus diurni %atque Completorii 
+%necnon prima Antiphona Matutini 
+secundum
 \textit{Antiphonale sacrosanctæ Romanæ Ecclesiæ pro diurnis horis
 SS. D. N. Pii X. Pontificis maximi jussu restitutum et editum.}
 Romæ typis Polyglottis Vaticanis 1912. /
-Reliqui cantus pro Matutino secundum 
-\textit{Nocturnale Romanum. Antiphonale sacrosanctæ Romanæ Ecclesiæ
-pro nocturnis horis.}
-2002. /
+%Reliqui cantus pro Matutino secundum 
+%\textit{Nocturnale Romanum. Antiphonale sacrosanctæ Romanæ Ecclesiæ
+%pro nocturnis horis.}
+%2002. /
 Textus et toni psalmorum sunt secundum consuetudines Conventus Choralis
-ex \textit{Antiphonale Monasticum.} Solesmis 1934. Psalmi nocturnales,
-qui in Antiphonali Monastico desunt, sumpti sunt de Breviario Monastico.
+ex \textit{Antiphonale Monasticum.} Solesmis 1934. %Psalmi nocturnales,
+%qui in Antiphonali Monastico desunt, sumpti sunt de Breviario Monastico.
 
 Translationes psalmorum ex
 Hejčl Jan: Žaltář čili Kniha žalmů, Praha~1922.
@@ -345,7 +262,7 @@ http://www.introitus.cz
 
 Series \guillemotright Conventus\guillemotleft, vol. IV.
 
-\vspace{1cm}
+\vspace{5mm}
 
 http://stiwolfgangi.xf.cz
 
