@@ -15,4 +15,9 @@ Dir["./cantus/*.gabc"].each {|t|
 file "vitus.pdf" => ['vitus.tex']+cantus do |t|
   sh "lualatex -interaction=nonstopmode "+t.prerequisites.first
 end
-task :default => ['vitus.pdf']
+
+file "vitus_lh.pdf" => ['vitus_lh.tex']+cantus do |t|
+  sh "lualatex -interaction=nonstopmode "+t.prerequisites.first
+end
+
+task :default => ['vitus.pdf', 'vitus_lh.pdf']
