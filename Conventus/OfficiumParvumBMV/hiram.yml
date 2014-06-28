@@ -1,4 +1,8 @@
-main: [officiumparvumbmv.tex, laudes_officiumparvumbmv.tex]
+main: [
+officiumparvumbmv.tex, 
+laudes_officiumparvumbmv.tex,
+vesperae_officiumparvumbmv.tex
+]
 #main: breakbox.tex
 moretex: [
 conventuscommune.tex, 

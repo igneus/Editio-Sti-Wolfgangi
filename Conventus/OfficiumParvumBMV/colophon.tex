@@ -1,0 +1,138 @@
+\newcommand{\colophonFontes}{
+  Fontes. 
+  Textus secundum 
+  \textit{Officium parvum beatæ Mariæ Virginis et Officium
+    defunctorum cum Psalmis gradualibus et pænitentialibus ac Litaniis sanctorum
+    e Breviario romano a Pio papa X reformato excerpta.}
+  Editio I juxta typicam III Vaticanam Breviarii romani. 
+  Ratisbonæ, sumptibus et typis Friderici Pustet 1925. /
+  Ordo horarum incipiens a Vesperis et non a Matutino est secundum
+  \textit{Antiphonale Romanum.} Ut infra. /
+  Omnes cantus Horarum cursus diurni atque Completorii 
+  necnon prima Antiphona Matutini secundum
+  \textit{Antiphonale sacrosanctæ Romanæ Ecclesiæ pro diurnis horis
+    SS. D. N. Pii X. Pontificis maximi jussu restitutum et editum.}
+  Romæ typis Polyglottis Vaticanis 1912. /
+  Reliqui cantus pro Matutino secundum 
+  \textit{Nocturnale Romanum. Antiphonale sacrosanctæ Romanæ Ecclesiæ
+    pro nocturnis horis.}
+  2002. /
+  Textus et toni psalmorum sunt secundum consuetudines Conventus Choralis
+  ex \textit{Antiphonale Monasticum.} Solesmis 1934. Psalmi nocturnales,
+  qui in Antiphonali Monastico desunt, sumpti sunt de Breviario Monastico.
+}
+
+% shortenned version of the command above for the extracts
+\newcommand{\colophonFontesParvus}{
+  Fontes. 
+  Textus secundum 
+  \textit{Officium parvum beatæ Mariæ Virginis et Officium
+    defunctorum cum Psalmis gradualibus et pænitentialibus ac Litaniis sanctorum
+    e Breviario romano a Pio papa X reformato excerpta.}
+  Editio I juxta typicam III Vaticanam Breviarii romani. 
+  Ratisbonæ, sumptibus et typis Friderici Pustet 1925. /
+  %Ordo horarum incipiens a Vesperis et non a Matutino est secundum
+  %\textit{Antiphonale Romanum.} Ut infra. /
+  Omnes cantus Horarum cursus diurni %atque Completorii 
+  %necnon prima Antiphona Matutini 
+  secundum
+  \textit{Antiphonale sacrosanctæ Romanæ Ecclesiæ pro diurnis horis
+    SS. D. N. Pii X. Pontificis maximi jussu restitutum et editum.}
+  Romæ typis Polyglottis Vaticanis 1912. /
+  %Reliqui cantus pro Matutino secundum 
+  %\textit{Nocturnale Romanum. Antiphonale sacrosanctæ Romanæ Ecclesiæ
+  %  pro nocturnis horis.}
+  % 2002. /
+  Textus et toni psalmorum sunt secundum consuetudines Conventus Choralis
+  ex \textit{Antiphonale Monasticum.} Solesmis 1934. 
+  % Psalmi nocturnales,
+  % qui in Antiphonali Monastico desunt, sumpti sunt de Breviario Monastico.
+}
+
+\newcommand{\colophonTranslationes}{
+  Translationes psalmorum ex
+  Hejčl Jan: Žaltář čili Kniha žalmů, Praha~1922.
+  Translationes canticorum evangelicorum ex Hejčl Jan: 
+  Od Květné neděle do Bílé soboty. Příručka pro každého, kdo se chce účastniti
+  bohoslužby ve Svatém týdnu, Olomouc 1928. /
+  Translationes lectionum secundum 
+  \textit{Jeruzalémská bible.} Praha - Kostelní Vydří 2009.
+}
+
+\newcommand{\colophonCollaborantes}{
+  Collaborantes.
+  Textus latinos cantusque transcripsit et omnem laborem typographicum peregit
+  Jakub Pavlík. Idem typographus indignus terminationem antiphonæ
+  \textit{Spiritus Sanctus} sine alleluia composuit, quam in libris invenire
+  non poterat. /
+  Psalmos in lingua bohemica de libro supra dicto transcripsit
+  Barbora Maturová et idem typographus. /
+  Václav Ondráček textus hymnorum antiphonarum etc. 
+  in linguam bohemicam transtulit. /
+  Filip Srovnal librum istum præparare mandavit; idem etiam librum examinavit
+  erroresque correxit. /
+  Štěpán Němec primam libri partem diligentissime examinavit, errores multos
+  inveniens. /
+  Idem Štěpán Němec et Jakub Zentner in dubiis circa rubricas officii
+  consilio adiuti sunt. /
+  Terezie Regnerová pinxit imaginem titulum libri ornantem.
+}
+
+\newcommand{\colophonInstrumenta}{
+  Instrumenta adhibita.
+  LuaTeX, %http://www.luatex.org / 
+  Gregorio, %http://home.gna.org/gregorio /
+  typi Junicode. %http://junicode.sourceforge.net
+}
+
+\newcommand{\colophonCetera}{
+  \begin{center}
+    Liber hic imprimis ad usum chori 
+    \guillemotright Conventus Choralis\guillemotleft\ 
+    paratus est
+    et secundum eius consuetudines.
+    http://www.introitus.cz
+
+    \vspace{1cm}
+
+    {\large Editio Sancti Wolfgangi \annusEditionis .}
+
+    \vspace{2mm}
+
+    Series \guillemotright Conventus\guillemotleft, vol. IV.
+
+    \vspace{1cm}
+
+    http://stiwolfgangi.xf.cz
+
+    \vfill
+
+    \today
+  \end{center}
+}
+
+% colophon for the complete version
+\newcommand{\colophonMagnus}{
+  \colophonFontes
+
+  \colophonTranslationes
+
+  \colophonCollaborantes
+
+  \colophonInstrumenta
+
+  \colophonCetera
+}
+
+% colophon for the extracts (laudes/vespers only)
+\newcommand{\colophonParvus}{
+  \colophonFontesParvus
+
+  \colophonTranslationes
+
+  \colophonCollaborantes
+
+  \colophonInstrumenta
+
+  \colophonCetera
+}

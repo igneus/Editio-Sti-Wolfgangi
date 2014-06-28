@@ -30,8 +30,7 @@
 \input{textusrepetiti.tex}
 \input{colophon.tex}
 
-% there are only Laudes in this booklet so it would look weird to have
-% each Laudes started with title ``Ad Laudes.'' :)
+% there are only Vespers in this booklet so we don't need hour headings
 \renewcommand{\hora}[1]{\vspace{1cm}}
 
 \newcommand{\annusEditionis}{2013}
@@ -74,7 +73,7 @@
 \begin{titulusOfficii}
 \nomenFesti{Officium Parvum Beatæ Mariæ Virginis.}
 \vspace{3mm}
-\nomenFesti{Ad Laudes.}
+\nomenFesti{Ad Vesperas.}
 \end{titulusOfficii}
 
 % graphic
@@ -117,9 +116,6 @@ Editio Sancti Wolfgangi \annusEditionis
 \fancyhf{}
 \pagestyle{fancy}
 
-% in the complete edition this is done by the \hora command
-\fancyhead[LE,RO]{\thepage}
-
 \divisio{Extra Adventum.}
 
 \rubrica{Quod dicitur a Matutino diei 3 Februarii usque ad Nonam
@@ -127,13 +123,7 @@ Sabbati ante Dominicam I Adventus inclusive,
 præterquam in Festo Annuntiationis B.~M.~V., in quo dicitur,
 ut in Adventu, pg. \pageref{tempus:adventus}.}
 
-\input{partes/extradv_laudes.tex}
-
-\pagebreak
-
-\divisio{Antiphonae finales B.~M.~V.}
-
-\input{partes/antiphonaefinales.tex}
+\input{partes/extradv_vesperae.tex}
 
 \pagebreak
 
@@ -146,9 +136,7 @@ ut in Adventu, pg. \pageref{tempus:adventus}.}
 \rubrica{Quod dicitur a Vesperis Sabbati ante Dominicam I Adventus 
 usque ad Nonam Vigiliae Nativitatis Domini inclusive.}
 
-\input{partes/advent_laudes.tex}
-
-\vfill
+\input{partes/advent_vesperae.tex}
 
 \pagebreak
 
@@ -159,13 +147,11 @@ usque ad Nonam Vigiliae Nativitatis Domini inclusive.}
 \rubrica{Quod dicitur a Vesperis diei 24 Decembris usque ad Completorium
 diei 2 Februarii inclusive.}
 
-\input{partes/nativitas_laudes.tex}
+\input{partes/nativitas_vesperae.tex}
 
-%\pagebreak
+\pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace{2cm}
 
 \divisio{Tempore Paschali.}
 
@@ -181,7 +167,11 @@ diei 2 Februarii inclusive.}
 
 \divisio{Toni Communes.}
 
-\input{partes/tonicommunes_laudes.tex}
+\input{partes/tonicommunes_vesperae.tex}
+
+\vfill
+
+\vfill
 
 \pagebreak
 
