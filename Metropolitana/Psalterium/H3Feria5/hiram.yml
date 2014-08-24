@@ -1,0 +1,23 @@
+settings:
+  psalms-dir: ../../../psalmi/lh
+  hymnographus-options:
+    - no-linebreaks
+  initia-options:
+    - flex
+
+main:
+  - h3feria5.tex
+
+moretex:
+  - metropolitanacommune.tex
+
+chants:
+  - ../../cantus/psalterium/h1f5_*.gabc
+  - ../../cantus/psalterium/h3f5_*.gabc
+  - ../../../cantuscommunes/arom09/*.gabc
+
+hymns:
+  - ['../../cantus/hymni/textus-MagnaeDeus.txt', '../../cantus/hymni/musica-MagnaeDeus.gabc']
+
+psalms:
+  'vesperae ii': {}

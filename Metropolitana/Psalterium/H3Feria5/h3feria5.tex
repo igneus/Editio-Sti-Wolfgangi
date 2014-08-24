@@ -1,0 +1,164 @@
+% LuaLaTeX
+
+\documentclass[a5paper, twoside, 12pt]{article}
+
+\usepackage[latin]{babel}
+\usepackage{ecclesiastic}
+
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=1.5cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common},Numbers=OldStyle]{Junicode}
+
+\usepackage{multicol}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{gregoriosyms}
+\usepackage{parcolumns}
+\usepackage{multicol}
+
+\input{metropolitanacommune.tex}
+
+% GREGORIO general settings:
+% staff size
+\setgrefactor{14}
+
+% initial font.
+\def\greinitialformat#1{%
+{\fontsize{38}{38}\selectfont #1}%
+}
+
+\newcommand{\spacearoundinitialNormal}{
+  % space around the initial.
+  \setspaceafterinitial{2.2mm plus 0em minus 0em}
+  \setspacebeforeinitial{2.2mm plus 0em minus 0em}
+}
+
+\spacearoundinitialNormal
+
+\newcommand{\psalteriumDir}{../../cantus/psalterium}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\vspace*{3cm}
+
+\begin{center}
+
+{\Large Feria V hebdomadae III
+
+\vspace{1cm}
+
+Ad Vesperas}
+
+\vfill
+
+\end{center}
+
+\cleardoublepage
+
+\pagestyle{plain}
+
+\includescore{../../../cantuscommunes/arom09/deusinadiutorium-communis}
+
+\vfill
+
+\pars{Hymnus}
+
+\superInitialam{VIII}
+\includescore{temporalia/hymnus-MagnaeDeus}
+
+\vfill
+
+\pagebreak
+
+\pars{Antiphona I}
+
+\antiphona{E}{\psalteriumDir/h3f5_ve_a1}{}
+
+%\pars{Psalmus 109}
+
+%\input{temporalia/ps109-initium-viii-G-auto}
+
+%\psalmusEtTranslatio{temporalia/ps109-viii-g}{temporalia/ps109-boh}
+
+\vfill
+
+\pagebreak
+
+\pars{Antiphona II}
+
+\antiphona{III b}{\psalteriumDir/h3f5_ve_a2}{}
+
+%\pars{Psalmus 113B}
+
+%\input{temporalia/ps113b-initium-per-auto}
+
+%\psalmusEtTranslatio{temporalia/ps113b-per}{temporalia/ps113b-boh}
+
+\vfill
+
+\pagebreak
+
+\pars{Antiphona III}
+
+\antiphona{I f}{\psalteriumDir/h1f5_ve_a3}{}
+
+%\vspace{1cm}
+
+%\rubrica{Sequitur Lectio brevis. Deinde:}
+
+
+\pars{Responsorium breve}
+
+\superInitialam{℟. br.}
+\includescore{\psalteriumDir/h1f5_ve_r}
+
+\vfill
+
+\pagebreak
+
+\pars{Antiphona ad Magnificat}
+
+\antiphona{VIII g}{\psalteriumDir/h1f5_ve_am}{}
+
+\pars{Magnificat}
+
+%\includescore{../../../tonipsalmorum/arom12/magnificat-initium-viii-G}
+
+%\sci
+
+%\psalmusEtTranslatio{temporalia/magnificat-viiisoll-g}{temporalia/magnificat-boh}
+
+%\vspace{1cm}
+
+%\rubrica{Sequuntur Preces, Oratio Dominica, Oratio diei et Benedictio.}
+
+\vfill
+
+\pagebreak
+
+\pagestyle{empty}
+
+\mbox{}
+\vfill
+
+%Textus et cantus Officii secundum
+%\emph{Antiphonale Romanum II}, Solesmes 2009.
+
+%Translationes psalmorum canticorumque secundum
+%\emph{Denní modlitba církve}, Kostelní Vydří 2005.
+
+\begin{center}
+Pro choro Ecclesiæ Metropolitanæ Pragensis.
+
+Pragæ 2014.
+\end{center}
+
+\end{document}
