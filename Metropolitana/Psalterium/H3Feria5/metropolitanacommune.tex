@@ -76,20 +76,17 @@
   \psalmusEtTranslatioB{#1}{#2}{5cm}
 }
 
+\newcommand{\psalmus}[1]{
+  \vspace{0.5cm}
+  \input{#1}
+}
+
 % znaky k umisteni nad inicialu zpevu
 \newcommand{\superInitialam}[1]{\gresetfirstlineaboveinitial{\small {#1}}{\small {#1}}}
 
 % pars officii, i.e. "oratio", ...
 \newcommand{\pars}[1]{
   \hfill \textsc{\small{#1}} \hfill
-}
-
-\newenvironment{psalmus}{
-  \setlength{\parindent}{0pt}
-  \setlength{\parskip}{5pt}
-}{
-  \setlength{\parindent}{10pt}
-  \setlength{\parskip}{10pt}
 }
 
 %%%% Prejmenovat na latinske:
@@ -107,3 +104,7 @@
 #3
 \vspace{2mm}
 }
+
+% for pslm
+\newcommand{\flex}{~\dag\mbox{}\\}
+\newcommand{\asterisk}{~*\\}

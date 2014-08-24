@@ -20,4 +20,5 @@ hymns:
   - ['../../cantus/hymni/textus-MagnaeDeus.txt', '../../cantus/hymni/musica-MagnaeDeus.gabc']
 
 psalms:
-  'vesperae ii': {}
+  'vesperae ii':
+    magnificat: VIII.G
