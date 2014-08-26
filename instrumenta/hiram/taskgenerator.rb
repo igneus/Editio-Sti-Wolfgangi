@@ -49,7 +49,8 @@ module Hiram::HiramUtils
     'VIIIsoll.G' => [[1,3], [1,2]],
     'VIIIsoll.G2' => [[1,3], [1,2]],
     'per' => [[1,3], [1,1]],
-    'dir' => [[1,2], [1,0]]
+    'dir' => [[1,2], [1,0]],
+    'E' => [[1,0], [2,0]]
   }
 
   # takes a psalmtone (String like 'I.g') and returns options
