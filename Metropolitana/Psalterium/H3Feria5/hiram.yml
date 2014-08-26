@@ -1,5 +1,6 @@
 settings:
   psalms-dir: ../../../psalmi/lh
+  psalmtones-dir: ../../../tonipsalmorum/arom09
   hymnographus-options:
     - no-linebreaks
   initia-options:
@@ -24,3 +25,4 @@ psalms:
     magnificat: VIII.G
     131i: E
     131ii: III.b
+    ap11: I.f
