@@ -1,5 +1,6 @@
 settings:
   psalms-dir: ../../../psalmi/lh
+  translations-dir: ../../../bohemice_psalmi/DMC199x
   psalmtones-dir: ../../../tonipsalmorum/arom09
   hymnographus-options:
     - no-linebreaks
