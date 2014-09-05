@@ -229,7 +229,7 @@ module Hiram
         psoutname = psalm + tonesuff + '.tex'
       end
 
-      outdir = ''
+      outdir = nil
       if @proj.settings['temporalia-structured'] then
         outdir = @psalm_subdirnames[hour]
         psoutname = File.join(outdir, psoutname)
@@ -263,7 +263,11 @@ module Hiram
         inchoatio = ((not ingroup) or firstingroup)
         begin
           opts = @proj.settings['initia-options'].collect {|o| "--#{o}"}.join(" ")
-          @initia_targets << @taskgen.geninitium(psfname, tone, inchoatio, opts, File.join(@taskgen.output_dir, outdir))
+          dir = @taskgen.output_dir
+          if outdir then
+            ininame = File.join(dir, outdir)
+          end
+          @initia_targets << @taskgen.geninitium(psfname, tone, inchoatio, opts, dir)
         rescue RuntimeError => re
           STDERR.puts "ERROR: initium not generated for psalm '#{psfname}': "+re.message
         end

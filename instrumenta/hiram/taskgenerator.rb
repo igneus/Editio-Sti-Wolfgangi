@@ -160,11 +160,11 @@ class Hiram::TaskGenerator
 
     of = zalm.gsub(".pslm", "-boh.tex")
     if outdir then
-      of = outdir + '/' + of
+      of = File.join(outdir, of)
     end
-    ofop = "--output "+of+" "
-    syrovy = input_dir+'/'+zalm
-    of_fullpath = @output_dir+of
+    ofop = "--output #{of} "
+    syrovy = File.join(input_dir, zalm)
+    of_fullpath = File.join(@output_dir, of)
     file of_fullpath => [syrovy] do
       wd = Dir.pwd
       chdir @output_dir
