@@ -54,6 +54,8 @@
 \newcommand{\translatioCantus}[1]{\vspace{1mm}%
 {\noindent\footnotesize #1}}
 
+\newenvironment{psalmiTranslatio}{\footnotesize}{}
+
 % pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
 % s prekladem
 \newcommand{\psalmusEtTranslatioB}[3]{
@@ -65,9 +67,7 @@
 
     \colchunk{
       \vspace{-0.5cm}
-      {\footnotesize
-        \input{#2}
-      }
+      \input{#2}
     }
   \end{parcolumns}
 }
@@ -100,7 +100,19 @@
 \vspace{2mm}
 }
 
+% test if we are in a specific environment
+\makeatletter
+\def\ifenv#1{
+   \def\@tempa{#1}%
+   \ifx\@tempa\@currenvir
+      \expandafter\@firstoftwo
+    \else
+      \expandafter\@secondoftwo
+   \fi
+}
+\makeatother
+
 % for pslm
 \newenvironment{psalmus}{\vspace{0.5cm}}{}
-\newcommand{\flex}{~\dag\mbox{}\\}
-\newcommand{\asterisk}{~*\\}
+\newcommand{\flex}{~\dag\mbox{}\ifenv{psalmiTranslatio}{}{\\}}
+\newcommand{\asterisk}{~*\ifenv{psalmiTranslatio}{}{\\}}
