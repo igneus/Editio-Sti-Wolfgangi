@@ -17,6 +17,7 @@ chants:
   - ../../cantus/psalterium/h1f5_*.gabc
   - ../../cantus/psalterium/h3f5_*.gabc
   - ../../../cantuscommunes/arom09/*.gabc
+  - ../../../tonipsalmorum/arom09/magnificat*.gabc
 
 hymns:
   - ['../../cantus/hymni/textus-MagnaeDeus.txt', '../../cantus/hymni/musica-MagnaeDeus.gabc']
