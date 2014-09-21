@@ -59,17 +59,18 @@
 % pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
 % s prekladem
 \newcommand{\psalmusEtTranslatioB}[3]{
-  \vspace{0.5cm}
-  \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
-    \colchunk{
-      \input{#1}
-    }
+  \input{#1}
+  %% \vspace{0.5cm}
+  %% \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
+  %%   \colchunk{
+  %%     \input{#1}
+  %%   }
 
-    \colchunk{
-      \vspace{-0.5cm}
-      \input{#2}
-    }
-  \end{parcolumns}
+  %%   \colchunk{
+  %%     %\vspace{-0.5cm}
+  %%     \input{#2}
+  %%   }
+  %% \end{parcolumns}
 }
 
 \newcommand{\psalmusEtTranslatio}[2]{
