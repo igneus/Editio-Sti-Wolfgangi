@@ -9,6 +9,10 @@
 
 \usepackage{fontspec}
 %\setmainfont[Ligatures={Common},Numbers=OldStyle]{Junicode}
+% leave the default latex main font
+
+% font used for the special characters
+\newfontfamily\chantcharsfont{Junicode}
 
 \usepackage{multicol}
 \usepackage{lettrine}
@@ -123,7 +127,7 @@ Ad Vesperas}
 
 \pars{Responsorium breve}
 
-\superInitialam{℟. br.}
+\superInitialam{\chantcharsfont{℟. br.}}
 \includescore{\psalteriumDir/h1f5_ve_r}
 
 \vfill
