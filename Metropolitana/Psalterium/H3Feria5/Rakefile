@@ -1,0 +1,11 @@
+main = 'h3feria5'
+
+booklet = file "#{main}-book.pdf" => ["#{main}.pdf"] do |t|
+  sh "pdfbook --booklet false --signature 8 --suffix book #{t.prerequisites.first}"
+end
+
+booklet_a4 = file "#{main}-a4book.pdf" => [booklet] do |t|
+  sh "pdfjam #{t.prerequisites.first} --a3paper --landscape --outfile #{t.name}"
+end
+
+task :default => [booklet, booklet_a4]
