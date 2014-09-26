@@ -40,7 +40,7 @@ class HymnMelody
       raise "Invalid final '#{self.final}'."
     end
 
-    return "A("+NOTES[f]+NOTES[f+1]+NOTES[f]+")men.("+NOTES[f-1]+"."+NOTES[f]+".)"
+    return "A("+NOTES[f]+NOTES[f+1]+NOTES[f]+")men.("+NOTES[f-1]+NOTES[f]+")"
   end
 
   def HymnMelody.load(filename)
