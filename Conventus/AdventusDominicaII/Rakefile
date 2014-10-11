@@ -3,7 +3,7 @@ TMP_DIR = "temporalia"
 
 EDITIO_ROOTDIR = "../.."
 TOOLS_DIR = EDITIO_ROOTDIR + "/instrumenta"
-PSALMS_DIR = EDITIO_ROOTDIR + "/psalmi"
+PSALMS_DIR = EDITIO_ROOTDIR + "/psalmi/amon33"
 PSALMTONES_DIR = EDITIO_ROOTDIR + "/tonipsalmorum/arom12"
 CZECH_PSALMS_DIR = EDITIO_ROOTDIR + "/bohemice_psalmi"
 COMMON_CHANTS_DIR = EDITIO_ROOTDIR + "/cantuscommunes"

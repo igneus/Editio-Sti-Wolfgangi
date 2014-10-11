@@ -4,7 +4,7 @@ TMP_DIR = "temporalia"
 
 EDITIO_ROOTDIR = "../.."
 TOOLS_DIR = EDITIO_ROOTDIR + "/instrumenta"
-PSALMS_DIR = EDITIO_ROOTDIR + "/psalmi"
+PSALMS_DIR = EDITIO_ROOTDIR + "/psalmi/amon33"
 PSALMTONES_DIR = EDITIO_ROOTDIR + "/tonipsalmorum/arom12"
 CZECH_PSALMS_DIR = EDITIO_ROOTDIR + "/bohemice_psalmi"
 COMMON_CHANTS_DIR = EDITIO_ROOTDIR + "/cantuscommunes"
@@ -159,8 +159,8 @@ nativitas_psalmi << genczechpsalm("benedictus.pslm", options_translation, TMP_DI
 
 # noty
 ["cantus/amon33/*.gabc", 
- COMMON_CHANTS_DIR+"/triplex76/*.gabc", 
- COMMON_CHANTS_DIR+"/kyriale76/*.gabc", 
+ "cantus/triplex76/*.gabc", 
+ COMMON_CHANTS_DIR+"/kyriale76/[^0]*.gabc", 
  COMMON_CHANTS_DIR+"/amon33/*.gabc"].each do |d|
   Dir[d].each do |s|
     nativitas_cantus << gregorio(s)
@@ -168,7 +168,7 @@ nativitas_psalmi << genczechpsalm("benedictus.pslm", options_translation, TMP_DI
 end
 
 # initium k Benedictus:
-file TMP_DIR+"/benedictus-initium-viiiSoll-G-auto.gabc" => [PSALMS_DIR+"/benedictus.pslm", PSALMTONES_DIR+"/viiiSoll-G-auto.gabc", TOOLS_DIR+'/initiumpsalmi.rb'] do |t|
+file TMP_DIR+"/benedictus-initium-viiisoll-G-auto.gabc" => [PSALMS_DIR+"/benedictus.pslm", PSALMTONES_DIR+"/viiisoll-G-auto.gabc", TOOLS_DIR+'/initiumpsalmi.rb'] do |t|
   psalmfile = t.prerequisites[0]
   patternfile = t.prerequisites[1]
   wd = Dir.pwd
@@ -176,7 +176,7 @@ file TMP_DIR+"/benedictus-initium-viiiSoll-G-auto.gabc" => [PSALMS_DIR+"/benedic
   sh "ruby ../#{TOOLS_DIR}/initiumpsalmi.rb ../#{psalmfile} ../#{patternfile}"
   chdir wd
 end
-nativitas_cantus << gregorio(TMP_DIR+"/benedictus-initium-viiiSoll-G-auto.gabc")
+nativitas_cantus << gregorio(TMP_DIR+"/benedictus-initium-viiisoll-G-auto.gabc")
 
 nativitas_hymni = ['hym-AveMarisStella-text.tex', 
                    'hym-AveMarisStella-bohtext.tex',
