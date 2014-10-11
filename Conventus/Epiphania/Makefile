@@ -69,8 +69,9 @@ SCORES = alleluia-VidimusStellam ant1 ant2 ant3 ant4 ant5 ant-ben-laud ant-magn-
 	 magnificat-initium-i-D_ magnificat-initium-viii-G2 offertorium-RegesTharsis \
 	 oratiodominica oratio resp1v respl supplicatiolitaniae versus-adorate \
 	 versus-reges $(addprefix matant,1 2 3 4 5 6 7 8 9) $(addprefix matresp,1 2 3 4 5 6 7 8) \
-	 ps94-initium-viii-G tedeum-solemnis annuntiatio \
-	 hym-RerumDeus hym-RectorPotens hym-NuncSancte hym-TeLucis
+	 ps94-initium-viii-G ps94-boh tedeum-solemnis annuntiatio \
+	 hym-RerumDeus hym-RectorPotens hym-NuncSancte hym-TeLucis \
+	 benedictio-noctemquietam jubedomnebenedicere lectiobrevis-fratressobrii
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = cantus/amon33/hym-HostisHerodes-bohtext.tex cantus/amon33/hym-OSolaMagnarum-bohtext.tex \
 	    cantus/nrom02/ps94.tex
@@ -85,7 +86,7 @@ endef
 iter-left := $(MODUSLIST)
 include $(iter)
 define iter-doit
-$(TMP_DIR)/%.tex: $(i)/%.gabc ; $(GREGORIO) -o $$@ $$<
+$(TMP_DIR)/%.tex: $(i)/%.gabc ; $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g' $$< | $(GREGORIO) -s -o $$@
 endef
 iter-left := . $(TMP_DIR) cantus/amon33 cantus/nrom02 cantus/grom61 cantus/triplex76 \
 	     cantus/otriplex85 $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33) $(PSALMTONES_DIR)
@@ -97,6 +98,8 @@ $(patsubst %,$(TMP_DIR)/%.tex,ps4 ps90 ps148 ps149 dan3): PSALMOPTS = $(LAPSALMO
 $(TMP_DIR)/magnificat.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold --skip-verses 2 $(LAPSALMOPTSACC)
 $(TMP_DIR)/%-boh.tex: PSALMOPTS = $(CZPSALMOPTS)
 $(CZPSALMS): $(TMP_DIR)/%-boh.tex: $(CZECH_PSALMS_DIR)/Hejcl1922/%.pslm
+	$(GENPSALM)
+$(TMP_DIR)/ps94-boh.tex: cantus/nrom02/ps94.pslm
 	$(GENPSALM)
 $(TMP_DIR)/dan3-boh.tex: $(CZECH_PSALMS_DIR)/Pavlik/dan3.pslm
 	$(GENPSALM)
