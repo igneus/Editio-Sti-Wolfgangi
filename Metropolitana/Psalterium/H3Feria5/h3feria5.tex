@@ -5,10 +5,14 @@
 \usepackage[latin]{babel}
 \usepackage{ecclesiastic}
 
-\usepackage[left=1cm, right=1cm, top=1cm, bottom=1.5cm]{geometry}
+\usepackage[left=1.5cm, right=1.5cm, top=1cm, bottom=1.5cm]{geometry}
 
 \usepackage{fontspec}
 %\setmainfont[Ligatures={Common},Numbers=OldStyle]{Junicode}
+% leave the default latex main font
+
+% font used for the special characters
+\newfontfamily\chantcharsfont{Junicode}
 
 \usepackage{multicol}
 \usepackage{lettrine}
@@ -21,6 +25,7 @@
 \usepackage{gregoriosyms}
 \usepackage{parcolumns}
 \usepackage{multicol}
+\usepackage{hanging}
 
 \input{metropolitanacommune.tex}
 
@@ -47,27 +52,31 @@
 
 \pagestyle{empty}
 
-\vspace*{3cm}
+\vspace*{5cm}
 
 \begin{center}
 
-{\Large Feria V hebdomadae III
+{\Huge \textsc{ad vesperas}}
 
-\vspace{1cm}
+\vspace{0.5cm}
 
-Ad Vesperas}
+{\LARGE \textsc{Feria V hebdomadae iii}}
 
 \vfill
 
 \end{center}
 
-\cleardoublepage
+\clearpage
 
 \pagestyle{plain}
+
+\pars{Introductio}
 
 \includescore{../../../cantuscommunes/arom09/deusinadiutorium-communis}
 
 \vfill
+
+\pagebreak
 
 \pars{Hymnus}
 
@@ -78,7 +87,7 @@ Ad Vesperas}
 
 \pagebreak
 
-\pars{Antiphona I}
+\pars{Antiphona 1}
 
 \antiphona{E}{\psalteriumDir/h3f5_ve_a1}{}
 
@@ -86,13 +95,13 @@ Ad Vesperas}
 
 \input{temporalia/ps131i-initium-e-auto}
 
-\input{temporalia/ps131i-e}
+\psalmusEtTranslatio{temporalia/ps131i-e}{temporalia/ps131i-boh}
 
 \vfill
 
 \pagebreak
 
-\pars{Antiphona II}
+\pars{Antiphona 2}
 
 \antiphona{III b}{\psalteriumDir/h3f5_ve_a2}{}
 
@@ -100,13 +109,15 @@ Ad Vesperas}
 
 \input{temporalia/ps131ii-initium-iii-b-auto}
 
-\input{temporalia/ps131ii-iii-b}
+{\small
+\psalmusEtTranslatio{temporalia/ps131ii-iii-b}{temporalia/ps131ii-boh}
+}
 
 \vfill
 
 \pagebreak
 
-\pars{Antiphona III}
+\pars{Antiphona 3}
 
 \antiphona{I f}{\psalteriumDir/h1f5_ve_a3}{}
 
@@ -114,7 +125,7 @@ Ad Vesperas}
 
 \input{temporalia/ap11-initium-i-f-auto}
 
-\input{temporalia/ap11-i-f}
+\psalmusEtTranslatio{temporalia/ap11-i-f}{temporalia/ap11-boh}
 
 \vspace{1cm}
 
@@ -122,22 +133,24 @@ Ad Vesperas}
 
 \pars{Responsorium breve}
 
-\superInitialam{℟. br.}
+\superInitialam{\chantcharsfont{℟. br.}}
 \includescore{\psalteriumDir/h1f5_ve_r}
 
 \vfill
-
-\pagebreak
 
 \pars{Antiphona ad Magnificat}
 
 \antiphona{VIII g}{\psalteriumDir/h1f5_ve_am}{}
 
-\pars{Magnificat}
+%\pars{Magnificat}
 
-\includescore{../../../tonipsalmorum/arom12/magnificat-initium-viii-G}
+% smaller grefactor, because with 14 the second line of the notated
+% initium breaks in a very unpleasant way - just before the last syllable
+\setgrefactor{13}
 
-\input{temporalia/magnificat-viii-g}
+\includescore{../../../tonipsalmorum/arom09/magnificat-initium-viii-G}
+
+\psalmusEtTranslatio{temporalia/magnificat-viii-g}{temporalia/magnificat-boh}
 
 \vspace{1cm}
 
@@ -145,23 +158,16 @@ Ad Vesperas}
 
 \vfill
 
-\pagebreak
-
-\pagestyle{empty}
-
-\mbox{}
-\vfill
-
 %Textus et cantus Officii secundum
 %\emph{Antiphonale Romanum II}, Solesmes 2009.
-
+%
 %Translationes psalmorum canticorumque secundum
 %\emph{Denní modlitba církve}, Kostelní Vydří 2005.
 
-\begin{center}
-Pro choro Ecclesiæ Metropolitanæ Pragensis.
-
-Pragæ 2014.
-\end{center}
+%\begin{center}
+%Pro choro Ecclesiæ Metropolitanæ Pragensis.
+%
+%Pragæ 2014.
+%\end{center}
 
 \end{document}

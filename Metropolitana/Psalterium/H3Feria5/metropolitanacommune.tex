@@ -54,22 +54,23 @@
 \newcommand{\translatioCantus}[1]{\vspace{1mm}%
 {\noindent\footnotesize #1}}
 
+\newenvironment{psalmiTranslatio}{\footnotesize}{}
+
 % pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
 % s prekladem
 \newcommand{\psalmusEtTranslatioB}[3]{
-  \vspace{0.5cm}
-  \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
-    \colchunk{
-      \input{#1}
-    }
+  \input{#1}
+  %% \vspace{0.5cm}
+  %% \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
+  %%   \colchunk{
+  %%     \input{#1}
+  %%   }
 
-    \colchunk{
-      \vspace{-0.5cm}
-      {\footnotesize
-        \input{#2}
-      }
-    }
-  \end{parcolumns}
+  %%   \colchunk{
+  %%     %\vspace{-0.5cm}
+  %%     \input{#2}
+  %%   }
+  %% \end{parcolumns}
 }
 
 \newcommand{\psalmusEtTranslatio}[2]{
@@ -77,11 +78,12 @@
 }
 
 % znaky k umisteni nad inicialu zpevu
-\newcommand{\superInitialam}[1]{\gresetfirstlineaboveinitial{\small {#1}}{\small {#1}}}
+\newcommand{\superInitialam}[1]{\gresetfirstlineaboveinitial{\footnotesize {#1}}{}}
 
 % pars officii, i.e. "oratio", ...
 \newcommand{\pars}[1]{
-  \hfill \textsc{\small{#1}} \hfill
+  \hfill \textsc{\footnotesize{#1}} \hfill
+  \vspace{2mm}
 }
 
 %%%% Prejmenovat na latinske:
@@ -97,10 +99,22 @@
 \includescore{#2}
 
 #3
-\vspace{2mm}
+\vspace{1mm}
 }
 
+% test if we are in a specific environment
+\makeatletter
+\def\ifenv#1{
+   \def\@tempa{#1}%
+   \ifx\@tempa\@currenvir
+      \expandafter\@firstoftwo
+    \else
+      \expandafter\@secondoftwo
+   \fi
+}
+\makeatother
+
 % for pslm
-\newenvironment{psalmus}{\vspace{0.5cm}}{}
-\newcommand{\flex}{~\dag\mbox{}\\}
-\newcommand{\asterisk}{~*\\}
+\newenvironment{psalmus}{\vspace{0.5cm}\begin{hangparas}{1em}{1}}{\end{hangparas}}
+\newcommand{\flex}{~\dag\mbox{}\ifenv{psalmiTranslatio}{}{\\}}
+\newcommand{\asterisk}{~*\ifenv{psalmiTranslatio}{}{\\}}
