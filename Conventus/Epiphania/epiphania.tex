@@ -3,7 +3,7 @@
 \documentclass[a4paper, twoside, 12pt]{article}
 \usepackage[latin]{babel}
 %\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
-\usepackage[landscape, a4paper, mag=1080, truedimen, left=2cm, right=1.5cm, top=1.8cm, bottom=1cm]{geometry} % okraje stranky
+\usepackage[landscape, a4paper, mag=1166, truedimen, left=2cm, right=1.5cm, top=1.8cm, bottom=1cm]{geometry} % okraje stranky
 
 \usepackage{fontspec}
 \setmainfont[Ligatures={Common, TeX}]{Junicode}
@@ -29,6 +29,8 @@
 \usepackage{parcolumns}
 \usepackage[contents={},opacity=1,scale=1,color=black]{background}
 \usepackage{tikzpagenodes}
+\usepackage{calc}
+\usepackage{longtable}
 \usetikzlibrary{calc}
 
 \input{conventuscommune.tex} % Often used macros
@@ -93,10 +95,10 @@
 \setspaceafterinitial{2.2mm plus 0em minus 0em}
 \setspacebeforeinitial{2.2mm plus 0em minus 0em}
 
-% Here we set the initial font. Change 43 if you want a bigger initial.
+% Here we set the initial font. Change 38 if you want a bigger initial.
 % Emit the initials in red.
 \def\greinitialformat#1{%
-{\color{red}\fontsize{43}{43}\selectfont #1}%
+{\color{red}\fontsize{38}{38}\selectfont #1}%
 }
 
 \pagestyle{empty}
@@ -153,8 +155,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps109-boh.tex}
 %\input{temporalia/ps109.tex}
-
-\psalmusEtTranslatio{temporalia/ps109.tex}{temporalia/ps109-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps109.tex}{temporalia/ps109-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps109-comb.tex}{10cm}
 
 \vfill
 
@@ -170,10 +172,10 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \includescore{temporalia/ps110-initium-i-g2-auto.tex}
 
-% \translatioPsalmi{temporalia/ps110-boh.tex}
-% \input{temporalia/ps110.tex}
-
-\psalmusEtTranslatioB{temporalia/ps110.tex}{temporalia/ps110-boh.tex}{10cm}
+%\translatioPsalmi{temporalia/ps110-boh.tex}
+%\input{temporalia/ps110.tex}
+%\psalmusEtTranslatioB{temporalia/ps110.tex}{temporalia/ps110-boh.tex}{10cm}
+\psalmusEtTranslatioT{temporalia/ps110-comb.tex}{10cm}
 
 \vfill
 
@@ -189,10 +191,10 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \includescore{temporalia/ps111-initium-i-g3-auto.tex}
 
-% \translatioPsalmi{temporalia/ps111-boh.tex}
-% \input{temporalia/ps111.tex}
-
-\psalmusEtTranslatio{temporalia/ps111.tex}{temporalia/ps111-boh.tex}
+%\translatioPsalmi{temporalia/ps111-boh.tex}
+%\input{temporalia/ps111.tex}
+%\psalmusEtTranslatio{temporalia/ps111.tex}{temporalia/ps111-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps111-comb.tex}{10cm}
 
 \vfill
 
@@ -210,7 +212,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps112-boh.tex}
 %\input{temporalia/ps112.tex}
-\psalmusEtTranslatio{temporalia/ps112.tex}{temporalia/ps112-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps112.tex}{temporalia/ps112-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps112-comb.tex}{10cm}
 
 \vfill
 
@@ -263,7 +266,8 @@ Editio Sancti Wolfgangi \annusEditionis
 \cantusSineNeumas
 \includescore{temporalia/magnificat-initium-viii-G2.tex}
 
-\psalmusEtTranslatioB{temporalia/magnificat.tex}{temporalia/magnificat-boh.tex}{10cm}
+%\psalmusEtTranslatioB{temporalia/magnificat.tex}{temporalia/magnificat-boh.tex}{10cm}
+\psalmusEtTranslatioT{temporalia/magnificat-comb.tex}{10cm}
 
 \pagebreak
 
@@ -284,7 +288,8 @@ Editio Sancti Wolfgangi \annusEditionis
 \includescore{temporalia/magnificat-initium-i-D_.tex}
 
 % maly svindl, ale prizvukova struktura VIIIsoll-G2 a Isoll-D* je stejna
-\psalmusEtTranslatio{temporalia/magnificat.tex}{temporalia/magnificat-boh.tex}
+%\psalmusEtTranslatio{temporalia/magnificat.tex}{temporalia/magnificat-boh.tex}
+\psalmusEtTranslatioT{temporalia/magnificat-comb.tex}{10cm}
 
 \pagebreak
 
@@ -346,7 +351,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps4-boh.tex}
 %\input{temporalia/ps4.tex}
-\psalmusEtTranslatioB{temporalia/ps4.tex}{temporalia/ps4-boh.tex}{11.5cm}
+%\psalmusEtTranslatioB{temporalia/ps4.tex}{temporalia/ps4-boh.tex}{11.5cm}
+\psalmusEtTranslatioT{temporalia/ps4-comb.tex}{10cm}
 
 \vfill
 
@@ -360,7 +366,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps90-boh.tex}
 %\input{temporalia/ps90.tex}
-\psalmusEtTranslatioB{temporalia/ps90.tex}{temporalia/ps90-boh.tex}{9.5cm}
+%\psalmusEtTranslatioB{temporalia/ps90.tex}{temporalia/ps90-boh.tex}{9.5cm}
+\psalmusEtTranslatioT{temporalia/ps90-comb.tex}{10cm}
 
 \vfill
 
@@ -374,7 +381,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps133-boh.tex}
 %\input{temporalia/ps133.tex}
-\psalmusEtTranslatio{temporalia/ps133.tex}{temporalia/ps133-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps133.tex}{temporalia/ps133-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps133-comb.tex}{10cm}
 
 \vfill
 
@@ -405,7 +413,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps28-boh.tex}
 %\input{temporalia/ps28.tex}
-\psalmusEtTranslatioB{temporalia/ps28.tex}{temporalia/ps28-boh.tex}{10.5cm}
+%\psalmusEtTranslatioB{temporalia/ps28.tex}{temporalia/ps28-boh.tex}{10.5cm}
+\psalmusEtTranslatioT{temporalia/ps28-comb.tex}{10cm}
 
 \vfill
 
@@ -425,7 +434,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps45-boh.tex}
 %\input{temporalia/ps45.tex}
-\psalmusEtTranslatio{temporalia/ps45.tex}{temporalia/ps45-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps45.tex}{temporalia/ps45-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps45-comb.tex}{10cm}
 
 \vfill
 
@@ -445,7 +455,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps46-boh.tex}
 %\input{temporalia/ps46.tex}
-\psalmusEtTranslatio{temporalia/ps46.tex}{temporalia/ps46-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps46.tex}{temporalia/ps46-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps46-comb.tex}{10cm}
 
 \vfill
 
@@ -544,7 +555,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps65-boh.tex}
 %\input{temporalia/ps65.tex}
-\psalmusEtTranslatio{temporalia/ps65.tex}{temporalia/ps65-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps65.tex}{temporalia/ps65-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps65-comb.tex}{10cm}
 
 \vfill
 
@@ -564,7 +576,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps71-boh.tex}
 %\input{temporalia/ps71.tex}
-\psalmusEtTranslatio{temporalia/ps71.tex}{temporalia/ps71-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps71.tex}{temporalia/ps71-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps71-comb.tex}{10cm}
 
 \vfill
 
@@ -584,7 +597,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps85-boh.tex}
 %\input{temporalia/ps85.tex}
-\psalmusEtTranslatio{temporalia/ps85.tex}{temporalia/ps85-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps85.tex}{temporalia/ps85-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps85-comb.tex}{10cm}
 
 \vfill
 
@@ -685,7 +699,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps94-boh.tex}
 %\input{cantus/nrom02/ps94.tex}
-\psalmusEtTranslatioB{cantus/nrom02/ps94.tex}{temporalia/ps94-boh.tex}{9.5cm}
+%\psalmusEtTranslatioB{cantus/nrom02/ps94.tex}{temporalia/ps94-boh.tex}{9.5cm}
+\psalmusEtTranslatioT{temporalia/ps94-comb.tex}{10.5cm}
 
 \vfill
 
@@ -705,7 +720,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps95-boh.tex}
 %\input{temporalia/ps95.tex}
-\psalmusEtTranslatioB{temporalia/ps95.tex}{temporalia/ps95-boh.tex}{10cm}
+%\psalmusEtTranslatioB{temporalia/ps95.tex}{temporalia/ps95-boh.tex}{10cm}
+\psalmusEtTranslatioT{temporalia/ps95-comb.tex}{10cm}
 
 \vfill
 
@@ -725,7 +741,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps96-boh.tex}
 %\input{temporalia/ps96.tex}
-\psalmusEtTranslatio{temporalia/ps96.tex}{temporalia/ps96-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps96.tex}{temporalia/ps96-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps96-comb.tex}{10cm}
 
 \vfill
 
@@ -847,7 +864,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps66-boh.tex}
 %\input{temporalia/ps66.tex}
-\psalmusEtTranslatio{temporalia/ps66.tex}{temporalia/ps66-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps66.tex}{temporalia/ps66-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps66-comb.tex}{10cm}
 
 \vfill
 
@@ -865,7 +883,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps92-boh.tex}
 %\input{temporalia/ps92.tex}
-\psalmusEtTranslatio{temporalia/ps92.tex}{temporalia/ps92-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps92.tex}{temporalia/ps92-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps92-comb.tex}{10cm}
 
 \vfill
 
@@ -883,7 +902,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps99-boh.tex}
 %\input{temporalia/ps99.tex}
-\psalmusEtTranslatio{temporalia/ps99.tex}{temporalia/ps99-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps99.tex}{temporalia/ps99-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps99-comb.tex}{10cm}
 
 \vfill
 
@@ -901,7 +921,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps62-boh.tex}
 %\input{temporalia/ps62.tex}
-\psalmusEtTranslatio{temporalia/ps62.tex}{temporalia/ps62-boh.tex}
+%\psalmusEtTranslatio{temporalia/ps62.tex}{temporalia/ps62-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps62-comb.tex}{10cm}
 
 \vfill
 
@@ -917,7 +938,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \includescore{temporalia/dan3-initium-iv-E-auto.tex}
 
-\psalmusEtTranslatioB{temporalia/dan3.tex}{temporalia/dan3-boh.tex}{10cm} % Canticum trium
+%\psalmusEtTranslatioB{temporalia/dan3.tex}{temporalia/dan3-boh.tex}{10cm} % Canticum trium
+\psalmusEtTranslatioT{temporalia/dan3-comb.tex}{10cm}
 
 \rubrica{Hic non dicitur Gloria Patri, neque Amen.}
 \vspace{1cm}
@@ -945,7 +967,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps148-boh.tex}
 %\input{temporalia/ps148.tex}
-\psalmusEtTranslatioB{temporalia/ps148.tex}{temporalia/ps148-boh.tex}{\psVItransW}
+%\psalmusEtTranslatioB{temporalia/ps148.tex}{temporalia/ps148-boh.tex}{\psVItransW}
+\psalmusEtTranslatioT{temporalia/ps148-comb.tex}{10cm}
 
 \rubrica{Hic non dicitur Gloria Patri.}
 
@@ -956,7 +979,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps149-boh.tex}
 %\input{temporalia/ps149.tex}
-\psalmusEtTranslatioB{temporalia/ps149.tex}{temporalia/ps149-boh.tex}{\psVItransW}
+%\psalmusEtTranslatioB{temporalia/ps149.tex}{temporalia/ps149-boh.tex}{\psVItransW}
+\psalmusEtTranslatioT{temporalia/ps149-comb.tex}{10cm}
 
 \rubrica{Hic non dicitur Gloria Patri.}
 
@@ -967,7 +991,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps150-boh.tex}
 %\input{temporalia/ps150.tex}
-\psalmusEtTranslatioB{temporalia/ps150.tex}{temporalia/ps150-boh.tex}{\psVItransW}
+%\psalmusEtTranslatioB{temporalia/ps150.tex}{temporalia/ps150-boh.tex}{\psVItransW}
+\psalmusEtTranslatioT{temporalia/ps150-comb.tex}{10cm}
 
 \pagebreak
 
@@ -1014,7 +1039,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \includescore{temporalia/benedictus-initium-viiisoll-G2-auto.tex}
 
-\psalmusEtTranslatioB{temporalia/benedictus.tex}{temporalia/benedictus-boh.tex}{10.5cm}
+%\psalmusEtTranslatioB{temporalia/benedictus.tex}{temporalia/benedictus-boh.tex}{10.5cm}
+\psalmusEtTranslatioT{temporalia/benedictus-comb.tex}{10cm}
 
 \vspace{0.5cm}
 
@@ -1072,7 +1098,8 @@ Editio Sancti Wolfgangi \annusEditionis
 
 %\translatioPsalmi{temporalia/ps118v_vii-boh.tex}
 %\input{temporalia/ps118v_vii.tex}
-\psalmusEtTranslatioB{temporalia/ps118v_vii.tex}{temporalia/ps118v_vii-boh.tex}{10cm}
+%\psalmusEtTranslatioB{temporalia/ps118v_vii.tex}{temporalia/ps118v_vii-boh.tex}{10cm}
+\psalmusEtTranslatioT{temporalia/ps118v_vii-comb.tex}{10cm}
 
 \vfill
 
@@ -1202,7 +1229,8 @@ anni currentis iuxta hanc formulam.}
 
 %\translatioPsalmi{temporalia/ps118viii_x-boh.tex}
 %\input{temporalia/ps118viii_x.tex}
-\psalmusEtTranslatioB{temporalia/ps118viii_x.tex}{temporalia/ps118viii_x-boh.tex}{10cm}
+%\psalmusEtTranslatioB{temporalia/ps118viii_x.tex}{temporalia/ps118viii_x-boh.tex}{10cm}
+\psalmusEtTranslatioT{temporalia/ps118viii_x-comb.tex}{10cm}
 
 \vfill
 
@@ -1235,7 +1263,8 @@ anni currentis iuxta hanc formulam.}
 
 %\translatioPsalmi{temporalia/ps118xi_xiii-boh.tex}
 %\input{temporalia/ps118xi_xiii.tex}
-\psalmusEtTranslatioB{temporalia/ps118xi_xiii.tex}{temporalia/ps118xi_xiii-boh.tex}{10cm}
+%\psalmusEtTranslatioB{temporalia/ps118xi_xiii.tex}{temporalia/ps118xi_xiii-boh.tex}{10cm}
+\psalmusEtTranslatioT{temporalia/ps118xi_xiii-comb.tex}{10cm}
 
 \vspace{2cm}
 

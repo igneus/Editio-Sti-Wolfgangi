@@ -2,6 +2,8 @@ RUBY_COMMAND = ruby
 GREGORIO = gregorio
 LUALATEX = lualatex
 SED = sed
+AWK = awk
+CP = cp
 TMP_DIR = temporalia
 ifneq ($(wildcard $(TMP_DIR)),$(TMP_DIR))
 TD := $(shell mkdir $(TMP_DIR))
@@ -14,6 +16,8 @@ CZECH_PSALMS_DIR = $(EDITIO_ROOTDIR)/bohemice_psalmi
 COMMON_CHANTS_DIR = $(EDITIO_ROOTDIR)/cantuscommunes
 PSALM_PREPROCESSOR = $(TOOLS_DIR)/psalmpreprocessor.rb
 INITIUM_TOOL = $(TOOLS_DIR)/initiumpsalmi.rb
+PSSKIP = 1
+GENPSCOMB = $(AWK) -f pscomb.awk -v PSSKIP=$(PSSKIP) -v TRFILE=$(word 2,$^) $< > $@
 PSALMS = 4 28 45 46 62 65 66 71 85 90 92 95 96 99 109 110 111 112 118v_vii 118viii_x 118xi_xiii 133 148 149 150
 include tonus.mk
 MODUS-4 = dir
@@ -48,6 +52,7 @@ MODUSLIST = $(sort $(foreach P,$(PSALMS) benedictus magnificat dan3,$(MODUS-$(P)
 CZPSALMOPTS = --accents 0:0 --title-pattern " " --no-paragraph
 CZPSALMS = $(patsubst %,$(TMP_DIR)/ps%-boh.tex,$(PSALMS))
 ALLCZPSALMS = $(CZPSALMS) $(patsubst %,$(TMP_DIR)/%-boh.tex,dan3 benedictus magnificat)
+ALLCOMBPSALMS = $(patsubst $(TMP_DIR)/%-boh.tex,$(TMP_DIR)/%-comb.tex,$(ALLCZPSALMS)) $(TMP_DIR)/ps94-comb.tex
 GENPSALM = $(RUBY_COMMAND) $(PSALM_PREPROCESSOR) --output $@ $(PSALMOPTS) $< \
 	   && $(SED) -i -e 's/\*/\\grestar{}/g' $@
 TONUS = $(TONUS-$(MODUS-$*))
@@ -105,12 +110,17 @@ $(TMP_DIR)/dan3-boh.tex: $(CZECH_PSALMS_DIR)/Pavlik/dan3.pslm
 	$(GENPSALM)
 $(TMP_DIR)/benedictus-boh.tex $(TMP_DIR)/magnificat-boh.tex: $(TMP_DIR)/%-boh.tex: $(CZECH_PSALMS_DIR)/DMC199x/%.pslm
 	$(GENPSALM)
+$(TMP_DIR)/ps94.tex: cantus/nrom02/ps94.tex
+	$(CP) $< $@
 $(LAPSALMS): $(TMP_DIR)/ps%.tex: $(PSALMS_DIR)/ps%.pslm
 	$(GENPSALM)
 $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: $(PSALMS_DIR)/%.pslm
 	$(GENPSALM)
+$(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
+$(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
+	$(GENPSCOMB)
 epiphania.pdf: epiphania.tex conventuscommune.tex translationes_cs.tex \
-	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
+	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
 clean:

@@ -31,7 +31,7 @@ position={current page.east|-current page text area.north east},
 vshift=12pt,
 hshift=-\value{Thumb}*\ThumbSize+\ThumbSize+\ThumbSize/4,
 contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
- align=center,text height=14pt,text depth=10pt]
+ align=center,text height=22pt,text depth=22pt]
 {\small\thumbTitulus};
 }
 }
@@ -39,10 +39,10 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \backgroundsetup{
 angle=90,
 position={current page.west|-current page text area.north west},
-vshift=-12pt,
+vshift=-16pt,
 hshift=-\value{Thumb}*\ThumbSize+\ThumbSize+\ThumbSize/4,
 contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
- align=center,text height=14pt,text depth=10pt]
+ align=center,text height=22pt,text depth=12pt]
 {\small\thumbTitulus};
 }
 }
@@ -147,6 +147,18 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
   \psalmusEtTranslatioB{#1}{#2}{8.5cm}
 }
 
+\newcommand{\psalmusTr}[1]{{\footnotesize\nlfont\hspace*{-4pt} #1}}
+\newcommand{\psalmusEtTranslatioT}[2]{{
+  \setlength{\LTleft}{-0.25cm}
+  \setlength{\LTright}{\fill}
+  \setlength{\tabcolsep}{0.35cm}
+  \begin{psalmus}
+      \noindent
+      \begin{longtable}{p{\textwidth-#2-1cm}p{#2}}
+        \input{#1}
+      \end{longtable}
+  \end{psalmus}
+}}
 
 \newcommand{\canticumMagnificatEtTranslatio}[1]{
   \psalmusEtTranslatioB{#1}{temporalia/extra-adventum-vespers/magnificat-boh.tex}{12cm}
@@ -175,11 +187,11 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 
 % prepinani mista mezi notovymi osnovami: pro neumovane a neneumovane zpevy
 \newcommand{\cantusCumNeumis}{
-  \setgrefactor{17}
+  \setgrefactor{15}
   \global\advance\grespaceabovelines by 5mm%
 }
 \newcommand{\cantusSineNeumas}{
-  \setgrefactor{17}
+  \setgrefactor{15}
   \global\advance\grespaceabovelines by -5mm%
 }
 
