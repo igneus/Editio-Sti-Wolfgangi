@@ -20,7 +20,7 @@ PSSKIP = 1
 GENPSCOMB = $(AWK) -f pscomb.awk -v PSSKIP=$(PSSKIP) -v TRFILE=$(word 2,$^) $< > $@
 PSALMS = 4 28 45 46 62 65 66 71 85 90 92 95 96 99 109 110 111 112 118v_vii 118viii_x 118xi_xiii 133 148 149 150
 include tonus.mk
-MODUS-4 = dir
+MODUS-4 = viii-G
 MODUS-28 = vii-a
 MODUS-45 = vi-F
 MODUS-46 = i-f
@@ -29,7 +29,7 @@ MODUS-65 = iv-E
 MODUS-66 = dir
 MODUS-71 = i-a2
 MODUS-85 = iv-E
-MODUS-90 = dir
+MODUS-90 = viii-G
 MODUS-92 = ii-D
 MODUS-95 = vi-F
 MODUS-96 = vi-F
@@ -41,7 +41,7 @@ MODUS-112 = iv-E
 MODUS-118v_vii = i-g2
 MODUS-118viii_x = i-g3
 MODUS-118xi_xiii = vii-c2
-MODUS-133 = dir
+MODUS-133 = viii-G
 MODUS-148 = vii-c2
 MODUS-149 = vii-c2
 MODUS-150 = vii-c2
@@ -76,7 +76,9 @@ SCORES = alleluia-VidimusStellam ant1 ant2 ant3 ant4 ant5 ant-ben-laud ant-magn-
 	 versus-reges $(addprefix matant,1 2 3 4 5 6 7 8 9) $(addprefix matresp,1 2 3 4 5 6 7 8) \
 	 ps94-initium-viii-G ps94-boh tedeum-solemnis annuntiatio \
 	 hym-RerumDeus hym-RectorPotens hym-NuncSancte hym-TeLucis \
-	 benedictio-noctemquietam jubedomnebenedicere lectiobrevis-fratressobrii
+	 benedictio-noctemquietam jubedomnebenedicere lectiobrevis-fratressobrii \
+	 convertenosdeus ant-miserere deusinadiutorium-solemnis \
+	 capitulum-tuautem resp-inmanus ant-salvanos versus-custodi
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = cantus/amon33/hym-HostisHerodes-bohtext.tex cantus/amon33/hym-OSolaMagnarum-bohtext.tex \
 	    cantus/nrom02/ps94.tex
@@ -93,14 +95,16 @@ include $(iter)
 define iter-doit
 $(TMP_DIR)/%.tex: $(i)/%.gabc ; $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g' $$< | $(GREGORIO) -s -o $$@
 endef
-iter-left := . $(TMP_DIR) cantus/amon33 cantus/nrom02 cantus/grom61 cantus/triplex76 \
-	     cantus/otriplex85 $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33) $(PSALMTONES_DIR)
+iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 nrom02 grom61 triplex76 otriplex85) \
+	     $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12) $(PSALMTONES_DIR)
 include $(iter)
 
 all: epiphania.pdf
 $(TMP_DIR)/%.tex: PSALMOPTS = $(APPENDGLORIAPATRI) $(LAPSALMOPTS)
-$(patsubst %,$(TMP_DIR)/%.tex,ps4 ps90 ps148 ps149 dan3): PSALMOPTS = $(LAPSALMOPTS)
+$(patsubst %,$(TMP_DIR)/%.tex,ps4 ps148 ps149 dan3): PSALMOPTS = $(LAPSALMOPTS)
 $(TMP_DIR)/magnificat.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold --skip-verses 2 $(LAPSALMOPTSACC)
+$(TMP_DIR)/ps90.tex: PSALMOPTS = --accents-style bold $(LAPSALMOPTSACC)
+$(TMP_DIR)/ps133.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold $(LAPSALMOPTSACC)
 $(TMP_DIR)/%-boh.tex: PSALMOPTS = $(CZPSALMOPTS)
 $(CZPSALMS): $(TMP_DIR)/%-boh.tex: $(CZECH_PSALMS_DIR)/Hejcl1922/%.pslm
 	$(GENPSALM)
@@ -117,6 +121,7 @@ $(LAPSALMS): $(TMP_DIR)/ps%.tex: $(PSALMS_DIR)/ps%.pslm
 $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: $(PSALMS_DIR)/%.pslm
 	$(GENPSALM)
 $(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
+$(TMP_DIR)/ps90-comb.tex $(TMP_DIR)/ps113-comb.tex: PSSKIP = 0
 $(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
 	$(GENPSCOMB)
 epiphania.pdf: epiphania.tex conventuscommune.tex translationes_cs.tex \
