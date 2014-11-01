@@ -1,0 +1,18 @@
+office-part: matutinum, benedictio 5. lectionis, tonus solemnis;
+occasion: In Epiphania Domini;
+book: Antiphonale Romanum 1912, p. 34*; Liber Usualis, 1961, p. 120;
+initial-style: 1;
+%%
+
+(c3)
+Ju(h)be(h) Dom(h)ne(h) be(h)ne(e)dí(f)ce(d)re.(d.) (::)
+
+<alt>{\color{black}\textnormal{\pars{Benedictio.}}}</alt> Chris(h)tus(h) per(h)pé(h)tu(h)æ(g) det(f) no(h)bis(h.) *(;)
+gá(h)u(h)di(h)a(e) vi(f)tæ.(d.) <sp>R/</sp>.(::)
+
+A(g.)men.(h.) (::Z)
+
+(h[alt:Flexa.]) (h) (h) (hR) (hr1) (fr) +(f.) (;)
+(h[alt:Metrum.]) (h) (h) (hR) (g) (f) (hr1) (hr) *(h.) (;)
+(h[alt:Conclusio.]) (h) (h) (hR) (e) (fr1) (dr) (d.) (::)
+(hR[alt:Interrogatio.]) (h.) (,) (g) (g) (g) (gR) (f) (g) <c>?</c>(gh..) (::)

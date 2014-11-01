@@ -49,16 +49,6 @@
 
 %%%% Vicekrat opakovane kousky
 
-\newcommand{\versusRegesTharsis}{
-  \pars{Versus.}
-
-  % Versus. %%%
-    \includescore{temporalia/versus-reges.tex}
-
-    \noindent \trVersus
-    \vfill
-}
-
 \newcommand{\anteOrationem}{
   \rubrica{Ante Orationem, cantatur a Superiore:}
 
@@ -80,9 +70,38 @@
 }
 
 \newcommand{\tuAutem}{
-  \hspace{0.5cm}
-  Tu autem, Dómine, miserére nobis.
-  \Rbardot{} Deo grátias.
+  \vfill
+
+  \includescore{temporalia/tuautem.tex}
+}
+
+\newcommand{\lectioEvangelii}{
+\pars{Léctio sancti Evangélii secúndum Matthǽum.} \scriptura{Matth. 2, 1-12}
+
+\textusEtTranslatio{
+  Cum natus esset Jesus in Béthlehem Juda in diébus Heródis regis, ecce Magi
+  ab Oriénte venérunt Jerosólymam, dicéntes: Ubi est qui natus est Rex
+  Judæórum?
+  Vídimus enim stellam ejus in Oriénte, et vénimus adoráre eum.
+  Audiens autem Heródes rex, turbátus est, et omnis Jerosólyma cum illo.
+  Et cóngregans omnes príncipes sacerdótum, et scribas pópuli,
+  sciscitabátur ab eis, ubi Christus nascerétur.
+  At illi dixérunt ei: In Béthlehem Judæ: sic enim scriptum est per Prophétam:
+  Et tu Béthlehem terra Juda, nequáquam mínima es in princípibus Juda: ex
+  te enim éxiet dux, qui regat pópulum meum Israël.
+  Tunc Heródes, clam vocátis Magis, diligénter dídicit ab eis tempus
+  stellæ, quæ appáruit eis:
+  Et mittens illos in Béthlehem, dixit: Ite, et interrogate diligénter de
+  púero: et cum invenéritis, renuntiáte mihi, ut et ego véniens adórem eum.
+  Qui cum audíssent regem, abiérunt, et ecce stella, quam víderant in
+  Oriénte, antecedébat eos, usque dum véniens staret supra, ubi erat puer.
+  Vidéntes autem stellam gavísi sunt gáudio magno valde.
+  Et intrántes domum, invenérunt púerum cum María matre ejus, et
+  procidéntes adoravérunt eum: et apértis thesáuris suis obtulérunt ei múnera,
+  aurum, thus et myrrham.
+  Et respónso accépto in somnis, ne redírent ad Heródem, per áliam viam
+  revérsi sunt in regiónem suam.
+}{\trMatEvangelium}{10cm}
 }
 
 \setlength{\columnsep}{30pt} % prostor mezi sloupci
@@ -130,15 +149,65 @@ Editio Sancti Wolfgangi \annusEditionis
 \fancyhf{}
 \pagestyle{fancy}
 
+\lectioEvangelii
+
+\vfill
+\pagebreak
+
+\pars{Oratio ante divinum Officium.}
+
+\lettrine{{\color{red}A}}{peri,} Dómine, os meum ad benedicéndum nomen sanctum tuum:
+munda quoque cor meum ab ómnibus vanis, pervérsis, et aliénis
+cogitatiónibus:
+intelléctum illúmina, afféctum inflámma,
+ut digne, atténte ac devóte hoc Offícium recitáre váleam,
+et exaudíri mérear ante conspéctum Divínæ Majestátis tuæ.
+Per Christum, Dominum nostrum.
+\Rbardot{} Amen.
+
+Dómine, in unióne illíus divínæ intentiónis,
+qua ipse in terris laudes Deo persolvísti,
+has tibi Horas \rubricatum{(vel \textnormal{hanc tibi Horam})} persólvo.
+
+\vfill
+
+\pars{Oratio post divinum Officium.}
+
+\rubrica{
+  Orationem sequentem devote post Officium recitantibus
+  Leo Papa X. defectus, et culpas in eo persolvendo ex humana
+  fragilitate contractas, indulsit, et dicitur flexis genibus.
+}
+
+\lettrine{{\color{red}S}}{acrosánctæ} et indivíduæ Trinitáti,
+crucifíxi Dómini nostri Jesu Christi humanitáti,
+beatíssimæ et gloriosíssimæ sempérque Vírginis Maríæ
+fecúndæ integritáti, 
+et ómnium Sanctórum universitáti
+sit sempitérna laus, honor, virtus et glória
+ab omni creatúra,
+nobísque remíssio ómnium peccatórum,
+per infiníta sǽcula sæculórum.
+\Rbardot{} Amen.
+
+\noindent \Vbardot{} Beáta víscera Maríæ Virginis, quæ portavérunt
+ætérni Patris Fílium.\\
+\Rbardot{} Et beáta úbera, quæ lactavérunt Christum Dominum.
+
+\rubrica{Et dicitur secreto \textnormal{Pater noster.} et \textnormal{Ave María.}}
+
+\vfill
+
 \hora{In I. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sideThumbs{I. Vesperis}
+
+\cantusSineNeumas
 
 \label{deusinadiutorium}
 
 \includescore{temporalia/deusinadiutorium-solemnis.tex}
 
 \vfill
-
 \pagebreak
 
 \cantusCumNeumis
@@ -149,17 +218,15 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \trAntI
 
+\cantusSineNeumas
+
 \scriptura{Psalmus 109.}
 
 \includescore{temporalia/ps109-initium-ii-D-auto.tex}
 
-%\translatioPsalmi{temporalia/ps109-boh.tex}
-%\input{temporalia/ps109.tex}
-%\psalmusEtTranslatio{temporalia/ps109.tex}{temporalia/ps109-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps109-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 2.}
@@ -172,13 +239,9 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \includescore{temporalia/ps110-initium-i-g2-auto.tex}
 
-%\translatioPsalmi{temporalia/ps110-boh.tex}
-%\input{temporalia/ps110.tex}
-%\psalmusEtTranslatioB{temporalia/ps110.tex}{temporalia/ps110-boh.tex}{10cm}
 \psalmusEtTranslatioT{temporalia/ps110-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 3.}
@@ -191,13 +254,9 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \includescore{temporalia/ps111-initium-i-g3-auto.tex}
 
-%\translatioPsalmi{temporalia/ps111-boh.tex}
-%\input{temporalia/ps111.tex}
-%\psalmusEtTranslatio{temporalia/ps111.tex}{temporalia/ps111-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps111-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 4.}
@@ -210,13 +269,9 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \includescore{temporalia/ps112-initium-iv-E-auto.tex}
 
-%\translatioPsalmi{temporalia/ps112-boh.tex}
-%\input{temporalia/ps112.tex}
-%\psalmusEtTranslatio{temporalia/ps112.tex}{temporalia/ps112-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps112-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
 \raggedcolumns
@@ -241,7 +296,6 @@ Editio Sancti Wolfgangi \annusEditionis
 \trRespVesp
 
 \vfill
-
 \pagebreak
 
 % Hymnus. %%%
@@ -251,9 +305,18 @@ Editio Sancti Wolfgangi \annusEditionis
 \includescore{temporalia/hym-HostisHerodes.tex}
 \input{cantus/amon33/hym-HostisHerodes-bohtext.tex}
 
-\versusRegesTharsis
+\vfill
 
 \pagebreak
+
+\pars{Versus.}
+
+% Versus. %%%
+\includescore{temporalia/versus-reges.tex}
+
+\noindent \trVersus
+
+\vfill
 
 \cantusCumNeumis
 
@@ -263,10 +326,15 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \trAntMagnificatI
 
+\vfill
+
+\pagebreak
+
+\scriptura{Lucæ 1, 46-55}
+
 \cantusSineNeumas
 \includescore{temporalia/magnificat-initium-viii-G2.tex}
 
-%\psalmusEtTranslatioB{temporalia/magnificat.tex}{temporalia/magnificat-boh.tex}{10cm}
 \psalmusEtTranslatioT{temporalia/magnificat-comb.tex}{10cm}
 
 \pagebreak
@@ -280,16 +348,19 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \trAntMagnificatII
 
-% antifona je dlouha a mista dost, dame Magnificat na novou stranku
 \vfill
+
 \pagebreak
+
+\scriptura{Lucæ 1, 46-55}
 
 \cantusSineNeumas
 \includescore{temporalia/magnificat-initium-i-D_.tex}
 
 % maly svindl, ale prizvukova struktura VIIIsoll-G2 a Isoll-D* je stejna
-%\psalmusEtTranslatio{temporalia/magnificat.tex}{temporalia/magnificat-boh.tex}
 \psalmusEtTranslatioT{temporalia/magnificat-comb.tex}{10cm}
+
+\vfill
 
 \pagebreak
 
@@ -308,16 +379,21 @@ Editio Sancti Wolfgangi \annusEditionis
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
 \vspace{2mm}
 
-\includescore{temporalia/benedicamus-duplex-vesperae.tex}
+\rubrica{In I. Vesperis:}
+
+\includescore{temporalia/benedicamus-solemnis-1vesp.tex}
+
+\rubrica{In II. Vesperis:}
+
+\includescore{temporalia/benedicamus-solemnis-2vesp.tex}
 
 \vfill
-
 \pagebreak
 
 \hora{Ad Completorium.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sideThumbs{{\scriptsize{}Completorium}}
 
-\rubrica{Lector incipit:}
+\rubrica{Lector petit benedictionem, dicens:}
 
 \includescore{temporalia/jubedomnebenedicere.tex}
 
@@ -329,9 +405,7 @@ Editio Sancti Wolfgangi \annusEditionis
 
 \vfill
 
-\pars{Lectio brevis.}
-
-\scriptura{1 Petr. 5, 8-9}
+\pars{Lectio brevis.} \scriptura{1 Petr. 5, 8-9}
 
 \includescore{temporalia/lectiobrevis-fratressobrii.tex}
 
@@ -344,7 +418,6 @@ Editio Sancti Wolfgangi \annusEditionis
 \noindent Pater noster \rubricatum{quod dicitur totum secreto.}
 
 \vfill
-
 \pagebreak
 
 \pars{Confessio.}
@@ -370,6 +443,8 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \vfill
 
+\rubrica{Et facta absolutione dicitur:}
+
 \includescore{temporalia/convertenosdeus.tex}
 
 \vfill
@@ -377,7 +452,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \includescore{temporalia/deusinadiutorium-communis.tex}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 1.}
@@ -390,22 +464,15 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps4-initium-viii-G-auto.tex}
 
-%\translatioPsalmi{temporalia/ps4-boh.tex}
-%\input{temporalia/ps4.tex}
-%\psalmusEtTranslatioB{temporalia/ps4.tex}{temporalia/ps4-boh.tex}{11.5cm}
 \psalmusEtTranslatioT{temporalia/ps4-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 2.} \scriptura{Psalmus 90.}
 
 %\includescore{temporalia/ps90-initium-viii-G-auto.tex}
 
-%\translatioPsalmi{temporalia/ps90-boh.tex}
-%\input{temporalia/ps90.tex}
-%\psalmusEtTranslatioB{temporalia/ps90.tex}{temporalia/ps90-boh.tex}{9.5cm}
 \psalmusEtTranslatioT{temporalia/ps90-comb.tex}{10cm}
 
 \pagebreak
@@ -414,9 +481,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 %\includescore{temporalia/ps133-initium-viii-G-auto.tex}
 
-%\translatioPsalmi{temporalia/ps133-boh.tex}
-%\input{temporalia/ps133.tex}
-%\psalmusEtTranslatio{temporalia/ps133.tex}{temporalia/ps133-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps133-comb.tex}{10cm}
 
 \vfill
@@ -452,8 +516,9 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/versus-custodi.tex}
 
-\trComplVersus
+\noindent \trComplVersus
 
+\vfill
 \pagebreak
 
 \cantusCumNeumis
@@ -464,11 +529,44 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \trAntSalvaNos
 
-%\includescore{temporalia/nuncdimitis-initium-iii-a-auto.tex}
+\scriptura{Lucæ 2, 29-32}
 
-%\psalmusEtTranslatioB{temporalia/nuncdimitis.tex}{temporalia/nuncdimitis-boh.tex}{10.5cm}
-%\psalmusEtTranslatioT{temporalia/nuncdimitis-comb.tex}{10cm}
+\includescore{temporalia/nuncdimittis-initium-iii-a-auto.tex}
 
+\psalmusEtTranslatioT{temporalia/nuncdimittis-comb.tex}{10cm}
+
+\vfill
+\pagebreak
+
+\pars{Oratio.}
+
+\cantusSineNeumas
+
+\includescore{temporalia/oratio-visita.tex}
+
+\vfill
+
+\includescore{temporalia/domineexaudi.tex}
+
+\vfill
+
+\includescore{temporalia/benedicamus-minor.tex}
+
+\vfill
+
+\pars{Benedictio.}
+
+\noindent Benedícat et custódiat nos omnípotens et miséricors Dóminus, \gredagger{}
+Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
+
+\vfill
+\pagebreak
+
+\pars{Antiphona finalis B. M. V.}
+
+\antiphona{V}{temporalia/an_alma_redemptoris_mater.tex}
+
+\vfill
 \pagebreak
 
 \hora{Ad Matutinum.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -476,9 +574,7 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \subhora{In I. Nocturno}
 
-\pars{psalmus 1.}
-
-\scriptura{Psalmus 28, 1.2; \textbf{H72}}
+\pars{psalmus 1.} \scriptura{Psalmus 28, 1.2; \textbf{H72}}
 
 \antiphona{VII a}{temporalia/matant1.tex}
 
@@ -488,18 +584,12 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps28-initium-vii-a-auto.tex}
 
-%\translatioPsalmi{temporalia/ps28-boh.tex}
-%\input{temporalia/ps28.tex}
-%\psalmusEtTranslatioB{temporalia/ps28.tex}{temporalia/ps28-boh.tex}{10.5cm}
 \psalmusEtTranslatioT{temporalia/ps28-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{psalmus 2.}
-
-\scriptura{Psalmus 45, 5; \textbf{H72}}
+\pars{psalmus 2.} \scriptura{Psalmus 45, 5; \textbf{H72}}
 
 \antiphona{VI F}{temporalia/matant2.tex}
 
@@ -509,18 +599,12 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps45-initium-vi-F-auto.tex}
 
-%\translatioPsalmi{temporalia/ps45-boh.tex}
-%\input{temporalia/ps45.tex}
-%\psalmusEtTranslatio{temporalia/ps45.tex}{temporalia/ps45-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps45-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{psalmus 3.}
-
-\scriptura{Psalmus 46, 7.8; \textbf{H72}}
+\pars{psalmus 3.} \scriptura{Psalmus 46, 7.8; \textbf{H72}}
 
 \antiphona{I f}{temporalia/matant3.tex}
 
@@ -530,18 +614,36 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps46-initium-i-f-auto.tex}
 
-%\translatioPsalmi{temporalia/ps46-boh.tex}
-%\input{temporalia/ps46.tex}
-%\psalmusEtTranslatio{temporalia/ps46.tex}{temporalia/ps46-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps46-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{Lectio I}
+\pars{Versus.} \scriptura{Psalmus 65, 4}
+
+\includescore{temporalia/versus-omnis.tex}
+
+\noindent \trMatVersusI
+
+\vfill
+
+\includescore{temporalia/oratiodominica-mat.tex}
+
+\vfill
+
+\pars{Absolutio.}
+
+\includescore{temporalia/absolutio-exaudi.tex}
+
+\vfill
+\pagebreak
+
+\includescore{temporalia/benedictio-solemn-benedictione.tex}
+
+\vfill
+
 % De Isaia Prophéta.
-\scriptura{Isaiæ 55, 1-4}
+\pars{Lectio I} \scriptura{Isaiæ 55, 1-4}
 
 \textusEtTranslatio{
   Omnes sitiéntes, veníte ad aquas, et qui non habétis argéntum, properáte,
@@ -553,20 +655,25 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
   Inclináte aurem vestram, et veníte ad me; audíte, et vivet ánima vestra,
   et fériam vobíscum pactum sempitérnum, misericórdias David fidéles.
   Ecce testem pópulis dedi eum, ducem ac præceptórem géntibus.
-
-  \tuAutem
 }{\trMatLecI}{10cm}
 
+\tuAutem
+
 \vfill
+\pagebreak
+
+\pars{Responsorium 1.} \scriptura{\Rbar{} Matth. 3, 16-17 \Vbar{} Lucæ 3, 22; \textbf{H72}}
 
 \responsorium{III}{temporalia/matresp1.tex}{\trMatRespI}
 
 \vfill
-
 \pagebreak
 
-\pars{Lectio II}
-\scriptura{Isaiæ 60, 1-6}
+\includescore{temporalia/benedictio-solemn-unigenitus.tex}
+
+\vfill
+
+\pars{Lectio II} \scriptura{Isaiæ 60, 1-6}
 
 \textusEtTranslatio{
   Surge, illumináre, Jerúsalem, quia venit lumen tuum, et glória Dómini
@@ -580,20 +687,25 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
   convérsa fúerit ad te multitúdo maris; fortitúdo géntium vénerit tibi.
   Inundátio camelórum opériet te, dromedárii Mádian et Epha; omnes de Saba
   vénient, aurum et thus deferéntes, et laudem Dómino annuntiántes.
-
-  \tuAutem
 }{\trMatLecII}{10cm}
 
+\tuAutem
+
 \vfill
+\pagebreak
+
+\pars{Responsorium 2.} \scriptura{\Rbar{} Matth. 3, 16-17 \Vbar{} ibidem; \textbf{H75}}
 
 \responsorium{II}{temporalia/matresp2.tex}{\trMatRespII}
 
 \vfill
-
 \pagebreak
 
-\pars{Lectio III}
-\scriptura{Isaiæ 61, 10-11; 62, 1}
+\includescore{temporalia/benedictio-solemn-spiritus.tex}
+
+\vfill
+
+\pars{Lectio III} \scriptura{Isaiæ 61, 10-11; 62, 1}
 
 \textusEtTranslatio{
   Gaudens gaudébo in Dómino, et exsultábit ánima mea in Deo meo, quia
@@ -604,23 +716,23 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
   géntibus.
   Propter Sion non tacébo, et propter Jerúsalem non quiéscam, donec
   egrediátur ut splendor justus ejus, et salvátor ejus ut lampas accendátur.
-
-  \tuAutem
 }{\trMatLecIII}{10cm}
 
+\tuAutem
+
 \vfill
+\pagebreak
+
+\pars{Responsorium 3.} \scriptura{\Rbar{} Psalmus 71, 10 \Vbar{} Isaiæ 60, 6; \textbf{Sar. 85}}
 
 \responsorium{II}{temporalia/matresp3.tex}{\trMatRespIII}
 
 \vfill
-
 \pagebreak
 
 \subhora{In II. Nocturno}
 
-\pars{psalmus 4.}
-
-\scriptura{Psalmus 65, 4; \textbf{H73}}
+\pars{psalmus 4.} \scriptura{Psalmus 65, 4; \textbf{H73}}
 
 \antiphona{IV E}{temporalia/matant4.tex}
 
@@ -630,18 +742,12 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps65-initium-iv-E-auto.tex}
 
-%\translatioPsalmi{temporalia/ps65-boh.tex}
-%\input{temporalia/ps65.tex}
-%\psalmusEtTranslatio{temporalia/ps65.tex}{temporalia/ps65-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps65-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{psalmus 5.}
-
-\scriptura{Psalmus 71, 10; \textbf{H73}}
+\pars{psalmus 5.} \scriptura{Psalmus 71, 10; \textbf{H73}}
 
 \antiphona{I a2}{temporalia/matant5.tex}
 
@@ -651,18 +757,12 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps71-initium-i-a2-auto.tex}
 
-%\translatioPsalmi{temporalia/ps71-boh.tex}
-%\input{temporalia/ps71.tex}
-%\psalmusEtTranslatio{temporalia/ps71.tex}{temporalia/ps71-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps71-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{psalmus 6.}
-
-\scriptura{Psalmus 85, 7.8; \textbf{H72}}
+\pars{psalmus 6.} \scriptura{Psalmus 85, 7.8; \textbf{H72}}
 
 \antiphona{IV E}{temporalia/matant6.tex}
 
@@ -672,18 +772,36 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps85-initium-iv-E-auto.tex}
 
-%\translatioPsalmi{temporalia/ps85-boh.tex}
-%\input{temporalia/ps85.tex}
-%\psalmusEtTranslatio{temporalia/ps85.tex}{temporalia/ps85-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps85-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{Lectio IV}
+\pars{Versus.}
+
+\includescore{temporalia/versus-reges.tex}
+
+\noindent \trVersus
+
+\vfill
+
+\includescore{temporalia/oratiodominica-mat.tex}
+
+\vfill
+
+\pars{Absolutio.}
+
+\includescore{temporalia/absolutio-ipsius.tex}
+
+\vfill
+\pagebreak
+
+\includescore{temporalia/benedictio-solemn-deus.tex}
+
+\vfill
+
 % Sermo sancti Leónis Papæ.
-\scriptura{Sermo 2. de Epiphania.}
+\pars{Lectio IV} \scriptura{Sermo 2. de Epiphania.}
 
 \textusEtTranslatio{
   Gaudéte in Dómino, dilectíssimi, íterum dico, gaudéte: quóniam brevi
@@ -697,20 +815,25 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
   perdúxit: ut a solis ortu usque ad occásum veri Regis generátio coruscáret,
   cum rerum fidem et regna Oriéntis per Magos díscerent, et Románum impérium
   non láteret.
-
-  \tuAutem
 }{\trMatLecIV}{10cm}
 
+\tuAutem
+
 \vfill
+\pagebreak
+
+\pars{Responsorium 4.} \scriptura{\Rbar{} Isaiæ 60, 1 \Vbar{} ibid. 60, 3; \textbf{H74}}
 
 \responsorium{V}{temporalia/matresp4.tex}{\trMatRespIV}
 
 \vfill
-
 \pagebreak
 
-\pars{Lectio V}
-\scriptura{Sermo 2. de Epiphania.}
+\includescore{temporalia/benedictio-solemn-christus.tex}
+
+\vfill
+
+\pars{Lectio V} \scriptura{Sermo 2. de Epiphania.}
 
 \textusEtTranslatio{
   Nam et sævítia Heródis volens primórdia suspécti sibi Regis exstínguere,
@@ -722,20 +845,25 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
   illátus est, ut gens antíquis erróribus dédita, jam ad vicínam salútem per
   occúltam grátiam signarétur: et quæ nondum ejécerat ab ánimo superstitiónem,
   jam hospítio recíperet veritátem.
-
-  \tuAutem
 }{\trMatLecV}{10cm}
 
+\tuAutem
+
 \vfill
+\pagebreak
+
+\pars{Responsorium 5.} \scriptura{\Rbar{} Isaiæ 60, 6 \Vbar{} Psalmus 71, 10; \textbf{H73}}
 
 \responsorium{VII}{temporalia/matresp5.tex}{\trMatRespV}
 
 \vfill
-
 \pagebreak
 
-\pars{Lectio VI}
-\scriptura{Sermo 2. de Epiphania.}
+\includescore{temporalia/benedictio-solemn-ignem.tex}
+
+\vfill
+
+\pars{Lectio VI} \scriptura{Sermo 2. de Epiphania.}
 
 \textusEtTranslatio{
   Agnoscámus ergo, dilectíssimi, in Magis adoratóribus Christi, vocatiónis
@@ -748,23 +876,23 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
   adorémus in cælis. Ac sicut illi de thesáuris suis mýsticas Dómino múnerum
   spécies obtulérunt, ita et nos de córdibus nostris, quæ Deo sunt digna,
   promámus.
-
-  \tuAutem
 }{\trMatLecVI}{10cm}
 
+\tuAutem
+
 \vfill
+\pagebreak
+
+\pars{Responsorium 6.} \scriptura{\Rbar{} Matth. 2, 1-2 \Vbar{} ibidem 2, 2; \textbf{H74}}
 
 \responsorium{VIII}{temporalia/matresp6.tex}{\trMatRespVI}
 
 \vfill
-
 \pagebreak
 
 \subhora{In III. Nocturno}
 
-\pars{psalmus 7.}
-
-\scriptura{Psalmus 94, 6.7; \textbf{H74}}
+\pars{psalmus 7.} \scriptura{Psalmus 94, 6.7; \textbf{H74}}
 
 \antiphona{VIII G}{temporalia/matant7.tex}
 
@@ -774,18 +902,12 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps94-initium-viii-G.tex}
 
-%\translatioPsalmi{temporalia/ps94-boh.tex}
-%\input{cantus/nrom02/ps94.tex}
-%\psalmusEtTranslatioB{cantus/nrom02/ps94.tex}{temporalia/ps94-boh.tex}{9.5cm}
 \psalmusEtTranslatioT{temporalia/ps94-comb.tex}{10.5cm}
 
 \vfill
-
 \pagebreak
 
-\pars{psalmus 8.}
-
-\scriptura{Psalmus 95, 9; \textbf{H74}}
+\pars{psalmus 8.} \scriptura{Psalmus 95, 9; \textbf{H74}}
 
 \antiphona{VI F}{temporalia/matant8.tex}
 
@@ -795,18 +917,12 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps95-initium-vi-F-auto.tex}
 
-%\translatioPsalmi{temporalia/ps95-boh.tex}
-%\input{temporalia/ps95.tex}
-%\psalmusEtTranslatioB{temporalia/ps95.tex}{temporalia/ps95-boh.tex}{10cm}
 \psalmusEtTranslatioT{temporalia/ps95-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{psalmus 9.}
-
-\scriptura{Psalmus 96, 7; \textbf{H74}}
+\pars{psalmus 9.} \scriptura{Psalmus 96, 7; \textbf{H74}}
 
 \antiphona{VI F}{temporalia/matant9.tex}
 
@@ -816,18 +932,36 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps96-initium-vi-F-auto.tex}
 
-%\translatioPsalmi{temporalia/ps96-boh.tex}
-%\input{temporalia/ps96.tex}
-%\psalmusEtTranslatio{temporalia/ps96.tex}{temporalia/ps96-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps96-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{Lectio VII}
+\pars{Versus.} \scriptura{Psalmus 95, 9}
+
+\includescore{temporalia/versus-adorate-mat.tex}
+
+\noindent \trMatVersusIII
+
+\vfill
+
+\includescore{temporalia/oratiodominica-mat.tex}
+
+\vfill
+
+\pars{Absolutio.}
+
+\includescore{temporalia/absolutio-avinculis.tex}
+
+\vfill
+\pagebreak
+
+\includescore{temporalia/benedictio-solemn-evangelica.tex}
+
+\vfill
+
 % Léctio sancti Evangélii secúndum Matthǽum.
-\scriptura{Matt 2, 1-12}
+\pars{Lectio VII} \scriptura{Matth. 2, 1-12}
 
 \textusEtTranslatio{
   Cum natus esset Jesus in Béthlehem Juda in diébus Heródis regis, ecce Magi
@@ -851,20 +985,25 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
   autem infidélibus, non fidélibus. Quia et illis prophetíæ tamquam fidélibus,
   non infidélibus: et istis signa tamquam infidélibus, non fidélibus data
   sunt.
-
-  \tuAutem
 }{\trMatLecVIIb}{10cm}
 
+\tuAutem
+
 \vfill
+\pagebreak
+
+\pars{Responsorium 7.} \scriptura{\Rbar{} Matth. 2, 9-10 \Vbar{} ibid. 2, 11; \textbf{H73}}
 
 \responsorium{VIII}{temporalia/matresp7.tex}{\trMatRespVII}
 
 \vfill
-
 \pagebreak
 
-\pars{Lectio VIII}
-\scriptura{Homilia 10. in Evang.}
+\includescore{temporalia/benedictio-solemn-divinum.tex}
+
+\vfill
+
+\pars{Lectio VIII} \scriptura{Homilia 10. in Evang.}
 
 \textusEtTranslatio{
   Et notándum, quod Redemptórem nostrum, cum jam perféctæ esset ætátis, eísdem
@@ -875,20 +1014,25 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
   Sed in ómnibus signis, quæ vel nascénte Dómino, vel moriénte eo monstráta
   sunt, considerándum nobis est, quanta fúerit in quorúmdam Judæórum corde
   durítia, qui hunc nec per prophetíæ donum, nec per mirácula agnovérunt.
-
-  \tuAutem
 }{\trMatLecVIII}{10cm}
 
+\tuAutem
+
 \vfill
+\pagebreak
+
+\pars{Responsorium 8.} \scriptura{\Rbar{} Matth. 2, 10-11 \Vbar{} ibid. 2, 9; \textbf{H75}}
 
 \responsorium{IV}{temporalia/matresp8.tex}{\trMatRespVIII}
 
 \vfill
-
 \pagebreak
 
-\pars{Lectio IX}
-\scriptura{Homilia 10. in Evang.}
+\includescore{temporalia/benedictio-solemn-perevangelica.tex}
+
+\vfill
+
+\pars{Lectio IX} \scriptura{Homilia 10. in Evang.}
 
 \textusEtTranslatio{
   Omnia quippe eleménta auctórem suum venísse testáta sunt. Ut enim de eis
@@ -900,12 +1044,11 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
   tamen hunc, quem Dóminum ómnia insensibília eleménta sensérunt, adhuc
   infidélium Judæórum corda Deum esse mínime cognóscunt, et durióra saxis,
   scindi ad pœniténdum nolunt.
-
-  \tuAutem
 }{\trMatLecIX}{10cm}
 
-\vfill
+\tuAutem
 
+\vfill
 \pagebreak
 
 % Te Deum
@@ -918,7 +1061,41 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \trTeDeum
 
 \vfill
+\pagebreak
 
+% Evangelium
+
+\lectioEvangelii
+
+\hspace{0.5cm}
+\Vbardot{} Te décet laus, te decet hymnus: tibi glória Deo Patri, et Fílio, \\
+cum Spíritu Sancto in sǽcula seculórum.
+\Rbardot{} Amen.
+
+\vfill
+\pagebreak
+
+\pars{Oratio.}
+
+\includescore{temporalia/oratio.tex}
+\trOrationis
+
+\vfill
+
+\includescore{temporalia/domineexaudi.tex}
+
+\vfill
+
+% Nocturnale Romanum 2002, p. LXXVI Benedicamus Domino seems to match
+% the one from Solemn Laudes.
+\includescore{temporalia/benedicamus-solemnis-laud.tex}
+
+\vfill
+
+\noindent \Vbardot{} Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
+\Rbardot{} Amen.
+
+\vfill
 \pagebreak
 
 \hora{Ad Laudes.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -933,19 +1110,13 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \cantusSineNeumas
 
-\pars{psalmus 1.}
-
-\scriptura{Psalmus 66.}
+\pars{psalmus 1.} \scriptura{Psalmus 66.}
 
 \includescore{temporalia/ps66-initium-dir-auto.tex}
 
-%\translatioPsalmi{temporalia/ps66-boh.tex}
-%\input{temporalia/ps66.tex}
-%\psalmusEtTranslatio{temporalia/ps66.tex}{temporalia/ps66-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps66-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 2.}
@@ -958,13 +1129,9 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps92-initium-ii-D-auto.tex}
 
-%\translatioPsalmi{temporalia/ps92-boh.tex}
-%\input{temporalia/ps92.tex}
-%\psalmusEtTranslatio{temporalia/ps92.tex}{temporalia/ps92-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps92-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 3.}
@@ -977,13 +1144,9 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps99-initium-i-g2-auto.tex}
 
-%\translatioPsalmi{temporalia/ps99-boh.tex}
-%\input{temporalia/ps99.tex}
-%\psalmusEtTranslatio{temporalia/ps99.tex}{temporalia/ps99-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps99-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 4.}
@@ -996,13 +1159,9 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps62-initium-i-g3-auto.tex}
 
-%\translatioPsalmi{temporalia/ps62-boh.tex}
-%\input{temporalia/ps62.tex}
-%\psalmusEtTranslatio{temporalia/ps62.tex}{temporalia/ps62-boh.tex}
 \psalmusEtTranslatioT{temporalia/ps62-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 5.}
@@ -1015,7 +1174,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/dan3-initium-iv-E-auto.tex}
 
-%\psalmusEtTranslatioB{temporalia/dan3.tex}{temporalia/dan3-boh.tex}{10cm} % Canticum trium
 \psalmusEtTranslatioT{temporalia/dan3-comb.tex}{10cm}
 
 \rubrica{Hic non dicitur Gloria Patri, neque Amen.}
@@ -1025,7 +1183,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \includescore{temporalia/ant4.tex} % repeat the antiphon - new page
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus 6.}
@@ -1042,9 +1199,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \newlength{\psVItransW}
 \setlength{\psVItransW}{10.5cm}
 
-%\translatioPsalmi{temporalia/ps148-boh.tex}
-%\input{temporalia/ps148.tex}
-%\psalmusEtTranslatioB{temporalia/ps148.tex}{temporalia/ps148-boh.tex}{\psVItransW}
 \psalmusEtTranslatioT{temporalia/ps148-comb.tex}{10cm}
 
 \rubrica{Hic non dicitur Gloria Patri.}
@@ -1054,9 +1208,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps149-initium-vii-c2-auto.tex}
 
-%\translatioPsalmi{temporalia/ps149-boh.tex}
-%\input{temporalia/ps149.tex}
-%\psalmusEtTranslatioB{temporalia/ps149.tex}{temporalia/ps149-boh.tex}{\psVItransW}
 \psalmusEtTranslatioT{temporalia/ps149-comb.tex}{10cm}
 
 \rubrica{Hic non dicitur Gloria Patri.}
@@ -1066,9 +1217,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps150-initium-vii-c2-auto.tex}
 
-%\translatioPsalmi{temporalia/ps150-boh.tex}
-%\input{temporalia/ps150.tex}
-%\psalmusEtTranslatioB{temporalia/ps150.tex}{temporalia/ps150-boh.tex}{\psVItransW}
 \psalmusEtTranslatioT{temporalia/ps150-comb.tex}{10cm}
 
 \pagebreak
@@ -1090,7 +1238,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \trRespLaudes
 \vfill
-
 \pagebreak
 
 \pars{Hymnus.}
@@ -1098,13 +1245,17 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \includescore{temporalia/hym-OSolaMagnarum.tex}
 \input{cantus/amon33/hym-OSolaMagnarum-bohtext.tex}
 
-\vspace{0.5cm}
+\vfill
+\pagebreak
 
-\versusRegesTharsis
+\pars{Versus.}
+
+% Versus. %%%
+\includescore{temporalia/versus-adorate.tex}
+
+\noindent \trVersusLaudes
 
 \vfill
-
-\pagebreak
 
 \cantusCumNeumis
 
@@ -1114,20 +1265,17 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \trAntBenedictus
 
+\scriptura{Lucæ 1, 68-79}
+
 \includescore{temporalia/benedictus-initium-viiisoll-G2-auto.tex}
 
-%\psalmusEtTranslatioB{temporalia/benedictus.tex}{temporalia/benedictus-boh.tex}{10.5cm}
 \psalmusEtTranslatioT{temporalia/benedictus-comb.tex}{10cm}
 
-\vspace{0.5cm}
-
 \vfill
-
 \pagebreak
 
 \cantusSineNeumas
 
-\label{oratio}
 \anteOrationem
 
 \pagebreak
@@ -1142,10 +1290,9 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
 \vspace{2mm}
 
-\includescore{temporalia/benedicamus-duplex-laudes.tex}
+\includescore{temporalia/benedicamus-solemnis-laud.tex}
 
 \vfill
-
 \pagebreak
 
 \hora{Ad Tertiam.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1160,7 +1307,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \antiphona{VIII}{temporalia/hym-NuncSancte.tex}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus.}
@@ -1173,13 +1319,69 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \includescore{temporalia/ps118v_vii-initium-i-g2-auto.tex}
 
-%\translatioPsalmi{temporalia/ps118v_vii-boh.tex}
-%\input{temporalia/ps118v_vii.tex}
-%\psalmusEtTranslatioB{temporalia/ps118v_vii.tex}{temporalia/ps118v_vii-boh.tex}{10cm}
 \psalmusEtTranslatioT{temporalia/ps118v_vii-comb.tex}{10cm}
 
 \vfill
+\pagebreak
 
+\raggedcolumns
+
+% Capitulum. %%%
+\cantusSineNeumas
+
+\label{capitulum}
+\pars{Capitulum.} \scriptura{Isaiæ 60, 1}
+
+\includescore{temporalia/capitulum-Surge.tex}
+
+% preklad Jeruz. bible
+\trCapituli
+
+\vfill
+
+\pars{Versus.}
+
+\includescore{temporalia/versus-reges-simplex.tex}
+
+\noindent \trVersus
+
+\vfill
+
+\rubrica{Ante Orationem, cantatur a Superiore:}
+
+\pars{Supplicatio Litaniæ.}
+
+\includescore{temporalia/supplicatiolitaniae.tex}
+
+\vfill
+
+\pars{Oratio Dominica.}
+
+\includescore{temporalia/oratiodominica-mat.tex}
+
+\vfill
+
+\includescore{temporalia/domineexaudi.tex}
+
+\vfill
+\pagebreak
+
+% Oratio. %%%
+\pars{Oratio.}
+
+\includescore{temporalia/oratio.tex}
+\trOrationis
+
+\vfill
+
+\includescore{temporalia/benedicamus-minor.tex}
+
+\vfill
+
+\noindent \Vbardot{} Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
+\Rbardot{} Amen.
+
+\vfill
 \pagebreak
 
 \hora{Ad Missam} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1194,20 +1396,19 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \trIntroitus
 
 \vfill
-\pagebreak
 
-\pars{Kyrie.}
+\pars{Kyrie.} \scriptura{X. s.}
 
-\superInitialam{I}
-\includescore{temporalia/ix-kyrie.tex}
+\superInitialam{III}
+\includescore{temporalia/ii-kyrie.tex}
 
 \vfill
 \pagebreak
 
-\pars{Gloria.}
+\pars{Gloria.} \scriptura{XIII. s.}
 
-\superInitialam{VII}
-\includescore{temporalia/ix-gloria.tex}
+\superInitialam{I}
+\includescore{temporalia/ii-gloria.tex}
 
 \vfill
 \pagebreak
@@ -1241,6 +1442,13 @@ anni currentis iuxta hanc formulam.}
 \vfill
 \pagebreak
 
+\pars{Credo.} \scriptura{XI. s.}
+
+\superInitialam{IV}
+\includescore{temporalia/credo-i.tex}
+
+\vfill
+
 \pars{Offertorium.}
 
 \antiphona{V}{temporalia/offertorium-RegesTharsis.tex}
@@ -1250,16 +1458,16 @@ anni currentis iuxta hanc formulam.}
 \vfill
 \pagebreak
 
-\pars{Sanctus.}
+\pars{Sanctus.} \scriptura{XII-XIII. s.}
 
-\superInitialam{V}
-\includescore{temporalia/ix-sanctus.tex}
+\superInitialam{I}
+\includescore{temporalia/ii-sanctus.tex}
 
 \vspace{1cm}
-\pars{Agnus Dei.}
+\pars{Agnus Dei.} \scriptura{X. s.}
 
-\superInitialam{V}
-\includescore{temporalia/ix-agnusdei.tex}
+\superInitialam{I}
+\includescore{temporalia/ii-agnusdei.tex}
 
 \vfill
 \pagebreak
@@ -1273,8 +1481,9 @@ anni currentis iuxta hanc formulam.}
 \scriptura{Psalmus 71., 1.2.3.7.8.10.11.12.17ab.17cd.18}
 
 \cantusSineNeumas
-\greblockcustos
-\includescore{temporalia/communio-versus-DeusJudicium.tex}
+\includescore{temporalia/communio-versus-DeusJudicium-initium.tex}
+
+\input{cantus/triplex76/communio-versus-DeusJudicium.tex}
 
 \vfill
 \pagebreak
@@ -1291,7 +1500,6 @@ anni currentis iuxta hanc formulam.}
 \antiphona{VIII}{temporalia/hym-RectorPotens.tex}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus.}
@@ -1304,13 +1512,73 @@ anni currentis iuxta hanc formulam.}
 
 \includescore{temporalia/ps118viii_x-initium-i-g3-auto.tex}
 
-%\translatioPsalmi{temporalia/ps118viii_x-boh.tex}
-%\input{temporalia/ps118viii_x.tex}
-%\psalmusEtTranslatioB{temporalia/ps118viii_x.tex}{temporalia/ps118viii_x-boh.tex}{10cm}
 \psalmusEtTranslatioT{temporalia/ps118viii_x-comb.tex}{10cm}
 
 \vfill
+\pagebreak
 
+\pagebreak
+
+\raggedcolumns
+
+% Capitulum. %%%
+\cantusSineNeumas
+
+\label{capitulum}
+\pars{Capitulum.} \scriptura{Isaiæ 60, 4}
+
+\includescore{temporalia/capitulum-Leva.tex}
+
+% preklad Jeruz. bible
+\trCapituliLeva
+
+\vfill
+
+\pars{Versus.}
+
+\includescore{temporalia/versus-omnes.tex}
+
+\noindent \trVersusSexta
+
+\vfill
+
+\vfill
+
+\rubrica{Ante Orationem, cantatur a Superiore:}
+
+\pars{Supplicatio Litaniæ.}
+
+\includescore{temporalia/supplicatiolitaniae.tex}
+
+\vfill
+
+\pars{Oratio Dominica.}
+
+\includescore{temporalia/oratiodominica-mat.tex}
+
+\vfill
+
+\includescore{temporalia/domineexaudi.tex}
+
+\vfill
+\pagebreak
+
+% Oratio. %%%
+\pars{Oratio.}
+
+\includescore{temporalia/oratio.tex}
+\trOrationis
+
+\vfill
+
+\includescore{temporalia/benedicamus-minor.tex}
+
+\vfill
+
+\noindent \Vbardot{} Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
+\Rbardot{} Amen.
+
+\vfill
 \pagebreak
 
 \hora{Ad Nonam.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1325,7 +1593,6 @@ anni currentis iuxta hanc formulam.}
 \antiphona{VIII}{temporalia/hym-RerumDeus.tex}
 
 \vfill
-
 \pagebreak
 
 \pars{psalmus.}
@@ -1338,19 +1605,79 @@ anni currentis iuxta hanc formulam.}
 
 \includescore{temporalia/ps118xi_xiii-initium-vii-c2-auto.tex}
 
-%\translatioPsalmi{temporalia/ps118xi_xiii-boh.tex}
-%\input{temporalia/ps118xi_xiii.tex}
-%\psalmusEtTranslatioB{temporalia/ps118xi_xiii.tex}{temporalia/ps118xi_xiii-boh.tex}{10cm}
 \psalmusEtTranslatioT{temporalia/ps118xi_xiii-comb.tex}{10cm}
+
+\pagebreak
+
+\raggedcolumns
+
+% Capitulum. %%%
+\cantusSineNeumas
+
+\label{capitulum}
+\pars{Capitulum.} \scriptura{Isaiæ 60, 6}
+
+\includescore{temporalia/capitulum-Omnes.tex}
+
+% preklad Jeruz. bible
+\trCapituliOmnes
+
+\vfill
+
+\pars{Versus.}
+
+\includescore{temporalia/versus-adorate-simplex.tex}
+
+\noindent \trVersusLaudes
+
+\vfill
+
+\vfill
+
+\rubrica{Ante Orationem, cantatur a Superiore:}
+
+\pars{Supplicatio Litaniæ.}
+
+\includescore{temporalia/supplicatiolitaniae.tex}
+
+\vfill
+
+\pars{Oratio Dominica.}
+
+\includescore{temporalia/oratiodominica-mat.tex}
+
+\vfill
+
+\includescore{temporalia/domineexaudi.tex}
+
+\vfill
+\pagebreak
+
+% Oratio. %%%
+\pars{Oratio.}
+
+\includescore{temporalia/oratio.tex}
+\trOrationis
+
+\vfill
+
+\includescore{temporalia/benedicamus-minor.tex}
+
+\vfill
+
+\noindent \Vbardot{} Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
+\Rbardot{} Amen.
+
+\vfill
 
 \vspace{2cm}
 
 \hora{In II. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sideThumbs{II. Vesperis}
+%\sideThumbs{II. Vesperis}
 
 \rubrica{Omnia ut in I. Vesperis, pg. \pageref{deusinadiutorium},
 præter antiphonam ad Magnificat, quæ est propria,
-pg. \pageref{magnificatIIvesp}.}
+pg. \pageref{magnificatIIvesp}, et Benedicamus Domino.}
 
 \newpage
 \RemoveSideThumbs
