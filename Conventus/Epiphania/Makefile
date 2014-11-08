@@ -18,7 +18,7 @@ PSALM_PREPROCESSOR = $(TOOLS_DIR)/psalmpreprocessor.rb
 INITIUM_TOOL = $(TOOLS_DIR)/initiumpsalmi.rb
 PSSKIP = 1
 GENPSCOMB = $(AWK) -f pscomb.awk -v PSSKIP=$(PSSKIP) -v TRFILE=$(word 2,$^) $< > $@
-PSALMS = 4 28 45 46 62 65 66 71 85 90 92 95 96 99 109 110 111 112 118v_vii 118viii_x 118xi_xiii 133 148 149 150
+PSALMS = 4 28 45 46 62 65 71 85 90 92 95 96 99 109 110 111 112 113 116 118v_x 118xi_xvi 118xvii_xxii 133 148 149 150
 include tonus.mk
 MODUS-4 = viii-G
 MODUS-28 = vii-a
@@ -26,7 +26,6 @@ MODUS-45 = vi-F
 MODUS-46 = i-f
 MODUS-62 = i-g3
 MODUS-65 = iv-E
-MODUS-66 = dir
 MODUS-71 = i-a2
 MODUS-85 = iv-E
 MODUS-90 = viii-G
@@ -38,9 +37,11 @@ MODUS-109 = ii-D
 MODUS-110 = i-g2
 MODUS-111 = i-g3
 MODUS-112 = iv-E
-MODUS-118v_vii = i-g2
-MODUS-118viii_x = i-g3
-MODUS-118xi_xiii = vii-c2
+MODUS-113 = vii-c2
+MODUS-116 = vii-c2
+MODUS-118v_x = i-g2
+MODUS-118xi_xvi = i-g3
+MODUS-118xvii_xxii = vii-c2
 MODUS-133 = viii-G
 MODUS-148 = vii-c2
 MODUS-149 = vii-c2
@@ -85,10 +86,10 @@ SCORES = alleluia-VidimusStellam ant1 ant2 ant3 ant4 ant5 ant-ben-laud ant-magn-
 	 $(addprefix benedictio-solemn-,benedictione unigenitus spiritus deus christus ignem evangelica divinum perevangelica) \
 	 $(addprefix benedicamus-solemnis-,laud 1vesp 2vesp) \
 	 $(addprefix versus-,adorate adorate-simplex reges reges-simplex omnes) \
-	 $(addprefix capitulum-,Surge Leva Omnes)
+	 $(addprefix capitulum-,Surge Leva Omnes) tedecetlaus tonus-evangelii-b
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = cantus/amon33/hym-HostisHerodes-bohtext.tex cantus/amon33/hym-OSolaMagnarum-bohtext.tex \
-	    cantus/nrom02/ps94.tex cantus/triplex76/communio-versus-DeusJudicium.tex
+	    cantus/nrom02/ps94.tex $(TMP_DIR)/communio-versus-DeusJudicium-comb.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
 LAPSALMSINITTEX = $(patsubst %.gabc,%.tex,$(LAPSALMSINITGABC))
@@ -102,7 +103,7 @@ include $(iter)
 define iter-doit
 $(TMP_DIR)/%.tex: $(i)/%.gabc ; $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g' $$< | $(GREGORIO) -s -o $$@
 endef
-iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 nrom02 grom61 triplex76 otriplex85 arom12) \
+iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 nrom02 grom61 triplex76 otriplex85 arom12 cselecti57) \
 	     $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12) $(PSALMTONES_DIR)
 include $(iter)
 
@@ -113,14 +114,13 @@ $(TMP_DIR)/magnificat.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold
 $(TMP_DIR)/ps90.tex: PSALMOPTS = --accents-style bold $(LAPSALMOPTSACC)
 $(TMP_DIR)/ps133.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold $(LAPSALMOPTSACC)
 $(TMP_DIR)/%-boh.tex: PSALMOPTS = $(CZPSALMOPTS)
-$(CZPSALMS): $(TMP_DIR)/%-boh.tex: $(CZECH_PSALMS_DIR)/Hejcl1922/%.pslm
+$(CZPSALMS) $(TMP_DIR)/benedictus-boh.tex: $(TMP_DIR)/%-boh.tex: $(CZECH_PSALMS_DIR)/Hejcl1922/%.pslm
 	$(GENPSALM)
 $(TMP_DIR)/ps94-boh.tex: cantus/nrom02/ps94.pslm
 	$(GENPSALM)
 $(TMP_DIR)/dan3-boh.tex: $(CZECH_PSALMS_DIR)/Pavlik/dan3.pslm
 	$(GENPSALM)
-$(TMP_DIR)/benedictus-boh.tex $(TMP_DIR)/magnificat-boh.tex $(TMP_DIR)/nuncdimittis-boh.tex: \
-$(TMP_DIR)/%-boh.tex: $(CZECH_PSALMS_DIR)/DMC199x/%.pslm
+$(patsubst %,$(TMP_DIR)/%-boh.tex, magnificat nuncdimittis): $(TMP_DIR)/%-boh.tex: $(CZECH_PSALMS_DIR)/DMC199x/%.pslm
 	$(GENPSALM)
 $(TMP_DIR)/ps94.tex: cantus/nrom02/ps94.tex
 	$(CP) $< $@
@@ -129,8 +129,10 @@ $(LAPSALMS): $(TMP_DIR)/ps%.tex: $(PSALMS_DIR)/ps%.pslm
 $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: $(PSALMS_DIR)/%.pslm
 	$(GENPSALM)
 $(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
-$(TMP_DIR)/ps90-comb.tex $(TMP_DIR)/ps113-comb.tex: PSSKIP = 0
+$(TMP_DIR)/ps90-comb.tex $(TMP_DIR)/ps133-comb.tex: PSSKIP = 0
 $(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
+	$(GENPSCOMB)
+$(TMP_DIR)/communio-versus-DeusJudicium-comb.tex: $(patsubst %,cantus/triplex76/communio-versus-DeusJudicium%tex,. -boh.)
 	$(GENPSCOMB)
 epiphania.pdf: epiphania.tex conventuscommune.tex translationes_cs.tex \
 	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)

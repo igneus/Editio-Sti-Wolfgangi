@@ -1,0 +1,10 @@
+office-part: tonus evangelii B;
+book: Graduale Triplex 1979, p. 806;
+initial-style: 1;
+%%
+
+(c3)
+(h[alt:Flexa.]) (h) (hR) (h) (f) (hr1) (gr) (g) (gr1) (hr) +(h.) (;)
+(h[alt:Metrum.]) (h) (h) (hR) (hr1f) (fr) *(f.) (;)
+(h[alt:Conclusio.]) (h) (hR) (h) (fhr1) (hr) (h.) (,) (g) (gR) (ghr1) (hr) (h.) (::)
+(hR[alt:Interrogatio.]) (h.) (,) (g) (g) (g) (gR) (f) (g) <c>?</c>(gh..) (::)
