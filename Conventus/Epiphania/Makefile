@@ -70,7 +70,7 @@ ALLLAPSALMS = $(LAPSALMS) $(LAPSALMSEXTRA)
 SCORES = alleluia-VidimusStellam ant1 ant2 ant3 ant4 ant5 ant-ben-laud ant-magn-vesp1 \
 	 ant-magn-vesp2 communio-VidimusStellam communio-versus-DeusJudicium-initium \
 	 deusinadiutorium-communis domineexaudi dominusvobiscum-solemnis \
-	 graduale-OmnesDeSaba hym-HostisHerodes hym-OSolaMagnarum credo-i \
+	 graduale-OmnesDeSaba hym-HostisHerodes hym-OSolaMagnarum hym-CrudelisHerodes credo-i \
 	 introitus-EcceAdvenit ii-agnusdei ii-gloria ii-kyrie ii-sanctus \
 	 magnificat-initium-i-D_ magnificat-initium-viii-G2 offertorium-RegesTharsis \
 	 oratiodominica oratio resp1v respl supplicatiolitaniae tuautem \
@@ -89,7 +89,8 @@ SCORES = alleluia-VidimusStellam ant1 ant2 ant3 ant4 ant5 ant-ben-laud ant-magn-
 	 $(addprefix capitulum-,Surge Leva Omnes) tedecetlaus tonus-evangelii-b
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = cantus/amon33/hym-HostisHerodes-bohtext.tex cantus/amon33/hym-OSolaMagnarum-bohtext.tex \
-	    cantus/nrom02/ps94.tex $(TMP_DIR)/communio-versus-DeusJudicium-comb.tex
+	    cantus/nrom02/ps94.tex $(TMP_DIR)/communio-versus-DeusJudicium-comb.tex \
+	    cantus/arom12/hym-CrudelisHerodes-bohtext.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
 LAPSALMSINITTEX = $(patsubst %.gabc,%.tex,$(LAPSALMSINITGABC))
