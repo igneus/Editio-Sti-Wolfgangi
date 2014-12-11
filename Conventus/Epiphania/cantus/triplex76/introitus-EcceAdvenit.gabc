@@ -2,18 +2,22 @@ name: Ecce advenit;
 office-part: Introitus;
 mode: 2;
 book: Graduale Romanum, 1961, p. 57;
-transcriber: Andrew Hinkley;
+transcriber: Andrew Hinkley, Jakub Jelínek;
+nabc-lines: 1;
 annotation: Intr.;
 annotation: ii;
 %%
 
-(f3) EC(ce!fg)CE(f.) *(,) ad(fe~)vé(f!gwh_f)nit(f.) (,)
-do(e)mi(hh)ná(h)tor(h) Dó(hiHG)mi(hggfg)nus:(gf..) (:)
-et(eh~) re(h)gnum(hhh) (,) in(fe~) ma(f!hhf/gf)nu(ef) e(fhhf/gv_FE)jus,(fe..) (:)
-et(f) po(hh)té(hi)stas,(f.) (,) et(fh'!iv) im(i)pé(hiHG)ri(hggfg)um.(gf..)
+(f3)
+EC(ce!fg|vspp2)CE(f.|ta) *(,) ad(fe~|vi>)vé(f!gwh_f|vi-qlhj!clhj)nit(f.|ta) (,)
+do(e|talse4)mi(hh|bv)ná(h|vi)tor(h|vi) Dó(hiHG|toS2sut1lsi7lsm8)mi(hggfg|cl!pivi)nus:(gf..|cl-) (:)
+et(eh~|ta>lse7lss2) re(h|vi)gnum(hhh|ts) (,)
+in(fe~|talsi8) ma(f!hhf/gf|tgppt1clhg)nu(ef|pe) e(fhhf/gv_FE|pepf>hhlssta2lst3)jus,(fe..|cl-) (:)
+et(f|vilss1lssta3) po(hh|bv-)té(hi|pe)stas,(f.|ta) (,)
+et(fh'!iv|salse7) im(i|vi>lss6)pé(hiHG|ci-ppt1)ri(hggfg|cl!prvihh)um.(gf..|cl-)
 <c><i>Ps.</i></c>(::)
-De(e)us,(fe) ju(eh)dí(h)ci(h)um(hg) tu(hi)um(i) Re(hi)gi(h) da:(h.) *(:)
-et(hf~) ju(fh)stí(h)ti(h)am(h) tu(h)am(h') Fí(i)li(hf)o(h) <v>\greblockcustos{}</v>Re(ge)gis.(fgf.) (::)
+De(e|talsi1)us,(fe|vi) ju(eh|vi)dí(h|vi)ci(h|vi)um(hg|vi) tu(hi|vi)um(i|vihhlss1) Re(hi|vi>)gi(h|ta) da:(h.|cl) *(:)
+et(hf~|vi>) ju(fh|pe)stí(h|vi)ti(h|vi)am(h|vi) tu(h|vi)am(h'|vi) Fí(i|vi)li(hf|cl)o(h|vi) <v>\greblockcustos{}</v>Re(ge|vi>)gis.(fgf.|tolsi9) (::)
 <sp>A/</sp>.(c+Z)
 Re(e)ges(fe) Thar(eh)sis(h) et(h) ín(h)su(h)læ(h) mú(hg)ne(hi)ra(i) óf(hi)fe(h)rent:(h.) *(:)
 re(hf~)ges(fh) A(h)ra(h)bum(h) et(h) Sa(h)ba(h) do(i)na(hf) ad(h)dú(ge)cent.(fgf.) (::)

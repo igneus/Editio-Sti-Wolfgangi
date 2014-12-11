@@ -3,10 +3,11 @@ office-part: matutinum, 2. ant.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 228;
 mode: 6;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (c4)
-FLú(f)mi(f)nis(f) ím(f)pe(f)tus(f) * læ(e)tí(g)fi(g)cat,(h) al(f)le(f)lú(e>)ja,(d) (;)
-ci(f)vi(f)tá(f)tem(e) De(g)i,(h) al(h)le(hg)lú(gf~)ja.(f) (::)
+FLú(f|vi)mi(f|vi)nis(f|vi) ím(f|vi)pe(f|vi)tus(f|vi) * læ(e|vi)tí(g|vihg)fi(g|vihg)cat,(h|vihi) al(f|vi)le(f|vi)lú(e>|vi>)ja,(d|ta) (;)
+ci(f|vi)vi(f|vi)tá(f|vi)tem(e|ta) De(g|vi)i,(h|vihi) al(h|vihi)le(hg|cl-hi)lú(gf~|vi>hg)ja.(f|ta) (::)

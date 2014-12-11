@@ -3,20 +3,21 @@ office-part: matutinum, 8. resp.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 242;
 mode: 4;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (c4)
-VI(e)dén(e)tes(fsssded) * {stel}(ef)lam(g) Ma(hghi>)gi,(h) (;)
-ga(h)ví(jh/jsss)si(g) sunt(efh~) gáu(h>)di(gh)o(hiGFghg) mag(egf)no:(eeofv) +(:)
-Et(d) in(g)trán(hi~)tes(h) do(hhgh)mum,(f) in(e>)ve(g)né(gh)runt(gf~) pú(gh)e(ghgFEf)rum(fe)
-cum(e>) Ma(f)rí(gh)a(g) mat(h/jij)re(h) e(gh>)jus,(g) (;)
-et(gh~) pro(h)ci(hg)dén(hhgh>)tes(e) (,)
-ad(e)o(gh)ra(gf)vé(ghGF)runt(g>) e(efEDe)um:(d/efe/fv) <v>\ddag</v>(:)
-Et,(d) a(e)pér(GHig~)tis(hg/hih) the(fd)sáu(ef)ris(g) su(hg!hwihi)is,(ih) (,)
-ob(h)tu(h)lé(jhjsss)runt(ghg) e(f)i(gh) mú(g)ne(gefvEDe)ra,(ed) (;)
-au(e)rum,(ghg~) thus(hhfg) et(GHighg) myr(egffs)rham.(fe) <sp>V/</sp>.(::)
+VI(e|vilse3)dén(e|vi)tes(fsssded|ts-tolsi8) * {stel}(ef|peS)lam(g|vi) Ma(hghi>|po-1lsl3vi>hj)gi,(h|ta) (;)
+ga(h|ta)ví(jh/jsss|cllsc2lss1tshh)si(g|vi) sunt(efh~|ta-ta>lsl3) gáu(h>|vi>)di(gh|pe)o(hiGFghg|pesu2lse4lsc3to) mag(egf|to/sthh)no:(eeofv|sa) +(:)
+Et(d|talsi7) in(g|vi)trán(hi~|ta>lsal2)tes(h|ta) do(hhgh|vi-pohh)mum,(f|ta) in(e>|vi>)ve(g|vi)né(gh|pe)runt(gf~|vi>) pú(gh|pe)e(ghgFEf|toSsu2vi)rum(fe|cl-)
+cum(e>|vi>) Ma(f|vi)rí(gh|peSlsl1)a(g|ta) mat(h/jij|trMlss2)re(h|ta) e(gh>|pe>1)jus,(g|ta) (;)
+et(gh~|ta>lse4) pro(h|vi)ci(hg|cllsc2)dén(hhgh>|vi-po>)tes(e|ta) (,)
+ad(e|vi)o(gh|pe)ra(gf|cllsc2)vé(ghGF|pe-1su2)runt(g>|vi>) e(efEDe|pe-su2vi)um:(d/efe/fv|ta-toS2hgvi-hg) <v>\ddag</v>(:)
+Et,(d|talsi7lsc6) a(e|vi)pér(GHig~|vi>ppt2lsal7lsi6)tis(hg/hih|cllsc2tohg) the(fd|cllsc2lsi1)sáu(ef|peS)ris(g|vi) su(hg!hwihi|cl-qihh!pohh)is,(ih|cl-) (,)
+ob(h|vilse1)tu(h|vi)lé(jhjsss|cllsc2lsl1ts-hh)runt(ghg|tolsi8) e(f|ta)i(gh|pe) mú(g|ta)ne(gefvEDe|cl-ci-vi)ra,(ed|cl-) (;)
+au(e|vilsl3)rum,(ghg~|pe>lss3) thus(hhfg|vi-pohjlsal1lsi8) et(GHighg|sflsc3lss2cl-hi) myr(egffs|to/sthh)rham.(fe|cl-) <sp>V/</sp>.(::)
 Stel(h)la,(gh) quam(gf!gwhghvG/Efe) ví(gh)de(g)rant(g) Ma(gh)gi(g) in(g) O(g)ri(g)én(gh~)te,(g) (,)
 an(g)te(g)ce(gf)dé(gh)bat(gf) e(e!fwgf)os,(fe) (;)
 us(f)que(de) dum(e) vé(efo)ni(e)ens(e) sta(efo)ret(e) su(e)pra(e) u(e)bi(e!fwgFE) e(g)rat(ghghvGF) pu(EFgef)er.(ed) +(::)

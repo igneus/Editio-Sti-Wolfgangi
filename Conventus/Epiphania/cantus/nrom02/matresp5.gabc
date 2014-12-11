@@ -3,17 +3,18 @@ office-part: matutinum, 5. resp.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 237;
 mode: 7;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (c3)
-OM(if!gwhi>)nes(ih/iji) * {de}(h) Sa(k)ba(kj/kvJ/H) vé(ik)ni(jkJIj)ent,(ji) (;)
-au(i!jwkji~)rum(ji) et(gh~) thus(ig) de(ig/hvGF)fe(g/hih)rén(hvGFh)tes,(EF/gwhe/f/eeod) (:)
-et(fd~) lau(e)dem(f!gwh) Dó(hgho<iv)mi(f!gwhgFEf)no(fe) an(e)nun(-ehg!hwij>)ti(hg)án(EFgfe~)tes,(fe) +(;)
+OM(if!gwhi>|cl-qi-vi>hi)nes(ih/iji|cllsc2to) * {de}(h|ta) Sa(k|vihi)ba(kj/kvJ/H|cl-hjci-hjlsi8) vé(ik|peShilsl1)ni(jkJIj|peShisu2vihi)ent,(ji|cl-) (;)
+au(i!jwkji~|qlhh!cl>hhppt1lse4)rum(ji|cl-) et(gh~|ta>) thus(ig|cl-) de(ig/hvGF|clS-ci-)fe(g/hih|sfM)rén(hvGFh|ci-vi)tes,(EF/gwhe/f/eeod|qlhh!clhhppu2vi-hjprhj) (:)
+et(fd~|vi>) lau(e|ta)dem(f!gwh|qlppt1) Dó(hgho<iv|clpq)mi(f!gwhgFEf|qlvsppt1su2vi)no(fe|cl-) an(e|ta)nun(-ehg!hwij>|toql-hhvi>hj)ti(hg|cllsc2)án(EFgfe~|cl>ppt2)tes,(fe|cl-) +(;)
 Al(ei>)le(ihi)lú(ig!hwihi)ja,(hg) (,)
 a(ef)le(efed)lú(efe/fg)ja,(f) (,)
 al(ij>)le(ih/hvGF/gwhGF/gvFE)lú(EF/gwhfg)ja.(fe) <sp>V/</sp>.(::)
-Re(i!jwkJI)ges(hi/h/hog) Thar(hi~)sis(h) et(h) ín(hi~)su(h)læ(h) mú(ig)ne(hi)ra(hi) óf(i)fe(i!jwkj)rent,(ji) (;)
-re(hi/h/hog)ges(hih) A(ij)ra(i)bum(i) et(i) Sa(i)ba(i) do(iji/jvIH)na(hg) ad(h!iwji/jkj)dú(ih!iwjij)cent.(ivHGhg) +(::)
+Re(i!jwkJI|ql-hhppt1su1sux1)ges(hi/h/hog|pe-1pr) Thar(hi~|ta>)sis(h|ta) et(h|ta) ín(hi~|ta>)su(h|ta)læ(h|ta) mú(ig|cl)ne(hi|pe)ra(hi|pe) óf(i|ta)fe(i!jwkj|ql!clppt1)rent,(ji|cl-) (;)
+re(hi/h/hog|peSvs>)ges(hih|to) A(ij|pe)ra(i|ta)bum(i|ta) et(i|ta) Sa(i|ta)ba(i|ta) do(iji/jvIH|tr-1su2)na(hg|cl) ad(h!iwji/jkj|ql!clppt1tohh)dú(ih!iwjij|cl-ql!po)cent.(ivHGhg|ci-cl-) +(::)
 Al(ei>)le(ihi)lú(ig!hwihi)ja.(hg) (::)

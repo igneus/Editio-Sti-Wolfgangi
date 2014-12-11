@@ -2,8 +2,13 @@ name: Vidimus stellam;
 office-part: Communio;
 mode: 4;
 book: Graduale Romanum, 1961, p. 59;
-transcriber: Andrew Hinkley;
+transcriber: Andrew Hinkley, Jakub Jelínek;
+nabc-lines: 1;
 annotation: Comm.;
 annotation: iv;
 %%
-(c4) VI(e!f'g)di(hgh)mus(gfg//efd.) *(,) stel(gi~)lam(i) e(j)jus(g) in(g) O(f!g'h)ri(i)én(gh~)te,(e.) (:) et(e!f'h) vé(h!iwj)ni(g)mus(g) cum(g) mu(g)né(fg)ri(efED'e)bus(ed..) (;) a(f)do(gh)rá(g)te(ghG'Fghg') Dó(e)mi(egff)num.(fe..) (::)
+(c4)
+VI(e!f'g|sa)di(hgh|po)mus(gfg/|po|/efd.|tohg) *(,)
+stel(gi~|ta>lsl1)lam(i|vi) e(j|vi>lsi6)jus(g|ta) in(g|vilse4) O(f!g'h|sa)ri(i|vi)én(gh~|ta>)te,(e.|grlsi9) (:)
+et(e!f'h|ql>ppt2lse7lsi6) vé(h!iwj|qlppt1)ni(g|ta)mus(g|ta) cum(g|ta>lsi6) mu(g|vi)né(fg|peSlss3)ri(efED'e|pe-1su2vihi)bus(ed..|cl-) (;)
+a(f|vilss2)do(gh|pelsal7lssta2lsm3)rá(g|talsx9)te(ghG'Fghg'|pe-su2tohh) Dó(e|ta)mi(egff|tosthi)num.(fe..|cl-) (::)

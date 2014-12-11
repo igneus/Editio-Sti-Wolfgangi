@@ -3,12 +3,14 @@ office-part: laudes, 5. ant.;
 occasion: In Epiphania Domini;
 book: Antiphonale Monasticum 1933, pg. 291;
 mode: 7;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Andrew Hinkley, Jakub Jelínek;
 %%
 
-(c3) STel(g)la(h) i(i_j)sta(i'_) *(,)
-si(i)cut(i') flam(j)ma(i') co(h)rú(h)scat,(g.) (;)
-et(h) Re(ij)gem(i) ré(h_g)gum(e_f) De(h_f)um(g') de(f)món(e.)strat:(e.) (:)
-Ma(g.h!iwji)gi(hiH'_G_) e(f'_)am(h) vi(g')dé(e)runt,(f.) (;)
-et(ed~) ma(e)gno(f') Re(h>)gi(e.) (,) mú(f')ne(e)ra(d) ob(ef)tu(f)lé(e.)runt.(e.) (::)
+(c3) STel(g|vi)la(h|vi) i(i_j|peS)sta(i'_|vi) *(,)
+si(i|vi)cut(i'|vi) flam(j|vi>)ma(i'|vi) co(h|ta)rú(h|vi)scat,(g.|ta-) (;)
+et(h|vilsc3) Re(ij|pe>)gem(i|vi>) ré(h_g|cllsc2)gum(e_f|peS) De(h_f|cllsc2)um(g'|vi>) de(f|vi)món(e.|ta)strat:(e.|ta) (:)
+Ma(g.h!iwji|vilsfr1qi!cl>ppt1)gi(hiH'_G_|pehhsu2lsm3) e(f'_|ta-lsi6)am(h|vi) vi(g'|vilssta1)dé(e|ta-)runt,(f.|vi) (;)
+et(ed~|vi>) ma(e|vi)gno(f'|vi) Re(h>|vi>lsi6)gi(e.|ta) (,)
+mú(f'|vi)ne(e|vi)ra(d|ta) ob(ef|pe)tu(f|vi)lé(e.|ta)runt.(e.|ta) (::)

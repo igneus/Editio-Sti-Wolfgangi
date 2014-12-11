@@ -3,11 +3,12 @@ office-part: laudes, 1. ant.;
 occasion: In Epiphania Domini;
 book: Antiphonale Monasticum 1933, pg. 290;
 mode: 2;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Andrew Hinkley, Jakub Jelínek;
 %%
 
-(f3) AN(f_g)te(e) lu(f)cí(fi'!jv)fe(h)rum(ge~) gé(gh)ni(f)tus,(f.) *(,)
-et(fe) an(h)te(ij) s<sp>'æ</sp>(j_)cu(ih)la,(h') Dó(h)mi(hv_GF)nus(gf..) (;)
-Sal(f)vá(h)tor(g') no(h)ster(f') hó(g)di(ef)e(fge'__ec.) (,)
-mun(e_f)do(h') ap(g)pá(e')ru(g)it.(f.) (::)
+(f3) AN(f_g|peS)te(e|ta) lu(f|vi)cí(fi'!jv|scG1)fe(h|vi)rum(ge~|vi>lsc4) gé(gh|pelsc7)ni(f|ta)tus,(f.|ta) *(,)
+et(fe|cllsc2) an(h|vi)te(ij|pe) s<sp>'æ</sp>(j_|vi-hg)cu(ih|cllsc2)la,(h'|ta) Dó(h|vi)mi(hv_GF|ci-)nus(gf..|cl-) (;)
+Sal(f|ta)vá(h|vi)tor(g'|ta) no(h|vi)ster(f'|ta) hó(g|vi)di(ef|pe)e(fge'__ec.|peSpr) (,)
+mun(e_f|peS)do(h'|vi) ap(g|vi)pá(e'|ta)ru(g|ql)it.(f.|ta) (::)

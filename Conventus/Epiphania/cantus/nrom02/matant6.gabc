@@ -3,10 +3,11 @@ office-part: matutinum, 6. ant.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 235;
 mode: 4;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (c4)
-OM(f>)nes(d) Gen(f)tes(fd) quas(ef)cúm(g)que(f) fe(e)cís(cd)ti,(d) (;)
-vé(c)ni(d)ent,(f) et(f) ad(f)o(f)rá(ef)bunt(e) co(f)ram(f) te,(ef) Dó(d)mi(f)ne.(e) (::)
+OM(f>|vi>)nes(d|ta) Gen(f|vi-)tes(fd|cl-lsal3) quas(ef|peS)cúm(g|vihg)que(f|vihg) fe(e|vi)cís(cd|peSlsi7)ti,(d|vi-) (;)
+vé(c|talsi8)ni(d|vi)ent,(f|vihg) et(f|vihh) ad(f|vihi)o(f|vihi)rá(ef|peShg)bunt(e|talsx6) co(f|vi)ram(f|vihg) te,(ef|peS) Dó(d|ta)mi(f|vi)ne.(e|ta) (::)

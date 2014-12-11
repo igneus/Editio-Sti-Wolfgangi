@@ -3,11 +3,12 @@ office-part: matutinum, 4. ant.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 232;
 mode: 4;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (c4)
-OM(f>)nis(d) ter(f)ra(fd) a(ef)dó(g)ret(f) te,(e) *(,)
-et(f) psal(e>)lat(c) ti(d)bi:(d) (;)
-psal(c)mum(d) di(f)cat(f) nó(f)mi(f)ni(f) tu(f)o,(f) Dó(d)mi(f)ne.(e) (::)
+OM(f>|vi>)nis(d|ta) ter(f|vi)ra(fd|cl-lsal3) a(ef|peS)dó(g|vihg)ret(f|vi) te,(e|ta) *(,)
+et(f|vi) psal(e>|vi>)lat(c|ta) ti(d|vi-)bi:(d|vi-) (;)
+psal(c|ta)mum(d|vi) di(f|vi)cat(f|vi) nó(f|vi)mi(f|vi)ni(f|vi) tu(f|vi)o,(f|vi) Dó(d|ta)mi(f|vi)ne.(e|ta) (::)

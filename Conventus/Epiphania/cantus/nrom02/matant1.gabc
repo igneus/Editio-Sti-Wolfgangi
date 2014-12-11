@@ -3,11 +3,11 @@ office-part: matutinum, 1. ant.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 227;
 mode: 7;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (c3)
-AF(e)fér(g)te(h) Dó(i)mi(j)no, *(i) fí(hg)li(f)i(f) De(hhi)i,(h) (;)
-ad(h)o(i)rá(g)te(h) Dó(f)mi(e)num(f) in(ed) au(e)la(f) san(g)cta(f) e(e)jus.(e) (::)
-
+AF(e|ta)fér(g|vi)te(h|vihh) Dó(i|vihj)mi(j|vihj)no, *(i|ta) fí(hg|cllsc2)li(f|ta)i(f|ta) De(hhi|vi-pehg)i,(h|ta-) (;)
+ad(h|ta)o(i|vi)rá(g|ta)te(h|vi) Dó(f|vi)mi(e|ta)num(f|vi) in(ed|cllsc2) au(e|vi)la(f|vihh) san(g|vihi)cta(f|vihh) e(e|ta)jus.(e|ta) (::)

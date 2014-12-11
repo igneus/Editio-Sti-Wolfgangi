@@ -3,10 +3,12 @@ office-part: laudes, 3. ant.;
 occasion: In Epiphania Domini;
 book: Antiphonale Monasticum 1933, pg. 291;
 mode: 1;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Andrew Hinkley, Jakub Jelínek;
 %%
 
-(c4) A(f)pér(h')tis(g) the(h)sáu(g)ris(f') su(g)is(d.) *(;)
-ob(h_iH'G)tu(h)lé(j_k)runt(jkj) Ma(ji)gi(g) Dó(i_j)mi(i)no(h.) (;)
-au(h_g~)rum,(h_g) thus(e') et(f) myr(g_h)rham,(g'_) (,) al(h)le(fge'___f)lú(d.)ia.(d.) (::)
+(c4) A(f|ta)pér(h'|vi)tis(g|ta) the(h|vi)sáu(g|vi)ris(f'|ta) su(g|vi)is(d.|ta) *(;)
+ob(h_iH'G|pe-1su2)tu(h|vi)lé(j_k|peShhlsl3)runt(jkj|tohh) Ma(ji|cllsc2)gi(g|ta) Dó(i_j|peS)mi(i|vi)no(h.|ta) (;)
+au(h_g~|vi->)rum,(h_g|cllsc2) thus(e'|ta) et(f|vi) myr(g_h|pe>1)rham,(g'_|ta) (,)
+al(h|vi>)le(fge'___f|tr)lú(d.|ta)ia.(d.|ta) (::)

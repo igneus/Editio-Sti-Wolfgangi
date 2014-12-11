@@ -3,12 +3,13 @@ office-part: matutinum, 8. ant.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 240;
 mode: 6;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (c4)
-A(f)Do(f)rá(f)te(e) Dó(g)mi(g)num,(h) *(,)
-al(f)le(f)lú(d>)ja:(c) (;)
-in(f) au(f)la(f) san(f)cta(e) e(g)jus,(h) (,)
-al(h)le(hg)lú(gf~)ja.(f) (::)
+A(f|vi)Do(f|vi)rá(f|vi)te(e|vi) Dó(g|vihh)mi(g|vihi)num,(h|vihj) *(,)
+al(f|vihg)le(f|vihg)lú(d>|vi>)ja:(c|ta) (;)
+in(f|vi) au(f|vi)la(f|vihg) san(f|vihh)cta(e|ta) e(g|vi)jus,(h|vihg) (,)
+al(h|vihh)le(hg|cl-hg)lú(gf~|vi>)ja.(f|ta) (::)

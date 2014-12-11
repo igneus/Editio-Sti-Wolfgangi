@@ -3,19 +3,20 @@ office-part: matutinum, 1. resp.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 229;
 mode: 3;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (c4)
-HO(g)di(hj)e(i) * in(j/jo/is<) Jor(h)dá(hjji)ne(GH!iwjIHijggo~!efe) (,)
-bap(e)ti(fg)zá(g)to(hg/goe) Dó(f)mi(g!hgh!iv)no(h) (;)
-ap(h)pér(jhjsss)ti(g) sunt(ghGFghg) cœ(egffs)li,(fe) (:)
-et(gefs) si(ed)cut(gh) co(g)lúm(ighs!jsskjjs)ba(ji)
-su(g)per(GH!iwj) e(jiioh/iHGh)um(hg) Spí(j)ri(j)tus(iioh) man(jvIHihg~)sit,(hg) (;)
-et(gh) vox(j/kjk) Pa(i!jo)tris(h) in(h)tó(hgh)nu(ege!fvEDe)it:(ed) +(:)
-Hic(gfssded/g!hwjIH!iwjjo~) est(i) Fí(j)li(ji)us(h) me(h)us(gf) di(gh)léc(g)tus,(ge/fvEDed) (;)
-in(f) quo(ghg) mi(hihGFgh)hi(g) com(GH/iwjIHjg/hwiHgs<)plá(e)cu(egffs)i.(fe) <sp>V/</sp>.(::)
+HO(g|ta)di(hj|pe)e(i|ta) * in(j/jo/is<|pr>) Jor(h|ta)dá(hjji|pe-cl-)ne(GH!iwjIHijggo~!efe|ql-hhppu2su2tohhor>hhtohj) (,)
+bap(e|ta)ti(fg|pe)zá(g|vi)to(hg/goe|cl!prlsm2) Dó(f|vi-)mi(g!hgh!iv|tr-1vihk)no(h|ta) (;)
+ap(h|ta)pér(jhjsss|cllsc2tshh)ti(g|ta) sunt(ghGFghg|pe-su2to) cœ(egffs|tolsi7sthh)li,(fe|cl-) (:)
+et(gefs|cllss2/sthh) si(ed|cllsc2)cut(gh|peSlsl4) co(g|ta)lúm(ighs!jsskjjs|cllsl2tsMclhhsthj)ba(ji|cl-)
+su(g|ta)per(GH!iwj|qlppu2) e(jiioh/iHGh|cl!prlsc2ci-vi-)um(hg|cl-) Spí(j|vi)ri(j|vihg)tus(iioh|pr) man(jvIHihg~|ci-cl>lst3)sit,(hg|cl-) (;)
+et(gh|peSlse4) vox(j/kjk|trMlsl1lss2) Pa(i!jo|vslsc3)tris(h|ta) in(h|ta)tó(hgh|po)nu(ege!fvEDe|toSci-vi)it:(ed|cl-) +(:)
+Hic(gfssded/g!hwjIH!iwjjo~|vi-ds-hhtohhql-hhppt1suu2qi-hhor>hj) est(i|ta) Fí(j|vi)li(ji|cllsc2)us(h|ta) me(h|vi)us(gf|cllsc2) di(gh|pe)léc(g|ta)tus,(ge/fvEDed|cl-ci-cl-) (;)
+in(f|vi) quo(ghg|to) mi(hihGFgh|toSsu2peS)hi(g|ta) com(GH/iwjIH|ql-ppu2suu2|jg/hwiHgs<|cl-ql-sut1sux1)plá(e|ta)cu(egffs|tosthh)i.(fe|cl-) <sp>V/</sp>.(::)
 Des(i)cén(ikjjs)dit(h!iwjhhhog) Spí(i)ri(i)tus(i) San(ijo)ctus(h) (,)
 cor(h)po(h)rá(hi)li(h) spé(h)ci(h)e(h) si(hi)cut(h) co(h)lúm(hg)ba(h) in(j) ip(ikjjs)sum,(ji) (;)
 et(hg) vox(hi) de(i) cœ(ikjIH/iwji)lo(hg) fac(GH/iwj)ta(ji/ioh/ivHGh) est.(hg) +(::) Hic.(g+Z)

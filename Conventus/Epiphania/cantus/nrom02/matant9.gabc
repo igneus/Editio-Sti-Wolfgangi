@@ -3,12 +3,13 @@ office-part: matutinum, 9. ant.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 241;
 mode: 6;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (c4)
-A(f)Do(f)rá(f)te(e) De(g)um,(h) *(,)
-al(f)le(f)lú(d>)ja:(c) (;)
-om(f)nes(f) An(f)ge(f)li(e) e(g)jus,(h) (,)
-al(h)le(hg)lú(gf~)ja.(f) (::)
+A(f|vi)Do(f|vi)rá(f|vi)te(e|vi) De(g|vihg)um,(h|vihi) *(,)
+al(f|vi)le(f|vihg)lú(d>|vi>)ja:(c|ta) (;)
+om(f|vi)nes(f|vihg) An(f|vihh)ge(f|vihi)li(e|tahi) e(g|vihi)jus,(h|vihj) (,)
+al(h|vihj)le(hg|cl-hj)lú(gf~|vi>hh)ja.(f|tahh) (::)

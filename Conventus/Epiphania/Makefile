@@ -135,7 +135,7 @@ $(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
 	$(GENPSCOMB)
 $(TMP_DIR)/communio-versus-DeusJudicium-comb.tex: $(patsubst %,cantus/triplex76/communio-versus-DeusJudicium%tex,. -boh.)
 	$(GENPSCOMB)
-epiphania.pdf: epiphania.tex conventuscommune.tex translationes_cs.tex \
+epiphania.pdf: epiphania.tex conventuscommune.tex translationes_cs.tex gregall.tex gregall.lua gregall.ttf SGModern.ttf \
 	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<

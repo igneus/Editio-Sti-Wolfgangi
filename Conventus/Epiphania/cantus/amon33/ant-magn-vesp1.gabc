@@ -3,13 +3,17 @@ office-part: in 1. vesperis, ant. ad Magnificat;
 occasion: In Epiphania Domini;
 book: Antiphonale Monasticum 1933, pg. 289;
 mode: 8;
+nabc-lines: 1;
 initial-style: 1;
-transcriber: Andrew Hinkley;
+transcriber: Andrew Hinkley, Jakub Jelínek;
 %%
 
-(c4) MA(f!g'h)gi(g) *(,) vi(gh)dén(hv_GF)tes(gh) stel(h)lam,(g'_) (,)
-di(g)xé(gjj)runt(hih) ad(gf) ín(gh)vi(h)cem:(g.) (;)
-Hoc(gj'_) si(k)gnum(i') mag(j)ni(h) Re(ji)gis(hg) est:(g.) (:)
-e(d)á(f!g'h)mus,(g'_) (,) et(g) in(g)qui(g)rá(h_i)mus(gh) e(g)um,(f.) (;)
-et(h) of(f)fe(hj)rá(j)mus(i) e(ji)i(h) mú(ij)ne(h)ra,(ghg.__) (,)
-au(e')rum,(f) thus(gh) et(h) myr(g.)rham.(g.) (::)
+(c4)
+MA(f!g'h|ta-pe>)gi(g|ta) *(,)
+vi(gh|pe)dén(hv_GF|ci-)tes(gh|pe) stel(h|vi>)lam,(g'_|ta) (,)
+di(g|ta)xé(gjj|pe-vi-)runt(hih|to) ad(gf|ta) ín(gh|pe)vi(h|vi)cem:(g.|ta-lsx6) (;)
+Hoc(gj'_|pe-hh) si(k|vi>hhlsal6)gnum(i'|ta) mag(j|vi>lsal6)ni(h|ta) Re(ji|cllsc2)gis(hg|cllsc2) est:(g.|vi-) (:)
+e(d|talsi8)á(f!g'h|scM1)mus,(g'_|ta) (,)
+et(g|ta) in(g|ta)qui(g|ta)rá(h_i|peSlsl3)mus(gh|pe) e(g|vi)um,(f.|ta) (;)
+et(h|vi) of(f|ta)fe(hj|pelsl3)rá(j|vi-)mus(i|ta) e(ji|cllsc2)i(h|ta) mú(ij|ql)ne(h|vi)ra,(ghg.__|toS) (,)
+au(e'|ta)rum,(f|vi) thus(gh|pe) et(h|vi) myr(g.|ta)rham.(g.|ta) (::)

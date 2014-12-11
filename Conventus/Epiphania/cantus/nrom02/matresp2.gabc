@@ -3,16 +3,17 @@ office-part: matutinum, 2. resp.;
 occasion: In Epiphania Domini;
 book: Nocturnale Romanum, 2002, pg. 231;
 mode: 2;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Jakub Jelínek;
 %%
 
 (f3)
-IN(f>) co(e)lúm(fhf)bæ(f) spé(hgh)ci(gvFEf)e(ffoe) *(;)
-Spí(e)ri(f)tus(h) San(hvGFEf)ctus(f!gwh/ih/hog) vi(f)sus(FGhvGFg) est,(gf) (:)
-Pa(h)tér(kx!h!iwjij!k>)na(j) vox(jiiog) au(hi>)dí(hi)ta(ghGFg) est:(gf) +(;)
-Hic(h) est(f) Fí(h)li(g!ho)us(f) me(fe)us(fgf) di(g)léc(hvGFg)tus,(ffoe) (;)
-in(e) quo(f!gwh) mi(h)hi(g) be(h)ne(gf) com(ef>)plá(hi)cu(h)i(hih!g/hvGF/gf) (,)
-ip(fv/hvG/E)sum(hvhv) au(ihhogs<)dí(FGhvGFg)te(gf) <sp>V/</sp>.(::)
-Cœ(EF/gwh/hi)li(h) a(h)pér(hi~)ti(i) sunt(hg~) su(hi)per(gh) e(f!gwhg)um,(gf) (;)
-et(f) vox(ef) Pa(f)tris(f!gwhGFE) in(f)tó(hg/hih)nu(hvGFg)it.(ffoe) +(::) Hic.(h) (::)
+IN(f>|vi->lsal6) co(e|ta)lúm(fhf|to)bæ(f|ta) spé(hgh|po)ci(gvFEf|ci-vi)e(ffoe|pr) *(;)
+Spí(e|ta)ri(f|vi)tus(h|vihg) San(hvGFEf|vi-hhsuu1su2)ctus(f!gwh/ih/hog|qlhhppt1clShipihilst2) vi(f|ta)sus(FGhvGFg|ci-hhpp2vihh) est,(gf|cl-) (:)
+Pa(h|vi)tér(kx!h!iwjij!k>|ql!po-1ppt1vi-hi)na(j|ta) vox(jiiog|cl!prlsc2) au(hi>|pe>)dí(hi|peS)ta(ghGFg|peSsu2vi) est:(gf|cl-) +(;)
+Hic(h|vi) est(f|ta) Fí(h|vi)li(g!ho|vslsc3)us(f|ta) me(fe|cllsc2)us(fgf|to) di(g|vi)léc(hvGFg|ci-vi)tus,(ffoe|pr) (;)
+in(e|talse7) quo(f!gwh|vi-qlhj) mi(h|vihh)hi(g|ta) be(h|vi)ne(gf|cllsc2) com(ef>|pe>)plá(hi|peS)cu(h|vi)i(hih!g/hvGF/gf|peSlsi7toS2hhsut1ci-hhcl-hh) (,)
+ip(fv/hvG/E|vi-!cilsc3)sum(hvhv|vi-vi-) au(ihhogs<|clSpi>)dí(FGhvGFg|ci-hhpp2vihh)te(gf|cl-) <sp>V/</sp>.(::)
+Cœ(EF/gwh/hi|ql-ppt2pehi)li(h|ta) a(h|ta)pér(hi~|ta>lsl3)ti(i|vi) sunt(hg~|vi>) su(hi|pe)per(gh|pe) e(f!gwhg|ql!clppt1)um,(gf|cl-) (;)
+et(f|vi) vox(ef|pe) Pat(f|ta)ris(f!gwhGFE|ql-ppt1su1sut2) in(f|vi)tó(hg/hih|cllsl2/tohhlsc2)nu(hvGFg|ci-vi)it.(ffoe|pr) +(::) Hic.(h) (::)
