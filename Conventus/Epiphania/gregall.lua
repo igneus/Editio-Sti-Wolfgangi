@@ -200,7 +200,7 @@ local add_ls = function(base, pre, ls, position, glyphbox, lsbox, baseraise, lwi
     if curlwidths[11] == 0 and glyphbox.width < lwidths[11] then
       curlwidths[11] = 1
       base = '\\kern '..((lwidths[11] - glyphbox.width)/2 * scale)..'sp'..base
-      kern1 = kern1 + lwidths[11] - (lwidths[11] - glyphbox.width)/2
+      kern1 = kern1 + (lwidths[11] - glyphbox.width)/2
     end
     kern1 = kern1 * scale
     kern2 = kern2 * scale
@@ -317,7 +317,9 @@ gregallparse_neumes = function(str, kind, scale)
 	base = gregalltab[kind][r]
 	local above = ''
 	local below = ''
-	local rmetrics = gregallmetrics[kind][r]
+	local rmetrics = { width = gregallmetrics[kind][r].width,
+			   height = gregallmetrics[kind][r].height,
+			   depth = gregallmetrics[kind][r].depth }
 	-- Should the pre and subpuncta be somehow specially positioned
 	-- against the base neume?
 	if pp ~= '' then
