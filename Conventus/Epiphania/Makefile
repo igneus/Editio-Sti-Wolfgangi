@@ -102,7 +102,7 @@ endef
 iter-left := $(MODUSLIST)
 include $(iter)
 define iter-doit
-$(TMP_DIR)/%.tex: $(i)/%.gabc ; $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g' $$< | $(GREGORIO) -s -o $$@
+$(TMP_DIR)/%.tex: $(i)/%.gabc ; $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g' $$< | $(GREGORIO) -s -o $$@
 endef
 iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 nrom02 grom61 triplex76 otriplex85 arom12 cselecti57) \
 	     $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12) $(PSALMTONES_DIR)
