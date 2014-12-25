@@ -79,7 +79,7 @@ SCORES = alleluia-VidimusStellam ant1 ant2 ant3 ant4 ant5 ant-ben-laud ant-magn-
 	 hym-RerumDeus hym-RectorPotens hym-NuncSancte hym-TeLucis \
 	 benedictio-noctemquietam jubedomnebenedicere lectiobrevis-fratressobrii \
 	 convertenosdeus ant-miserere deusinadiutorium-solemnis \
-	 capitulum-tuautem resp-inmanus ant-salvanos versus-custodi \
+	 capitulum-tuautem resp-inmanus ant-salvanos-antiquo versus-custodi \
 	 oratio-visita benedicamus-minor an_alma_redemptoris_mater \
 	 versus-omnis versus-adorate-mat oratiodominica-mat \
 	 absolutio-exaudi absolutio-ipsius absolutio-avinculis \
@@ -106,7 +106,7 @@ define iter-doit
 $(TMP_DIR)/%.tex: $(i)/%.gabc ; $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g' $$< | $(GREGORIO) -s -o $$@
 endef
 iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 nrom02 grom61 triplex76 otriplex85 arom12 cselecti57) \
-	     $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12) $(PSALMTONES_DIR)
+	     $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR)
 include $(iter)
 
 all: epiphania.pdf
