@@ -86,7 +86,8 @@ SCORES = alleluia-VidimusStellam ant1 ant2 ant3 ant4 ant5 ant-ben-laud ant-magn-
 	 $(addprefix benedictio-solemn-,benedictione unigenitus spiritus deus christus ignem evangelica divinum perevangelica) \
 	 $(addprefix benedicamus-solemnis-,laud 1vesp 2vesp) \
 	 $(addprefix versus-,adorate adorate-simplex reges reges-simplex omnes) \
-	 $(addprefix capitulum-,Surge Leva Omnes) tedecetlaus tonus-evangelii-b
+	 $(addprefix capitulum-,Surge Leva Omnes) tedecetlaus tonus-evangelii-b \
+	 tonus-lectionis-solemnis
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = $(patsubst %,cantus/amon33/hym-%-bohtext.tex,HostisHerodes OSolaMagnarum NuncSancte RerumDeus RectorPotens TeLucis) \
 	    cantus/nrom02/ps94.tex $(TMP_DIR)/communio-versus-DeusJudicium-comb.tex \
