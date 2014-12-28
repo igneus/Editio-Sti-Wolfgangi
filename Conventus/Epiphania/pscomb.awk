@@ -17,7 +17,7 @@ function trLine()
       else
 	ret = ret " " trline
     }
-  return "& \\psalmusTr{" ret "} \\\\"
+  return "& \\psalmusTr{" gensub(/ji/,"\\\\ji{}","g",ret) "} \\\\"
 }
 function printLine(tail)
 {
