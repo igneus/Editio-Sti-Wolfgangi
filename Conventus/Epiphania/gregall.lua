@@ -10,7 +10,6 @@ local gregallaliases = {
 ["pfG"] = "sfM",
 ["cl~"] = "vi>",
 ["pr~"] = "vs>",
-["ppt1"] = "ta",
 ["visu2"] = "ci",
 ["vi-su2"] = "ci-",
 ["visu3"] = "ci1",
@@ -228,14 +227,30 @@ local add_ls = function(base, pre, ls, position, glyphbox, lsbox, baseraise, lwi
   end
 end
 
+local add_spacing = function(str, len, idx, ret)
+  while idx <= len and (str:sub(idx, idx) == "/" or str:sub(idx, idx) == "`") do
+    if idx < len and str:sub(idx, idx + 1) == "//" then
+      ret = ret .. "\\hskip \\grenabclargerspace"
+      idx = idx + 2
+    elseif idx < len and str:sub(idx, idx + 1) == "``" then
+      ret = ret .. "\\hskip -\\grenabclargerspace"
+      idx = idx + 2
+    elseif str:sub(idx, idx) == "/" then
+      ret = ret .. "\\hskip \\grenabcinterelementspace"
+      idx = idx + 1
+    else
+      ret = ret .. "\\hskip -\\grenabcinterelementspace"
+      idx = idx + 1
+    end
+  end
+  return idx, ret
+end
+
 gregallparse_neumes = function(str, kind, scale)
   local len = str:len()
   local idx = 1
   local ret = ''
-  while idx <= len and str:sub(idx, idx) == "/" do
-    ret = ret .. "\\enspace{}"
-    idx = idx + 1
-  end
+  idx, ret = add_spacing(str, len, idx, ret)
   while idx <= len do
     local err, bases, heights, ls, pp, su, lscount
     err, idx, bases, heights, ls, pp, su = gregallparse_neume (str, idx, len)
@@ -280,33 +295,27 @@ gregallparse_neumes = function(str, kind, scale)
       -- significative letters.
       local allparts = ppsuparts + lscount
       if lscount >= 2 then allparts = ppsuparts + 2 end
-      -- Try to match as many parts (ls sequences, pp string, su string) as
+      -- Try to match as many parts (ls sequences, pp string, su string) as possible
+      -- except that for ls accept any of ls sequences only if we have all of them.
       for parts = allparts, 0, -1 do
-	if lscount >= 2 and parts >= 2 and parts <= 2 + ppsuparts then
-	  for i = 0, lscount - 1 do
-	    for j = 0, lscount - 1 do
-	      if i ~= j then
-		r, pp, su = l.try(kind, base, parts - 2, pp, su, ls[i] .. ls[j])
-		if r then
-		  ls[i] = ''
-		  ls[j] = ''
-		  break
-		end
-	      end
-	    end
-	    if r then break end
+	if lscount == 2 and parts >= 2 and parts <= 2 + ppsuparts then
+	  r, pp, su = l.try(kind, base, parts - 2, pp, su, ls[0] .. ls[1])
+	  if not r then
+	    r, pp, su = l.try(kind, base, parts - 2, pp, su, ls[1] .. ls[0])
+	  end
+	  if r then
+	    ls[0] = ''
+	    ls[1] = ''
+	    break
 	  end
 	  if r then break end
 	end
-	if lscount >= 1 and parts >= 1 and parts <= 1 + ppsuparts then
-	  for i = 0, lscount - 1 do
-	    r, pp, su = l.try(kind, base, parts - 1, pp, su, ls[i])
-	    if r then
-	      ls[i] = ''
-	      break
-	    end
+	if lscount == 1 and parts >= 1 and parts <= 1 + ppsuparts then
+	  r, pp, su = l.try(kind, base, parts - 1, pp, su, ls[0])
+	  if r then
+	    ls[0] = ''
+	    break
 	  end
-	  if r then break end
 	end
 	r, pp, su = l.try(kind, base, parts, pp, su, '')
 	if r then break end
@@ -364,10 +373,7 @@ gregallparse_neumes = function(str, kind, scale)
       end
     end
     ret = ret .. base
-    while idx <= len and str:sub(idx, idx) == "/" do
-      ret = ret .. "\\enspace{}"
-      idx = idx + 1
-    end
+    idx, ret = add_spacing(str, len, idx, ret)
   end
   return ret
 end
