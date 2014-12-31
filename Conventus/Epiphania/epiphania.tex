@@ -6,11 +6,11 @@
 \usepackage[landscape, a4paper, mag=1166, truedimen, left=2cm, right=1.5cm, top=1.6cm, bottom=0.95cm]{geometry} % okraje stranky
 
 \usepackage{fontspec}
-\setmainfont[Ligatures={Common, TeX}]{Junicode}
+\setmainfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
 %\setmainfont{Junicode}
 
 % shortcut for Junicode without ligatures (for the Czech texts)
-\newfontfamily\nlfont[Ligatures={Common, TeX}]{Junicode}
+\newfontfamily\nlfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
 
 % Hebrew font: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=SILHebrUnic2
 \newfontfamily\hebfont[Scale=1]{Ezra SIL}
