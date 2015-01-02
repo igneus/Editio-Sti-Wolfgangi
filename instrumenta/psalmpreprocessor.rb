@@ -306,6 +306,7 @@ module PsalmPreprocessor
       begin
         raise "too short" if i == 0
         num_syllables.times {
+          raise "too short" if i == 0
           bi = i-1
           if s[bi] == " " then
             bi -= 1
@@ -315,9 +316,7 @@ module PsalmPreprocessor
             i -= 1
           end
 
-          if i <= 0
-            raise "too short"
-          end
+          raise "too short" if i < 0
         }
       rescue
         # verse too short; do nothing, return it, as it is
