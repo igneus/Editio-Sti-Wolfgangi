@@ -27,6 +27,7 @@ TONUS-iii-g = 2 0 2 0
 TONUS-iii-g2 = 2 0 2 0
 TONUS-iv-E = 1 2 1 3
 TONUS-iv-E2 = 1 2 1 3
+TONUS-iv-e = 1 2 1 3
 TONUS-iv-d = 1 2 1 3
 TONUS-iv-d2 = 1 2 1 3
 TONUS-iv-a = 1 2 1 3
