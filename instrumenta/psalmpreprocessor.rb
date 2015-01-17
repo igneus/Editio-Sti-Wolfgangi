@@ -255,6 +255,9 @@ module PsalmPreprocessor
             end
             s = underline_last_accent s 
           }
+          if @second_hv == 0 then
+	    s = emphasize_preparatory_syllables s + "[]", @second_hv_prep
+          end
         end
       end
       

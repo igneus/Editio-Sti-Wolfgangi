@@ -50,4 +50,4 @@ TONUS-viii-c = 1 0 1 2
 TONUS-viiisoll-G = 1 3 1 2
 TONUS-viiisoll-G2 = 1 3 1 2
 TONUS-per = 1 3 1 1
-TONUS-dir = 1 2 1 0
+TONUS-dir = 1 2 0 0
