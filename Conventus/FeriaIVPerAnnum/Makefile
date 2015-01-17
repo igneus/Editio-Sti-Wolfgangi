@@ -24,13 +24,13 @@ PSALMS = 50 63 64 66 148 149 150
 include tonus.mk
 MODUS-50 = vii-a
 MODUS-63 = ii-D
-MODUS-64 = viii-a
+MODUS-64 = viii-C
 MODUS-66 = dir
 MODUS-148 = ii-D
 MODUS-149 = ii-D
 MODUS-150 = ii-D
 MODUS-benedictus = i-g5
-MODUS-anna = iv-E
+MODUS-anna = i-g2
 MODUSLIST = $(sort $(foreach P,$(PSALMS) benedictus anna,$(MODUS-$(P))))
 CZPSALMOPTS = --accents 0:0 --title-pattern " " --no-paragraph
 CZPSALMS = $(patsubst %,$(TMP_DIR)/ps%-boh.tex,$(PSALMS))
@@ -52,7 +52,7 @@ SCORES = ant1 ant2 ant3 ant4 ant5 ant-ben respbr \
 	 hym-NoxEtTenebraeAEstate hym-NoxEtTenebraeHieme \
 	 deusinadiutorium-communis supplicatiolitaniae oratiodominica \
 	 dominusvobiscum-solemnis domineexaudi benedicamus-feria-laudes \
-	 capitulum-Nox
+	 capitulum-Nox versus-repleti
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = 
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
@@ -84,7 +84,7 @@ $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: $(PSALMS_DIR)/%.pslm
 	$(GENPSALM)
 $(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
 	$(GENPSCOMB)
-feriaiv.pdf: feriaiv.tex conventuscommune.tex translationes_cs.tex \
+feriaiv.pdf: feriaiv.tex conventuscommune.tex translationes_cs.tex gregall.tex gregall.lua gregall.ttf SGModern.ttf \
 	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<

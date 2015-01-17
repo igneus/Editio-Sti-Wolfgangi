@@ -1,12 +1,12 @@
 name: Amplius lava me;
 office-part: laudes, 1. ant.;
 occasion: Feria IV per annum;
-book: Antiphonale Monasticum 1933, pg. 52;
+book: Antiphonale Monasticum, t. II, 2006, pg. 104;
 mode: 7;
-%nabc-lines: 1;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Štěpán Němec, Jakub Jelínek;
 %%
 (c3)
-AM(e)pli(g)us(h) la(i')va(i) me(h_f) * D{ó}(h')mi(h)ne(g.) (,)
-ab(h) in(f)jus(ed)tí(e_f)ti(g')a(f) me(e.)a.(e.) (::)
+AM(e|ta)pli(g|vi)us(h|vihg) la(i|vihi)va(i|vihk) me(hf|cl-hg) Dó(h|vihh)mi(h|vihi)ne(g|vi) *(,)
+ab(h) in(f)jus(ed)tí(ef)ti(g)a(f) me(e)a.(e) (::)

@@ -3,10 +3,10 @@ office-part: laudes, ant. ad Benedictus;
 occasion: Feria IV per annum;
 book: Antiphonale Monasticum 1933, pg. 58;
 mode: 1;
-%nabc-lines: 1;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Štěpán Němec, Jakub Jelínek;
 %%
 (c4)
-DE(f) ma(h)nu(g') óm(h>)ni(fg)um(g_') * q{ui}(d) o(f)dé(f')runt(e) nos(f_') (,)
-lí(g)be(g')ra(e) nos(fe) Dó(d)mi(cd)ne.(d.) (::)
+DE(f|ta) ma(h|vi)nu(g'|ta) óm(h>|vi>lsal6)ni(fg|pe)um(g_'|vi-) * q{ui}(d|ta) o(f|vi)dé(f'|vihg)runt(e|ta) nos(f_'|vilssta3) (,)
+lí(g|vi)be(g'|vihi)ra(e|ta) nos(fe|cllsc3) Dó(d|vi)mi(cd|pe)ne.(d.|vihe) (::)

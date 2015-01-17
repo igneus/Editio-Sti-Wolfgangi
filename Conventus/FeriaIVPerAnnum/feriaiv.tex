@@ -34,7 +34,7 @@
 
 \input{conventuscommune.tex} % Often used macros
 \input{translationes_cs.tex} % Czech translations of the proper texts
-%\input{gregall.tex}
+\input{gregall.tex}
 
 \newcommand{\annusEditionis}{2015}
 
@@ -118,7 +118,7 @@ Dómine, in unióne illíus divínæ intentiónis,
 qua ipse in terris laudes Deo persolvísti,
 has tibi Horas \rubricatum{(vel \textnormal{hanc tibi Horam})} persólvo.
 
-%\trOratioAnteOfficium
+\trOratioAnteOfficium
 
 \vfill
 
@@ -147,7 +147,7 @@ per infiníta sǽcula sæculórum.
 
 \rubrica{Et dicitur secreto \textnormal{Pater noster.} et \textnormal{Ave María.}}
 
-%\trOratioPostOfficium
+\trOratioPostOfficium
 
 \vfill
 
@@ -179,11 +179,11 @@ per infiníta sǽcula sæculórum.
 
 \cantusSineNeumas
 
-\pars{Psalmus 2.} \scriptura{\textbf{H95}}
+\pars{Psalmus 2.} \scriptura{Psalmus 50, 4; \textbf{H95}}
 
 \antiphona{VII a}{temporalia/ant1.tex}
 
-%\trAntI
+\trAntI
 
 \scriptura{Psalmus 50.}
 
@@ -191,14 +191,16 @@ per infiníta sǽcula sæculórum.
 
 \psalmusEtTranslatioT{temporalia/ps50-comb.tex}{10cm}
 
+\includescore{temporalia/ant1.tex} % repeat the antiphon - new page
+
 \vfill
 \pagebreak
 
-\pars{Psalmus 3.} \scriptura{\textbf{H96}}
+\pars{Psalmus 3.} \scriptura{Psalmus 63, 2; \textbf{H96}}
 
 \antiphona{II D}{temporalia/ant2.tex}
 
-%\trAntII
+\trAntII
 
 \scriptura{Psalmus 63.}
 
@@ -209,41 +211,45 @@ per infiníta sǽcula sæculórum.
 \vfill
 \pagebreak
 
-\pars{Psalmus 4.} \scriptura{\textbf{H96}}
+\pars{Psalmus 4.} \scriptura{Psalmus 64, 2; \textbf{H96}}
 
-\antiphona{VIII a}{temporalia/ant3.tex}
+\antiphona{VIII C}{temporalia/ant3.tex}
 
-%\trAntIII
+\trAntIII
 
 \scriptura{Psalmus 64.}
 
-\includescore{temporalia/ps64-initium-viii-a-auto.tex}
+\includescore{temporalia/ps64-initium-viii-C-auto.tex}
 
 \psalmusEtTranslatioT{temporalia/ps64-comb.tex}{10cm}
 
+\includescore{temporalia/ant3.tex} % repeat the antiphon - new page
+
 \vfill
 \pagebreak
 
-\pars{Psalmus 5.} \scriptura{\textbf{H96}}
+\pars{Psalmus 5.} \scriptura{1 Sam. 2, 10; \textbf{H96}}
 
-\antiphona{IV E}{temporalia/ant4.tex}
+\antiphona{I g2}{temporalia/ant4.tex}
 
-%\trAntIV
+\trAntIV
 
 \scriptura{Canticum Annæ, 1 Sam. 2, 1-10}
 
-\includescore{temporalia/anna-initium-iv-E-auto.tex}
+\includescore{temporalia/anna-initium-i-g2-auto.tex}
 
 \psalmusEtTranslatioT{temporalia/anna-comb.tex}{10cm}
+
+\includescore{temporalia/ant4.tex} % repeat the antiphon - new page
 
 \vfill
 \pagebreak
 
-\pars{Psalmus 6.} \scriptura{\textbf{H96}}
+\pars{Psalmus 6.} \scriptura{Psalmus 148, 4; \textbf{H96}}
 
 \antiphona{II D}{temporalia/ant5.tex}
 
-%\trAntV
+\trAntV
 
 \scriptura{Psalmus 148.}
 
@@ -280,7 +286,7 @@ per infiníta sǽcula sæculórum.
 \includescore{temporalia/capitulum-Nox.tex}
 
 % preklad Jeruz. bible
-%\trCapituli
+\trCapituli
 
 \vspace{1cm}
 \pars{Responsorium breve.}
@@ -288,7 +294,7 @@ per infiníta sǽcula sæculórum.
 \superInitialam{VI}
 \includescore{temporalia/respbr.tex}
 
-%\trRespLaudes
+\trRespLaudes
 \vfill
 \pagebreak
 
@@ -305,23 +311,27 @@ per infiníta sǽcula sæculórum.
 \includescore{temporalia/hym-NoxEtTenebraeAEstate.tex}
 %\input{cantus/amon33/hym-NoxEtTenebrae-bohtext.tex}
 
+\vfill
+
 \pars{Versus.}
 
-% Versus. %%%
-%\includescore{temporalia/versus-adorate.tex}
+\scriptura{Psalmus 89, 14}
 
-%\noindent \trVersusLaudes
+% Versus. %%%
+\includescore{temporalia/versus-repleti.tex}
+
+\noindent \trVersusLaudes
 
 \vfill
 \pagebreak
 
 %\cantusCumNeumis
 
-\pars{Canticum Zachariæ.} \scriptura{\textbf{H96}}
+\pars{Canticum Zachariæ.} \scriptura{Lucæ 1, 71; \textbf{H423}}
 
 \antiphona{I g5}{temporalia/ant-ben.tex}
 
-%\trAntBenedictus
+\trAntBenedictus
 
 \scriptura{Lucæ 1, 68-79}
 

@@ -1,11 +1,11 @@
 name: Caeli caelorum;
 office-part: laudes, 5. ant.;
 occasion: Feria IV per annum;
-book: Antiphonale Monasticum 1933, pg. 56;
+book: Antiphonale Monasticum, t. II, 2006, pg. 112;
 mode: 2;
-%nabc-lines: 1;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Štěpán Němec, Jakub Jelínek;
 %%
 (f3)
-CÆ(h_)li(g_) cæ(f')ló(h_)rum(g.) * l{au}(fe~)dá(f)te(g) De(f.)um.(f.) (::)
+CÆ(h|vi-hg)li(g|vihg) cæ(f|ta)ló(h|vi-)rum(g.|vi) * l{au}(fe~|vi>he)dá(f|vihg)te(g|vihi) De(f|ta)um.(f|ta) (::)

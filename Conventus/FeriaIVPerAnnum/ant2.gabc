@@ -1,12 +1,12 @@
 name: A timore;
 office-part: laudes, 2. ant.;
 occasion: Feria IV per annum;
-book: Antiphonale Monasticum 1933, pg. 52;
+book: Antiphonale Monasticum, t. II, 2006,  pg. 105;
 mode: 2;
-%nabc-lines: 1;
+nabc-lines: 1;
 initial-style: 1;
 transcriber: Štěpán Němec, Jakub Jelínek;
 %%
 (f3)
-A(h) ti(h)mó(h_g)re(f') * {i}(h)ni(h)mí(h_g)ci(f.) (,)
-é(e)ri(f)pe(g) Dó(h')mi(f)ne(g.) á(h)ni(g)mam(fe~) me(f.)am.(f.) (::)
+A(h|vi) ti(h|vi)mó(hg|cl-)re(f|ta) i(h|vi)ni(h|vi)mí(hg|cl-)ci(f|ta) *(,)
+é(e|ta)ri(f|vi)pe(g|vihg) Dó(h|vihh)mi(f|ta)ne(g|vi) á(h|vihh)ni(g|vihh)mam(fe~|vi>) me(f|ta)am.(f|ta) (::)
