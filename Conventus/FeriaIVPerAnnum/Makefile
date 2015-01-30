@@ -52,7 +52,7 @@ SCORES = ant1 ant2 ant3 ant4 ant5 ant-ben respbr \
 	 hym-NoxEtTenebraeAEstate hym-NoxEtTenebraeHieme \
 	 deusinadiutorium-communis supplicatiolitaniae oratiodominica \
 	 dominusvobiscum-solemnis domineexaudi benedicamus-feria-laudes \
-	 capitulum-Nox versus-repleti oratio
+	 capitulum-Nox versus-repleti oratio ant-salveregina-simplex
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = 
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
