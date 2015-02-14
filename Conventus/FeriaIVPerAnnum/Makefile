@@ -54,7 +54,7 @@ SCORES = ant1 ant2 ant3 ant4 ant5 ant-ben respbr \
 	 dominusvobiscum-solemnis domineexaudi benedicamus-feria-laudes \
 	 capitulum-Nox versus-repleti oratio ant-salveregina-simplex
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
-OTHERDEPS = 
+OTHERDEPS = hym-NoxEtTenebrae-bohtext.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,benedictus anna,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
 LAPSALMSINITTEX = $(patsubst %.gabc,%.tex,$(LAPSALMSINITGABC))
