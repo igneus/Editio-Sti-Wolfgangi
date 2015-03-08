@@ -61,7 +61,7 @@ LAPSALMS = $(patsubst %,$(TMP_DIR)/ps%.tex,$(PSALMS))
 LAPSALMSEXTRA = $(patsubst %,$(TMP_DIR)/%.tex,benedictus magnificat nuncdimittis dan3)
 ALLLAPSALMS = $(LAPSALMS) $(LAPSALMSEXTRA)
 SCORES = ant1 ant2 ant3 ant4 ant5 ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
-	 matant1 matant2 matant3 versus-spiritus \
+	 matant1 matant2 matant3 matresp1 matresp2 versus-spiritus \
 	 hym-VeniCreator hym-BeataNobis deusinadiutorium-solemnis deusinadiutorium-communis \
 	 supplicatiolitaniae oratiodominica resp1v resp2v respl \
 	 dominusvobiscum-solemnis domineexaudi magnificat-initium-i-D_ \
