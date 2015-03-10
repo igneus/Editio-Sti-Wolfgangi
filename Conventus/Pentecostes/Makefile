@@ -60,8 +60,8 @@ LAPSALMOPTS = $(LAPSALMOPTS_COMMON) $(LAPSALMOPTSACC)
 LAPSALMS = $(patsubst %,$(TMP_DIR)/ps%.tex,$(PSALMS))
 LAPSALMSEXTRA = $(patsubst %,$(TMP_DIR)/%.tex,benedictus magnificat nuncdimittis dan3)
 ALLLAPSALMS = $(LAPSALMS) $(LAPSALMSEXTRA)
-SCORES = ant1 ant2 ant3 ant4 ant5 ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
-	 matant1 matant2 matant3 matresp1 matresp2 versus-spiritus \
+SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
+	 $(addprefix matant,1 2 3) $(addprefix matresp,1 2) versus-spiritus \
 	 hym-VeniCreator hym-BeataNobis deusinadiutorium-solemnis deusinadiutorium-communis \
 	 supplicatiolitaniae oratiodominica resp1v resp2v respl \
 	 dominusvobiscum-solemnis domineexaudi magnificat-initium-i-D_ \
@@ -72,7 +72,11 @@ SCORES = ant1 ant2 ant3 ant4 ant5 ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 oratio-visita benedicamus-minor an_regina_caeli_simplex \
 	 introitus-SpiritusDomini alleluia-EmitteSpiritum seq-VeniSancte \
 	 alleluia-VeniSancte offertorium-ConfirmaHoc communio-FactusEst \
-	 viii-agnusdei viii-gloria viii-kyrie viii-sanctus credo-iii
+	 viii-agnusdei viii-gloria viii-kyrie viii-sanctus credo-iii \
+	 $(addprefix venite5,a b c d e f) \
+	 oratiodominica-mat absolutio-exaudi tedeum-solemnis \
+	 $(addprefix benedictio-solemn-,evangelica divinum) \
+	 benedicamus-solemnis-laud tonus-lectionis-solemnis tuautem
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = hym-TeLucis-bohtext.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
@@ -89,7 +93,8 @@ include $(iter)
 define iter-doit
 $(TMP_DIR)/%.tex: $(i)/%.gabc ; if $(GREP) -q ^nabc-lines: $$<; then $(SED) -e ':d;s/\(([^).]*\)\./\1/g;/([^)]*\./bd' $$<; else $(CAT) $$<; fi | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g;:d;s/\(([^)'\'']*\)'\''/\1/g;/([^)]*'\''/bd' | $(GREGORIO) -s -o $$@
 endef
-iter-left := . $(TMP_DIR) $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR)
+iter-left := . $(TMP_DIR) $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR) \
+	     $(addprefix ../Epiphania/cantus/,arom12 grom61)
 include $(iter)
 
 all: pentecostes.pdf
