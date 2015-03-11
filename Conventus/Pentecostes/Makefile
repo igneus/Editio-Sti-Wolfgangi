@@ -61,24 +61,27 @@ LAPSALMS = $(patsubst %,$(TMP_DIR)/ps%.tex,$(PSALMS))
 LAPSALMSEXTRA = $(patsubst %,$(TMP_DIR)/%.tex,benedictus magnificat nuncdimittis dan3)
 ALLLAPSALMS = $(LAPSALMS) $(LAPSALMSEXTRA)
 SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
-	 $(addprefix matant,1 2 3) $(addprefix matresp,1 2) versus-spiritus \
-	 hym-VeniCreator hym-BeataNobis deusinadiutorium-solemnis deusinadiutorium-communis \
+	 $(addprefix matant,1 2 3) $(addprefix matresp,1 2) \
+	 $(addprefix versus-,spiritus repleti loquebantur custodi gaude) \
+	 $(addprefix hym-,VeniCreator BeataNobis TeLucis JamChristus) \
+	 deusinadiutorium-solemnis deusinadiutorium-communis \
 	 supplicatiolitaniae oratiodominica resp1v resp2v respl \
 	 dominusvobiscum-solemnis domineexaudi magnificat-initium-i-D_ \
-	 capitulum-CumComplerentur versus-repleti versus-loquebantur oratio \
-	 hym-TeLucis benedictio-noctemquietam jubedomnebenedicere lectiobrevis-fratressobrii \
+	 capitulum-CumComplerentur oratio \
+	 benedictio-noctemquietam jubedomnebenedicere lectiobrevis-fratressobrii \
 	 convertenosdeus ant-alleluia deusinadiutorium-solemnis \
-	 capitulum-tuautem resp-inmanus ant-salvanos-antiquo versus-custodi \
+	 capitulum-tuautem resp-inmanus ant-salvanos-antiquo \
 	 oratio-visita benedicamus-minor an_regina_caeli_simplex \
 	 introitus-SpiritusDomini alleluia-EmitteSpiritum seq-VeniSancte \
 	 alleluia-VeniSancte offertorium-ConfirmaHoc communio-FactusEst \
 	 viii-agnusdei viii-gloria viii-kyrie viii-sanctus credo-iii \
 	 $(addprefix venite5,a b c d e f) \
 	 oratiodominica-mat absolutio-exaudi tedeum-solemnis \
-	 $(addprefix benedictio-solemn-,evangelica divinum) \
-	 benedicamus-solemnis-laud tonus-lectionis-solemnis tuautem
+	 $(addprefix benedictio-solemn-,evangelica divinum adsocietatem) \
+	 benedicamus-solemnis-laud tonus-lectionis-solemnis tuautem \
+	 dominelabiamea matinv-AlleluiaSpiritus
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
-OTHERDEPS = hym-TeLucis-bohtext.tex
+OTHERDEPS = $(addsuffix -bohtext.tex,hym-TeLucis hym-VeniCreator seq-VeniSancte)
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
 LAPSALMSINITTEX = $(patsubst %.gabc,%.tex,$(LAPSALMSINITGABC))
@@ -117,6 +120,7 @@ $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: $(PSALMS_DIR)/%.pslm
 $(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
 	$(GENPSCOMB)
 $(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
+$(TMP_DIR)/ps90-comb.tex $(TMP_DIR)/ps133-comb.tex: PSSKIP = 0
 pentecostes.pdf: pentecostes.tex conventuscommune.tex translationes_cs.tex gregall.tex gregall.lua gregall.ttf SGModern.ttf \
 	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 	$(LUALATEX) -interaction=nonstopmode $<

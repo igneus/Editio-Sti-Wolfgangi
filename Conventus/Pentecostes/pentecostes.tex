@@ -172,7 +172,7 @@ per infiníta sǽcula sæculórum.
 
 \cantusCumNeumis
 
-\pars{Psalmus 1.} \scriptura{\textbf{H270}}
+\pars{Psalmus 1.} \scriptura{Act. 2, 1; \textbf{H270}}
 
 \antiphona{III a2}{temporalia/ant1.tex}
 
@@ -189,7 +189,7 @@ per infiníta sǽcula sæculórum.
 \vfill
 \pagebreak
 
-\pars{Psalmus 2.} \scriptura{\textbf{H270?}}
+\pars{Psalmus 2.} \scriptura{Sap. 1, 7; \textbf{H270?}}
 
 \antiphona{VIII G}{temporalia/ant2.tex}
 
@@ -204,7 +204,7 @@ per infiníta sǽcula sæculórum.
 \vfill
 \pagebreak
 
-\pars{Psalmus 3.} \scriptura{\textbf{H270}}
+\pars{Psalmus 3.} \scriptura{Act. 2, 4; \textbf{H270}}
 
 \antiphona{VIII G}{temporalia/ant3.tex}
 
@@ -223,7 +223,7 @@ per infiníta sǽcula sæculórum.
 
 \antiphona{VII c2}{temporalia/ant5.tex}
 
-\trAntIV
+\trAntV
 
 \scriptura{Psalmus 112.}
 
@@ -270,16 +270,17 @@ per infiníta sǽcula sæculórum.
 
 \superInitialam{VIII}
 \includescore{temporalia/hym-VeniCreator.tex}
-%\input{hym-VeniCreator-bohtext.tex}
+\input{hym-VeniCreator-bohtext.tex}
 
 \vfill
+\pagebreak
 
 \pars{Versus.}\rubrica{ - in I. vesperis:}
 
 % Versus. %%%
 \includescore{temporalia/versus-repleti.tex}
 
-%\noindent \trVersus
+\noindent \trVersusVespI
 
 \vfill
 
@@ -288,18 +289,19 @@ per infiníta sǽcula sæculórum.
 % Versus. %%%
 \includescore{temporalia/versus-loquebantur.tex}
 
-%\noindent \trVersus
+\noindent \trVersusVespII
 
 \vfill
 \pagebreak
 
 \cantusCumNeumis
 
-\pars{Canticum B. Mariæ V.}\rubrica{ - in I. vesperis:} \scriptura{\textbf{H267}}
+\pars{Canticum B. Mariæ V.}\rubrica{ - in I. vesperis:} \scriptura{Joannes
+14, 18.28; ibid. 16, 22; \textbf{H267}}
 
 \antiphona{I D*}{temporalia/ant-magn-vesp1.tex}
 
-%\trAntMagnificatI
+\trAntMagnificatI
 
 \vfill
 
@@ -322,7 +324,7 @@ per infiníta sǽcula sæculórum.
 
 \antiphona{I D*}{temporalia/ant-magn-vesp2.tex}
 
-%\trAntMagnificatII
+\trAntMagnificatII
 
 \vfill
 
@@ -439,8 +441,6 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \antiphona{VIII G}{temporalia/ant-alleluia.tex}
 
-\trComplAntI
-
 \scriptura{Psalmus 4.}
 
 \includescore{temporalia/ps4-initium-viii-G-auto.tex}
@@ -546,13 +546,23 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 
 \antiphona{V}{temporalia/an_regina_caeli_simplex.tex}
 
-%\trAlmaRedemptoris
+\trReginaCaeli
+
+\includescore{temporalia/versus-gaude.tex}
+
+\trGaudeEtLaetare
 
 \vfill
 \pagebreak
 
 \hora{Ad Matutinum.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sideThumbs{Matutinum}
+
+\includescore{temporalia/dominelabiamea.tex}
+
+\pars{Invitatorium.} \scriptura{\textbf{H268}}
+
+\antiphona{V}{temporalia/matinv-AlleluiaSpiritus.tex}
 
 \scriptura{Psalmus 94. (Textus antiquus latinus); \textbf{H447}}
 
@@ -581,6 +591,14 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \includescore{temporalia/venite5f.tex}
 
 \rubrica{Repetitur altera pars Invitatorii. Denique repetitur integrum Invitatorium.}
+
+\includescore{temporalia/matinv-AlleluiaSpiritus.tex}
+
+\vfill
+
+\pars{Hymnus.}
+
+\antiphona{VIII}{temporalia/hym-JamChristus.tex}
 
 \vfill
 \pagebreak
@@ -686,9 +704,9 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 %dedit mihi Pater, sic fácio.
 
 \textusEtTranslatio{
-  In illo témpore: Dixit Jesus discípulis suis: Si quis díligit me, sermónem
-  meum servábit, et Pater meus díliget eum, et ad eum veniémus, et mansiónem
-  apud eum faciémus.
+  In illo témpore: Dixit Jesus discípulis \textbf{su}is:~\gredagger{}
+  Si quis díligit me, sermónem meum servábit, et Pater meus dí\textit{li}get eum,~\grestar{}
+  et ad eum veniémus, et mansiónem apud eum fa\textit{ci}émus.
   \textit{Et} réliqua.
 }{}{10cm}
 
@@ -698,15 +716,20 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \noindent Homilía sancti Gregóri\textit{i} Papæ.
 
 \textusEtTranslatio{
-  Libet, fratres caríssimi, evangelicæ verba lectiónis sub brevitate
-  transcúrrere, ut post diutius liceat in contemplatióne tantæ solemnitátis
-  immorari. Hódie namque Spíritus Sanctus repentino sónitu super discípulos
-  venit, mentesque carnalium in sui amórem permutávit, et foris apparéntibus
-  linguis igneis, intus facta sunt corda flammántia; quia dum Deum in ignis
-  visióne suscepérunt, per amórem suáviter arsérunt. Ipse namque Spíritus
-  Sanctus amor est: unde et Joánnes dicit Deus cáritas est. Qui ergo mente
-  integra Deum desíderat, profecto jam habet, quem amat. Neque enim quisquam
-  posset Deum dilígere, si eum quem díligit, non habéret.
+  Libet, fratres ca\textbf{rís}simi,~\gredagger{}
+  evangelicæ verba lectiónis sub brevita\textit{te} transcúrrere,~\grestar{}
+  ut post diutius liceat in contemplatióne tantæ solemnitátis im\textit{mo}rari.
+  Hódie namque Spíritus Sanctus repentino sónitu super discípulos \textbf{ve}nit,~\gredagger{}
+  mentesque carnalium in sui amórem \textit{per}mutávit,~\grestar{}
+  et foris apparéntibus linguis \textbf{ig}neis,~\gredagger{}
+  intus facta sunt cor\textit{da} flammántia;~\grestar{}
+  quia dum Deum in ignis visióne suscepérunt, per amórem suáviter \textit{ar}sérunt.
+  Ipse namque Spíritus \textit{San}ctus amor est:~\grestar{}
+  unde et Joánnes dicit Deus cá\textit{ri}tas est.
+  Qui ergo mente integra De\textit{um} desíderat,~\grestar{}
+  profecto jam habet, \textit{quem} amat.
+  Neque enim quisquam posset De\textit{um} dilígere,~\grestar{}
+  si eum quem díligit, non \textit{ha}béret.
 }{}{10cm}
 
 \tuAutem
@@ -731,14 +754,20 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \pars{Lectio II.} \scriptura{Homilia 30. in Evang.}
 
 \textusEtTranslatio{
-  Sed ecce, si unusquísque vestrum requirátur an diligat Deum: tota fiducia
-  et secura mente respondet, Diligo. In ipso autem lectiónis exordio audístis
-  quid Véritas dicit: Si quis díligit me, sermónem meum servábit. Probátio
-  ergo dilectiónis, exhibítio est operis. Hinc in epistola sua idem Joánnes
-  dicit: Qui dicit: Diligo Deum, et mandáta ejus non custódit, mendax est.
-  Vere étenim Deum dilígimus et mandáta ejus custodímus, si nos a nostris
-  voluptátibus coarctamus. Nam qui adhuc per illicita desidéria diffluit,
-  profecto Deum non amat: quia ei in sua voluntáte contradicit.
+  Sed ecce, si unusquísque vestrum requirátur an di\textit{li}gat Deum:~\grestar{}
+  tota fiducia et secura mente respon\textit{det,} Diligo.
+  In ipso autem lectiónis exordio audístis quid Vé\textit{ri}tas dicit:~\grestar{}
+  Si quis díligit me, sermónem meum \textit{ser}vábit.
+  Probátio ergo di\textit{lec}tiónis,~\grestar{}
+  exhibítio est \textit{o}peris.
+  Hinc in epistola sua idem Joánnes \textbf{di}cit:~\gredagger{}
+  Qui dicit: Di\textit{li}go Deum,~\grestar{}
+  et mandáta ejus non custó\textit{dit,} mendax est.
+  Vere étenim Deum dilígimus et mandáta ejus \textit{cus}todímus,~\grestar{}
+  si nos a nostris voluptátibus co\textit{ar}ctamus.
+  Nam qui adhuc per illicita desidéria \textbf{dif}fluit,~\gredagger{}
+  profecto De\textit{um} non amat:~\grestar{}
+  quia ei in sua voluntáte con\textit{tra}dicit.
 }{}{10cm}
 
 \tuAutem
@@ -754,7 +783,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \vfill
 \pagebreak
 
-%\includescore{temporalia/benedictio-solemn-adsocietatem.tex}
+\includescore{temporalia/benedictio-solemn-adsocietatem.tex}
 
 %\trMatBenedictioIII
 
@@ -763,17 +792,24 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \pars{Lectio III.} \scriptura{Homilia 30. in Evang.}
 
 \textusEtTranslatio{
-  Et Pater meus diliget eum, et ad eum veniemus, et mansiónem apud eum
-  faciémus. Pensate, fratres caríssimi, quanta sit ista dignitas, habére in
-  cordis hospítio advéntum Dei. Certe, si domum nostram quisquam dives aut
-  præpotens amícus intraret, omni festinántia domus tota mundarétur, ne quid
-  fortásse esset, quod óculos amíci intrántis offenderet. Tergat ergo sordes
-  pravi operis, qui Deo præparat domum mentis. Sed vidéte quid Véritas dicat:
-  Veniemus, et mansiónem apud eum faciémus. In quorúmdam étenim corda venit,
-  et mansiónem non facit: quia, per compunctiónem quidem, Dei respectum
-  percipiunt, sed tentatiónis témpore hoc ipsum quo compúncti fúerant,
-  obliviscúntur; sicque ad perpetranda peccáta redeunt, ac si hæc minime
-  planxíssent.
+  Et Pater meus diliget \textbf{e}um,~\gredagger{}
+  et ad eum \textit{ve}niemus,~\grestar{}
+  et mansiónem apud eum fa\textit{ci}émus.
+  Pensate, fratres ca\textbf{rís}simi,~\gredagger{}
+  quanta sit \textit{is}ta dígnitas,~\grestar{}
+  habére in cordis hospítio advén\textit{tum} Dei.
+  Certe, si domum nostram quisquam dives aut præpotens amícus in\textbf{tra}ret,~\gredagger{}
+  omni festinántia domus tota \textit{mun}darétur,~\grestar{}
+  ne quid fortásse esset, quod óculos amíci intrántis \textit{of}fenderet.
+  Tergat ergo sordes pra\textit{vi} operis,~\grestar{}
+  qui Deo præparat do\textit{mum} mentis.
+  Sed vidéte quid Vé\textit{ri}tas dicat:~\grestar{}
+  Veniemus, et mansiónem apud eum fa\textit{ci}émus.
+  In quorúmdam étenim corda venit, et mansiónem non \textbf{fa}cit:~\gredagger{}
+  quia, per compunctiónem quidem, Dei respec\textit{tum} percipiunt,~\grestar{}
+  sed tentatiónis témpore hoc ipsum quo compúncti fúerant, oblivis\textbf{cún}tur;~\gredagger{}
+  sicque ad perpetranda peccá\textit{ta} redeunt,~\grestar{}
+  ac si hæc minime \textit{plan}xíssent.
 }{}{10cm}
 
 \tuAutem
@@ -846,7 +882,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \vfill
 \pagebreak
 
-\pars{Psalmus 2.} \scriptura{\textbf{H270}}
+\pars{Psalmus 2.} \scriptura{Act. 2, 1; \textbf{H270}}
 
 \antiphona{III a2}{temporalia/ant1.tex}
 
@@ -861,7 +897,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \vfill
 \pagebreak
 
-\pars{Psalmus 3.} \scriptura{\textbf{H270}}
+\pars{Psalmus 3.} \scriptura{Sap. 1, 7; \textbf{H270}}
 
 \antiphona{VIII G}{temporalia/ant2.tex}
 
@@ -876,7 +912,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \vfill
 \pagebreak
 
-\pars{Psalmus 4.} \scriptura{\textbf{H270}}
+\pars{Psalmus 4.} \scriptura{Act. 2, 4; \textbf{H270}}
 
 \antiphona{VIII G}{temporalia/ant3.tex}
 
@@ -891,7 +927,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \vfill
 \pagebreak
 
-\pars{Psalmus 5.} \scriptura{\textbf{H270}}
+\pars{Psalmus 5.} \scriptura{Dan. 3, 77.79\textbf{H270}}
 
 \antiphona{I a2}{temporalia/ant4.tex}
 
@@ -1089,6 +1125,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \pars{Sequentia.}
 
 \antiphona{I}{temporalia/seq-VeniSancte.tex}
+\input{seq-VeniSancte-bohtext.tex}
 
 \vfill
 \pagebreak
