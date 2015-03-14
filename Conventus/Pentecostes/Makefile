@@ -78,10 +78,11 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 $(addprefix venite5,a b c d e f) \
 	 oratiodominica-mat absolutio-exaudi tedeum-solemnis \
 	 $(addprefix benedictio-solemn-,evangelica divinum adsocietatem) \
-	 benedicamus-solemnis-laud tonus-lectionis-solemnis tuautem \
-	 dominelabiamea matinv-AlleluiaSpiritus
+	 $(addprefix benedicamus-solemnis-,laud 1vesp 2vesp) tonus-lectionis-solemnis tuautem \
+	 dominelabiamea matinv-AlleluiaSpiritus communio-versus-Exsurgat-initium
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
-OTHERDEPS = $(addsuffix -bohtext.tex,hym-TeLucis hym-VeniCreator seq-VeniSancte)
+OTHERDEPS = $(addsuffix -bohtext.tex,hym-TeLucis hym-VeniCreator seq-VeniSancte) \
+	 $(TMP_DIR)/communio-versus-Exsurgat-comb.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
 LAPSALMSINITTEX = $(patsubst %.gabc,%.tex,$(LAPSALMSINITGABC))
@@ -121,6 +122,8 @@ $(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
 	$(GENPSCOMB)
 $(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
 $(TMP_DIR)/ps90-comb.tex $(TMP_DIR)/ps133-comb.tex: PSSKIP = 0
+$(TMP_DIR)/communio-versus-Exsurgat-comb.tex: $(patsubst %,communio-versus-Exsurgat%tex,. -boh.)
+	$(GENPSCOMB)
 pentecostes.pdf: pentecostes.tex conventuscommune.tex translationes_cs.tex gregall.tex gregall.lua gregall.ttf SGModern.ttf \
 	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 	$(LUALATEX) -interaction=nonstopmode $<
