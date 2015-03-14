@@ -12,6 +12,9 @@
 % shortcut for Junicode without ligatures (for the Czech texts)
 \newfontfamily\nlfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
 
+% Hebrew font: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=SILHebrUnic2
+\newfontfamily\hebfont[Scale=1]{Ezra SIL}
+
 \usepackage{multicol}
 \usepackage{color}
 \usepackage{lettrine}
@@ -189,7 +192,7 @@ per infiníta sǽcula sæculórum.
 \vfill
 \pagebreak
 
-\pars{Psalmus 2.} \scriptura{Sap. 1, 7; \textbf{H270?}}
+\pars{Psalmus 2.} \scriptura{Sap. 1, 7; \textbf{H270}}
 
 \antiphona{VIII G}{temporalia/ant2.tex}
 
@@ -504,7 +507,7 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 
 \pars{Hymnus.}
 
-\antiphona{VIII}{temporalia/hym-TeLucis.tex}
+\antiphona{I}{temporalia/hym-TeLucis.tex}
 \input{hym-TeLucis-bohtext.tex}
 
 \pagebreak
@@ -1110,6 +1113,102 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \vfill
 \pagebreak
 
+\hora{Ad Tertiam.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sideThumbs{Tertia}
+
+\vspace{1cm}
+\includescore{temporalia/deusinadiutorium-communis.tex}
+\vfill
+\pagebreak
+
+\pars{Hymnus.}
+
+\superInitialam{VIII}
+\includescore{temporalia/hym-VeniCreator.tex}
+\input{hym-VeniCreator-bohtext.tex}
+
+\vfill
+\pagebreak
+
+\pars{Psalmus.} \scriptura{Sap. 1, 7; \textbf{H270}}
+
+\antiphona{VIII G}{temporalia/ant2.tex}
+
+\trAntII
+
+\scriptura{Psalmus 118. {\hebfont{ה}},{\hebfont{ו}},{\hebfont{ז}},{\hebfont{ח}},{\hebfont{ט}},{\hebfont{י}}}
+
+\includescore{temporalia/ps118v_x-initium-viii-G-auto.tex}
+
+\psalmusEtTranslatioT{temporalia/ps118v_x-comb.tex}{10cm}
+
+\includescore{temporalia/ant2.tex} % repeat the antiphon - new page
+
+\vfill
+\pagebreak
+
+\raggedcolumns
+
+% Capitulum. %%%
+\cantusSineNeumas
+
+\label{capitulum}
+\pars{Capitulum.} \scriptura{Act. 2, 1 - 2}
+
+\includescore{temporalia/capitulum-CumComplerentur.tex}
+
+% preklad Jeruz. bible
+\trCapituli
+
+\vfill
+
+\pars{Versus.}
+
+\includescore{temporalia/versus-spiritus-simplex.tex}
+
+\noindent \trMatVersus
+
+\vfill
+
+\rubrica{Ante Orationem, cantatur a Superiore:}
+
+\pars{Supplicatio Litaniæ.}
+
+\includescore{temporalia/supplicatiolitaniae.tex}
+
+\vfill
+
+\pars{Oratio Dominica.}
+
+\includescore{temporalia/oratiodominica-mat.tex}
+
+\vfill
+
+\includescore{temporalia/domineexaudi.tex}
+
+\vfill
+\pagebreak
+
+% Oratio. %%%
+\pars{Oratio.}
+
+\includescore{temporalia/oratio.tex}
+\trOrationis
+
+\vfill
+
+\includescore{temporalia/benedicamus-minor.tex}
+
+\vfill
+
+\noindent \Vbardot{} Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
+\Rbardot{} Amen.
+
+\trFideliumAnimae
+
+\vfill
+\pagebreak
+
 \hora{Ad Missam} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sideThumbs{Missa}
 
@@ -1217,6 +1316,195 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \vfill
 \pagebreak
 
+\hora{Ad Sextam.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sideThumbs{Sexta}
+
+\vspace{1cm}
+\includescore{temporalia/deusinadiutorium-communis.tex}
+\vspace{1cm}
+
+\pars{Hymnus.}
+
+\antiphona{I}{temporalia/hym-RectorPotens.tex}
+\input{hym-RectorPotens-bohtext.tex}
+
+\vfill
+\pagebreak
+
+\pars{Psalmus.} \scriptura{Act. 2, 4; \textbf{H270}}
+
+\antiphona{VIII G}{temporalia/ant3.tex}
+
+\trAntIII
+
+\scriptura{Psalmus 118. {\hebfont{כ}},{\hebfont{ל}},{\hebfont{מ}},{\hebfont{נ}},{\hebfont{ס}},{\hebfont{ע}}}
+
+\includescore{temporalia/ps118xi_xvi-initium-viii-G-auto.tex}
+
+\psalmusEtTranslatioT{temporalia/ps118xi_xvi-comb.tex}{10cm}
+
+\includescore{temporalia/ant3.tex} % repeat the antiphon - new page
+
+\vfill
+\pagebreak
+
+\raggedcolumns
+
+% Capitulum. %%%
+\cantusSineNeumas
+
+\label{capitulum}
+\pars{Capitulum.} \scriptura{Act. 2, 6}
+
+\includescore{temporalia/capitulum-Facta.tex}
+
+% preklad Jeruz. bible
+\trCapituliFacta
+
+\vfill
+
+\pars{Versus.}
+
+\includescore{temporalia/versus-spiritusparaclitus.tex}
+
+\noindent \trVersusSexta
+
+\vfill
+
+\vfill
+
+\rubrica{Ante Orationem, cantatur a Superiore:}
+
+\pars{Supplicatio Litaniæ.}
+
+\includescore{temporalia/supplicatiolitaniae.tex}
+
+\vfill
+
+\pars{Oratio Dominica.}
+
+\includescore{temporalia/oratiodominica-mat.tex}
+
+\vfill
+
+\includescore{temporalia/domineexaudi.tex}
+
+\vfill
+\pagebreak
+
+% Oratio. %%%
+\pars{Oratio.}
+
+\includescore{temporalia/oratio.tex}
+\trOrationis
+
+\vfill
+
+\includescore{temporalia/benedicamus-minor.tex}
+
+\vfill
+
+\noindent \Vbardot{} Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
+\Rbardot{} Amen.
+
+\trFideliumAnimae
+
+\vfill
+\pagebreak
+
+\hora{Ad Nonam.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sideThumbs{Nona}
+
+\vspace{1cm}
+\includescore{temporalia/deusinadiutorium-communis.tex}
+\vspace{1cm}
+
+\pars{Hymnus.}
+
+\antiphona{I}{temporalia/hym-RerumDeus.tex}
+\input{hym-RerumDeus-bohtext.tex}
+
+\vfill
+\pagebreak
+
+\pars{Psalmus.} \scriptura{\textbf{H271}}
+
+\antiphona{VII c2}{temporalia/ant5.tex}
+
+\trAntV
+
+\scriptura{Psalmus 118. {\hebfont{פ}},{\hebfont{צ}},{\hebfont{ק}},{\hebfont{ר}},{\hebfont{ש}},{\hebfont{ת}}}
+
+\includescore{temporalia/ps118xvii_xxii-initium-vii-c2-auto.tex}
+
+\psalmusEtTranslatioT{temporalia/ps118xvii_xxii-comb.tex}{10cm}
+
+%\includescore{temporalia/ant5.tex} % repeat the antiphon - new page
+
+\pagebreak
+
+\raggedcolumns
+
+% Capitulum. %%%
+\cantusSineNeumas
+
+\label{capitulum}
+\pars{Capitulum.} \scriptura{Act. 2, 11}
+
+\includescore{temporalia/capitulum-Judaei.tex}
+
+% preklad Jeruz. bible
+\trCapituliJudaei
+
+\vfill
+
+\pars{Versus.}
+
+\includescore{temporalia/versus-repleti-simplex.tex}
+
+\noindent \trVersusVespI
+
+\vfill
+
+\vfill
+
+\rubrica{Ante Orationem, cantatur a Superiore:}
+
+\pars{Supplicatio Litaniæ.}
+
+\includescore{temporalia/supplicatiolitaniae.tex}
+
+\vfill
+
+\pars{Oratio Dominica.}
+
+\includescore{temporalia/oratiodominica-mat.tex}
+
+\vfill
+
+\includescore{temporalia/domineexaudi.tex}
+
+\vfill
+\pagebreak
+
+% Oratio. %%%
+\pars{Oratio.}
+
+\includescore{temporalia/oratio.tex}
+\trOrationis
+
+\vfill
+
+\includescore{temporalia/benedicamus-minor.tex}
+
+\vfill
+
+\noindent \Vbardot{} Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
+\Rbardot{} Amen.
+
+\trFideliumAnimae
+
+\vfill
 \newpage
 \RemoveSideThumbs
 \pagestyle{empty}

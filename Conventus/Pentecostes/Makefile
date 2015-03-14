@@ -20,7 +20,7 @@ PSALM_PREPROCESSOR = $(TOOLS_DIR)/psalmpreprocessor.rb
 INITIUM_TOOL = $(TOOLS_DIR)/initiumpsalmi.rb
 PSSKIP = 1
 GENPSCOMB = $(AWK) -f pscomb.awk -v PSSKIP=$(PSSKIP) -v TRFILE=$(word 2,$^) $< > $@
-PSALMS = 4 47 62 67 90 92 99 103 109 110 111 112 113 116 133 148 149 150
+PSALMS = 4 47 62 67 90 92 99 103 109 110 111 112 113 116 118v_x 118xi_xvi 118xvii_xxii 133 148 149 150
 include tonus.mk
 MODUS-4 = viii-G
 MODUS-47 = viii-c
@@ -36,6 +36,9 @@ MODUS-111 = viii-G
 MODUS-112 = i-a2
 MODUS-113 = vii-c2
 MODUS-116 = vii-c2
+MODUS-118v_x = viii-G
+MODUS-118xi_xvi = viii-G
+MODUS-118xvii_xxii = vii-c2
 MODUS-133 = viii-G
 MODUS-148 = vii-c2
 MODUS-149 = vii-c2
@@ -63,15 +66,16 @@ LAPSALMSEXTRA = $(patsubst %,$(TMP_DIR)/%.tex,benedictus magnificat nuncdimittis
 ALLLAPSALMS = $(LAPSALMS) $(LAPSALMSEXTRA)
 SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 $(addprefix matant,1 2 3) $(addprefix matresp,1 2) \
-	 $(addprefix versus-,spiritus repleti loquebantur custodi gaude) \
-	 $(addprefix hym-,VeniCreator BeataNobis TeLucis JamChristus) \
+	 $(addprefix versus-,spiritus repleti loquebantur custodi gaude \
+			     spiritus-simplex repleti-simplex spiritusparaclitus) \
+	 $(addprefix hym-,VeniCreator BeataNobis TeLucis JamChristus RectorPotens RerumDeus) \
 	 deusinadiutorium-solemnis deusinadiutorium-communis \
 	 supplicatiolitaniae oratiodominica resp1v resp2v respl \
 	 dominusvobiscum-solemnis domineexaudi magnificat-initium-i-D_ \
-	 capitulum-CumComplerentur oratio \
+	 $(addprefix capitulum-,CumComplerentur tuautem Facta Judaei) oratio \
 	 benedictio-noctemquietam jubedomnebenedicere lectiobrevis-fratressobrii \
 	 convertenosdeus ant-alleluia deusinadiutorium-solemnis \
-	 capitulum-tuautem resp-inmanus ant-salvanos-antiquo \
+	 resp-inmanus ant-salvanos-antiquo \
 	 oratio-visita benedicamus-minor an_regina_caeli_simplex \
 	 introitus-SpiritusDomini alleluia-EmitteSpiritum seq-VeniSancte \
 	 alleluia-VeniSancte offertorium-ConfirmaHoc communio-FactusEst \
@@ -82,7 +86,7 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 $(addprefix benedicamus-solemnis-,laud 1vesp 2vesp) tonus-lectionis-solemnis tuautem \
 	 dominelabiamea matinv-AlleluiaSpiritus communio-versus-Exsurgat-initium
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
-OTHERDEPS = $(addsuffix -bohtext.tex,hym-TeLucis hym-VeniCreator seq-VeniSancte) \
+OTHERDEPS = $(addsuffix -bohtext.tex,hym-TeLucis hym-VeniCreator hym-RectorPotens hym-RerumDeus seq-VeniSancte) \
 	 $(TMP_DIR)/communio-versus-Exsurgat-comb.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
