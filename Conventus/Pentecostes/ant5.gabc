@@ -3,12 +3,14 @@ office-part: laudes, 4. antiphona;
 occasion: In Festo Pentecostes;
 mode: 7;
 book: Antiphonale Monasticum, 1934, p. 521;
-transcriber: Albert Bloomfield;
+transcriber: Albert Bloomfield, Jakub Jelínek;
 initial-style: 1;
+nabc-lines: 1;
 %%
 (c3)
-LO(h_g)que(f)bán(hi~)tur(i.) *(,)
-vá(i_j_H_'G_)riis(f!gwh) lin(gf)guis(e') A(f)pó(f)sto(ef_ED'e)li(ed..) (;)
-ma(fh~)gná(h_)li(hg)a(fe) De(f)i,(e.) (;) al(hg~)le(f)lú(hi~)ia,(i.) (,)
-al(ef~)le(f_e_/fv_ED)lú(ef~)ia,(f.) (,)
-al(h)le(f_g_F'_D_')lú(f>)ia.(e.) (::)
+LO(h_g|cl-hglst2)que(f|gr)bán(hi~|ta>)tur(i.|vi-hg) *(,)
+vá(i_j_H_'G_|peShisut2lst2lsm3)riis(f!gwh|ta//ql) lin(gf|cl>lsi8)guis(e'|ta) A(f|vilsc4)pó(f|vilse1)sto(ef_ED'e|pe-1sut2vihg)li(ed..|cl-) (;)
+mag(fh~|ta>)ná(h_|vi-hg)li(hg|clhglsc3)a(fe|clhg) De(f|vihi)i,(e.|talsp3) (;)
+al(hg~|vi>)le(f|ta)lú(hi~|ta>)ia,(i.|vi-) (,)
+al(ef~|ta>)le(f_e_/fv_ED|cl-ci-hh)lú(ef~|ta>)ia,(f.|ta) (,)
+al(h|vi>lss2lsi8)le(f_g_F'_D_'|pe-1sut2)lú(f>|pe>)ia.(e.|ta) (::)
