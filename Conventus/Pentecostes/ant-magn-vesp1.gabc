@@ -5,9 +5,10 @@ occasion: In Festo Pentecostes;
 book: Antiphonale Monasticum 1933, pg. 519;
 transcriber: Jakub Jelínek;
 initial-style: 1;
+nabc-lines: 1;
 %%
 (c4)
-NON(cd~) vos(d) re(d)lín(de~)quam(d') *()
-ór(d>)pha(cf)nos,(f_e) al(d>)le(cd)lú(d_e)ia:(d/dc.) (:)
-vá(f_h)do,(g_h) et(f) vé(g_h)ni(g)o(fe) ad(cd~) vos,(d_f) al(e>)le(cd)lú(d_e)ia:(d/dc.) (:)
-et(c) gau(cd~)dé(d_e)bit(d/dc) cor(c_d) vés(ff)trum,(e_f) al(gh)le(fe)lú(d.)ia.(d.) (::)
+NON(cd~|ta>) vos(d|ta) re(d|ta)lín(de~|ta>)quam(d'|ta) *()
+ór(d>|vi>)pha(cf|pe)nos,(f_e|cl-) al(d>|vi>)le(cd|pe)lú(d_e|pe>)ia:(d/dc.|pr) (:)
+vá(f_h|peS)do,(g_h|pq) et(f|ta) vé(g_h|peS)ni(g|vi)o(fe|cl) ad(cd~|ta>lsi8) vos,(d_f|peS) al(e>|vi>)le(cd|pe)lú(d_e|pe>)ia:(d/dc.|vs) (:)
+et(c|ta) gau(cd~|ta>)dé(d_e|peS)bit(d/dc|pr) cor(c_d|pe>) vés(ff|vs)trum,(e_f|peS) al(gh|pe>)le(fe|cl)lú(d.|ta)ia.(d.|ta) (::)

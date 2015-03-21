@@ -3,21 +3,22 @@ office-part: matutinum, 1. resp.;
 occasion: In Festo Pentecostes;
 book: Nocturnale Romanum, 2002, pg. 493;
 mode: 3;
-initial-style: 1;
 transcriber: Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
 
 (c4)
-DUm(efsss) com(fe~)ple(g)rén(gh~)tur(GHiwji) di(ig/hjg/f/fo!e/f)es(fe) *()
-Pen(EF!gwh!i>)te(gh)cós(fe)tes,(EFghhggo~efe) (;)
-e(hvjvIG)rant(GHjij>) om(hgh>)nes(fe) pá(EF!gwh!iv)ri(g)ter(gf/fd/efe/f) di(de)cén(GHjvHGF!gwh/ihg~)tes,(hg) (,)
-al(gh>)le(hg)lú(ge/fed~)ia:(ed) (:)
-et(g) sú(hiHG!hwi!jo~)bi(i)to(i) fac(i!jo)tus(i) est(i) so(jssjvIH)nus(gh/g/go!f) de(h!iwj) cœ(jvIH)lo,(gh/g/go!f) (,)
-al(h!iwj)le(jvIH)lú(h>)ia,(hg/hih) +(;)
-Tam(fe~)quam(f) spí(gh)ri(ho~)tus(g) tor(hgh>)rens,(f/fo!e) (,)
-re(d)plé(d!fwg!hvGF!gwhgh)vit(hg) to(g/hgh)tam(f/fo!e) do(d!fwg!hvGF!gwhgh)mum,(hg) (,)
-al(gh>)le(hg)lú(ge/fed~)ia,(ed) (,)
-al(f!gw!h>)le(hhfgGH!iwjIHjg!hwiHG)lú(egffs)ia.(fe) <sp>V/</sp>.(::)
+DUm(efsss|ta-ts) com(fe~|vi>lse4)ple(g|vi)rén(gh~|ta>lse4)tur(GHiwji|ql!cl-ppt2) di(ig/hjg/f/fo!e/f|cltopihg``puhd/vi)es(fe|cl-) *()
+Pen(EF!gwh!i>|qlppt2vi>hh)te(gh|peS)cós(fe|clM-)tes,(EFghhggo~efe|pe-pp2clhhorhhtohi) (;)
+e(hvjvIG|vi-cihjlsc3)rant(GHjij>|po>pp2) om(hgh>|po>lsi6)nes(fe|cl-) pá(EF!gwh!iv|ql-ppt2vihj)ri(g|vi)ter(gf/fd/efe/f|pfto-1hhvi-hh) di(de|peS)cén(GHjvHGF!gwh/ihg~|vi-ppu2sut3qlhhcl->hi)tes,(hg|cl-) (,)
+al(gh>|pe>)le(hg|cl-)lú(ge/fed~|clS-cl->)ia:(ed|cl-) (:)
+et(g|vi) sú(hiHG!hwi!jo~|``pe-su2ql-or)bi(i|ta)to(i|ta) fac(i!jo|vslsc3)tus(i|ta) est(i|ta) so(jssjvIH|ds-ci-)nus(gh/g/go!f|pe-1pr) de(h!iwj|vi-qlhi) cœ(jvIH|ci-)lo,(gh/g/go!f|peSpr) (,)
+al(h!iwj|vi-qlhi)le(jvIH|ci-)lú(h>|pe>)ia,(hg/hih|cltohg) +(;)
+Tam(fe~|vi>)quam(f|vi) spí(gh|pe)ri(ho~|or)tus(g|ta) tor(hgh>|po>)rens,(f/fo!e|pr) (,)
+re(d|ta)plé(d!fwg!hvGF!gwhgh|qlppt1vi-hhsut2qihh!pohh)vit(hg|cl-) to(g/hgh|ta-po)tam(f/fo!e|pr) do(d!fwg!hvGF!gwhgh|ql-ppt1vi-hisut2qlhi!pohi)mum,(hg|cl-) (,)
+al(gh>|pe>)le(hg|cl-)lú(ge/fed~|clScl>)ia,(ed|cl-) (,)
+al(f!gw!h>|vi-qi>hi)le(hhfgGH!iwjIHjg!hwiHG|vi-pohiqlhkppt2sut2lse7cl-hjqi-hjsut2)lú(egffs|to/st)ia.(fe|cl-) <sp>V/</sp>.(::)
 Dum(i) er(ikjjs)go(h!iwji/h/ho!g) es(i)sent(i) in(i) u(i!jo)num(i) dis(i)cí(i!jo)pu(i)li(i) con(i)gre(i)gá(i!jo)ti(h) prop(h)ter(h) me(h)tum(hg) Ju(h)dæ(j)ó(ikjjs)rum,(ji) (;)
 so(hg)nus(hi) re(i)pén(ij~)te(i) de(i) cœ(i!jo)lo(i) ve(i)nit(ikjIH!iwji) su(hg)per(GH!iwj) e(ji/io!h/ivHGh)os.(hg) +(::)
 Tam(fd~)quam.(f) (::) 

@@ -3,16 +3,18 @@ office-part: 2. vesperis, antiphona ad Magnificat;
 mode: 1;
 book: Antiphonale Monasticum 1933, pg. 524;
 transcriber: Andrew Hinkley, Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
 (c4)
-HO(c)di(cd)e(d'_) *(,)
-com(f>)plé(fe)ti(de) sunt(d/dc) di(f_h)es(g_h) Pen(f_g)te(h)có(fe)stes,(dc) al(d_g)le(fe)lú(d.)ia:(d.) (:)
-hó(dh'!iv)di(h)e(h'_) (,)
-Spí(h)ri(hg)tus(gf) San(ghg~)ctus(h_/i/ih.) (;)
-in(d) ig(f>)ne(d'_) di(d)scí(dg)pu(f)lis(fe) ap(d)pá(fe)ru(dc)it,(c'_) (,)
-et(c) trí(d')bu(d)it(e) e(dc)is(c.) cha(f)rí(g)sma(ed)tum(fe~) do(d.)na:(d.) (:)
-mi(dh'!iv)sit(h) e(hg)os(g_h) in(h) u(h)ni(hg)vér(h)sum(ji~) mun(h_i)dum(h'_) (,)
-præ(h)di(g')cá(h)re(g') et(f) te(e_f)sti(gh)fi(fe)cá(d.)ri:(d.) (;)
-qui(fe) cre(d)dí(e')de(f)rit,(ghhg'_) (,)
-et(fhhg) ba(e')pti(g)zá(fe)tus(d) fú(fe)e(dc)rit,(c.) (,)
-sal(c_d)vus(f_gF'E) e(ggh)rit,(fv_ED'C__) al(d_g)le(fe)lú(d.)ia.(d.) (::)
+HO(c|pu)di(cd|pe-1)e(d'_|ta) *(,)
+com(f>|vi>)plé(fe|vi)ti(de|pehh) sunt(d/dc|clS) di(f_h|peS)es(g_h|clSpesu2) Pen(f_g|peSlsc6)te(h|pe)có(fe|clS)stes,(dc|clS) al(d_g|peS)le(fe|clS)lú(d.|ta)ia:(d.|ta) (:)
+hó(dh'!iv|sa)di(h|clS)e(h'_|pe) (,)
+Spí(h|vi)ri(hg|clS)tus(gf|clS) San(ghg~|toS2)ctus(h_/i/ih.|tr) (;)
+in(d|ta) ig(f>|vi>)ne(d'_|ta-) di(d|vi)scí(dg|ql``vi)pu(f|ta)lis(fe|clS) ap(d|ta)pá(fe|clS)ru(dc|clS)it,(c'_|ta) (,)
+et(c|vi) trí(d'|vi)bu(d|ta)it(e|clS) e(dc|clS)is(c.|vi) cha(f|vi)rí(g|vi-)sma(ed|cl)tum(fe~|vi>) do(d.|ta)na:(d.|ta) (:)
+mi(dh'!iv|sc-)sit(h|vi) e(hg|clS)os(g_h|peS) in(h|pu) u(h|vi)ni(hg|clS)vér(h|ta)sum(ji~|clS) mun(h_i|peS)dum(h'_|ta) (,)
+præ(h|vi)di(g'|ta)cá(h|vi)re(g'|vi-) et(f|ta) te(e_f|ta)sti(gh|pe)fi(fe|clS)cá(d.|ta)ri:(d.|ta) (;)
+qui(fe|clS) cre(d|ta)dí(e'|vi)de(f|ta)rit,(ghhg'_|ql!po) (,)
+et(fhhg|tr) ba(e'|ta)pti(g|vi)zá(fe|clvi)tus(d|ta) fú(fe|clS)e(dc|clS)rit,(c.|ta) (,)
+sal(c_d|peS)vus(f_gF'E|pesu2) e(ggh|qlcl)rit,(fv_ED'C__|ci) al(d_g|peS)le(fe|clS)lú(d.|ta)ia.(d.|ta) (::)

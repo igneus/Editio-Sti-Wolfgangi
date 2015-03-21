@@ -5,9 +5,10 @@ occasion: In Festo Pentecostes;
 book: Antiphonale Monasticum 1933, pg. 523;
 transcriber: Andrew Hinkley, Jakub Jelínek;
 initial-style: 1;
+nabc-lines: 1;
 %%
 (c3)
-AC(e)cí(ehg/h_i)pi(f!gw!hvG'_FE'f)te(f_e) *(,)
-Spí(h)ri(g)tum(h) San(i_j)ctum:(i.) (;)
-quo(i)rum(i) re(i')mi(h)sé(jl)ri(l)tis(lk) pec(ji)cá(j)ta,(i.) (,)
-re(i)mit(g)tún(ij)tur(h) e(hg)is,(e_f) al(g>)le(fg)lú(e.)ia.(e.) (::)
+AC(e|ta-)cí(ehg/h_i|tolsc1pq-)pi(f!gw!hvG'_FE'f|ql!vsppt1su2vihg)te(f_e|cl-) *(,)
+Spí(h|vilss3)ri(g|ta)tum(h|vi) San(i_j|vi-vi>hj)ctum:(i.|ta) (;)
+quo(i|ta)rum(i|ta) re(i'|vi)mi(h|ta)sé(jl|pehl)ri(l|vi-hl)tis(lk|clhl) pec(ji|cllsc3)cá(j|vi)ta,(i.|ta-) (,)
+re(i|vi)mit(g|ta)tún(ij|pe>hg)tur(h|vi) e(hg|cllst2)is,(e_f|peSlsi7) al(g>|vi>)le(fg|pelss3)lú(e.|ta)ia.(e.|ta) (::)
