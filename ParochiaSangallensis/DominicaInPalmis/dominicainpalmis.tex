@@ -1,0 +1,250 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside, 12pt]{article}
+\usepackage[latin]{babel}
+%\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
+\usepackage[portrait, a4paper, mag=1300, truedimen, left=0.8cm, right=0.8cm, top=0.8cm, bottom=0.8cm]{geometry} % okraje stranky
+
+\usepackage{fontspec}
+\setmainfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+%\setmainfont{Junicode}
+
+% shortcut for Junicode without ligatures (for the Czech texts)
+\newfontfamily\nlfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{gregoriosyms}
+\usepackage{wrapfig} % figures wrapped by the text
+\usepackage{parcolumns}
+\usepackage[contents={},opacity=1,scale=1,color=black]{background}
+\usepackage{tikzpagenodes}
+\usepackage{calc}
+\usepackage{longtable}
+
+\setlength{\headheight}{12pt}
+
+\input{conventuscommune.tex} % Often used macros
+\input{translationes_cs.tex} % Czech translations of the proper texts
+\input{gregall.tex}
+
+\setlength{\columnsep}{15pt} % prostor mezi sloupci
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 38 if you want a bigger initial.
+% Emit the initials in red.
+\def\greinitialformat#1{%
+{\color{red}\fontsize{38}{38}\selectfont #1}%
+}
+
+\renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
+\pagestyle{empty}
+
+\begin{center}
+{\large DOMINICA IN PALMIS DE PASSIONE DOMINI}
+
+Commemoratio ingressus Domini in Ierusalem
+\end{center}
+
+\rubrica{Dum celebrans accedit, cantatur:}
+
+\pars{Antiphona} \scriptura{Cf. Mt. 21, 9; Mc. 11, 10; \textbf{H175}}
+
+\antiphona{VII a}{temporalia/ant-hosanna.tex}
+
+\trHosanna
+
+\rubrica{Post antiphonam ab omnibus decantatam, cantor, vel cantores,
+versum integrum canunt. Intonatio rursus cantatur initio cuiusque
+versiculi.}
+
+\pars{Psalmus 117.} \scriptura{Ps. 117, 1.22.23.27.28}
+
+\includescore{temporalia/ps117-initium-vii-a-auto.tex}
+
+\psalmusEtTranslatioT{temporalia/ps117-comb.tex}{6cm}
+
+\rubrica{Omittitur \textnormal{Glória Patri.}}
+
+\vspace{2mm}
+
+\begin{center}
+{\large AD PROCESSIONEM}
+\end{center}
+
+\vspace{2mm}
+
+\rubrica{Progrediente processione, canuntur a schola et populo cantus sequentes (vel alii apti):}
+
+\pars{Antiphona} \scriptura{\textbf{H175}}
+
+\antiphona{I f}{temporalia/ant-pueriportantes.tex}
+
+\trPueriPortantes
+
+\pars{Psalmus 23.} \scriptura{Ps. 23, 1-10}
+
+\includescore{temporalia/ps23-initium-i-f-auto.tex}
+
+\psalmusEtTranslatioT{temporalia/ps23-comb.tex}{6.5cm}
+
+\rubrica{Omittitur \textnormal{Glória Patri.}}
+
+\vspace{4mm}
+
+\pars{Antiphona} \scriptura{\textbf{H175}}
+
+\antiphona{I f}{temporalia/ant-puerivestimenta.tex}
+
+\trPueriVestimenta
+
+\pars{Psalmus 46.} \scriptura{Ps. 46, 2-10}
+
+\includescore{temporalia/ps46-initium-i-f-auto.tex}
+
+\psalmusEtTranslatioT{temporalia/ps46-comb.tex}{6cm}
+
+\rubrica{Omittitur \textnormal{Glória Patri.}}
+
+\vspace{4mm}
+
+\pars{Hymnus ad Christum Regem}
+
+\rubrica{Chorus:} \scriptura{Theodulphus, episcopus Aurelianensis \olddag{} 821; \textbf{E381}}
+
+\antiphona{I}{temporalia/hym-glorialaus.tex}
+
+\trGloriaLaus \scriptura{Omnes: \textnormal{Glória, laus.} ut supra.}
+
+\rubrica{Chorus:}
+
+\includescore{temporalia/hym-glorialaus1.tex}
+
+\trGloriaLausI \scriptura{Omnes: \textnormal{Glória, laus.} ut supra.}
+
+\rubrica{Chorus:}
+
+\includescore{temporalia/hym-glorialaus2.tex}
+
+\trGloriaLausII \scriptura{Omnes: \textnormal{Glória, laus.} ut supra.}
+
+\rubrica{Chorus:}
+
+\includescore{temporalia/hym-glorialaus3.tex}
+
+\trGloriaLausIII \scriptura{Omnes: \textnormal{Glória, laus.} ut supra.}
+
+\rubrica{Chorus:}
+
+\includescore{temporalia/hym-glorialaus4.tex}
+
+\trGloriaLausIV \scriptura{Omnes: \textnormal{Glória, laus.} ut supra.}
+
+\rubrica{Chorus:}
+
+\includescore{temporalia/hym-glorialaus5.tex}
+
+\trGloriaLausV \scriptura{Omnes: \textnormal{Glória, laus.} ut supra.}
+
+\vfill
+\pagebreak
+
+\rubrica{Intrante processione in ecclesiam, cantatur:}
+
+\pars{Responsorium} \scriptura{H172}
+
+\antiphona{II}{temporalia/resp-ingrediente.tex}
+
+\trIngrediente
+
+\vspace{4mm}
+
+\rubrica{Post lectionem II:} \scriptura{Phil. 2, 8 \Vbardot{} ibid. 9; \textbf{C96}}
+
+\antiphona{GR. V}{temporalia/graduale-christus.tex}
+
+\trChristus
+
+\pars{Credo I.} \scriptura{XI. s.}
+
+\superInitialam{IV}
+\includescore{temporalia/credo-i.tex}
+
+\trCredo
+  
+\vspace{4mm}
+
+\pars{Antiphona} \scriptura{Cf. Ps. 73, 22; \textbf{H174}}
+
+\antiphona{{\scriptsize{VIII G}}}{temporalia/ant-iudica.tex}
+
+\trIudica
+
+\pars{Psalmus 21.} \scriptura{Ps. 21, 2.3.21.22}
+
+\includescore{temporalia/ps21-initium-viii-G-auto.tex}
+
+\psalmusEtTranslatioT{temporalia/ps21-comb.tex}{6cm}
+
+\vspace{4mm}
+
+\pars{Sanctus XVII.} \scriptura{XI. s.}
+
+\superInitialam{V}
+\includescore{temporalia/xvii-sanctus.tex}
+
+\vspace{4mm}
+
+\pars{Oratio Dominica}
+
+\includescore{temporalia/oratio-dominica.tex}
+
+\trOratioDominica
+
+\vspace{4mm}
+\pars{Agnus Dei XVII.} \scriptura{XIII. s.}
+
+\superInitialam{V}
+\includescore{temporalia/xvii-agnusdei.tex}
+
+\vspace{2mm}
+
+\pars{Antiphona ad Communio} \scriptura{Mt. 26, 42; \textbf{E186}}
+
+\antiphona{VIII G}{temporalia/communio-pater.tex}
+
+\trPater
+
+\pars{Psalmus 115.} \scriptura{Ps. 115, 1.3.4.5.6.7.8}
+
+\includescore{temporalia/ps115-initium-viii-g-auto.tex}
+
+\psalmusEtTranslatioT{temporalia/ps115-comb.tex}{6cm}
+
+\vspace{2mm}
+
+\pars{Attende Domine}
+
+\antiphona{{\scriptsize{V}}}{temporalia/ant-attende.tex}
+
+\trAttende \scriptura{Omnes: \textnormal{\Rbardot{} Atténde.} ut supra.}
+
+\includescore{temporalia/vers-adterex.tex}
+
+\psalmusEtTranslatioT{attende-comb.tex}{6cm}
+
+\end{document}
