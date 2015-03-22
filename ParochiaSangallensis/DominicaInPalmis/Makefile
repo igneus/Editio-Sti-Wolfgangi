@@ -48,10 +48,11 @@ ALLLAPSALMS = $(LAPSALMS) $(LAPSALMSEXTRA)
 SCORES = $(addprefix ant-,hosanna pueriportantes puerivestimenta iudica attende) hym-glorialaus \
 	 $(addprefix hym-glorialaus,1 2 3 4 5) resp-ingrediente \
 	 $(addprefix xvii-,sanctus agnusdei) communio-pater graduale-christus \
-	 oratio-dominica credo-i vers-adterex
+	 mysterium-fidei oratio-dominica resp-quia credo-i vers-adterex
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = attende-comb.tex
-LILYPONDSCORES = ant-bozemuj vers-posmivaji graduale-kristus
+LILYPONDSCORES = ant-bozemuj vers-posmivaji graduale-kristus ant-otce \
+		 $(addprefix offertorium-kbozicti,1 234 5 678 9)
 LILYPONDPDFS = $(patsubst %,$(TMP_DIR)/%.pdf,$(LILYPONDSCORES))
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc)
 LAPSALMSINITTEX = $(patsubst %.gabc,%.tex,$(LAPSALMSINITGABC))
