@@ -2,16 +2,18 @@ name: Spiritus Sanctus;
 office-part: vesperae 1., responsorium;
 mode: 6;
 transcriber: Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
 (c4)
-Spí(ed)ri(g)tus(hih) San(i/jg/hg/hsjsskjjs)ctus,(ji) (,)
-pro(i)cé(j)dens(h!iwjIG) a(h!iwj) thro(ikjjs)no(ji) (;)
-a(g)pos(g)to(h)ló(j)rum(i>) pec(ixhjh!iwj)tó(ghGFEf)ra(fe) (;)
-in(fd~)vi(e)si(f)bí(gh)li(ixgf!gwhghiv)ter(h) pe(hggf)net(ixf!go!hv/ig/hg)rá(egffs)vit(fe) (;)
-no(e)vum(gffs) san(fd~)cti(gh)fi(g)ca(hijv)ti(i)ó(i!jo!kv)nis(kj/jvIH) sig(h!iwjijg~)num,(hg) *(;)
-ut(g) in(h) o(j)re(i) e(h)ó(h)rum(g) (,)
-óm(ixhjh!iwj)ni(ghGFEf)um(fe) gé(e!fwg!hv)ne(g)ra(g) nas(g)ce(gh)rén(ixhiHGFgh>)tur(g) lin(ixgh!iwjIHig!hwiHgs)guá(ef)rum,(ixg!ivHG) (;)
-al(h>)le(ixg!ivHGf!gvFDfg!ivHGFghg)lú(egffs)ia.(fe) <sp>V/</sp>.(::)
-Lo(i)que(i)bán(ikjjs)tur(h!iwji/hhg) vá(ij)ri(h)is(h) lin(hg~)guis(h) a(j)pós(i)to(ikjjs)li(ji) (;)
-mag(i)ná(ikj/jvIH!iwji)li(hg)a(gh!iwj) De(ji/ih/ivHGh)i.(hg) *(::)
+Spí(ed|cl)ri(g|vi)tus(hih|to) San(i/jg/hg/hsjsskjjs|vi-clhjlsc3clhjtsMhjclhl/sthm)ctus,(ji|cl-) (,)
+pro(i|vi)cé(j|vihg)dens(h!iwjIG|ql-ppt1su2) a(h!iwj|vi-qlhi) thro(ikjjs|tohilsi7/sthj)no(ji|cl-) (;)
+a(g|ta)pos(g|ta)to(h|vi)ló(j|vihg)rum(i>|vi>) pec(ixhjh!iwj|//toSqlhi)tó(ghGFEf|toSsu2vi)ra(fe|cl-) (;)
+in(fd~|vi>)vi(e|vi)si(f|vi)bí(gh|peS)li(ixgf!gwhghiv|//cl-ql!po-1vi-hj)ter(h|ta) pe(hggf|cl!pi)net(ixf!go!hv/ig/hg|//sa-pf-hj)rá(egffs|to/st)vit(fe|cl-) (;)
+no(e|ta)vum(gffs|cl/sthg) san(fd~|vi>)cti(gh|pe)fi(g|ta)ca(hijv|pe-orhh)ti(i|ta)ó(i!jo!kv|sa)nis(kj/jvIH|clShhci-hh) sig(h!iwjijg~|ql!po>ppt1)num,(hg|cl-) *(;)
+ut(g|talse4) in(h|vi) o(j|vihh)re(i|vi) e(h|ta)ó(h|vi)rum(g|ta) (,)
+óm(ixhjh!iwj|//toSqi>hjlsi6)ni(ghGFEf|toSsu2vi)um(fe|cl-) gé(e!fwg!hv|````ql-ppt1orhh)ne(g|ta)ra(g|ta) nas(g|ta)ce(gh|pe)rén(ixhiHGFgh>|////toSsu2pe>)tur(g|ta) lin(ixgh!iwjIHig!hwiHgs|//ql-hhppt2sut2cl-hjqihjsut1sux1)guá(ef|peS)rum,(ixg!ivHG|//vi-cihjlsc3) (;)
+al(h>|vi>)le(ixg!ivHGf!gvFDfg!ivHGFghg|////vippu1su1sut1lsc3vippu1su1sut1lsc3vihgppt2su3lsc3tohj)lú(egffs|to/sthg)ia.(fe|cl-) <sp>V/</sp>.(::)
+Lo(i|ta)que(i|ta)bán(ikjjs|tohi/sthj)tur(h!iwji/hhg|ql!cl-ppt1pr) vá(ij|vs)ri(h|ta)is(h|ta) lin(hg~|vi>)guis(h|vi) a(j|vi)pós(i|vi)to(ikjjs|tohi/sthj)li(ji|cl-) (;)
+mag(i|ta)ná(ikj/jvIH!iwji|toShhvi-hjsut2qihl!cl-hl)li(hg|cl)a(gh!iwj|qlhhppt2) De(ji/ih/ivHGh|cl!pici-hgvihg)i.(hg|cl-) *(::)
 ut(g) in(h) o(j)re.(i) (::)

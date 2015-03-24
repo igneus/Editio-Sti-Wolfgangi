@@ -5,9 +5,10 @@ mode: 8;
 book: Nocturnale Romanum 2002, pg. 486;
 transcriber: Andrew Hinkley, Jakub Jelínek;
 initial-style: 1;
+nabc-lines: 1;
 %%
 (c3)
-FA(h)ctus(h) est(h) *()
-re(h)pén(h)te(h) de(h) cœ(h)lo(h) so(hih)nus(hgh) ad(hg)ve(f)ni(h)én(gf>)tis(e) (;)
-spí(e)ri(e)tus(eo<!fv) ve(d)he(f)mén(hf~)tis,(gh) (,)
-al(f>)le(e)lú(f)ia,(g) al(f>)le(d)lú(ef>)ia.(e) (::)
+FA(h|vi)ctus(h|vi) est(h|vi) *()
+re(h|vi)pén(h|vi)te(h|vi) de(h|vi) cœ(h|vi)lo(h|vi) so(hih|to)nus(hgh|po) ad(hg|cl-)ve(f|ta)ni(h|vi)én(gf>|cl->)tis(e|ta) (;)
+spí(e|ta)ri(e|ta)tus(eo<!fv|pq) ve(d|ta)he(f|vi)mén(hf~|vi>)tis,(gh|peS) (,)
+al(f>|vi>)le(e|ta)lú(f|vi)ia,(g|vihg) al(f>|vi>)le(d|ta)lú(ef>|pe>)ia.(e|ta) (::)
