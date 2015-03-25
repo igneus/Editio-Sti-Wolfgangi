@@ -51,6 +51,9 @@ SCORES = $(addprefix ant-,hosanna pueriportantes puerivestimenta iudica attende)
 	 mysterium-fidei oratio-dominica resp-quia credo-i vers-adterex
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
 OTHERDEPS = attende-comb.tex
+ALLCOMBTEXTS = $(patsubst %,$(TMP_DIR)/%-comb.tex,ante-processionem collecta \
+		 praefatio epiclesis post-mysterium liberanos ante-oratiodominica \
+		 pax post-communionem)
 LILYPONDSCORES = ant-bozemuj vers-posmivaji graduale-kristus ant-otce \
 		 $(addprefix offertorium-kbozicti,1 234 5 678 9)
 LILYPONDPDFS = $(patsubst %,$(TMP_DIR)/%.pdf,$(LILYPONDSCORES))
@@ -81,8 +84,11 @@ $(LAPSALMS): $(TMP_DIR)/ps%.tex: ps%.pslm
 	$(GENPSALM)
 $(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
 	$(GENPSCOMB)
+$(ALLCOMBTEXTS): PSSKIP = 0
+$(ALLCOMBTEXTS): $(TMP_DIR)/%-comb.tex: %.tex %-boh.tex
+	$(GENPSCOMB)
 dominicainpalmis.pdf: dominicainpalmis.tex conventuscommune.tex translationes_cs.tex \
-	gregall.tex gregall.lua gregall.ttf SGModern.ttf $(LILYPONDPDFS) \
+	gregall.tex gregall.lua gregall.ttf SGModern.ttf $(LILYPONDPDFS) $(ALLCOMBTEXTS) \
 	$(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
