@@ -30,16 +30,19 @@
 }
 }
     \new Lyrics \lyricsto "one" {
+\once \override LyricText.self-alignment-X = #0.68
 \markup{{\with-color #red \italic 6.} Je-} di- 
 \once \override LyricText.self-alignment-X = #LEFT
 "nému Bohu v nepří-" stup- ném svět- le: \markup{{\with-color #red ℟.}čest} a slá- va na vě- ky. A- men.
   }
     \new Lyrics \lyricsto "one" {
+\once \override LyricText.self-alignment-X = #0.7
 \markup{{\with-color #red \italic 7.} Je-} ží-
 \once \override LyricText.self-alignment-X = #LEFT
 "ši Kristu," Krá- li slá- vy: \markup{{\with-color #red ℟.}čest} a slá- va na vě- ky. A- men.
   }
     \new Lyrics \lyricsto "one" {
+\once \override LyricText.self-alignment-X = #0.3
 \markup{{\with-color #red \italic 8.} Du-} chu
 \once \override LyricText.self-alignment-X = #LEFT
 "svatému, prameni a" stráž- ci prav- dy: \markup{{\with-color #red ℟.}čest} a slá- va na vě- ky. A- men.

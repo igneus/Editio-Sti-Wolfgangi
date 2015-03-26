@@ -30,6 +30,7 @@
 }
 }
     \new Lyrics \lyricsto "one" {
+\once \override LyricText.self-alignment-X = #-0.07
 \markup{{\with-color #red \italic 1.} K Bo-} ží cti a slá- vě \markup{{\with-color #red ℟.}Da-} ry ty- to při- ná- ší- me.
   }
   >>

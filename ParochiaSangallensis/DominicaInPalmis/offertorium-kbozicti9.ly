@@ -30,6 +30,7 @@
 }
 }
     \new Lyrics \lyricsto "five" {
+\once \override LyricText.self-alignment-X = #0.4
 \markup{{\with-color #red \italic 9.} Lá-} ska 
 \once \override LyricText.self-alignment-X = #LEFT
 "Boha trojjediného přebývej" v_na- šich srd- cích. \markup{{\with-color #red ℟.}A-} men.

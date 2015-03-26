@@ -30,11 +30,13 @@
 }
 }
     \new Lyrics \lyricsto "one" {
+\once \override LyricText.self-alignment-X = #0.04
 \markup{{\with-color #red \italic 2.} K os-} la- 
 \once \override LyricText.self-alignment-X = #LEFT
 "vě utrpení" na- še- ho- Pá- na \markup{{\with-color #red ℟.}Da-} ry ty- to při- ná- ší- me.
   }
     \new Lyrics \lyricsto "one" {
+\once \override LyricText.self-alignment-X = #0.95
 \markup{{\with-color #red \italic 3.} Ve} ví- 
 \once \override LyricText.self-alignment-X = #LEFT
 "ře ve výkupnou" o- běť _ Kří- že \markup{{\with-color #red ℟.}Da-} ry ty- to při- ná- ší- me.
