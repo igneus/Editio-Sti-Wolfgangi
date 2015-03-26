@@ -45,6 +45,7 @@ TONUS-vii-d = 2 0 2 0
 TONUS-viisoll-a = 2 0 2 0
 TONUS-viii-G = 1 0 1 2
 TONUS-viii-G2 = 1 0 1 2
+TONUS-viii-g = 1 0 1 2
 TONUS-viii-a = 1 0 1 2
 TONUS-viii-c = 1 0 1 2
 TONUS-viii-C = 1 0 1 2
