@@ -45,12 +45,13 @@ LAPSALMOPTS = $(LAPSALMOPTS_COMMON) $(LAPSALMOPTSACC)
 LAPSALMS = $(patsubst %,$(TMP_DIR)/ps%.tex,$(PSALMS))
 LAPSALMSEXTRA = 
 ALLLAPSALMS = $(LAPSALMS) $(LAPSALMSEXTRA)
-SCORES = $(addprefix ant-,hosanna pueriportantes puerivestimenta iudica attende) hym-glorialaus \
-	 $(addprefix hym-glorialaus,1 2 3 4 5) resp-ingrediente \
+SCORES = $(addprefix ant-,hosanna pueriportantes puerivestimenta iudica attende paxincaelo) \
+	 $(addprefix hym-glorialaus,1 2 3 4 5) resp-ingrediente hym-glorialaus \
 	 $(addprefix xvii-,sanctus agnusdei) communio-pater graduale-christus \
-	 mysterium-fidei oratio-dominica resp-quia credo-i vers-adterex
+	 mysterium-fidei oratio-dominica resp-quia credo-i vers-adterex \
+	 ps121-initium
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
-OTHERDEPS = attende-comb.tex
+OTHERDEPS = attende-comb.tex ps121-comb.tex
 ALLCOMBTEXTS = $(patsubst %,$(TMP_DIR)/%-comb.tex,ante-processionem collecta \
 		 praefatio epiclesis post-mysterium liberanos ante-oratiodominica \
 		 pax post-communionem)
