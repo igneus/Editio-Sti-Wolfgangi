@@ -3,14 +3,15 @@ office-part: matutinum;
 occasion: In Fesco Pentecostes;
 book: Nocturnale Romanum, 2002, pg. XXXVIII;
 mode: 5;
-initial-style: 1;
 transcriber: Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
 
 (c3)
-Quó(h)ni(h)am(hihssfgf) ip(f)sí(g)us(h) est(h) ma(hi)re,(h) et(h) ip(h)se(h) fe(i)cit(h) il(i>)lud,(h) (,)
-et(f) á(g)ri(h)dam(h) fun(h)da(h)vé(g)runt(f) ma(h)nus(i) e(h)jus:(hi) (;)
-<sc>ve</sc>(h)<sc>ní</sc>(g)<sc>te,</sc>(f) <sc>a</sc>(f)<sc>do</sc>(d)<sc>ré</sc>(f)<sc>mus,</sc>(h) <sc>et</sc>(h) <sc>pro</sc>(h)<sc>ci</sc>(h)<sc>dá</sc>(h)<sc>mus</sc>(h) <sc>an</sc>(h)<sc>te</sc>(i) <sc>De</sc>(h)<sc>um:</sc>(hi) (;)
-plo(f)ré(g)mus(h) co(h)ram(h) Dó(hi)mi(h)no,(h) qui(h) fe(hi)cit(h) nos,(h) (,)
-qui(f)a(g) ip(h)se(h) est(h) Dó(h)mi(g)nus,(f) De(h)us(i) nos(hi)ter;(ih) (;)
-nos(d) au(f>)tem(h) pó(hi)pu(h)lus(h) e(hi~)jus,(h) et(h) o(hi)ves(h) pás(h/ho!g)cu(gf)æ(ho<!iv) e(hg/hih)jus.(f!gwhGEDEfv/fe) <sp>R/</sp>.(::)
+Quó(h|ta)ni(h|ta)am(hihssfgf|pe-ds-hitohj) ip(f|ta)sí(g|vi)us(h|vi) est(h|vi) ma(hi|pe)re,(h|ta) et(h|ta) ip(h|ta)se(h|ta) fe(i|vi)cit(h|ta) il(i>|vi>)lud,(h|vi-) (,)
+et(f|ta) á(g|vi)ri(h|vihg)dam(h|vihg) fun(h|vihg)da(h|vihh)vé(g|vihi)runt(f|ta) ma(h|vihg)nus(i|vihg) e(h|ta)jus:(hi|pe) (;)
+<sc>ve</sc>(h|vi)<sc>ní</sc>(g|vihj)<sc>te,</sc>(f|ta) <sc>a</sc>(f|vi)<sc>do</sc>(d|ta)<sc>ré</sc>(f|vi)<sc>mus,</sc>(h|vihg) <sc>et</sc>(h|vi) <sc>pro</sc>(h|vi)<sc>ci</sc>(h|vi)<sc>dá</sc>(h|vi)<sc>mus</sc>(h|vi) <sc>an</sc>(h|vi>)<sc>te</sc>(i|ta) <sc>De</sc>(h|vi)<sc>um:</sc>(hi|vi-) (;)
+plo(f|ta)ré(g|vi)mus(h|vihg) co(h|vihg)ram(h|vihg) Dó(hi|pe)mi(h|ta)no,(h|tahg) qui(h|ta) fe(hi|pe)cit(h|vi) nos,(h|vi-) (,)
+qui(f|ta)a(g|vi) ip(h|vi)se(h|vihg) est(h|vi) Dó(h|vi)mi(g|vihi)nus,(f|ta) De(h|vi)us(i|vi) nos(hi|peS)ter;(ih|cl-) (;)
+nos(d|gr) au(f>|vi>)tem(h|vihg) pó(hi|pe)pu(h|ta)lus(h|ta) e(hi~|ta>)jus,(h|ta) et(h|ta) o(hi|pe)ves(h|ta) pás(h/ho!g|pr-)cu(gf|cl)æ(ho<!iv|pq) e(hg/hih|clto>hi)jus.(f!gwhGEDEfv/fe|qi-ppt1su2vi-pp2cl-hi) <sp>R/</sp>.(::)

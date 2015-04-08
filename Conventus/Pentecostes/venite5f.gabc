@@ -3,13 +3,14 @@ office-part: matutinum;
 occasion: In Fesco Pentecostes;
 book: Nocturnale Romanum, 2002, pg. XXXVIII;
 mode: 5;
-initial-style: 1;
 transcriber: Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
 
 (c3)
-Gló(h)ri(h)a(hihssfgf) Pat(f)ri,(g) et(h) Fí(hi)li(h)o,(h) (,)
-et(h) Spi(g)rí(f)tu(h)i(i) Sanc(h)to.(i) (;)
-Sic(h)ut(g) e(f)rat(d) in(f) prin(h)cí(h)pi(h)o,(h) et(f) nunc,(h) et(i) sem(hi)per,(ih) (;)
-et(d) in(f>) sǽ(hi)cu(h)la(h) sæ(h)cu(h/ho!g)ló(gf)rum.(ho<!iv) A(hg/hih)men.(f!gwhGEDEfv/fe) *(::)
+Gló(h|ta)ri(h|ta)a(hihssfgf|vi-ds-hitohi) Pat(f|vi)ri,(g|ta) et(h|vi) Fí(hi|vi)li(h|vi)o,(h|vi) (,)
+et(h|vi) Spi(g|vihh)rí(f|ta)tu(h|vi)i(i|vihg) Sanc(h|ta)to.(i|pe) (;)
+Sic(h|vi)ut(g|ta) e(f|vi)rat(d|ta) in(f|vihg) prin(h|vi)cí(h|vihg)pi(h|vihi)o,(h|vi) et(f|ta) nunc,(h|vihg) et(i|vihi) sem(hi|peShg)per,(ih|cl-) (;)
+et(d|gr) in(f>|vi>) sǽ(hi|pe)cu(h|ta)la(h|ta) sæ(h|ta)cu(h/ho!g|pr-)ló(gf|cl)rum.(ho<!iv|pq>) A(hg/hih|cltohi)men.(f!gwhGEDEfv/fe|qi-ppt1su2vi-pp2cl-hi) *(::)
 <sp>R/</sp>.(::)

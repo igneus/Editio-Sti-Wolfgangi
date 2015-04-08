@@ -3,14 +3,15 @@ office-part: matutinum;
 occasion: In Fesco Pentecostes;
 book: Nocturnale Romanum, 2002, pg. XXXVIII;
 mode: 5;
-initial-style: 1;
 transcriber: Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
 
 (c3)
-Hó(h)di(h)e,(hihssfgf)si(f)vo(g)cem(h) e(h)jus(h) au(i>)di(h)é(hi)ri(h)tis,(h) (,)
-no(f)lí(g)te(h) ob(h)du(h)rá(h)re(h) cor(h)da(i) ves(h)tra,(hi) (;)
-si(h)cut(f) in(f) ex(d)a(f)cer(h)ba(h)ti(h)ó(h)ne(h) se(h)cún(i>)dum(h) di(i)em(h) (,)
-ten(f)ta(g)ti(h)ó(h)nis(h) in(i>) de(h)sér(i>)to:(h) (,)
-u(f)bi(g) ten(h)ta(h)vé(h)runt(g) me(f) pat(h)res(i) ves(hi)tri,(ih) (;)
-pro(d)ba(f)vé(hi)runt(h) et(h) vi(h)dé(hi)runt(h) ó(h/ho!g)pe(gf)ra(ho<!iv) me(hg/hih)a.(f!gwhGEDEfv/fe) *(::)
+Hó(h|ta)di(h|ta)e,(hihssfgf|pe-ds-hitohi) si(f|ta) vo(g|vi)cem(h|vihg) e(h|vi)jus(h|vihg) au(i>|vi>)di(h|ta)é(hi|pe)ri(h|ta)tis,(h|vihg) (,)
+no(f|ta)lí(g|vi)te(h|vihg) ob(h|vi)du(h|vi)rá(h|vihi)re(h|ta) cor(h|vi)da(i|vihg) ves(h|ta)tra,(hi|pe) (;)
+si(h|vi)cut(f|ta) in(f|vi) ex(d|ta)a(f|vi)cer(h|vi)ba(h|vi)ti(h|vihg)ó(h|vihg)ne(h|vihh) se(h|vihg)cún(i>|vi>)dum(h|ta) di(i|ta)em(h|vs) (,)
+ten(f|ta)ta(g|vi)ti(h|vi)ó(h|vihg)nis(h|vihg) in(i>|vi>) de(h|ta)sér(i>|pe>)to:(h|vihg) (,)
+u(f|ta)bi(g|vihg) ten(h|vi)ta(h|vi)vé(h|vihg)runt(g|vihi) me(f|ta) pat(h|vi)res(i|vi) ves(hi|peS)tri,(ih|cl-) (;)
+pro(d|gr)ba(f|vihg)vé(hi|pe)runt(h|ta) et(h|ta) vi(h|ta)dé(hi|pe)runt(h|ta) ó(h/ho!g|pr-)pe(gf|cl)ra(ho<!iv|pq) me(hg/hih|cltohi)a.(f!gwhGEDEfv/fe|qi-ppt1su2vi-hgpp2cl-hj) *(::)
