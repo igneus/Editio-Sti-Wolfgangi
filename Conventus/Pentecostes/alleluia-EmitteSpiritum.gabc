@@ -3,12 +3,15 @@ office-part: Alleluia;
 mode: 4;
 book: Graduale Romanum, 1908, p. 249; Graduale Triplex, 1979, p. 252;
 transcriber: Andrew Hinkley, Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
-(c4) AL(fd~)le(e!fg)lú(hgh)ia.(ixhiHG'gf.) (,)
-(ixhiHG'ge.//ghGF'E/f_0gf/fe.) <sp>V/</sp>.(::)
-E(h)mít(h)te(ixg'//ivHG'/hffe.) (,)
-Spí(fh)ri(ghg'/hf)tum(ed~) tu(egF'D)um,(d.) (:)
-et(dc~) cre(f)a(ghg)bún(ixhiGE/g.///hiFD//fffd/gvFE.,df/h_f/g_e/fv.//df!gv/ef~)tur:(e.) (:)
-et(f) re(f)no(f)vá(ef)bis(f) fá(e!f'g)ci(gd/gvFE)em(e.) (,)
-ter(fd/ef!g'h)ræ.(ixhiHG'/gf.) (,)
+(c4)
+AL(fd~|vi>)le(e!fg|sa)lú(hgh|po)ia.(ixhiHG'gf.|pesu2pi) (,)
+(ixhiHG'ge.|pesu2pi|//ghGF'E|pesu3|/f_0gf/fe.|pqpr) <sp>V/</sp>.(::)
+E(h|vi)mít(h|vihi)te(ixg'//ivHG'/hffe.|cippu1lsc2ciG) (,)
+Spí(fh|peSlss4)ri(ghg'/hf|to!cllsc2)tum(ed~|vi>) tu(egF'D|pe-1su2)um,(d.|ta) (:)
+et(dc~|vi>lsi6) cre(f|vi)a(ghg|tohh)bún(ixhiGE|vi-vihjsu1suu1lsc2|/g.///hiFD|vi-toS2hisux1//|fffd/gvFE.|dspohgsu1suu1lsc2|,df/h_f/g_e|///sflst2clhh|/fv.|vi-hh//|df!gv/ef~|popp2)tur:(e.|ta) (:)
+et(f|ta) re(f|ta)no(f|ta)vá(ef|vslsl2lst2)bis(f|ta) fá(e!f'g|sa)ci(gd/gvFE|posu2lsc2)em(e.|ta) (,)
+ter(fd/ef!g'h|cllsc3pehhpp2)ræ.(ixhiHG'/gf.|//pesu2pi) (,)
 (ixhiHG'/ge.//ghGF'E/f_0gffe.) (::)

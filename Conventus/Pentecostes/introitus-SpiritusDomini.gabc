@@ -3,17 +3,19 @@ office-part: Introitus;
 mode: 8;
 book: Graduale Romanum, 1961, p. 292; Graduale Triplex, 1979, p. 252;
 transcriber: Andrew Hinkley, Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
 (c4)
-SPI(d)RI(fhg)TUS(gh~) Dó(h)mi(ghGF'g)ni(gf..) *(,)
-re(fh)plé(jjk)vit(j) or(kl~)bem(j) ter(jjj)rá(g)rum,(jj) (,)
-al(h)le(hv./fhg)lú(ghg___)ia:(g.) (:)
-et(fg) hoc(gjj) quod(g) cón(gjij)ti(hiHG'h)net(h_g) óm(g!h'j~)ni(j)a,(j.) (;)
-sci(i)én(jk~)ti(k_j)am(jjj/hih.___) ha(kl)bet(j) vo(jjj)cis,(h.) (;)
-al(hg~)le(f!g'h)lú(hg/hv_GF)ia,(f.) (,)
-al(f!h'j~)le(j)lú(ji/jhj~)ia,(ijHG.) (,)
-al(gh~)le(hv./fhg)lú(ghg___)ia.(g.) <i><c>Ps.</c></i>(::)
-Ex(g)súr(hg)gat(gj) De(j)us,(j'_) (,)
-et(j) dis(j)si(j)pén(j)tur(j) i(j)ni(ji)mí(jk)ci(k) e(jk)jus:(j.) *(:)
-et(jh~) fú(hj)gi(j)ant,(j) qui(j) o(j)dé(j)runt(j) e(j)um,(j'_) (,)
-a(j) fá(jji)ci(gh)e(ji) e(h)jus.(ghd___/ffg.) (::)
+SPI(d|ta)RI(fhg|tolsl3lss4)TUS(gh~|ta) Dó(h|vi)mi(ghGF'g|peSsu1suw1vihg)ni(gf..|cl-) *(,)
+re(fh|pelss3lse7)plé(jjk|vi-lss2pehklse8)vit(j|ta) or(kl~|ta>hjlsl3lss4)bem(j|ta) ter(jjj|ts>hhlsi6)rá(g|talsi8)rum,(jj|bv) (,)
+al(h|vi>)le(hv./fhg|vi-tohhlsi7)lú(ghg___|toS)ia:(g.|ta) (:)
+et(fg|talse4) hoc(gjj|pevihg) quod(g|talsi8) cón(gjij|talse8po>hhlss3)ti(hiHG'h|pe-1su2vihh)net(h_g|cl-) óm(g!h'j~|pe>2lse7)ni(j|vi)a,(j.|vi) (;)
+sci(i|vi)én(jk~|ta>hhlss2)ti(k_j|///cl-hi)am(jjj|ts-hg|/hih.___|toShg) ha(kl|peShllsl4)bet(j|ta) vo(jjj|ts)cis,(h.|vi) (;)
+al(hg~|vi>lsi2)le(f!g'h|sa)lú(hg/hv_GF|pf>lsc2lst2)ia,(f.|ta) (,)
+al(f!h'j~|pe>2lse7lsl3)le(j|vi)lú(ji/jhj~|cllsc2polssta7lsm2)ia,(ijHG.|toS2) (,)
+al(gh~|pe>2lse7)le(hv./fhg|vi-tohhlsi7)lú(ghg___|toS)ia.(g.|ta) <i><c>Ps.</c></i>(::)
+Ex(g|ta)súr(hg|vi>)gat(gj|pe) De(j|vi)us,(j'_|vihh) (,)
+et(j|vi) dis(j|vi)si(j|vi)pén(j|vi)tur(j|vi) i(j|vi)ni(ji|cl)mí(jk|pehi)ci(k|vihi) e(jk|pe>hi)jus:(j.|cl) *(:)
+et(jh~|vi>) fú(hj|pe)gi(j|vi)ant,(j|vi) qui(j|vi) o(j|vi)dé(j|vi)runt(j|vi) e(j|pe)um,(j'_|tahh) (,)
+a(j|ta) fá(jji|pr-)ci(gh|peS)e(ji|cl) e(h|vi>)jus.(ghd___/ffg.|toSsalsi6) (::)
