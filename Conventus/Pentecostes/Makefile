@@ -85,12 +85,12 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 $(addprefix benedictio-solemn-,evangelica divinum adsocietatem) \
 	 $(addprefix benedicamus-solemnis-,laud 1vesp 2vesp) tonus-lectionis-solemnis tuautem \
 	 dominelabiamea matinv-AlleluiaSpiritus communio-versus-Exsurgat-initium
-OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
+OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(addsuffix -bohtext.tex,hym-TeLucis hym-VeniCreator hym-RectorPotens hym-RerumDeus seq-VeniSancte) \
 	 $(TMP_DIR)/communio-versus-Exsurgat-comb.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
-LAPSALMSINITTEX = $(patsubst %.gabc,%.tex,$(LAPSALMSINITGABC))
+LAPSALMSINITTEX = $(patsubst %.gabc,%.gtex,$(LAPSALMSINITGABC))
 GENINITIUM = cd $(TMP_DIR) && $(RUBY_COMMAND) ../$(INITIUM_TOOL) ../$(1) ../$(PSALMTONES_DIR)/$(2)-auto.gabc; \
 	     [ $(2) = "dir" ] && cd .. && $(SED) -i -e '/(::)$$$$/{/(,) (::)$$$$/!{s/<b>//g;s/<\/b>//g}}' $(3) || :
 iter = $(patsubst %,iterator.mk,$(iter-left))
@@ -100,7 +100,7 @@ endef
 iter-left := $(MODUSLIST)
 include $(iter)
 define iter-doit
-$(TMP_DIR)/%.tex: $(i)/%.gabc ; if $(GREP) -q ^nabc-lines: $$<; then $(SED) -e ':d;s/\(([^).]*\)\./\1/g;/([^)]*\./bd' $$<; else $(CAT) $$<; fi | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g;:d;s/\(([^)'\'']*\)'\''/\1/g;/([^)]*'\''/bd' | $(GREGORIO) -s -o $$@
+$(TMP_DIR)/%.gtex: $(i)/%.gabc ; if $(GREP) -q ^nabc-lines: $$<; then $(SED) -e ':d;s/\(([^).]*\)\./\1/g;/([^)]*\./bd' $$<; else $(CAT) $$<; fi | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g;:d;s/\(([^)'\'']*\)'\''/\1/g;/([^)]*'\''/bd' | $(GREGORIO) -s -o $$@
 endef
 iter-left := . $(TMP_DIR) $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR) \
 	     $(addprefix ../Epiphania/cantus/,arom12 grom61)

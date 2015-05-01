@@ -50,7 +50,7 @@ SCORES = $(addprefix ant-,hosanna pueriportantes puerivestimenta iudica attende 
 	 $(addprefix xvii-,sanctus agnusdei) communio-pater graduale-christus \
 	 mysterium-fidei oratio-dominica resp-quia credo-i vers-adterex \
 	 ps121-initium
-OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
+OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = attende-comb.tex ps121-comb.tex
 ALLCOMBTEXTS = $(patsubst %,$(TMP_DIR)/%-comb.tex,ante-processionem collecta \
 		 praefatio epiclesis post-mysterium liberanos ante-oratiodominica \
@@ -59,7 +59,7 @@ LILYPONDSCORES = ant-bozemuj vers-posmivaji graduale-kristus ant-otce \
 		 $(addprefix offertorium-kbozicti,1 234 5 678 9)
 LILYPONDPDFS = $(patsubst %,$(TMP_DIR)/%.pdf,$(LILYPONDSCORES))
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc)
-LAPSALMSINITTEX = $(patsubst %.gabc,%.tex,$(LAPSALMSINITGABC))
+LAPSALMSINITTEX = $(patsubst %.gabc,%.gtex,$(LAPSALMSINITGABC))
 GENINITIUM = cd $(TMP_DIR) && $(RUBY_COMMAND) ../$(INITIUM_TOOL) ../$(1) ../$(PSALMTONES_DIR)/$(2)-auto.gabc; \
 	     cd ..; $(SED) -i -e 's/ (::)/ <sp>A\/<\/sp>.(::)/' $(3)
 iter = $(patsubst %,iterator.mk,$(iter-left))
@@ -69,7 +69,7 @@ endef
 iter-left := $(MODUSLIST)
 include $(iter)
 define iter-doit
-$(TMP_DIR)/%.tex: $(i)/%.gabc ; $(CAT) $$< | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g' | $(GREGORIO) -s -o $$@
+$(TMP_DIR)/%.gtex: $(i)/%.gabc ; $(CAT) $$< | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g' | $(GREGORIO) -s -o $$@
 endef
 iter-left := . $(TMP_DIR) $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR)
 include $(iter)

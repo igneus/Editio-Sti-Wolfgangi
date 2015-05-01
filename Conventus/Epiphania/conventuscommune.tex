@@ -72,18 +72,18 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \let\oldgredagger\gredagger
 \let\olddag\dag
 \let\oldddag\ddag
-\renewcommand{\Rbar}{\textbf{\color{red}\oldrbar}}
-\renewcommand{\Vbar}{\textbf{\color{red}\oldvbar}}
-\renewcommand{\Abar}{\textbf{\color{red}\oldabar}}
-\renewcommand{\grecross}{\textbf{\color{red}\oldgrecross}}
-\renewcommand{\grestar}{\textbf{\color{red}\oldgrestar}}
-\renewcommand{\gredagger}{\textbf{\color{red}\oldgredagger}}
+\renewcommand{\Rbar}{{\color{red}\oldrbar}}
+\renewcommand{\Vbar}{{\color{red}\oldvbar}}
+\renewcommand{\Abar}{{\color{red}\oldabar}}
+\renewcommand{\grecross}{{\color{red}\oldgrecross}}
+\renewcommand{\grestar}{{\color{red}\oldgrestar}}
+\renewcommand{\gredagger}{{\color{red}\oldgredagger}}
 \renewcommand{\dag}{{\color{red}\olddag}}
 \renewcommand{\ddag}{{\color{red}\oldddag}}
-\newcommand{\Rbardot}{{\color{red}\textbf{\oldrbar}.~}}
-\newcommand{\Vbardot}{{\color{red}\textbf{\oldvbar}.~}}
-\newcommand{\Abardot}{{\color{red}\textbf{\oldabar}.~}}
-\newcommand{\Psdot}{{\color{red}\textbf{Ps}.~}}
+\newcommand{\Rbardot}{{\color{red}\oldrbar.~}}
+\newcommand{\Vbardot}{{\color{red}\oldvbar.~}}
+\newcommand{\Abardot}{{\color{red}\oldabar.~}}
+\newcommand{\Psdot}{{\color{red}Ps.~}}
 
 \let\quasiHora\hora
 
@@ -189,11 +189,12 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \newcommand{\cantusCumNeumis}{
   \setgrefactor{14}
 %  \global\advance\grespaceabovelines by 5mm%
-  \global\advance\grespaceabovelines by 2mm%
+%  \global\advance\grespaceabovelines by 2mm%
 }
 \newcommand{\cantusSineNeumas}{
   \setgrefactor{14}
-  \global\advance\grespaceabovelines by -5mm%
+%  \global\advance\grespaceabovelines by -5mm%
+  \grechangedim{spaceabovelines}{0cm}{1}%
 }
 
 \renewcommand{\greabovelinestextstyle}[1]{%

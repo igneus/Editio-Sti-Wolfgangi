@@ -77,7 +77,7 @@ SCORES = alleluia-VidimusStellam ant1 ant2 ant3 ant4 ant5 ant-ben-laud ant-magn-
 	 magnificat-initium-i-D_ magnificat-initium-viii-G2 offertorium-RegesTharsis \
 	 oratiodominica oratio resp1v respl supplicatiolitaniae tuautem \
 	 $(addprefix matant,1 2 3 4 5 6 7 8 9) $(addprefix matresp,1 2 3 4 5 6 7 8) \
-	 ps94-initium-viii-G ps94-boh tedeum-solemnis annuntiatio christus_apparuit_nobis \
+	 ps94-initium-viii-G tedeum-solemnis annuntiatio christus_apparuit_nobis \
 	 hym-RerumDeus hym-RectorPotens hym-NuncSancte hym-TeLucis \
 	 benedictio-noctemquietam jubedomnebenedicere lectiobrevis-fratressobrii \
 	 convertenosdeus ant-miserere deusinadiutorium-solemnis \
@@ -90,13 +90,13 @@ SCORES = alleluia-VidimusStellam ant1 ant2 ant3 ant4 ant5 ant-ben-laud ant-magn-
 	 $(addprefix versus-,adorate adorate-simplex reges reges-simplex omnes) \
 	 $(addprefix capitulum-,Surge Leva Omnes) tedecetlaus tonus-evangelii-b \
 	 tonus-lectionis-solemnis
-OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.tex,$(SCORES))
+OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(patsubst %,cantus/amon33/hym-%-bohtext.tex,HostisHerodes OSolaMagnarum NuncSancte RerumDeus RectorPotens TeLucis) \
 	    cantus/nrom02/ps94.tex $(TMP_DIR)/communio-versus-DeusJudicium-comb.tex \
 	    cantus/arom12/hym-CrudelisHerodes-bohtext.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
-LAPSALMSINITTEX = $(patsubst %.gabc,%.tex,$(LAPSALMSINITGABC))
+LAPSALMSINITTEX = $(patsubst %.gabc,%.gtex,$(LAPSALMSINITGABC))
 GENINITIUM = cd $(TMP_DIR) && $(RUBY_COMMAND) ../$(INITIUM_TOOL) ../$(1) ../$(PSALMTONES_DIR)/$(2)-auto.gabc
 iter = $(patsubst %,iterator.mk,$(iter-left))
 define iter-doit
@@ -105,7 +105,7 @@ endef
 iter-left := $(MODUSLIST)
 include $(iter)
 define iter-doit
-$(TMP_DIR)/%.tex: $(i)/%.gabc ; if $(GREP) -q ^nabc-lines: $$<; then $(SED) -e ':d;s/\(([^).]*\)\./\1/g;/([^)]*\./bd' $$<; else $(CAT) $$<; fi | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g;:d;s/\(([^)'\'']*\)'\''/\1/g;/([^)]*'\''/bd' | $(GREGORIO) -s -o $$@
+$(TMP_DIR)/%.gtex: $(i)/%.gabc ; if $(GREP) -q ^nabc-lines: $$<; then $(SED) -e ':d;s/\(([^).]*\)\./\1/g;/([^)]*\./bd' $$<; else $(CAT) $$<; fi | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g;:d;s/\(([^)'\'']*\)'\''/\1/g;/([^)]*'\''/bd' | $(GREGORIO) -s -o $$@
 endef
 iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 nrom02 grom61 triplex76 otriplex85 arom12 cselecti57) \
 	     $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR)

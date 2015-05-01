@@ -42,8 +42,8 @@
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
-\setspaceafterinitial{2.2mm plus 0em minus 0em}
-\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+\setspaceafterinitial{2.2mm}{1}
+\setspacebeforeinitial{2.2mm}{1}
 
 % Here we set the initial font. Change 38 if you want a bigger initial.
 % Emit the initials in red.
@@ -53,6 +53,8 @@
 
 \renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
 \pagestyle{empty}
+
+\grechangedim{spaceabovelines}{0.2cm}{1}%
 
 \begin{center}
 {\large DOMINICA IN PALMIS DE PASSIONE DOMINI}
@@ -64,7 +66,7 @@ Commemoratio ingressus Domini in Ierusalem
 
 \pars{Antiphona} \scriptura{Cf. Mt. 21, 9; Mc. 11, 10; \textbf{H175}}
 
-\antiphona{VII a}{temporalia/ant-hosanna.tex}
+\antiphona{VII a}{temporalia/ant-hosanna.gtex}
 
 \trHosanna
 
@@ -74,7 +76,7 @@ versiculi.}
 
 \pars{Psalmus 117.} \scriptura{Ps. 117, 1.22.23.27.28}
 
-\includescore{temporalia/ps117-initium-vii-a-auto.tex}
+\includescore{temporalia/ps117-initium-vii-a-auto.gtex}
 
 \psalmusEtTranslatioT{temporalia/ps117-comb.tex}{6cm}
 
@@ -96,13 +98,13 @@ versiculi.}
 
 \pars{Antiphona} \scriptura{\textbf{H175}}
 
-\antiphona{I f}{temporalia/ant-pueriportantes.tex}
+\antiphona{I f}{temporalia/ant-pueriportantes.gtex}
 
 \trPueriPortantes
 
 \pars{Psalmus 23.} \scriptura{Ps. 23, 1-10}
 
-\includescore{temporalia/ps23-initium-i-f-auto.tex}
+\includescore{temporalia/ps23-initium-i-f-auto.gtex}
 
 \psalmusEtTranslatioT{temporalia/ps23-comb.tex}{6.5cm}
 
@@ -110,13 +112,13 @@ versiculi.}
 
 \pars{Antiphona} \scriptura{\textbf{H175}}
 
-\antiphona{I f}{temporalia/ant-puerivestimenta.tex}
+\antiphona{I f}{temporalia/ant-puerivestimenta.gtex}
 
 \trPueriVestimenta
 
 \pars{Psalmus 46.} \scriptura{Ps. 46, 2-10}
 
-\includescore{temporalia/ps46-initium-i-f-auto.tex}
+\includescore{temporalia/ps46-initium-i-f-auto.gtex}
 
 \psalmusEtTranslatioT{temporalia/ps46-comb.tex}{6cm}
 
@@ -126,7 +128,7 @@ versiculi.}
 
 \rubrica{Chorus:} \scriptura{Theodulphus, episcopus Aurelianensis \olddag{} 821; \textbf{E381}}
 
-\antiphona{I}{temporalia/hym-glorialaus.tex}
+\antiphona{I}{temporalia/hym-glorialaus.gtex}
 
 \trGloriaLaus
 
@@ -134,7 +136,7 @@ versiculi.}
 
 \rubrica{Chorus:}
 
-\includescore{temporalia/hym-glorialaus1.tex}
+\includescore{temporalia/hym-glorialaus1.gtex}
 
 \trGloriaLausI
 
@@ -142,7 +144,7 @@ versiculi.}
 
 \rubrica{Chorus:}
 
-\includescore{temporalia/hym-glorialaus2.tex}
+\includescore{temporalia/hym-glorialaus2.gtex}
 
 \trGloriaLausII
 
@@ -150,7 +152,7 @@ versiculi.}
 
 \rubrica{Chorus:}
 
-\includescore{temporalia/hym-glorialaus3.tex}
+\includescore{temporalia/hym-glorialaus3.gtex}
 
 \trGloriaLausIII
 
@@ -158,7 +160,7 @@ versiculi.}
 
 \rubrica{Chorus:}
 
-\includescore{temporalia/hym-glorialaus4.tex}
+\includescore{temporalia/hym-glorialaus4.gtex}
 
 \trGloriaLausIV
 
@@ -166,7 +168,7 @@ versiculi.}
 
 \rubrica{Chorus:}
 
-\includescore{temporalia/hym-glorialaus5.tex}
+\includescore{temporalia/hym-glorialaus5.gtex}
 
 \trGloriaLausV
 
@@ -179,7 +181,7 @@ versiculi.}
 
 \pars{Responsorium} \scriptura{\textbf{H172}}
 
-\antiphona{II}{temporalia/resp-ingrediente.tex}
+\antiphona{II}{temporalia/resp-ingrediente.gtex}
 
 \trIngrediente
 
@@ -224,14 +226,17 @@ versiculi.}
 
 \scriptura{Phil. 2, 8 \Vbardot{} ibid. 9; \textbf{C96}}
 
-\antiphona{GR. V}{temporalia/graduale-christus.tex}
+\antiphona{GR. V}{temporalia/graduale-christus.gtex}
 
 \trChristus
 
 \pars{Credo I.} \scriptura{XI. s.}
 
 \superInitialam{IV}
-\includescore{temporalia/credo-i.tex}
+\includescore{temporalia/credo-i.gtex}
+
+\vfill
+\pagebreak
 
 \trCredo
   
@@ -253,7 +258,7 @@ versiculi.}
 
 \pars{Antiphona} \scriptura{Cf. Ps. 73, 22; \textbf{H174}}
 
-\antiphona{{\scriptsize{VIII G}}}{temporalia/ant-iudica.tex}
+\antiphona{{\scriptsize{VIII G}}}{temporalia/ant-iudica.gtex}
 
 \trIudica
 
@@ -262,7 +267,7 @@ versiculi.}
 
 \pars{Psalmus 21.} \scriptura{Ps. 21, 2.3.21.22}
 
-\includescore{temporalia/ps21-initium-viii-G-auto.tex}
+\includescore{temporalia/ps21-initium-viii-G-auto.gtex}
 
 \psalmusEtTranslatioT{temporalia/ps21-comb.tex}{6cm}
 
@@ -277,13 +282,13 @@ versiculi.}
 \pars{Sanctus XVII.} \scriptura{XI. s.}
 
 \superInitialam{V}
-\includescore{temporalia/xvii-sanctus.tex}
+\includescore{temporalia/xvii-sanctus.gtex}
 
 \trSanctus
 
 \psalmusEtTranslatioT{temporalia/epiclesis-comb.tex}{6cm}
 
-\includescore{temporalia/mysterium-fidei.tex}
+\includescore{temporalia/mysterium-fidei.gtex}
 
 \trMysteriumFidei
 
@@ -297,7 +302,7 @@ versiculi.}
 
 \pars{Oratio Dominica}
 
-\includescore{temporalia/oratio-dominica.tex}
+\includescore{temporalia/oratio-dominica.gtex}
 
 \trOratioDominica
 
@@ -309,7 +314,7 @@ versiculi.}
 
 \rubrica{Populus orationem concludit, acclamans:}
 
-\includescore{temporalia/resp-quia.tex}
+\includescore{temporalia/resp-quia.gtex}
 
 \trQuia
 
@@ -319,11 +324,11 @@ versiculi.}
 
 \vspace{-1cm}
 
-\antiphona{VIII}{temporalia/ant-paxincaelo.tex}
+\antiphona{VIII}{temporalia/ant-paxincaelo.gtex}
 
 \trPaxInCaelo \scriptura{Ps. 121, 6.7.}
 
-\includescore{temporalia/ps121-initium.tex}
+\includescore{temporalia/ps121-initium.gtex}
 
 \vspace{-0.5cm}
 
@@ -334,14 +339,14 @@ versiculi.}
 \pars{Agnus Dei XVII.} \scriptura{XIII. s.}
 
 \superInitialam{V}
-\includescore{temporalia/xvii-agnusdei.tex}
+\includescore{temporalia/xvii-agnusdei.gtex}
 
 \trAgnus
 
 \vspace{2mm}
 \pars{Antiphona ad Communio} \scriptura{Mt. 26, 42; \textbf{E186}}
 
-\antiphona{VIII G}{temporalia/communio-pater.tex}
+\antiphona{VIII G}{temporalia/communio-pater.gtex}
 
 \trPater
 
@@ -350,7 +355,7 @@ versiculi.}
 
 \pars{Psalmus 115.} \scriptura{Ps. 115, 1.3.4.5.6.7.8}
 
-\includescore{temporalia/ps115-initium-viii-g-auto.tex}
+\includescore{temporalia/ps115-initium-viii-g-auto.gtex}
 
 \psalmusEtTranslatioT{temporalia/ps115-comb.tex}{6.5cm}
 
@@ -358,11 +363,11 @@ versiculi.}
 
 \pars{Attende Domine}
 
-\antiphona{{\scriptsize{V}}}{temporalia/ant-attende.tex}
+\antiphona{{\scriptsize{V}}}{temporalia/ant-attende.gtex}
 
 \trAttende \scriptura{Omnes: \textnormal{\Rbardot{} Atténde.} ut supra.}
 
-\includescore{temporalia/vers-adterex.tex}
+\includescore{temporalia/vers-adterex.gtex}
 
 \psalmusEtTranslatioT{attende-comb.tex}{6cm}
 
