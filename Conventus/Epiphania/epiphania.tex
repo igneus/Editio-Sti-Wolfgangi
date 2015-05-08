@@ -50,6 +50,10 @@
   \relax%
 }
 
+\def\hebinitial#1{%
+\leavevmode{\newbox\hebbox\setbox\hebbox\hbox{\hebfont{#1}\hskip 1mm}\kern -\wd\hebbox\hbox{\hebfont{#1}\hskip 1mm}}%
+}
+
 %%%% Vicekrat opakovane kousky
 
 \newcommand{\anteOrationem}{
@@ -1497,7 +1501,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 
 \trAntII
 
-\scriptura{Psalmus 118. {\hebfont{ה}},{\hebfont{ו}},{\hebfont{ז}},{\hebfont{ח}},{\hebfont{ט}},{\hebfont{י}}}
+\scriptura{Psalmus 118, 33-80}
 
 \includescore{temporalia/ps118v_x-initium-i-g2-auto.gtex}
 
@@ -1704,7 +1708,7 @@ anni currentis iuxta hanc formulam.}
 
 \trAntIII
 
-\scriptura{Psalmus 118. {\hebfont{כ}},{\hebfont{ל}},{\hebfont{מ}},{\hebfont{נ}},{\hebfont{ס}},{\hebfont{ע}}}
+\scriptura{Psalmus 118, 81-128}
 
 \includescore{temporalia/ps118xi_xvi-initium-i-g3-auto.gtex}
 
@@ -1800,7 +1804,7 @@ anni currentis iuxta hanc formulam.}
 
 \trAntV
 
-\scriptura{Psalmus 118. {\hebfont{פ}},{\hebfont{צ}},{\hebfont{ק}},{\hebfont{ר}},{\hebfont{ש}},{\hebfont{ת}}}
+\scriptura{Psalmus 118, 129-176}
 
 \includescore{temporalia/ps118xvii_xxii-initium-vii-c2-auto.gtex}
 
