@@ -7,22 +7,24 @@
 \def\gregallchar{%
   \begingroup %
     \catcode`\~=12{}%
+    \catcode`\@=11{}%
     \fontsize{8}{8}%
     \color{red}%
     \dogregallchar%
 }
-\def\dogregallchar#1{
+\def\dogregallchar#1{%
     \gregallcharno{#1}{gregall}{0.8}%
   \endgroup %
 }
 \def\gregallmodchar{%
   \begingroup %
     \catcode`\~=12{}%
+    \catcode`\@=11{}%
     \fontsize{16}{16}%
     \color{red}%
     \dogregallmodchar%
 }
-\def\dogregallmodchar#1{
+\def\dogregallmodchar#1{%
     \gregallcharno{#1}{gregallmod}{1.6}%
   \endgroup %
 }
