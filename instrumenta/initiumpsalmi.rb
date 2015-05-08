@@ -431,13 +431,11 @@ initium.each_with_index do |n,i|
     text_i += 1
     redo
   else
-    of.print s
     if i == 0 then
-      # add space at the beginning
-      of.print n.gsub("(", "( ")
-    else
-      of.print n
+      of.print "( )"
     end
+    of.print s
+    of.print n
     text_i += 1
   end
 end
