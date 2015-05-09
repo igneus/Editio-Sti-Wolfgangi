@@ -41,15 +41,6 @@
 
 \newcommand{\annusEditionis}{2015}
 
-% From git gregorio
-\def\greendofsyllable{%
-  \ifnum\greblockcusto=1\relax %
-     \grelocalrightbox{}%
-  \fi %
-  \grepenalty{\greendofsyllablepenalty }%
-  \relax%
-}
-
 \def\hebinitial#1{%
 \leavevmode{\newbox\hebbox\setbox\hebbox\hbox{\hebfont{#1}\hskip 1mm}\kern -\wd\hebbox\hbox{\hebfont{#1}\hskip 1mm}}%
 }
