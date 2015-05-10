@@ -85,7 +85,8 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 oratiodominica-mat absolutio-exaudi tedeum-solemnis \
 	 $(addprefix benedictio-solemn-,evangelica divinum adsocietatem) \
 	 $(addprefix benedicamus-solemnis-,laud 1vesp 2vesp) tonus-lectionis-solemnis tuautem \
-	 dominelabiamea matinv-AlleluiaSpiritus communio-versus-Exsurgat-initium
+	 dominelabiamea matinv-AlleluiaSpiritus communio-versus-Exsurgat-initium \
+	 tedecetlaus tonus-evangelii-b
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(addsuffix -bohtext.tex,hym-TeLucis hym-VeniCreator hym-RectorPotens hym-RerumDeus seq-VeniSancte) \
 	 $(TMP_DIR)/communio-versus-Exsurgat-comb.tex
@@ -105,7 +106,7 @@ define iter-doit
 $(TMP_DIR)/%.gtex: $(i)/%.gabc ; if $(GREP) -q ^nabc-lines: $$<; then $(SED) -e ':d;s/\(([^).]*\)\./\1/g;/([^)]*\./bd' $$<; else $(CAT) $$<; fi | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g;:d;s/\(([^)'\'']*\)'\''/\1/g;/([^)]*'\''/bd' | $(GREGORIO) -s -o $$@
 endef
 iter-left := . $(TMP_DIR) $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR) \
-	     $(addprefix ../Epiphania/cantus/,arom12 grom61)
+	     $(addprefix ../Epiphania/cantus/,arom12 grom61 cselecti57 triplex76)
 include $(iter)
 
 all: pentecostes.pdf
