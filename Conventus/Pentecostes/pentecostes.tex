@@ -83,6 +83,8 @@
 \setspaceafterinitial{2.2mm}{1}
 \setspacebeforeinitial{2.2mm}{1}
 
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+
 % Here we set the initial font. Change 38 if you want a bigger initial.
 % Emit the initials in red.
 \def\greinitialformat#1{%
@@ -169,8 +171,6 @@ per infiníta sǽcula sæculórum.
 \sideThumbs{Vesperæ}
 
 \cantusSineNeumas
-
-\label{deusinadiutorium}
 
 \includescore{temporalia/deusinadiutorium-solemnis.gtex}
 
@@ -284,7 +284,6 @@ per infiníta sǽcula sæculórum.
 % Capitulum. %%%
 \cantusSineNeumas
 
-\label{capitulum}
 \pars{Capitulum.} \scriptura{Act. 2, 1 - 2}
 
 \includescore{temporalia/capitulum-CumComplerentur.gtex}
@@ -292,7 +291,7 @@ per infiníta sǽcula sæculórum.
 % preklad Jeruz. bible
 \trCapituli
 
-\vspace{1cm}
+\vfill
 \pars{Responsorium breve.}\rubrica{ - in I. vesperis:} \scriptura{\textbf{H269}}
 
 \superInitialam{VI}
@@ -301,7 +300,6 @@ per infiníta sǽcula sæculórum.
 %\trRespVesp2
 
 \vfill
-\pagebreak
 
 \pars{Responsorium breve.}\rubrica{ - in II. vesperis:}
 
@@ -365,7 +363,6 @@ per infiníta sǽcula sæculórum.
 \pagebreak
 
 \pars{Canticum B. Mariæ V.}\rubrica{ - in II. vesperis:} \scriptura{\textbf{Sg. 388 p. 247}}
-\label{magnificatIIvesp}
 
 \cantusCumNeumis
 
@@ -388,7 +385,6 @@ per infiníta sǽcula sæculórum.
 \vfill
 \pagebreak
 
-\label{oratio}
 \anteOrationem
 
 \pagebreak
@@ -1214,7 +1210,6 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 % Capitulum. %%%
 \cantusSineNeumas
 
-\label{capitulum}
 \pars{Capitulum.} \scriptura{Act. 2, 1 - 2}
 
 \includescore{temporalia/capitulum-CumComplerentur.gtex}
@@ -1324,24 +1319,27 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \input{seq-VeniSancte-bohtext.tex}
 
 \vfill
+\newgeometry{landscape, a4paper, mag=1166, truedimen, left=2cm, right=1.5cm, top=1.6cm, bottom=0.60cm}
 \pagebreak
-
-\vfill
 
 \pars{Credo III.} \scriptura{XVII. s.}
 
+{
+\vspace{-0.22cm}
+\vfill
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
 \superInitialam{V}
 \includescore{temporalia/credo-iii.gtex}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+}
 
-\vfill
+%\vfill
+\newgeometry{landscape, a4paper, mag=1166, truedimen, left=2cm, right=1.5cm, top=1.6cm, bottom=0.95cm}
 \pagebreak
 
 \pars{Offertorium.} \scriptura{Psalmus 67, 29.30; \Vbardot{} ibid. 5.27.33.34; \textbf{E256}}
 
 \antiphona{IV}{temporalia/offertorium-ConfirmaHoc.gtex}
-
-\vfill
-\pagebreak
 
 \trOffertorium
 
@@ -1359,11 +1357,12 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \includescore{temporalia/viii-agnusdei.gtex}
 
 \vfill
+\newgeometry{landscape, a4paper, mag=1166, truedimen, left=2cm, right=1.5cm, top=1.6cm, bottom=0.60cm}
 \pagebreak
 
 \pars{Communio.} \scriptura{Act. 2, 2.4.11; \textbf{E257}}
 
-\vspace{-4mm}
+\vspace{-7mm}
 
 \antiphona{VII}{temporalia/communio-FactusEst.gtex}
 
@@ -1374,10 +1373,12 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \cantusSineNeumas
 \includescore{temporalia/communio-versus-Exsurgat-initium.gtex}
 
-\psalmusEtTranslatioT{temporalia/communio-versus-Exsurgat-comb.tex}{10.0cm}
-%\input{cantus/triplex76/communio-versus-DeusJudicium.tex}
+\vspace{-3mm}
+
+\psalmusEtTranslatioTS{temporalia/communio-versus-Exsurgat-comb.tex}{9.5cm}
 
 \vfill
+\newgeometry{landscape, a4paper, mag=1166, truedimen, left=2cm, right=1.5cm, top=1.6cm, bottom=0.95cm}
 \pagebreak
 
 \hora{Ad Sextam.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1417,7 +1418,6 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 % Capitulum. %%%
 \cantusSineNeumas
 
-\label{capitulum}
 \pars{Capitulum.} \scriptura{Act. 2, 6}
 
 \includescore{temporalia/capitulum-Facta.gtex}
@@ -1512,7 +1512,6 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 % Capitulum. %%%
 \cantusSineNeumas
 
-\label{capitulum}
 \pars{Capitulum.} \scriptura{Act. 2, 11}
 
 \includescore{temporalia/capitulum-Judaei.gtex}
