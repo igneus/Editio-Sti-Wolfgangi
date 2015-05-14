@@ -63,6 +63,10 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \addcontentsline{toc}{subsection}{#1}
 }
 
+% In Junicode, the default R/ with .35em has the bar too close to the
+% letter.
+\gresimpledefbarglyph{R}{.41em}
+
 % Emit R/, V/, A/ and + in red
 \let\oldrbar\Rbar
 \let\oldvbar\Vbar

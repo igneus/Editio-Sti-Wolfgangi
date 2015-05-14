@@ -63,6 +63,10 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \addcontentsline{toc}{subsection}{#1}
 }
 
+% In Junicode, the default R/ with .35em has the bar too close to the
+% letter.
+\gresimpledefbarglyph{R}{.41em}
+
 % Emit R/, V/, A/ and + in red
 \let\oldrbar\Rbar
 \let\oldvbar\Vbar
@@ -155,6 +159,17 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
   \begin{psalmus}
       \noindent
       \begin{longtable}{p{\textwidth-#2-1cm}p{#2}}
+        \input{#1}
+      \end{longtable}
+  \end{psalmus}
+}}
+\newcommand{\psalmusEtTranslatioTS}[2]{{
+  \setlength{\LTleft}{-0.25cm}
+  \setlength{\LTright}{\fill}
+  \setlength{\tabcolsep}{0.25cm}
+  \begin{psalmus}
+      \noindent
+      \begin{longtable}{p{\textwidth-#2-0.5cm}p{#2}}
         \input{#1}
       \end{longtable}
   \end{psalmus}
