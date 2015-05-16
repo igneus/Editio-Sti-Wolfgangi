@@ -1,0 +1,208 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside, 12pt]{article}
+\usepackage[latin]{babel}
+%\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
+\usepackage[portrait, a4paper, mag=1300, truedimen, left=0.8cm, right=0.8cm, top=0.8cm, bottom=0.8cm]{geometry} % okraje stranky
+
+\usepackage{fontspec}
+\setmainfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+%\setmainfont{Junicode}
+
+% shortcut for Junicode without ligatures (for the Czech texts)
+\newfontfamily\nlfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{gregoriosyms}
+\usepackage{wrapfig} % figures wrapped by the text
+\usepackage{parcolumns}
+\usepackage[contents={},opacity=1,scale=1,color=black]{background}
+\usepackage{tikzpagenodes}
+\usepackage{calc}
+\usepackage{longtable}
+
+\setlength{\headheight}{12pt}
+
+\input{conventuscommune.tex} % Often used macros
+\input{gregall.tex}
+
+\setlength{\columnsep}{15pt} % prostor mezi sloupci
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm}{1}
+\setspacebeforeinitial{2.2mm}{1}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+
+% Here we set the initial font. Change 38 if you want a bigger initial.
+% Emit the initials in red.
+\def\greinitialformat#1{%
+{\color{red}\fontsize{36}{36}\selectfont #1}%
+}
+
+\renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
+\pagestyle{empty}
+
+\grechangedim{spaceabovelines}{0.2cm}{1}%
+
+\vfill
+
+\hbox{}
+
+\vspace{5cm}
+
+\begin{center}
+{{\Huge A \& Ω}\\
+{\huge LITURGICKÉHO DNE}}
+\end{center}
+
+\vfill
+\pagebreak
+
+\cantusSineNeumas
+
+\scriptura{Psalmus 66.}
+
+\vspace{-0.3cm}
+
+\includescore{temporalia/ps66-initium-dir-auto.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/ps66.tex}}
+
+\vspace{0.5cm}
+
+\includescore{temporalia/deusinadiutorium-communis.gtex}
+
+\vspace{0.5cm}
+
+\antiphona{IV}{temporalia/hym-DieiLuce.gtex}
+
+\vspace{0.5cm}
+
+\scriptura{Cf. Dan. 3, 51; \textbf{H151}}
+
+\antiphona{VIII g}{temporalia/ant-trium.gtex}
+
+\scriptura{Dan. 3, 52-56; \textbf{E373}}
+
+\antiphona{VII}{temporalia/hym-BenedictusEs.gtex}
+
+\vspace{0.5cm}
+
+\scriptura{Psalmus 150.; \textbf{H99}}
+
+\antiphona{I f}{temporalia/ant-intympano.gtex}
+
+\includescore{temporalia/ps150-initium-i-f-auto.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/ps150.tex}}
+
+%\vspace{0.5cm}
+\vfill
+\pagebreak
+
+\pars{Canticum Zachariæ.} \scriptura{Lucæ 1, 68-79}
+
+\includescore{temporalia/benedictus-initium-iiisoll-a-auto.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/benedictus.tex}}
+
+\vspace{0.5cm}
+
+\antiphona{III}{temporalia/hym-TeDeum.gtex}
+
+\vspace{0.5cm}
+%\vfill
+%\pagebreak
+
+\pars{Lectio brevis.} \scriptura{1 Petr. 5, 8-9}
+
+\includescore{temporalia/lectiobrevis-fratressobrii.gtex}
+
+\vspace{0.5cm}
+
+\includescore{temporalia/versus-adjutorium.gtex}
+
+\noindent\pars{Confessio.}
+                                                          
+\noindent Confíteor Deo omnipoténti, et vobis fratres:~\grestar{}
+quia peccávi nimis cogitatióne, verbo, ópere et omissióne:~\grestar{}
+mea culpa, mea culpa, mea máxima culpa.~\grestar{}
+Ideo precor beátam Maríam semper Vírginem,~\grestar{}
+omnes Ángelos et Sanctos, et vos fratres,~\grestar{}
+oráre pro me ad Dóminum Deum nostrum.
+
+\noindent \Vbardot{} Misereátur nostri omnípotens Deus, et dimíssis
+peccátis nostris, perdúcat nos ad vitam ætérnam. \Rbardot{} Amen.
+
+\vspace{0.5cm}
+
+\includescore{temporalia/convertenosdeus.gtex}
+
+\vspace{0.5cm}
+%\vfill
+%\pagebreak
+
+\grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.05 cm}{1}%
+
+\antiphona{VIII}{temporalia/hym-TeLucis.gtex}
+
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+
+%\vspace{0.5cm}
+\vfill
+\pagebreak
+
+\pars{Lectio brevis.} \scriptura{Deut. 6, 4-7}
+
+\includescore{temporalia/lectiobrevis-audi.gtex}
+
+%\vspace{0.5cm}
+
+\superInitialam{VI}
+\includescore{temporalia/resp-inmanus.gtex}
+
+\vspace{0.5cm}
+
+\pars{Canticum Simeonis.}
+
+\vspace{-0.3cm}
+
+\antiphona{III a}{temporalia/ant-salvanos-antiquo.gtex}
+
+\vspace{-0.3cm}
+
+\scriptura{Lucæ 2, 29-32}
+
+\includescore{temporalia/nuncdimittis-initium-iii-a-auto.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/nuncdimittis.tex}}
+
+\vspace{0.5cm}
+
+\includescore{temporalia/kyrie.gtex}
+
+\vspace{0.5cm}
+
+\pars{Oratio Dominica.}
+
+\includescore{temporalia/oratiodominica.gtex}
+
+\vspace{0.5cm}
+
+\pars{Hospodine, pomiluj ny.}
+
+\includescore{temporalia/hospodine.gtex}
+
+\end{document}
