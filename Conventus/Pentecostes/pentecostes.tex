@@ -119,6 +119,36 @@ Editio Sancti Wolfgangi \annusEditionis
 \fancyhf{}
 \pagestyle{fancy}
 
+\pars{Léctio sancti Evangélii secúndum Ioánnem.} \scriptura{Ioannes 14, 23-31}
+
+\textusEtTranslatio{
+  Respóndit Iesus et dixit ei:
+  Si quis díligit me, sermónem meum servábit, et Pater meus díliget eum,
+  et ad eum veniémus, et mansiónem apud eum faciémus;
+  Qui non díligit me, sermónes meos non servat.
+  Et sermónem, quem audístis, non est meus:
+  sed eius, qui misit me, Patris.
+  Hæc locútus sum vobis apud vos manens.
+  Paráclitus autem Spíritus Sanctus, quem mittet Pater in nómine meo,
+  ille vos docébit ómnia, et súggeret vobis ómnia, quæcúmque díxero vobis.
+  Pacem relínquo vobis, pacem meam do vobis:
+  non quómodo mundus dat, ego do vobis.
+  Non turbétur cor vestrum, neque formídet.
+  Audístis quia ego dixi vobis: Vado et vénio ad vos.
+  Si diligerétis me, gauderétis útique,
+  quia vado ad Patrem: quia Pater maior me est.
+  Et nunc dixi vobis, priúsquam fiat:
+  ut, cum factum fúerit, credátis.
+  Iam non multa loquar vobíscum:
+  venit enim princeps mundi huius, et in me non habet quidquam.
+  Sed ut cognóscat mundus quia díligo Patrem,
+  et sicut mandátum dedit mihi Pater, sic fácio.
+  Súrgite, eámus hinc.
+}{\trMatEvangelium}{10cm}
+
+\vfill
+\pagebreak
+
 \pars{Oratio ante divinum Officium.}
 
 \lettrine{{\color{red}A}}{peri,} Dómine, os meum ad benedicéndum nomen sanctum tuum:
@@ -297,16 +327,17 @@ per infiníta sǽcula sæculórum.
 \superInitialam{VI}
 \includescore{temporalia/resp1v.gtex}
 
-%\trRespVesp2
+\trRespVespI
 
 \vfill
+\pagebreak
 
 \pars{Responsorium breve.}\rubrica{ - in II. vesperis:}
 
 \superInitialam{VI}
 \includescore{temporalia/resp2v.gtex}
 
-%\trRespVesp2
+\trRespVespII
 
 \vfill
 \pagebreak
@@ -661,13 +692,23 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \includescore{temporalia/matinv-AlleluiaSpiritus.gtex}
 
 \vfill
+\newgeometry{landscape, a4paper, mag=1166, truedimen, left=2cm, right=1.5cm, top=1.6cm, bottom=0.60cm}
 \pagebreak
 
 \pars{Hymnus.}
 
+\vspace{-0.5cm}
+
 \antiphona{VIII}{temporalia/hym-JamChristus.gtex}
+{
+\vspace{-0.5cm}
+\setlength{\columnsep}{0pt} % prostor mezi sloupci
+\input{hym-JamChristus-bohtext.tex}
+\setlength{\columnsep}{30pt} % prostor mezi sloupci
+}
 
 \vfill
+\newgeometry{landscape, a4paper, mag=1166, truedimen, left=2cm, right=1.5cm, top=1.6cm, bottom=0.95cm}
 \pagebreak
 
 \pars{Psalmus 1.} \scriptura{Act. 2, 2; \textbf{H268}}
@@ -784,7 +825,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
   profecto iam habet, \textit{quem} amat.
   Neque enim quisquam posset De\textit{um} dilígere,~\grestar{}
   si eum quem díligit, non \textit{ha}béret.
-}{}{10cm}
+}{\trMatLecIb}{10cm}
 
 \tuAutem
 
@@ -822,7 +863,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
   Nam qui adhuc per illicita desidéria \textbf{dif}fluit,~\gredagger{}
   profecto De\textit{um} non amat:~\grestar{}
   quia ei in sua voluntáte con\textit{tra}dicit.
-}{}{10cm}
+}{\trMatLecII}{10cm}
 
 \tuAutem
 
@@ -864,7 +905,7 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
   sed tentatiónis témpore hoc ipsum quo compúncti fúerant, oblivis\textbf{cún}tur;~\gredagger{}
   sicque ad perpetranda peccá\textit{ta} redeunt,~\grestar{}
   ac si hæc minime \textit{plan}xíssent.
-}{}{10cm}
+}{\trMatLecIII}{10cm}
 
 \tuAutem
 
