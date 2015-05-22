@@ -137,7 +137,8 @@ $(TMP_DIR)/ps90-comb.tex $(TMP_DIR)/ps133-comb.tex: PSSKIP = 0
 $(TMP_DIR)/communio-versus-Exsurgat-comb.tex: $(patsubst %,communio-versus-Exsurgat%tex,. -boh.)
 	$(GENPSCOMB)
 pentecostes.pdf: pentecostes.tex conventuscommune.tex translationes_cs.tex gregall.tex gregall.lua gregall.ttf SGModern.ttf \
-	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS) giotto.jpg
+	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS) \
+	       giotto.jpg pentecostes.jpg
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
 clean:
