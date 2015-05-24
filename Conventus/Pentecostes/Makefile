@@ -24,13 +24,13 @@ GENPSCOMB = $(AWK) -f pscomb.awk -v PSSKIP=$(PSSKIP) -v TRFILE=$(word 2,$^) $< >
 PSALMS = 4 47 62 67 90 92 99 103 109 110 111 112 113 116 118v_x 118xi_xvi 118xvii_xxii 133 148 149 150
 include tonus.mk
 MODUS-4 = viii-G
-MODUS-47 = viii-c
+MODUS-47 = viii-C
 MODUS-62 = viii-G
-MODUS-67 = viii-c
+MODUS-67 = viii-C
 MODUS-90 = viii-G
 MODUS-92 = iii-a2
 MODUS-99 = viii-G
-MODUS-103 = viii-c
+MODUS-103 = viii-C
 MODUS-109 = iii-a2
 MODUS-110 = viii-G
 MODUS-111 = viii-G
