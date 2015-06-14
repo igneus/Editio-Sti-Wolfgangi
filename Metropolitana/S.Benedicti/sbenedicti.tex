@@ -1,0 +1,207 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside, 12pt]{article}
+\usepackage[latin]{babel}
+%\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
+\usepackage[portrait, a4paper, mag=1300, truedimen, left=0.8cm, right=0.8cm, top=0.8cm, bottom=0.8cm]{geometry} % okraje stranky
+
+\usepackage{fontspec}
+\setmainfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+%\setmainfont{Junicode}
+
+% shortcut for Junicode without ligatures (for the Czech texts)
+\newfontfamily\nlfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{gregoriosyms}
+\usepackage{wrapfig} % figures wrapped by the text
+\usepackage{parcolumns}
+\usepackage[contents={},opacity=1,scale=1,color=black]{background}
+\usepackage{tikzpagenodes}
+\usepackage{calc}
+\usepackage{longtable}
+
+\setlength{\headheight}{12pt}
+
+\input{conventuscommune.tex} % Often used macros
+\input{gregall.tex}
+
+\setlength{\columnsep}{15pt} % prostor mezi sloupci
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm}{1}
+\setspacebeforeinitial{2.2mm}{1}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+
+% Here we set the initial font. Change 38 if you want a bigger initial.
+% Emit the initials in red.
+\def\greinitialformat#1{%
+{\color{red}\fontsize{36}{36}\selectfont #1}%
+}
+
+\renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
+\pagestyle{empty}
+
+\grechangedim{spaceabovelines}{0.2cm}{1}%
+
+\vfill
+
+\hbox{}
+
+\vspace{5cm}
+
+\begin{center}
+{\large \textit{DIE XI IULII}}
+
+\vspace{0.5cm}
+
+{\huge S. BENEDICTI, ABBATIS}
+
+\vspace{0.5cm}
+
+{\large \textsc{Europæ Patroni}}
+
+\vspace{0.5cm}
+
+\textsc{Secundum Antiphonale Romanum II}
+\end{center}
+
+\vfill
+\pagebreak
+
+\cantusSineNeumas
+
+\pars{Introductio}
+
+\includescore{temporalia/deusinadiutorium-communis.gtex}
+
+\vspace{0.5cm}
+
+\pars{Hymnus}
+
+\antiphona{II}{temporalia/hym-InterAEternas.gtex}
+
+\vfill
+\pagebreak
+
+\pars{Antiphona I} \scriptura{S. Gregorius}
+
+\antiphona{VIII g}{temporalia/ant1.gtex}
+
+\scriptura{Ps. 14}
+
+\includescore{temporalia/ps14-initium-viii-G-auto.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/ps14.tex}}
+
+\vfill
+\pagebreak
+
+\pars{Antiphona II}
+
+\antiphona{I d}{temporalia/ant2.gtex}
+
+\scriptura{Ps. 111}
+
+\includescore{temporalia/ps111-initium-i-D2-auto.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/ps111.tex}}
+
+\vfill
+\pagebreak
+
+\pars{Antiphona III}
+
+\antiphona{VIII g}{temporalia/ant3.gtex}
+
+\scriptura{Ap. 15, 3-4}
+
+\includescore{temporalia/ap15-initium-viii-G-auto.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/ap15.tex}}
+
+\vspace{0.5cm}
+
+\pars{Lectio brevis} \scriptura{1 Ptr. 5, 1-4}
+
+Senióres, qui in vobis sunt, óbsecro consénior et testis Christi passiónum,
+qui et eius, quæ in futúro revelánda est, glóriæ communicátor: páscite qui
+in vobis est gregem Dei, providéntes non coácte, sed spontánee secúndúm
+Deum, neque turpis lucri grátia, sed voluntárie; neque ut dominántes in
+cleris, sed forma facti gregis ex ánimo.  Et, cum apparúerit princeps
+pastórum, percipiétis immarcescíbilem glóriæ corónam.
+
+\vspace{0.5cm}
+
+\pars{Responsorium breve}
+
+\antiphona{\oldrbar.~ br.}{temporalia/resp.gtex}
+
+\vfill
+\pagebreak
+
+\pars{Antiphona ad Magnificat}
+
+\antiphona{I f}{temporalia/ant-magn-vesp.gtex}
+
+\scriptura{Lc. 1, 46-55}
+
+\includescore{temporalia/magnificat-initium-i-f.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/magnificat.tex}}
+
+\vfill
+\pagebreak
+
+\pars{Preces}
+
+Christum, pro homínibus pontíficem constitútum in iis quæ sunt ad Deum,
+dignis láudibus celebrémus, humíliter \textit{depre}\textbf{cán}tes:
+
+\Rbardot{} Salvum fac pópulum tu\textit{um,} \textbf{Dó}mine.
+
+Qui Ecclésiam tuam per sanctos et exímios rectóres mirabíliter
+\textit{illus}\textbf{trás}ti,
+fac ut christiáni eódem semper lætificéntur \textit{splen}\textbf{dó}re.
+\Rbardot{}
+
+Qui, cum sancti te pastóres sicut Móyses orárent pópuli peccáta
+\textit{dimi}\textbf{sís}ti,
+per intercessiónem eórum Ecclésiam tuam contínua purificatióne
+\textit{sanc}\textbf{tí}fica. \Rbardot{}
+
+Qui sanctos tuos unxísti in médio fratrum et Spíritum tuum in illos
+\textit{direx}\textbf{ís}ti,
+reple Spíritu Sancto omnes pópuli tui \textit{rec}\textbf{tó}res. \Rbardot{}
+
+Qui pastórum sanctórum ipse posséssio \textit{exsti}\textbf{tís}ti,
+tríbue nullum ex iis, quos sánguine acquisísti, sine te
+\textit{ma}\textbf{né}re. \Rbardot{}
+
+Qui, per Ecclésiæ pastóres, vitam ætérnam óvibus tuis præstas, ne rápiat eas
+quisquam de \textit{manu} \textbf{tu}a,
+salva defúnctos, pro quibus ánimam tuam po\textit{su}\textbf{ís}ti. \Rbardot{}
+
+\vspace{0.5cm}
+
+\pars{Oratio conclusiva}
+
+Deus, qui beátum Benedíctum abbátem in schola divíni servítii præclárum
+constituísti \\
+magístrum, \gredagger{} tríbue, quǽsumus, \grestar{}
+ut, amóri tuo nihil præponéntes,
+viam mandatórum tuórum dilatáto corde currámus. Per Dóminum.
+
+\end{document}
