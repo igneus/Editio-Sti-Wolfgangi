@@ -1,3 +1,6 @@
+NOTE: The work is now continued by @jakubjelinek
+at https://github.com/jakubjelinek/Editio-Sti-Wolfgangi
+
 # Series Conventus #
 
 Booklets prepared for the choir 
