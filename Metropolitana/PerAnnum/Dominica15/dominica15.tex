@@ -1,0 +1,177 @@
+% LuaLaTeX
+
+\documentclass[a4paper, twoside, 12pt]{article}
+\usepackage[latin]{babel}
+%\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
+\usepackage[portrait, a4paper, mag=1414, truedimen, left=0.8cm, right=0.8cm, top=0.8cm, bottom=0.8cm]{geometry} % okraje stranky
+
+\usepackage{fontspec}
+\setmainfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+%\setmainfont{Junicode}
+
+% shortcut for Junicode without ligatures (for the Czech texts)
+\newfontfamily\nlfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{lettrine}
+\usepackage{fancyhdr}
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{gregoriosyms}
+\usepackage{wrapfig} % figures wrapped by the text
+\usepackage{parcolumns}
+\usepackage[contents={},opacity=1,scale=1,color=black]{background}
+\usepackage{tikzpagenodes}
+\usepackage{calc}
+\usepackage{longtable}
+
+\setlength{\headheight}{12pt}
+
+\input{conventuscommune.tex} % Often used macros
+\input{gregall.tex}
+
+\setlength{\columnsep}{15pt} % prostor mezi sloupci
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm}{1}
+\setspacebeforeinitial{2.2mm}{1}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+
+% Here we set the initial font. Change 38 if you want a bigger initial.
+% Emit the initials in red.
+\def\greinitialformat#1{%
+{\color{red}\fontsize{36}{36}\selectfont #1}%
+}
+
+\renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
+\pagestyle{empty}
+
+\grechangedim{spaceabovelines}{0.2cm}{1}%
+
+\vfill
+
+\hbox{}
+
+\vspace{5cm}
+
+\begin{center}
+{\huge AD I VESPERAS}
+
+\vspace{0.5cm}
+
+{\huge \textsc{dominica XV per annum}}
+
+\vspace{0.2cm}
+
+{\huge \textsc{anno b}}
+
+\vspace{0.5cm}
+
+\textsc{secundum antiphonale romanum II}
+\end{center}
+
+\vfill
+\pagebreak
+
+\cantusSineNeumas
+
+\pars{Introductio}
+
+\includescore{temporalia/deusinadiutorium-communis.gtex}
+
+\vspace{0.5cm}
+
+\pars{Hymnus} \scriptura{S. Ambrosius}
+
+\vspace{-0.5cm}
+
+\antiphona{II}{temporalia/hym-DeusCreatorOmnium.gtex}
+
+\vspace{0.5cm}
+
+\pars{Antiphona I} \scriptura{Ps. 112, 2; \textbf{H92}}
+
+\vspace{-0.2cm}
+
+\antiphona{VII C}{temporalia/ant1.gtex}
+
+\vspace{0.2cm}
+
+\pars{Psalmus 112}
+
+\vspace{0.2cm}
+
+\includescore{temporalia/ps112-initium-vii-c-auto.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/ps112.tex}}
+
+\vfill
+\pagebreak
+
+\pars{Antiphona II} \scriptura{Ps. 115, 4; \textbf{H182}}
+
+\vspace{-0.2cm}
+
+\antiphona{II d}{temporalia/ant2.gtex}
+
+\pars{Psalmus 115}
+
+\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{1}%
+\includescore{temporalia/ps115-initium-ii-D-auto.gtex}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+
+{\setlength{\parindent}{0pt}\input{temporalia/ps115.tex}}
+
+\vfill
+\pagebreak
+
+\pars{Antiphona III} \scriptura{Phil. 2, 8.9}
+
+%\vspace{-0.5cm}
+
+\antiphona{I f}{temporalia/ant3.gtex}
+
+\vspace{0.2cm}
+
+\pars{Canticum} \scriptura{Phil. 2, 6-11}
+
+\includescore{temporalia/phil2-initium-i-f-auto.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/phil2.tex}}
+
+\vfill
+
+\pars{Post lectionem}
+
+\vspace{-0.2cm}
+
+\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{1}%
+\antiphona{\oldrbar.~ br.}{temporalia/resp.gtex}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+
+\vfill
+\pagebreak
+
+\pars{Antiphona ad Magnificat} \scriptura{Lc. 9, 1.2}
+
+\vspace{-0.2cm}
+
+\antiphona{I f}{temporalia/ant-magn-vesp.gtex}
+
+\vspace{0.2cm}
+
+\pars{Canticum Evangelicum} \scriptura{Lc. 1, 46-55}
+
+\includescore{temporalia/magnificat-initium-i-g.gtex}
+
+{\setlength{\parindent}{0pt}\input{temporalia/magnificat.tex}}
+
+\end{document}
