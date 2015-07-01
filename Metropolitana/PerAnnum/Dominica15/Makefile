@@ -19,6 +19,7 @@ COMMON_CHANTS_DIR = $(EDITIO_ROOTDIR)/cantuscommunes
 PSALM_PREPROCESSOR = $(TOOLS_DIR)/psalmpreprocessor.rb
 INITIUM_TOOL = $(TOOLS_DIR)/initiumpsalmi.rb
 PSSKIP = 1
+GENPSCOMB = $(AWK) -f pscomb.awk -v PSSKIP=$(PSSKIP) -v TRFILE=$(word 2,$^) $< > $@
 PSALMS = 112 115
 MODUS-112 = vii-c
 MODUS-115 = ii-D
@@ -26,6 +27,10 @@ MODUS-magnificat = isoll-g
 MODUS-phil2 = i-f
 include tonus.mk
 MODUSLIST = $(sort $(foreach P,$(PSALMS) magnificat phil2,$(MODUS-$(P))))
+CZPSALMOPTS = --accents 0:0 --title-pattern " " --no-paragraph
+CZPSALMS = $(patsubst %,$(TMP_DIR)/ps%-boh.tex,$(PSALMS))
+ALLCZPSALMS = $(CZPSALMS) $(patsubst %,$(TMP_DIR)/%-boh.tex,magnificat phil2)
+ALLCOMBPSALMS = $(patsubst $(TMP_DIR)/%-boh.tex,$(TMP_DIR)/%-comb.tex,$(ALLCZPSALMS))
 GENPSALM = $(RUBY_COMMAND) $(PSALM_PREPROCESSOR) --output $@ $(PSALMOPTS) $< \
 	   && $(SED) -i -e 's/\*/\\grestar{}/g' $@
 TONUS = $(TONUS-$(MODUS-$*))
@@ -66,21 +71,32 @@ endef
 iter-left := . $(TMP_DIR) $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR)
 include $(iter)
 
-all: dominica15.pdf
+all: dominica15.pdf dominica15cs.pdf
 $(TMP_DIR)/%.tex: PSALMOPTS = $(APPENDGLORIAPATRI) $(LAPSALMOPTS)
 $(TMP_DIR)/magnificat.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold --skip-verses 2 $(LAPSALMOPTSACC)
+$(TMP_DIR)/%-boh.tex: PSALMOPTS = $(CZPSALMOPTS)
 $(LAPSALMS): $(TMP_DIR)/ps%.tex: $(PSALMS_DIR)/ps%.pslm
 	$(GENPSALM)
 	$(SED) -i -e 'y/Jj/Ii/' $@
+$(ALLCZPSALMS): $(TMP_DIR)/%-boh.tex: %-boh.pslm
+	$(GENPSALM)
+$(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
+	$(GENPSCOMB)
+$(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
 $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: $(PSALMS_DIR)/%.pslm
 	$(GENPSALM)
 	$(SED) -i -e 'y/Jj/Ii/' $@
 $(LAPSALMSEXTRA2): $(TMP_DIR)/%.tex: %.pslm
 	$(GENPSALM)
 	$(SED) -i -e 'y/Jj/Ii/' $@
-dominica15.pdf: dominica15.tex conventuscommune.tex \
+COMMON_DEPS = conventuscommune.tex \
 	gregall.tex gregall.lua gregall.ttf SGModern.ttf \
 	$(ALLLAPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
+dominica15.pdf: dominica15.tex $(COMMON_DEPS)
+	$(LUALATEX) -interaction=nonstopmode $<
+	$(LUALATEX) -interaction=nonstopmode $<
+dominica15cs.pdf: dominica15cs.tex $(COMMON_DEPS) $(ALLCOMBPSALMS) \
+	hym-DeusCreatorOmnium-bohtext.tex translationes_cs.tex
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
 clean:
