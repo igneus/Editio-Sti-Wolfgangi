@@ -3,7 +3,7 @@
 \documentclass[a4paper, twoside, 12pt]{article}
 \usepackage[latin]{babel}
 %\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
-\usepackage[portrait, a4paper, mag=1300, truedimen, left=0.8cm, right=0.8cm, top=0.8cm, bottom=0.8cm]{geometry} % okraje stranky
+\usepackage[portrait, a4paper, mag=1414, truedimen, left=0.8cm, right=0.8cm, top=0.8cm, bottom=0.8cm]{geometry} % okraje stranky
 
 \usepackage{fontspec}
 \setmainfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
@@ -91,12 +91,15 @@
 
 \pars{Hymnus}
 
+\vspace{-0.5cm}
+
 \antiphona{II}{temporalia/hym-InterAEternas.gtex}
 
-\vfill
-\pagebreak
+\vspace{0.5cm}
 
 \pars{Antiphona I} \scriptura{S. Gregorius}
+
+\vspace{-0.2cm}
 
 \antiphona{VIII g}{temporalia/ant1.gtex}
 
@@ -111,11 +114,15 @@
 
 \pars{Antiphona II}
 
+\vspace{-0.2cm}
+
 \antiphona{I d}{temporalia/ant2.gtex}
 
 \scriptura{Ps. 111}
 
+\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{1}%
 \includescore{temporalia/ps111-initium-i-D2-auto.gtex}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
 
 {\setlength{\parindent}{0pt}\input{temporalia/ps111.tex}}
 
@@ -123,6 +130,8 @@
 \pagebreak
 
 \pars{Antiphona III}
+
+\vspace{-0.5cm}
 
 \antiphona{VIII g}{temporalia/ant3.gtex}
 
@@ -132,7 +141,8 @@
 
 {\setlength{\parindent}{0pt}\input{temporalia/ap15.tex}}
 
-\vspace{0.5cm}
+\vfill
+\pagebreak
 
 \pars{Lectio brevis} \scriptura{1 Ptr. 5, 1-4}
 
@@ -147,12 +157,17 @@ pastórum, percipiétis immarcescíbilem glóriæ corónam.
 
 \pars{Responsorium breve}
 
+\vspace{-0.2cm}
+
+
 \antiphona{\oldrbar.~ br.}{temporalia/resp.gtex}
 
 \vfill
 \pagebreak
 
 \pars{Antiphona ad Magnificat}
+
+\vspace{-0.2cm}
 
 \antiphona{I f}{temporalia/ant-magn-vesp.gtex}
 
@@ -173,26 +188,26 @@ dignis láudibus celebrémus, humíliter \textit{depre}\textbf{cán}tes:
 \Rbardot{} Salvum fac pópulum tu\textit{um,} \textbf{Dó}mine.
 
 Qui Ecclésiam tuam per sanctos et exímios rectóres mirabíliter
-\textit{illus}\textbf{trás}ti,
-fac ut christiáni eódem semper lætificéntur \textit{splen}\textbf{dó}re.
+\textit{illus}\textbf{trás}ti,\\
+-- fac ut christiáni eódem semper lætificéntur \textit{splen}\textbf{dó}re.
 \Rbardot{}
 
 Qui, cum sancti te pastóres sicut Móyses orárent pópuli peccáta
-\textit{dimi}\textbf{sís}ti,
-per intercessiónem eórum Ecclésiam tuam contínua purificatióne
+\textit{dimi}\textbf{sís}ti,\\
+-- per intercessiónem eórum Ecclésiam tuam contínua purificatióne
 \textit{sanc}\textbf{tí}fica. \Rbardot{}
 
 Qui sanctos tuos unxísti in médio fratrum et Spíritum tuum in illos
-\textit{direx}\textbf{ís}ti,
-reple Spíritu Sancto omnes pópuli tui \textit{rec}\textbf{tó}res. \Rbardot{}
+\textit{direx}\textbf{ís}ti,\\
+-- reple Spíritu Sancto omnes pópuli tui \textit{rec}\textbf{tó}res. \Rbardot{}
 
-Qui pastórum sanctórum ipse posséssio \textit{exsti}\textbf{tís}ti,
-tríbue nullum ex iis, quos sánguine acquisísti, sine te
+Qui pastórum sanctórum ipse posséssio \textit{exsti}\textbf{tís}ti,\\
+-- tríbue nullum ex iis, quos sánguine acquisísti, sine te
 \textit{ma}\textbf{né}re. \Rbardot{}
 
 Qui, per Ecclésiæ pastóres, vitam ætérnam óvibus tuis præstas, ne rápiat eas
-quisquam de \textit{manu} \textbf{tu}a,
-salva defúnctos, pro quibus ánimam tuam po\textit{su}\textbf{ís}ti. \Rbardot{}
+quisquam de \textit{manu} \textbf{tu}a,\\
+-- salva defúnctos, pro quibus ánimam tuam po\textit{su}\textbf{ís}ti. \Rbardot{}
 
 \vspace{0.5cm}
 
