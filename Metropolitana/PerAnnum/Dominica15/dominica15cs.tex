@@ -3,7 +3,7 @@
 \documentclass[a4paper, twoside, 12pt]{article}
 \usepackage[latin]{babel}
 %\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
-\usepackage[portrait, a4paper, mag=1414, truedimen, left=0.8cm, right=0.8cm, top=0.8cm, bottom=0.8cm]{geometry} % okraje stranky
+\usepackage[portrait, a4paper, mag=1360, truedimen, left=0.8cm, right=0.8cm, top=0.8cm, bottom=0.8cm]{geometry} % okraje stranky
 
 \usepackage{fontspec}
 \setmainfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
@@ -183,7 +183,19 @@
 
 \trLectioI
 
-\vspace{0.5cm}
+\vspace{0.3cm}
+
+\pars{Responsorium} \scriptura{\Rbardot{} Mt. 27, 45-46 \Vbardot{} Lc. 23, 46; \textbf{H218}}
+
+\vspace{-0.2cm}
+
+\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{1}%
+\antiphona{VII}{temporalia/resp2.gtex}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+
+\trRespII
+
+\vspace{0.3cm}
 
 \pars{Lectio II}
 
@@ -201,8 +213,10 @@
 
 \trResp
 
-\vfill
-\pagebreak
+%\vfill
+%\pagebreak
+
+\vspace{0.5cm}
 
 \pars{Antiphona ad Magnificat} \scriptura{Lc. 9, 1.2}
 
