@@ -147,5 +147,5 @@ epiphania.pdf: epiphania.tex conventuscommune.tex translationes_cs.tex \
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
 clean:
-	-rm -rf $(TMP_DIR) *~ *.aux *.gaux *.log
+	-rm -rf $(TMP_DIR) *~ *.aux *.gaux *.greaux *.log
 .PHONY: clean
