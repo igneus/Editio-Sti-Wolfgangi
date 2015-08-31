@@ -3,6 +3,7 @@
 *.dvi
 *.aux
 *.gaux
+*.greaux
 *.log
 *.out
 *.toc

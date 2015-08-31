@@ -354,9 +354,9 @@ def set_verse_part(parttext, partmelody, text_offset, of)
         # add the accent indication with a curly bracket
         if partmelody.movable_accent? && i == partmelody.accents - 1 then
           if j == 0 then
-            neume.gsub! 'r', 'r[ocba:1;4mm]'
+            neume.gsub! 'r', 'r[ocba:1{]'
           elsif j == 1 then
-            neume.gsub! 'r1', ''
+            neume.gsub! 'r1', '[ocba:1}]'
           end
         end
 
@@ -375,9 +375,9 @@ def set_verse_part(parttext, partmelody, text_offset, of)
       # add the accent indication with a curly bracket
       if partmelody.movable_accent? && i == partmelody.accents - 1 then
         if j == 0 then
-          neume.gsub! 'r', 'r[ocba:1;4mm]'
+          neume.gsub! 'r', 'r[ocba:1{]'
         elsif j == 1 then
-          neume.gsub! 'r1', ''
+          neume.gsub! 'r1', '[ocba:1}]'
         end
       end
 
