@@ -2,11 +2,19 @@
 
 \documentclass[a4paper, twoside, 12pt]{article}
 \usepackage[latin]{babel} 
-\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
+%\usepackage[landscape, left=3cm, right=1.5cm, top=2cm, bottom=1cm]{geometry} % okraje stranky
+\usepackage[landscape, a4paper, mag=1166, truedimen, left=2cm, right=1.5cm, top=1.6cm, bottom=0.95cm]{geometry} % okraje stranky
 
 \usepackage{fontspec}
-% \setmainfont{Gentium Book Basic}
-\setmainfont{Junicode}
+\setmainfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+%\setmainfont{Junicode}
+
+% shortcut for Junicode without ligatures (for the Czech texts)
+\newfontfamily\nlfont[FeatureFile={junicode.fea}, Ligatures={Common, TeX}, RawFeature=+fixi]{Junicode}
+
+% Hebrew font:
+% http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=SILHebrUnic2
+\newfontfamily\hebfont[Scale=1]{Ezra SIL}
 
 \usepackage{multicol}
 \usepackage{color}
@@ -20,84 +28,21 @@
 \usepackage{gregoriosyms}
 \usepackage{wrapfig} % figures wrapped by the text
 \usepackage{parcolumns}
+\usepackage[contents={},opacity=1,scale=1,color=black]{background}
+\usepackage{tikzpagenodes}
+\usepackage{calc}
+\usepackage{longtable}
+\usetikzlibrary{calc}
 
+\setlength{\headheight}{14.5pt}
+
+\input{conventuscommune.tex} % Often used macros
 \input{translationes_cs.tex} % Czech translations of the proper texts
 
+\newcommand{\annusEditionis}{2015}
 
-\newcommand{\cantusCommunesAM}{../../cantuscommunes/amon33}
-\newcommand{\cantusCommunesGT}{../../cantuscommunes/kyriale76}
-\newcommand{\cantusProprii}{cantus}
-
-
-\newenvironment{titulusOfficii}{\begin{center}}{\end{center}}
-\newcommand{\dies}[1]{#1
-
-}
-\newcommand{\nomenFesti}[1]{\textbf{\Large #1}
-
-}
-\newcommand{\celebratio}[1]{#1
-
-}
-
-\newcommand{\hora}[1]{\vspace{0.5cm}{\large \textbf{#1}}
-% from some reason the following doesn't work:
-\fancyhead[LE]{\thepage\ / #1}
-\fancyhead[RO]{#1 / \thepage}
-
-}
-
-\newcommand{\rubrica}[1]{\vspace{3mm}\textit{#1}}
-
-\newcommand{\notitia}[1]{\textcolor{red}{#1}}
-
-\newcommand{\titCapitulum}[1]{\hfill \textit{#1}}
-
-\newcommand{\translatioCantus}[1]{\vspace{1mm}{\noindent\footnotesize #1}}
-
-% pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
-% s prekladem
-\newcommand{\psalmusEtTranslatioB}[3]{
-  \vspace{0.5cm}
-  \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
-    \colchunk{\input{#1}}
-    \colchunk{\vspace{-0.5cm}{\footnotesize \input{#2}}}
-  \end{parcolumns}
-}
-
-\newcommand{\psalmusEtTranslatio}[2]{
-  \psalmusEtTranslatioB{#1}{#2}{8.5cm}
-}
-
-% volne misto nad antifonami, kam si zpevaci dokresli neumy
-\newcommand{\hicSuntNeumae}{\vspace{1.3cm}}
-
-% prepinani mista mezi notovymi osnovami: pro neumovane a neneumovane zpevy
-\newcommand{\cantusCumNeumis}{
-  \setgrefactor{17}
-  \global\advance\grespaceabovelines by 10mm%
-}
-\newcommand{\cantusSineNeumas}{
-  \setgrefactor{17}
-  \global\advance\grespaceabovelines by -10mm%
-}
-
-% pars officii, i.e. "oratio", ...
-\newcommand{\pars}[1]{\textbf{#1}}
-
-\newenvironment{psalmus}{
-  \setlength{\parindent}{0pt}
-  \setlength{\parskip}{5pt}
-}{
-  \setlength{\parindent}{10pt}
-  \setlength{\parskip}{10pt}
-}
-
-%%%% Prejmenovat na latinske:
-\newcommand{\nadpisZalmu}[1]{
-  \hspace{2cm}\textbf{#1}\vspace{2mm}%
-  \nopagebreak%
-
+\def\hebinitial#1{%
+\leavevmode{\newbox\hebbox\setbox\hebbox\hbox{\hebfont{#1}\hskip 1mm}\kern -\wd\hebbox\hbox{\hebfont{#1}\hskip 1mm}}%
 }
 
 %%%% Vicekrat opakovane kousky
@@ -106,17 +51,17 @@
   \pars{Versus.}
 
   % Versus. %%%
-    \includescore{\cantusProprii/amon33/versus-nativitasest.tex}
+    \gregorioscore{temporalia/versus-nativitasest.gtex}
     % \vspace{-5mm}
-    \noindent ℟.\hspace{0.5mm}Cujus vita ínclyta cunctas illústrat ecclési\textit{as.}
+    \noindent \Rbardot{}\hspace{0.5mm}Cujus vita ínclyta cunctas illústrat ecclési\textit{as.}
     
     \noindent \translatioVersus
 }
 
 \newcommand{\capitulumAbInitioEtResponsorium}{
-  \pars{Capitulum.} \titCapitulum{Eccli. 24. b}
+  \pars{Capitulum.} \scriptura{Eccli. 24. b}
 
-  \includescore{\cantusProprii/amon33/capitulum-AbInitio.tex}
+  \gregorioscore{temporalia/capitulum-AbInitio.gtex}
 
   % preklad Jeruz. bible
   \translatioCapituli
@@ -124,8 +69,7 @@
   \vspace{1cm}
   \pars{Responsorium breve.}
 
-  \gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.}}}{\small \textsc{\textbf{VI.}}}
-  \includescore{\cantusProprii/amon33/resp1v.tex}
+  \antiphona{VI}{temporalia/resp1v.gtex}
 
   \translatioRespVesp
 }
@@ -133,21 +77,21 @@
 \newcommand{\anteOrationem}{
   \rubrica{Ante Orationem, cantatur a Superiore:}
 
-  \pars{Supplicatio Litaniae.}
+  \pars{Supplicatio Litaniæ.}
 
-  \includescore{\cantusCommunesAM/supplicatiolitaniae.tex}
+  \gregorioscore{temporalia/supplicatiolitaniae.gtex}
 
   \pars{Oratio Dominica.}
 
-  \includescore{\cantusCommunesAM/oratiodominica.tex}
+  \gregorioscore{temporalia/oratiodominica.gtex}
 
   \rubrica{Deinde dicitur ab Hebdomadario:}
 
-  \includescore{\cantusCommunesAM/dominusvobiscum-solemnis.tex}
+  \gregorioscore{temporalia/dominusvobiscum-solemnis.gtex}
 
   \rubrica{In choro monialium loco Dominus vobiscum dicitur:}
 
-  \includescore{\cantusCommunesAM/domineexaudi.tex}
+  \gregorioscore{temporalia/domineexaudi.gtex}
 }
 
 \setlength{\columnsep}{30pt} % prostor mezi sloupci
@@ -157,12 +101,15 @@
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
-\setspaceafterinitial{2.2mm plus 0em minus 0em}
-\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+\setspaceafterinitial{2.2mm}{1}
+\setspacebeforeinitial{2.2mm}{1}
 
-% Here we set the initial font. Change 43 if you want a bigger initial.
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+
+% Here we set the initial font. Change 38 if you want a bigger initial.
+% Emit the initials in red.
 \def\greinitialformat#1{%
-{\fontsize{43}{43}\selectfont #1}%
+{\color{red}\fontsize{38}{38}\selectfont #1}%
 }
 
 \pagestyle{empty}
@@ -170,7 +117,7 @@
 %%%% Titulni stranka
 \begin{titulusOfficii}
 \dies{Die 8. Septembris.}
-\nomenFesti{In Nativitate B. Mariae Virginis.}
+\nomenFesti{In Nativitate B. Mariæ Virginis.}
 \celebratio{Duplex 2. classis.} % puvodne "cum Octava." Oktavy byly ale zruseny
 \end{titulusOfficii}
 
@@ -185,7 +132,7 @@
 \begin{center}
 Ad usum et secundum consuetudines chori \guillemotright Conventus Choralis\guillemotleft.
 
-Editio Sancti Wolfgangi 2012
+Editio Sancti Wolfgangi \annusEditionis
 \end{center}
 
 \pagebreak
@@ -194,501 +141,479 @@ Editio Sancti Wolfgangi 2012
 \fancyhf{}
 \pagestyle{fancy}
 
-\hora{In I. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hora{In Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sideThumbs{Vesperæ}
 
 \label{deusinadiutorium}
 
-\includescore{\cantusCommunesAM/deusinadiutorium-communis.tex}
+\gregorioscore{temporalia/deusinadiutorium-communis.gtex}
 
 \vfill
-
 \pagebreak
 
 \cantusCumNeumis
 
-\pars{psalmus 1.}
+\pars{Psalmus 1.}
 
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{\cantusProprii/amon33/ant1.tex}
+{
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
+\antiphona{VIII G}{temporalia/ant1.gtex}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+}
 
 \translatioAntI
 
-\titCapitulum{Psalmus 109.}
+\scriptura{Ps. 109}
 
-\includescore{temporalia/ps109-initium-viii-G-auto.tex}
+\gregorioscore{temporalia/ps109-initium-viii-G-auto.gtex}
 
-%\translatioPsalmi{temporalia/ps109-boh.tex}
-%\input{temporalia/ps109.tex}
-
-\psalmusEtTranslatio{temporalia/ps109.tex}{temporalia/ps109-boh.tex}
+\psalmusEtTranslatioT{temporalia/ps109-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{psalmus 2.}
+\pars{Psalmus 2.}
 
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
-\includescore{\cantusProprii/amon33/ant2.tex}
+\antiphona{VII c}{temporalia/ant2.gtex}
 
 \translatioAntII
 
-\titCapitulum{Psalmus 112.}
+\scriptura{Ps. 112}
 
-\includescore{temporalia/ps112-initium-vii-c-auto.tex}
-
-% \translatioPsalmi{temporalia/ps112-boh.tex}
-% \input{temporalia/ps112.tex}
-
-\psalmusEtTranslatio{temporalia/ps112.tex}{temporalia/ps112-boh.tex}
+\gregorioscore{temporalia/ps112-initium-vii-c-auto.gtex}
+\psalmusEtTranslatioT{temporalia/ps112-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{psalmus 3.}
+\pars{Psalmus 3.}
 
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
-\includescore{\cantusProprii/amon33/ant3.tex}
+\antiphona{VI F}{temporalia/ant3.gtex}
 
 \translatioAntIII
 
-\titCapitulum{Psalmus 121.}
+\scriptura{Ps. 121}
 
-\includescore{temporalia/ps121-initium-vi-F-auto.tex}
-
-% \translatioPsalmi{temporalia/ps121-boh.tex}
-% \input{temporalia/ps121.tex}
-
-\psalmusEtTranslatio{temporalia/ps121.tex}{temporalia/ps121-boh.tex}
+\gregorioscore{temporalia/ps121-initium-vi-F-auto.gtex}
+\psalmusEtTranslatioT{temporalia/ps121-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\pars{psalmus 4.}
+\pars{Psalmus 4.}
 
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{\cantusProprii/amon33/ant4.tex}
+\antiphona{VIII G}{temporalia/ant4.gtex}
 
 \translatioAntIV
 
-\titCapitulum{Psalmus 126.}
+\scriptura{Ps. 126}
 
-\includescore{temporalia/ps126-initium-viii-G-auto.tex}
-
-%\translatioPsalmi{temporalia/ps126-boh.tex}
-%\input{temporalia/ps126.tex}
-\psalmusEtTranslatio{temporalia/ps126.tex}{temporalia/ps126-boh.tex}
+\gregorioscore{temporalia/ps126-initium-viii-G-auto.gtex}
+\psalmusEtTranslatioT{temporalia/ps126-comb.tex}{10cm}
 
 \vfill
-
 \pagebreak
 
-\raggedcolumns
-
-% Capitulum. %%%
-\cantusSineNeumas
-
-\label{capitulum}
-\capitulumAbInitioEtResponsorium
-
-\vfill
-
-\pagebreak
-
-% Hymnus. %%%
-\pars{Hymnus.}
-
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{I.}}}{\small \textsc{\textbf{I.}}}
-\includescore{\cantusProprii/amon33/hym-AveMarisStella.tex}
-\psalmusEtTranslatio{cantus/amon33/hym-AveMarisStella-text.tex}{cantus/amon33/hym-AveMarisStella-bohtext.tex}
-
-\versusNativitasEst
-
-\pagebreak
-
-\cantusCumNeumis
-
-\pars{Canticum B. Mariae V.}\rubrica{ - in I. vesperis:}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{I.D2}}}{\small \textsc{\textbf{I.D2}}}
-\includescore{\cantusProprii/amon33/ant-magn-vesp1.tex}
-
-\translatioAntMagnificatI
-
-\cantusSineNeumas
-\includescore{\cantusProprii/amon33/magnificat-initium-i-D2.tex}
-
-\psalmusEtTranslatioB{temporalia/magnificat-iD2.tex}{temporalia/magnificat-boh.tex}{10cm}
-
-\pagebreak
-
-\pars{Canticum B. Mariae V.}\rubrica{ - in II. vesperis:}
-\label{magnificatIIvesp}
-
-\cantusCumNeumis
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{I.f}}}{\small \textsc{\textbf{I.f}}}
-\includescore{\cantusProprii/amon33/ant-magn-vesp2.tex}
-
-\translatioAntMagnificatII
-
-% antifona je dlouha a mista dost, dame Magnificat na novou stranku
-\vfill
-\pagebreak 
-
-\cantusSineNeumas
-\includescore{\cantusProprii/amon33/magnificat-initium-i-f.tex}
-
-% maly svindl, ale prizvukova struktura Isoll-D2 a Isoll-f je stejna
-\psalmusEtTranslatio{temporalia/magnificat-iD2.tex}{temporalia/magnificat-boh.tex}
-
-\pagebreak
-
-\label{oratio}
-\anteOrationem
-
-\pagebreak
-
-% Oratio. %%%
-\pars{Oratio.}
-
-\includescore{\cantusProprii/amon33/oratio.tex}
-\translatioOrationis
-
-\vspace{1cm}
-\rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
-\vspace{2mm}
-
-\includescore{\cantusCommunesAM/benedicamus-duplex-vesperae.tex}
-
-\vfill
-
-\pagebreak
-
-\hora{Ad Laudes.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Psalmi festivi (AM33, pg. 721):
-% 66 // 92, 99, 62, Dan3, 148+149+150
-
-\vspace{1cm}
-\includescore{\cantusCommunesAM/deusinadiutorium-communis.tex}
-\vspace{1cm}
-
-\cantusCumNeumis
-
-\pars{psalmus 1.}
-
-\titCapitulum{Psalmus 66.}
-
-\includescore{temporalia/ps66-initium-dir-auto.tex}
-
-%\translatioPsalmi{temporalia/ps66-boh.tex}
-%\input{temporalia/ps66.tex}
-\psalmusEtTranslatio{temporalia/ps66.tex}{temporalia/ps66-boh.tex}
-
-\vfill
-
-\pagebreak
-
-\pars{psalmus 2.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{\cantusProprii/amon33/ant1.tex}
-
-\translatioAntI
-
-\titCapitulum{Psalmus 92.}
-
-\includescore{temporalia/ps92-initium-viii-G-auto.tex}
-
-%\translatioPsalmi{temporalia/ps92-boh.tex}
-%\input{temporalia/ps92.tex}
-\psalmusEtTranslatio{temporalia/ps92.tex}{temporalia/ps92-boh.tex}
-
-\vfill
-
-\pagebreak
-
-\pars{psalmus 3.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
-\includescore{\cantusProprii/amon33/ant2.tex}
-
-\translatioAntII
-
-\titCapitulum{Psalmus 99.}
-
-\includescore{temporalia/ps99-initium-vii-c-auto.tex}
-
-%\translatioPsalmi{temporalia/ps99-boh.tex}
-%\input{temporalia/ps99.tex}
-\psalmusEtTranslatio{temporalia/ps99.tex}{temporalia/ps99-boh.tex}
-
-\vfill
-
-\pagebreak
-
-\pars{psalmus 4.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
-\includescore{\cantusProprii/amon33/ant3.tex}
-
-\translatioAntIII
-
-\titCapitulum{Psalmus 62.}
-
-\includescore{temporalia/ps62-initium-vi-F-auto.tex}
-
-%\translatioPsalmi{temporalia/ps62-boh.tex}
-%\input{temporalia/ps62.tex}
-\psalmusEtTranslatio{temporalia/ps62.tex}{temporalia/ps62-boh.tex}
-
-\vfill
-
-\pagebreak
-
-\pars{psalmus 5.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{\cantusProprii/amon33/ant4.tex}
-
-\translatioAntIV
-
-\titCapitulum{Canticum trium puerorum, Dan. 3, 57-88 et 56.}
-
-\includescore{temporalia/dan3-initium-viii-G-auto.tex}
-
-\psalmusEtTranslatioB{temporalia/dan3.tex}{temporalia/dan3-boh.tex}{10cm} % Canticum trium
-
-\rubrica{Hic non dicitur Gloria Patri, neque Amen.}
-\vspace{1cm}
-
-\hicSuntNeumae
-\includescore{\cantusProprii/amon33/ant4.tex} % repeat the antiphon - new page
-
-\vfill
-
-\pagebreak
-
-\pars{psalmus 6.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
-\includescore{\cantusProprii/amon33/ant5.tex}
-
-\translatioAntV
-
+%\raggedcolumns
 %
-\titCapitulum{Psalmus 148.}
-
-\includescore{temporalia/ps148-initium-vii-c-auto.tex}
-
-\newlength{\psVItransW}
-\setlength{\psVItransW}{10.5cm}
-
-%\translatioPsalmi{temporalia/ps148-boh.tex}
-%\input{temporalia/ps148.tex}
-\psalmusEtTranslatioB{temporalia/ps148.tex}{temporalia/ps148-boh.tex}{\psVItransW}
-
-\rubrica{Hic non dicitur Gloria Patri.}
-
+%% Capitulum. %%%
+%\cantusSineNeumas
 %
-\titCapitulum{Psalmus 149.}
-
-\includescore{temporalia/ps149-initium-vii-c-auto.tex}
-
-%\translatioPsalmi{temporalia/ps149-boh.tex}
-%\input{temporalia/ps149.tex}
-\psalmusEtTranslatioB{temporalia/ps149.tex}{temporalia/ps149-boh.tex}{\psVItransW}
-
-\rubrica{Hic non dicitur Gloria Patri.}
-
+%\label{capitulum}
+%\capitulumAbInitioEtResponsorium
 %
-\titCapitulum{Psalmus 150.}
-
-\includescore{temporalia/ps150-initium-vii-c-auto.tex}
-
-%\translatioPsalmi{temporalia/ps150-boh.tex}
-%\input{temporalia/ps150.tex}
-\psalmusEtTranslatioB{temporalia/ps150.tex}{temporalia/ps150-boh.tex}{\psVItransW}
-
-\pagebreak
-
-\cantusSineNeumas
-
-\capitulumAbInitioEtResponsorium
-\vfill
-
-\pagebreak
-
-\pars{Hymnus.}
-
-\includescore{\cantusProprii/amon33/hym-OGloriosaDomina.tex}
-\psalmusEtTranslatio{cantus/amon33/hym-OGloriosaDomina-text.tex}{cantus/amon33/hym-OGloriosaDomina-bohtext.tex}
-
-\vspace{0.5cm}
-
-\versusNativitasEst
-
-\vfill
-
-\pagebreak
-
-\cantusCumNeumis
-
-\pars{Canticum Zachariae.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
-\includescore{\cantusProprii/amon33/ant-ben-laud.tex}
-
-\translatioAntBenedictus
-
-\includescore{temporalia/benedictus-initium-viiisoll-G-auto.tex}
-
-\psalmusEtTranslatioB{temporalia/benedictus-viiiG.tex}{temporalia/benedictus-boh.tex}{10.5cm}
-
-\vspace{0.5cm}
-
-\vfill
-
-\pagebreak
-
-\cantusSineNeumas
-
-\label{oratio}
-\anteOrationem
-
-\pagebreak
-
-% Oratio. %%%
-\pars{Oratio.}
-
-\includescore{\cantusProprii/amon33/oratio.tex}
-\translatioOrationis
-
-\vspace{1cm}
-\rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
-\vspace{2mm}
-
-\includescore{\cantusCommunesAM/benedicamus-duplex-laudes.tex}
-
-\vfill
-
-\pagebreak
-
-\hora{Ad Missam - missa IX.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\pars{Kyrie.}
-
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{I}}}{\small \textsc{\textbf{I}}}
-\includescore{\cantusCommunesGT/ix-kyrie.tex}
-
-\vfill
-\pagebreak
-
-\pars{Gloria.}
-
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII}}}{\small \textsc{\textbf{VII}}}
-\includescore{\cantusCommunesGT/ix-gloria.tex}
-
-\vfill
-\pagebreak
-
-\pars{Sanctus.}
-
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{V}}}{\small \textsc{\textbf{V}}}
-\includescore{\cantusCommunesGT/ix-sanctus.tex}
-
-\vspace{1cm}
-\pars{Agnus Dei.}
-
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{V}}}{\small \textsc{\textbf{V}}}
-\includescore{\cantusCommunesGT/ix-agnusdei.tex}
-
-\vfill
-\pagebreak
-
-\hora{Ad Missam - proprium festi.}
-
-\pars{Antiphona ad introitum.}
-
-\cantusCumNeumis
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{I}}}{\small \textsc{\textbf{I}}}
-\includescore{\cantusProprii/triplex76/introitus-GaudeamusOmnes.tex}
-
-\translatioIntroitus
-
-\vfill
-\pagebreak
-
-\pars{Graduale.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{IV}}}{\small \textsc{\textbf{IV}}}
-\includescore{\cantusProprii/triplex76/graduale-BenedictaEtVenerabilis.tex}
-
-\translatioGraduale
-
-\vfill
-\pagebreak
-
-\pars{Alleluia.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII}}}{\small \textsc{\textbf{VII}}}
-\includescore{\cantusProprii/triplex76/alleluia-SolemnitasGloriosae.tex}
-
-\translatioAlleluia
-
-\vfill
-\pagebreak
-
-\pars{Offertorium.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII}}}{\small \textsc{\textbf{VIII}}}
-\includescore{\cantusProprii/triplex76/offertorium-BeataEs.tex}
-
-\translatioOffertorium
-
-\vspace{3mm}
-
-\pars{Communio.}
-
-\hicSuntNeumae
-\gresetfirstlineaboveinitial{\small \textsc{\textbf{VI}}}{\small \textsc{\textbf{VI}}}
-\includescore{\cantusProprii/triplex76/communio-BeatamMeDicent.tex}
-
-\translatioCommunio
-
-\titCapitulum{Canticum Magnificat: Luc. 1,46-47.50.51.52.53.54.55}
-
-\cantusSineNeumas
-\includescore{\cantusProprii/triplex76/communio-versus-Magnificat.tex}
-
-\vspace{2cm}
-
-\hora{In II. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\rubrica{Omnia ut in I. Vesperis, pg. \pageref{deusinadiutorium}, 
-praeter antiphonam ad Magnificat, quae est propria, 
-pg. \pageref{magnificatIIvesp}.}
-
+%\vfill
+%
+%\pagebreak
+%
+%% Hymnus. %%%
+%\pars{Hymnus.}
+%
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{I.}}}{\small \textsc{\textbf{I.}}}
+%\gregorioscore{temporalia/hym-AveMarisStella.gtex}
+%\psalmusEtTranslatio{cantus/amon33/hym-AveMarisStella-text.tex}{cantus/amon33/hym-AveMarisStella-bohtext.tex}
+%
+%\versusNativitasEst
+%
+%\pagebreak
+%
+%\cantusCumNeumis
+%
+%\pars{Canticum B. Mariæ V.}\rubrica{ - in I. vesperis:}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{I.D2}}}{\small \textsc{\textbf{I.D2}}}
+%\gregorioscore{temporalia/ant-magn-vesp1.gtex}
+%
+%\translatioAntMagnificatI
+%
+%\cantusSineNeumas
+%\gregorioscore{temporalia/magnificat-initium-i-D2.gtex}
+%
+%\psalmusEtTranslatioB{temporalia/magnificat-iD2.gtex}{temporalia/magnificat-boh.gtex}{10cm}
+%
+%\pagebreak
+%
+%\pars{Canticum B. Mariæ V.}\rubrica{ - in II. vesperis:}
+%\label{magnificatIIvesp}
+%
+%\cantusCumNeumis
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{I.f}}}{\small \textsc{\textbf{I.f}}}
+%\gregorioscore{temporalia/ant-magn-vesp2.gtex}
+%
+%\translatioAntMagnificatII
+%
+%% antifona je dlouha a mista dost, dame Magnificat na novou stranku
+%\vfill
+%\pagebreak 
+%
+%\cantusSineNeumas
+%\gregorioscore{temporalia/magnificat-initium-i-f.gtex}
+%
+%% maly svindl, ale prizvukova struktura Isoll-D2 a Isoll-f je stejna
+%\psalmusEtTranslatio{temporalia/magnificat-iD2.gtex}{temporalia/magnificat-boh.gtex}
+%
+%\pagebreak
+%
+%\label{oratio}
+%\anteOrationem
+%
+%\pagebreak
+%
+%% Oratio. %%%
+%\pars{Oratio.}
+%
+%\gregorioscore{temporalia/oratio.gtex}
+%\translatioOrationis
+%
+%\vspace{1cm}
+%\rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
+%\vspace{2mm}
+%
+%\gregorioscore{temporalia/benedicamus-duplex-vesperae.gtex}
+%
+%\vfill
+%
+%\pagebreak
+%
+%\hora{Ad Laudes.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% Psalmi festivi (AM33, pg. 721):
+%% 66 // 92, 99, 62, Dan3, 148+149+150
+%
+%\vspace{1cm}
+%\gregorioscore{temporalia/deusinadiutorium-communis.gtex}
+%\vspace{1cm}
+%
+%\cantusCumNeumis
+%
+%\pars{psalmus 1.}
+%
+%\titCapitulum{Psalmus 66.}
+%
+%\gregorioscore{temporalia/ps66-initium-dir-auto.gtex}
+%
+%%\translatioPsalmi{temporalia/ps66-boh.gtex}
+%%\input{temporalia/ps66.gtex}
+%\psalmusEtTranslatio{temporalia/ps66.gtex}{temporalia/ps66-boh.gtex}
+%
+%\vfill
+%
+%\pagebreak
+%
+%\pars{psalmus 2.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
+%\gregorioscore{temporalia/ant1.gtex}
+%
+%\translatioAntI
+%
+%\titCapitulum{Psalmus 92.}
+%
+%\gregorioscore{temporalia/ps92-initium-viii-G-auto.gtex}
+%
+%%\translatioPsalmi{temporalia/ps92-boh.gtex}
+%%\input{temporalia/ps92.gtex}
+%\psalmusEtTranslatio{temporalia/ps92.gtex}{temporalia/ps92-boh.gtex}
+%
+%\vfill
+%
+%\pagebreak
+%
+%\pars{psalmus 3.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
+%\gregorioscore{temporalia/ant2.gtex}
+%
+%\translatioAntII
+%
+%\titCapitulum{Psalmus 99.}
+%
+%\gregorioscore{temporalia/ps99-initium-vii-c-auto.gtex}
+%
+%%\translatioPsalmi{temporalia/ps99-boh.gtex}
+%%\input{temporalia/ps99.gtex}
+%\psalmusEtTranslatio{temporalia/ps99.gtex}{temporalia/ps99-boh.gtex}
+%
+%\vfill
+%
+%\pagebreak
+%
+%\pars{psalmus 4.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VI.F}}}{\small \textsc{\textbf{VI.F}}}
+%\gregorioscore{temporalia/ant3.gtex}
+%
+%\translatioAntIII
+%
+%\titCapitulum{Psalmus 62.}
+%
+%\gregorioscore{temporalia/ps62-initium-vi-F-auto.gtex}
+%
+%%\translatioPsalmi{temporalia/ps62-boh.gtex}
+%%\input{temporalia/ps62.gtex}
+%\psalmusEtTranslatio{temporalia/ps62.gtex}{temporalia/ps62-boh.gtex}
+%
+%\vfill
+%
+%\pagebreak
+%
+%\pars{psalmus 5.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
+%\gregorioscore{temporalia/ant4.gtex}
+%
+%\translatioAntIV
+%
+%\titCapitulum{Canticum trium puerorum, Dan. 3, 57-88 et 56.}
+%
+%\gregorioscore{temporalia/dan3-initium-viii-G-auto.gtex}
+%
+%\psalmusEtTranslatioB{temporalia/dan3.gtex}{temporalia/dan3-boh.gtex}{10cm} % Canticum trium
+%
+%\rubrica{Hic non dicitur Gloria Patri, neque Amen.}
+%\vspace{1cm}
+%
+%\hicSuntNeumae
+%\gregorioscore{temporalia/ant4.gtex} % repeat the antiphon - new page
+%
+%\vfill
+%
+%\pagebreak
+%
+%\pars{psalmus 6.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII.c}}}{\small \textsc{\textbf{VII.c}}}
+%\gregorioscore{temporalia/ant5.gtex}
+%
+%\translatioAntV
+%
+%%
+%\titCapitulum{Psalmus 148.}
+%
+%\gregorioscore{temporalia/ps148-initium-vii-c-auto.gtex}
+%
+%\newlength{\psVItransW}
+%\setlength{\psVItransW}{10.5cm}
+%
+%%\translatioPsalmi{temporalia/ps148-boh.gtex}
+%%\input{temporalia/ps148.gtex}
+%\psalmusEtTranslatioB{temporalia/ps148.gtex}{temporalia/ps148-boh.gtex}{\psVItransW}
+%
+%\rubrica{Hic non dicitur Gloria Patri.}
+%
+%%
+%\titCapitulum{Psalmus 149.}
+%
+%\gregorioscore{temporalia/ps149-initium-vii-c-auto.gtex}
+%
+%%\translatioPsalmi{temporalia/ps149-boh.gtex}
+%%\input{temporalia/ps149.gtex}
+%\psalmusEtTranslatioB{temporalia/ps149.gtex}{temporalia/ps149-boh.gtex}{\psVItransW}
+%
+%\rubrica{Hic non dicitur Gloria Patri.}
+%
+%%
+%\titCapitulum{Psalmus 150.}
+%
+%\gregorioscore{temporalia/ps150-initium-vii-c-auto.gtex}
+%
+%%\translatioPsalmi{temporalia/ps150-boh.gtex}
+%%\input{temporalia/ps150.gtex}
+%\psalmusEtTranslatioB{temporalia/ps150.gtex}{temporalia/ps150-boh.gtex}{\psVItransW}
+%
+%\pagebreak
+%
+%\cantusSineNeumas
+%
+%\capitulumAbInitioEtResponsorium
+%\vfill
+%
+%\pagebreak
+%
+%\pars{Hymnus.}
+%
+%\gregorioscore{temporalia/hym-OGloriosaDomina.gtex}
+%\psalmusEtTranslatio{cantus/amon33/hym-OGloriosaDomina-text.tex}{cantus/amon33/hym-OGloriosaDomina-bohtext.tex}
+%
+%\vspace{0.5cm}
+%
+%\versusNativitasEst
+%
+%\vfill
+%
+%\pagebreak
+%
+%\cantusCumNeumis
+%
+%\pars{Canticum Zachariæ.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII.G}}}{\small \textsc{\textbf{VIII.G}}}
+%\gregorioscore{temporalia/ant-ben-laud.gtex}
+%
+%\translatioAntBenedictus
+%
+%\gregorioscore{temporalia/benedictus-initium-viiisoll-G-auto.gtex}
+%
+%\psalmusEtTranslatioB{temporalia/benedictus-viiiG.gtex}{temporalia/benedictus-boh.gtex}{10.5cm}
+%
+%\vspace{0.5cm}
+%
+%\vfill
+%
+%\pagebreak
+%
+%\cantusSineNeumas
+%
+%\label{oratio}
+%\anteOrationem
+%
+%\pagebreak
+%
+%% Oratio. %%%
+%\pars{Oratio.}
+%
+%\gregorioscore{temporalia/oratio.gtex}
+%\translatioOrationis
+%
+%\vspace{1cm}
+%\rubrica{Hebdomadarius dicit iterum Dominus vobiscum. Postea cantatur a cantore:}
+%\vspace{2mm}
+%
+%\gregorioscore{temporalia/benedicamus-duplex-laudes.gtex}
+%
+%\vfill
+%
+%\pagebreak
+%
+%\hora{Ad Missam - missa IX.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\pars{Kyrie.}
+%
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{I}}}{\small \textsc{\textbf{I}}}
+%\gregorioscore{temporalia/ix-kyrie.gtex}
+%
+%\vfill
+%\pagebreak
+%
+%\pars{Gloria.}
+%
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII}}}{\small \textsc{\textbf{VII}}}
+%\gregorioscore{temporalia/ix-gloria.gtex}
+%
+%\vfill
+%\pagebreak
+%
+%\pars{Sanctus.}
+%
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{V}}}{\small \textsc{\textbf{V}}}
+%\gregorioscore{temporalia/ix-sanctus.gtex}
+%
+%\vspace{1cm}
+%\pars{Agnus Dei.}
+%
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{V}}}{\small \textsc{\textbf{V}}}
+%\gregorioscore{temporalia/ix-agnusdei.gtex}
+%
+%\vfill
+%\pagebreak
+%
+%\hora{Ad Missam - proprium festi.}
+%
+%\pars{Antiphona ad introitum.}
+%
+%\cantusCumNeumis
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{I}}}{\small \textsc{\textbf{I}}}
+%\gregorioscore{temporalia/introitus-GaudeamusOmnes.gtex}
+%
+%\translatioIntroitus
+%
+%\vfill
+%\pagebreak
+%
+%\pars{Graduale.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{IV}}}{\small \textsc{\textbf{IV}}}
+%\gregorioscore{temporalia/graduale-BenedictaEtVenerabilis.gtex}
+%
+%\translatioGraduale
+%
+%\vfill
+%\pagebreak
+%
+%\pars{Alleluia.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII}}}{\small \textsc{\textbf{VII}}}
+%\gregorioscore{temporalia/alleluia-SolemnitasGloriosae.gtex}
+%
+%\translatioAlleluia
+%
+%\vfill
+%\pagebreak
+%
+%\pars{Offertorium.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VIII}}}{\small \textsc{\textbf{VIII}}}
+%\gregorioscore{temporalia/offertorium-BeataEs.gtex}
+%
+%\translatioOffertorium
+%
+%\vspace{3mm}
+%
+%\pars{Communio.}
+%
+%\hicSuntNeumae
+%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VI}}}{\small \textsc{\textbf{VI}}}
+%\gregorioscore{temporalia/communio-BeatamMeDicent.gtex}
+%
+%\translatioCommunio
+%
+%\titCapitulum{Canticum Magnificat: Luc. 1,46-47.50.51.52.53.54.55}
+%
+%\cantusSineNeumas
+%\gregorioscore{temporalia/communio-versus-Magnificat.gtex}
+%
+%\vspace{2cm}
+%
+%\hora{In II. Vesperis.} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\rubrica{Omnia ut in I. Vesperis, pg. \pageref{deusinadiutorium}, 
+%præter antiphonam ad Magnificat, quæ est propria, 
+%pg. \pageref{magnificatIIvesp}.}
+%
 \newpage
 \pagestyle{empty}
 
@@ -702,7 +627,7 @@ pg. \pageref{magnificatIIvesp}.}
 Fontes. 
 Textus et cantus officii divini secundum 
 Antiphonale Monasticum, Solesmis 1933. /
-Textus et cantus missae secundum
+Textus et cantus missæ secundum
 Graduale triplex, Solesmis 1979. /
 Versus ad communionem secundum
 http://media.musicasacra.com/pdf/beatamme.pdf (12.8.2012). /
@@ -718,10 +643,10 @@ Proprios cantus festi in linguam bohemicam idem Jakub Pavlík et Tereza Hodinov�
 transtulerunt. Pro erroribus autem prior est accusandus. /
 Psalmos in lingua bohemica de libro supra dicto transcripsit
 Barbora Maturová. /
-Filip Srovnal librum istum praeparare mandavit et laborem exprobrationibus
-utilissimis comitabatur. Ipse etiam neumas super cantus missae
+Filip Srovnal librum istum præparare mandavit et laborem exprobrationibus
+utilissimis comitabatur. Ipse etiam neumas super cantus missæ
 de Graduali triplici transcripsit. /
-Imaginem, quae paginam tituli ornat, Klára Jirsová pinxit.
+Imaginem, quæ paginam tituli ornat, Klára Jirsová pinxit.
 
 Instrumenta adhibita.
 LuaTeX, %http://www.luatex.org / 
@@ -737,7 +662,7 @@ http://www.introitus.cz
 
 \vspace{1cm}
 
-{\large Editio Sancti Wolfgangi 2012.}
+{\large Editio Sancti Wolfgangi \annusEditionis.}
 
 \vspace{2mm}
 
