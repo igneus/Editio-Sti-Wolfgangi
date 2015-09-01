@@ -4,9 +4,11 @@ occasion: In Nativitate B. Mariae Virginis;
 book: Antiphonale Monasticum 1933, pg. 1033;
 mode: 7;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
-(c3) CUM(i) ju(g)cun(i')di(j)tá(i.)te(i.) * (,) 
-Na(i)ti(i)vi(i)tá(ij)tem(i') be(i)á(i)tae(i') Ma(i)rí(i')ae(g) ce(hi)le(g)bré(e.)mus,(e.) (;)
-ut(e) ip(fg)sa(g') pro(g) no(g)bis(g) in(h')ter(g)cé(f_h)dat(g_') (,)
-ad(f) Dó(e')mi(f)num(f_') Je(h)sum(g) Chris(e.)tum.(e.) (::)
+(c3)
+CUM(i|vi) ju(g|ta)cun(i'|vi)di(j|vihg)tá(i.|ta)te(i.|ta-) *(,)
+Na(i|tahg)ti(i|tahg)vi(i|tahg)tá(ij|pe)tem(i'|ta) be(i|ta)á(i)tæ(i'|ta) Ma(i|ta)rí(i'|vi)æ(g|ta) ce(hi|pelss3)le(g|vi)bré(e.|ta)mus,(e.|ta-) (;)
+ut(e|ta) ip(fg|pe)sa(g'|ta) pro(g|ta) no(g|tahg)bis(g|tahg) in(h'|vihe)ter(g|vihg)cé(f_h|peS)dat(g_'|vihh) (,)
+ad(f|vihi) Dó(e'|ta)mi(f|vihg)num(f_'|vi-hh) Je(h|vihi)sum(g|vihk) Chris(e.|ta)tum.(e.|ta) (::)

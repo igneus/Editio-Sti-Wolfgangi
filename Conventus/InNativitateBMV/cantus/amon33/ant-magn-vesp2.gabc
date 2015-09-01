@@ -4,17 +4,19 @@ occasion: In Nativitate B. Mariae Virginis;
 book: Antiphonale Monasticum 1933, pg. 1031;
 mode: 1;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
-(c4) NA(d)tí(d_c)vi(f)tas(g) tu(f_h)a,(h.) * (,)
-De(h)i(g) Gé(e_f)ni(g)trix(fe) Vir(d.)go,(d.) (;)
-gáu(d')di(f)um(d) an(dc~)nun(f')ti(g)á(f_h)vit(hv_GF_'ED_') (,)
-u(f)ni(g')vér(e)so(fe) mun(d.)do:(d.) (:)
-ex(h_) te(h_') e(h)nim(gf) or(g)tus(gh) est(h.) (,)
-Sol(hh) jus(g_i)tí(h)ti(gh)æ,(hv_GF_'ED_') (,)
-Chris(f)tus(g') De(e)us(fe) nos(d.)ter:(d.) (:)
-qui(d) sol(d)vens(f') ma(d)le(dc)dic(f)ti(g)ó(f_h)nem,(h.) (,)
-de(h)dit(g) be(e')ne(f)dic(g)ti(fe)ó(d.)nem:(d.) (;)
-et(c) con(d)fún(f')dens(e>) mor(c_d)tem,(c.) (,)
-do(fv_ED)ná(e)vit(f) no(gfh)bis(hv_GF_'ED_') (,)
-vi(f)tam(g>') sem(e)pi(fe)tér(d.)nam.(d.) (::)
+(c4)
+NA(d|vi)tí(d_c|cl-)vi(f|vi)tas(g|vihi) tu(f_h|peS)a,(h.|vi-) *(,)
+De(h|vihg)i(g|vi) Gé(e_f|peS)ni(g|vi)trix(fe|cl) Vir(d.|tahg)go,(d.|tahg) (;)
+gáu(d'|ta)di(f|vi)um(d|tahg) an(dc~|vi>)nun(f'|ta)ti(g|vihg)á(f_h|peS)vit(hv_GF_'ED_'|vi-hhsu1suu1su2) (,)
+u(f|vihg)ni(g'|vihh)vér(e|ta)so(fe|cl) mun(d.|ta)do:(d.|ta) (:)
+ex(h_|vi-lst3) te(h_'|vi-) e(h|vi)nim(gf|cl) or(g|vi)tus(gh|pe) est(h.|vi-) (,)
+Sol(hh|vs) jus(g_i|peS)tí(h|vi)ti(gh|pe)æ,(hv_GF_'ED_'|vi-hhsu1suu1su2) (,)
+Chris(f|vihg)tus(g'|vihh) De(e|ta)us(fe|cl) nos(d.|tahh)ter:(d.|ta-hh) (:)
+qui(d|tahg) sol(d|ta)vens(f'|vi) ma(d|ta)le(dc|cl)dic(f|vi)ti(g|vi)ó(f_h|peS)nem,(h.|vi-) (,)
+de(h|``vilse4lsc3)dit(g|vihg) be(e'|ta)ne(f|vi)dic(g|vi)ti(fe|cl)ó(d.|ta)nem:(d.|ta) (;)
+et(c|ta) con(d|ta)fún(f'|vi)dens(e>|vi>) mor(c_d|pe>1)tem,(c.|ta) (,)
+do(fv_ED|ci-)ná(e|vi)vit(f|vihh) no(gfh|polsc2lsm2lss3)bis(hv_GF_'ED_'|vi-hhsu1suu1su2) (,)
+vi(f|vi)tam(g>'|vi>) sem(e|ta)pi(fe|cl)tér(d.|tahh)nam.(d.|tahh) (::)

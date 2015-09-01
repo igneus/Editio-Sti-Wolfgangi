@@ -4,10 +4,12 @@ occasion: In Nativitate B. Mariae Virginis;
 book: Antiphonale Monasticum 1933, pg. 1034;
 mode: 8;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
-(c4) NA(g)ti(g')vi(g)tá(g)tem(gh) ho(hv_GF)di(gh)ér(h>)nam(g_') * (,)
-per(g)pé(gi_jv)tu(h)æ(gf) Vír(gh)gi(h)nis(g.) (,) 
-Ge(gji)ni(j)trí(k')cis(j) De(ji)i(h) Ma(ji)rí(hg)æ(g_') (,)
-so(g)lém(h>')ni(g)ter(g) ce(h_i)le(gh)bré(g)mus:(f.) (;)
-qua(g_) cel(g')si(g)tú(gh)do(gf) thro(hiwj)ni(ji!jkj) pro(ji)cés(hg)sit,(f) al(gh)le(h)lú(g.)ia.(g.) (::)
+(c4)
+NA(g|ta)ti(g'|ta)vi(g|ta)tá(g|ta)tem(gh|pe) ho(hv_GF|vi-su1sut1)di(gh|pe)ér(h>|vi>)nam(g_'|tahg) *(,)
+per(g|tahg)pé(gi_jv|pe-``vi-)tu(h|vi)æ(gf|cl) Vír(gh|pe)gi(h|vi)nis(g.|ta-) (,)
+Ge(gji|to)ni(j|vi)trí(k'|vi)cis(j|ta) De(ji|cl)i(h|ta) Ma(ji|cl)rí(hg|cllsc3)æ(g_'|ta) (,)
+so(g|ta)lém(h>'|vi>)ni(g|ta)ter(g|ta) ce(h_i|peS)le(gh|pe)bré(g|vi)mus:(f.|ta-) (;)
+qua(g_|``vi-lsp1lst3) cel(g'|vihg)si(g|vi)tú(gh|pe)do(gf|cl) thro(hiwj|vilsl2qlhi)ni(ji!jkj|cltohh) pro(ji|cl)cés(hg|clhg)sit,(f|ta) al(gh|pe)le(h|or)lú(g.|ta)ia.(g.|ta) (::)

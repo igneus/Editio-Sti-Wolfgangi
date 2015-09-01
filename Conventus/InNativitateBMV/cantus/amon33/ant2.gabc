@@ -4,9 +4,11 @@ occasion: In Nativitate B. Mariae Virginis;
 book: Antiphonale Monasticum 1933, pg. 1032;
 mode: 7;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
-(c3) NA(i)tí(i)vi(g)tas(i') est(j) hó(i)di(hi)e(i_') * (,)
-san(i)ctæ(i') Ma(g)rí(h')æ(g) Vír(e')gi(e)nis,(e.) (;)
-cu(g)jus(g) vi(g')ta(h) ín(f')cly(h)ta(g_') (,)
-cun(f)ctas(e') il(f)lú(f_')strat(h) ec(g')clé(e)si(de)as.(e.) (::)
+(c3)
+NA(i|vi)tí(i|vihi)vi(g|tahg)tas(i'|vihh) est(j|vihi) hó(i|vihh)di(hi|pehg)e(i_'|ta) *(,)
+san(i|vihg)ctæ(i'|vihg) Ma(g|tahg)rí(h'|vihg)æ(g|vihh) Vír(e'|tahh)gi(e|tahh)nis,(e.|tahi) (;)
+cu(g|vihg)jus(g|vihg) vi(g'|vihhlse4)ta(h|vihhlsc3) ín(f'|tahg)cly(h|vihh)ta(g_'|vihglsc3) (,)
+cun(f|vihg)ctas(e'|ta) il(f|vi)lú(f_'|vi-hi)strat(h|vihg) ec(g'|vi)clé(e|vihg)si(de|pehg)as.(e.|tahh) (::)

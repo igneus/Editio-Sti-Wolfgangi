@@ -62,7 +62,7 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 magnificat-initium-i-f capitulum-AbInitio oratio \
 	 introitus-GaudeamusOmnes alleluia-SolemnitasGloriosae \
 	 offertorium-BeataEs communio-BeatamMeDicent communio-versus-Magnificat \
-	 ix-agnusdei ix-gloria ix-kyrie ix-sanctus
+	 ix-agnusdei ix-gloria ix-kyrie ix-sanctus graduale-BenedictaEtVenerabilis
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(addprefix cantus/amon33/,$(addsuffix -bohtext.tex,hym-AveMarisStella hym-OGloriosaDomina))
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
@@ -112,7 +112,7 @@ $(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
 #	$(GENPSCOMB)
 innativitatebmv.pdf: innativitatebmv.tex conventuscommune.tex translationes_cs.tex \
 	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS) \
-	       imagines/imago_nativitas.jpg
+	       imagines/imago_nativitas.jpg imagines/giotto.jpg
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
 clean:
