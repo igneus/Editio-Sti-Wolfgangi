@@ -60,9 +60,10 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 deusinadiutorium-communis supplicatiolitaniae oratiodominica resp1v \
 	 dominusvobiscum-solemnis domineexaudi magnificat-initium-i-D2 \
 	 magnificat-initium-i-f capitulum-AbInitio oratio \
-	 introitus-GaudeamusOmnes alleluia-SolemnitasGloriosae \
-	 offertorium-BeataEs communio-BeatamMeDicent communio-versus-Magnificat \
-	 ix-agnusdei ix-gloria ix-kyrie ix-sanctus graduale-BenedictaEtVenerabilis
+	 introitus-GaudeamusOmnes graduale-BenedictaEtVenerabilis \
+	 alleluia-SolemnitasGloriosae offertorium-BeataEs \
+	 communio-BeatamMeDicent communio-versus-Magnificat \
+	 ix-agnusdei ix-gloria ix-kyrie ix-sanctus credo-iii
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(addprefix cantus/amon33/,$(addsuffix -bohtext.tex,hym-AveMarisStella hym-OGloriosaDomina))
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \

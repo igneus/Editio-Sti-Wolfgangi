@@ -5,20 +5,17 @@ book: Graduale Triplex 1976, p. 405;
 annotation: I;
 mode: 1;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
 (c4)
-Gau(c)de(d)a(ixdh'!iv)mus(h.) *(,) 
-om(hg~)nes(hg) in(fg) Dó(gjh)mi(ixh.ghwihi)no,(i.h.) (;) 
-
-di(h)em(fg~) fes(g)tum(gff) ce(dg)le(gff)brán(dg~)tes(gff) (,)
-sub(f) ho(g)nó(g./hjh)re(ghg.) Ma(f)rí(h)æ(gjj) Vír(h)gi(h_i_h_)nis:(h.) (:)
-de(fg) cu(fg)ius(f) fes(f)ti(g)vi(g)tá(g./hjh)te(ghg.) (,)
-gau(fg)dent(f) án(fg/hgh)ge(gvFE'fwgfg)li,(g.f.) (;)
-
-et(f) col(g)láu(g.!hjHG)dant(h_g) (,) 
-Fí(fge)li(f)um(fg/hf/gvFE) De(dewfef)i.(e.d.) <c><i>Ps.</i></c>(::)
-
-E(f)ruc(gh)tá(h)vit(h) cor(h) me(h)um(h) 
-ver(hj)bum(h) bo(hg)num:(g.h.) (:)
-di(gf)co(gh) e(h)go(h) ó(h)pe(h)ra(hjh) me(g')a(f) re(fff)gi.(dc!d.f.) (::)
+Gau(c|talsi8lsm9)de(d|vi)a(ixdh'!iv|pelss3`vihglsl3)mus(h.|ta) *(,)
+om(hg~|vi>lss6)nes(hg|tolsc2) in(fg|peSlsi7lsm3) Dó(gjh|``tolse4lss2)mi(ixh.ghwihi|cl-qlhg!pohg)no,(ih..|cl-) (;)
+di(h|vi)em(fg~|ta>lsi8lsm2) fes(g|vi)tum(gff|polsc1) ce(dg|peSlsi7lsl3)le(gff|////po)brán(dg~|ta>lsi7)tes(gff|po) (,)
+sub(f|``vilse4lsc3) ho(g|vihhlsl2)nó(g./hjh|``vihilse4tohklsl2)re(ghg.|tolsc7lst2) Ma(f|ta)rí(h|vihhlss3)æ(gjj|pe``vihh) Vír(h|ta)gi(h_i_h_|toS)nis:(h.|ta) (:)
+de(fg|pelsi8) cu(fg|pe>)ius(f|ta) fes(f|ta)ti(g)vi(g|vihhlss2)tá(g./hjh|vi-hh//tohklsl2lst3)te(ghg.|tolst2) (,)
+gau(fg|pe>1lsi6)dent(f|vi) án(fg/hgh|po>hhpp2lss3)ge(gvFE'fwgfg|vi-sut2lsp2qlhh!pohh)li,(gf..|cl-) (;)
+et(f|talse8) col(g|vilsc1)láu(g.!hjHG|vi-tohhlss6)dant(h_g|cl-) (,)
+Fí(fge|to)li(f|vi)um(fg/hf/gvFE|po-1hhpp2su1sux1) De(dewfef|ql!poppt1)i.(ed..|cl-) <c><i>Ps.</i></c>(::)
+E(f|talss2)ruc(gh|pe)tá(h|vi)vit(h|vi) cor(h|vi) me(h|vi)um(h|vi) ver(hj|pe>)bum(h|ta) bo(hg|cl)num:(gh..|pe) (:)
+di(gf|cl)co(gh|pe) e(h|vi)go(h|vi) ó(h|vi)pe(h|vi)ra(hjh|to) me(g'|vi)a(f|ta) re(fff|ts>)gi.(dc!df..|clsa) (::)

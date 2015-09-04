@@ -5,24 +5,22 @@ book: Graduale Triplex 1976, p. 407;
 annotation: IV;
 mode: 4;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
 (c4)
-Be(fe)ne(fg)díc(g)ta(gv.ff!ded.) *(,) 
-et(f) ve(dfe)ne(fg)rá(gff)bi(df)lis(egF'E) es,(e.) (;)
-Vir(ed~)go(g) Ma(hj)rí(ijwkvJI'Hfhf/gh)a:(g.) (:)
-
-quæ(df) si(feg)ne(gefd) tac(cd)tu(d.) pu(f)dó(gh)ris(ixh.ivHG'h!e!f'g) (;) 
-in(gh~)vén(hfh/hvGE'fd)ta(cd) es(d.) (,)
-ma(dcixf!g'h)ter(h.ivHG'e!f'g) Sal(g)va(df)tó(efED.,f.!ixhiHG'/ge.!ghGF'Ef_gF'E)ris.(e.) <sp>V/</sp>.(::)
-
-Vir(h)go(ixjh/hgh!e!f'g eg!ivHGhvFDe. , ghF'Eghf/f/f'dfED'!f!g'h) (,) 
+Be(fe|cllsc3)ne(fg|pe)díc(g)ta(gv.ff!ded.|vi-ds-hhtohi) *(,)
+et(f) ve(dfe)ne(fg|pe)rá(gff)bi(df|pe)lis(egF'E|pe-1su2) es,(e.|ta) (;)
+Vir(ed~|``vi>lse4)go(g|pe) Ma(hj|pehg)rí(ijwkvJI'H|viqi-hisu2vi|fhf/gh|trvihi)a:(g.|vi) (:)
+quæ(df) si(feg|po)ne(gefd|pflsc2) tac(cd)tu(d.|ta) pu(f|vi)dó(gh|pe)ris(ixh.ivHG'h/e!f'g|ta-lsx2visu1sut1visa) (;)
+in(gh~)vén(hfh/hvGE'fd|po)ta(cd) es(d.) (,)
+ma(dcixf!g'h|cllsc3vipehg)ter(h.ivHG'e!f'g|ta-vihgsu1sut1sa) Sal(g|vi)va(df|pe)tó(efED.|ta-vihgsu1sut1|,f.!ixhiHG'|vi-pehisu2|/ge.!ghGF'Ef_gF'E|pihipehjsu3pq-hjsu2)ris.(e.|ta) <sp>V/</sp>.(::)
+Vir(h)go(ixjh/hgh!e!f'g eg!ivHGhvFDe. , ghF'Eghf/f/f'dfED'!f!g'h) (,)
 De(gf!gh )i(g) Gé(f)ni(g!hgh)trix,(hgh'f) (;)
 quem(ed) to(f_g//ef!hvGE'fd)tus(d.) (,)
 non(e) ca(c)pit(d) or(d!ff fffdfvED'e!f'g)bis,(gh!hg.) (:)
-
-in(f) tu(f)a(g!hgh) se(h) clau(hgh'f)sit(ed) (,) 
+in(f) tu(f)a(g!hgh) se(h) clau(hgh'f)sit(ed) (,)
 ví(f_g//ef!hvGE'fd)sce(cd)ra(d.) (;)
 fac(cd!ff)tus(fg) ho(g_f!hgh)mo.(hhf.) (,)
-(h_ghvFDgff'fvECddc/d.a.) (,)
+(h_ghvFDgff'fvECddc/da..) (,)
 (cdfvfvDC'd!ff/gff!ded.) (::)
