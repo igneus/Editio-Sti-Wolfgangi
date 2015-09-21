@@ -4,12 +4,11 @@ occasion: Dominica II Adventus;
 book: Antiphonale Monasticum 1933, pg. 197;
 mode: 3;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
-% III.a
-
 (c4)
-EC(g)ce(g) Dó(hi)mi(i)nus(i') nos(i)ter(i_') *(,) 
-cum(i) vir(i')tú(j)te(h') vé(i)ni(hg)et,(g.) (;)
-ut(g) il(h)lú(j')mi(i)net(g) ó(h)cu(g)los(g_') (,) 
-ser(g)vó(g_h)rum(f') su(g)ó(f)rum,(f_d) al(e_f)le(g)lú(ge~)ia.(e.) (::)
+EC(g|vi)ce(g|vi) Dó(hi|pehg)mi(i|vihg)nus(i'|vihg) nos(i|vi)ter(i_'|vi-) *(,)
+cum(i|vihg) vir(i'|vihg)tú(j|vihh)te(h'|ta) vé(i|vi)ni(hg|cllsc3)et,(g.|talsx6) (;)
+ut(g|ta) il(h|vi)lú(j'|vihh)mi(i|vi)net(g|ta) ó(h|````vilssta4)cu(g|vi)los(g_'|ta) (,)
+ser(g|````talssta4)vó(g_h|peSlsal3)rum(f'|ta) su(g|vi)ó(f|ta)rum,(f_d|cl-) al(e_f|peS)le(g|vi)lú(ge~|vi>)ia.(e.|ta) (::)

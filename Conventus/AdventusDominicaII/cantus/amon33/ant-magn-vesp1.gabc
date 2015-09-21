@@ -4,12 +4,11 @@ occasion: Sabbato ante Dominicam II Adventus;
 book: Antiphonale Monasticum 1933, pg. 195;
 mode: 7;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
-% VII.a
-
 (c3)
-VE(e)ni(f') Dó(h)mi(hi)ne(ii) *(,) 
-vi(h)si(i)tá(j')re(k) nos(l) in(kj~) pa(i.)ce,(i.) (;)
-ut(k/kj) læ(h_i)té(k)mur(j) co(i')ram(h) te(g_f) (,)
-cor(e_f)de(g) per(f>)féc(e.)to.(e.) (::)
+VE(e|gr)ni(f'|vihg) Dó(h|vihh)mi(hi|pehh)ne(ii|vshg) *(,)
+vi(h|ta)si(i|vi)tá(j'|vihh)re(k|vihj) nos(l|vihllsl1) in(kj~|vi>hh) pa(i.|tahg)ce,(i.|tahg) (;)
+ut(k/kj|prhhlsal3) læ(h_i|peS)té(k|vihh)mur(j|vihg) co(i'|vi)ram(h|ta) te(g_f|cl-) (,)
+cor(e_f|peS)de(g|vihg) per(f>|vi>)féc(e.|ta)to.(e.|ta) (::)

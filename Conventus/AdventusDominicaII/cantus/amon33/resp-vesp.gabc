@@ -4,15 +4,16 @@ occasion: ordinarium de tempore Adventus;
 book: Antiphonale Monasticum 1933, pg. 182;
 mode: 4;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
 (c4)
-O(f)stén(f)de(f) no(f)bis(fd~) Dó(e')mi(f)ne(g.) *(;) 
-Mi(g)se(e')ri(f)cór(dc~)di(d')am(f) tu(f.)am.(e.) 
+O(f|vihg)stén(f|vihg)de(f|vihg) no(f|vihg)bis(fd~|vi>hg) Dó(e'|vihe)mi(f|vihg)ne(g.|pehh) *(;)
+Mi(g|vihh)se(e'|tahi)ri(f|vihh)cór(dc~|vi>hh)di(d'|vihi)am(f|vihj) tu(f.|vihh)am.(e.|tahg)
 <sp>V/</sp>.(::)
-Et(c) sa(de)lu(e)ta(ef)re(e') tu(f)um(fe~) da(d) no(ef)bis.(g.) *(::) 
+Et(c|ta) sa(de|pe)lu(e|vi)ta(ef|vslsc2)re(e'|tahh) tu(f|vi-)um(fe~|or>) da(d|ta) no(ef|vi)bis.(g.|pehh) *(::)
 Mi(g)se(e')ri(f)cór(dc~)di(d')am(f) tu(f.)am.(e.) (::z)
 
-<sp>V/</sp>. ( )
-Gló(e)ri(g)a(g) Pat(gh)ri,(h_') et(h) Fí(g')li(h)o,(e_') (,) 
+<sp>V/</sp>. ()
+Gló(e)ri(g)a(g) Pat(gh)ri,(h_') et(h) Fí(g')li(h)o,(e_') (,)
 et(e) Spi(f')rí(f)tu(fe)i(d) Sanc(ef~)to.(g.) (::)

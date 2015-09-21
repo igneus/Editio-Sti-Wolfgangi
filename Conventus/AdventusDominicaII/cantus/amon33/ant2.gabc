@@ -4,13 +4,13 @@ occasion: Dominica II Adventus;
 book: Antiphonale Monasticum 1933, pg. 195;
 mode: 7;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
-% VII.d
-
 (c3)
-URBS(e_i) *() for(i)ti(i)tú(i')di(i)nis(i) nos(k')træ(i) Si(hi)on,(i.) (;)
-Sal(gxg)vá(i)tor(h') po(gxi)né(hg)tur(f') in(gxg) e(h)a(gxgf) mu(e.)rus(e.) (;)
-et(i_j_i_) an(ih~)te(i)mu(il)rá(l/li)le:(i.) (:)
-a(i)pe(i')rí(j)te(ih) por(i)tas,(g.f!gwh.) (;)
-qui(h)a(h/hg) no(f)bís(g_h)cum(f) De(fe)us,(d) al(ef)le(f)lú(e.)ia.(e.) (::)
+URBS(e_i|peSlsl3) *()
+for(i|``vilse1)ti(i|vihh)tú(i'|vihh)di(i|vihh)nis(i|vihh) nos(k'|vihjlsal3)træ(i|vihg) Si(hi|pe)on,(i.|vi-) (;)
+Sal(gxg|//ta)vá(i|vi)tor(h'|ta) po(gxi|//vi)né(hg|cllsc3)tur(f'|ta) in(gxg|vi) e(h|vihh)a(gxgf|//cl) mu(e.|ta)rus(e.|ta) (;)
+et(i_j_i_|toShhlsl2) an(ih~|vi>)te(i|vi)mu(il|pehllsl3)rá(l/li|prhllsi9)le:(i.|ta-) (:)
+a(i|ta)pe(i'|ta)rí(j|vi)te(ih|cl) por(i|vi>)tas,(g.f!gwh.|cl-ql) (;)
+qui(h|vi)a(h/hg|pr) no(f|talsi8)bís(g_h|peS)cum(f|ta) De(fe|cllsc3)us,(d|ta) al(ef|pe)le(f|vi)lú(e.|ta)ia.(e.|ta) (::)
