@@ -4,14 +4,14 @@ occasion: Dominica II Adventus;
 book: Antiphonale Monasticum 1933, pg. 197;
 mode: 1;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
-% I.f
-
 (c4)
-JO(d)án(d)nes(f') au(d)tem(dc~) *() cum(f) au(g>)dís(f_h)set(h.) (,) 
-in(hg~) vín(h)cu(g)lis(e') ó(f)pe(g)ra(fe) Chris(d.)ti,(d.) (;)
-mit(d)tens(d') du(d)os(d') de(d) di(dc)sci(f)pu(g')lis(f) su(gh)is,(h_') (,) 
-a(h)it(g') il(g)li:(f.) (;)
-Tu(f) es(g') qui(h) ven(g')tú(h)rus(fe) es,(d_f_d_'/dc.) (,)
-an(c_d) á(f)li(f)um(e_f) ex(g)spec(fe)tá(d.)mus?(d.) (::)
+JO(d|ta)án(d|ta)nes(f'|vi) au(d|ta)tem(dc~|vi>) *()
+cum(f|ta) au(g>|vi>)dís(f_h|peS)set(h.|vi-) (,)
+in(hg~|vi>) vín(h|vi)cu(g|vi)lis(e'|ta) ó(f|vi)pe(g|vihh)ra(fe|cl) Chris(d.|ta)ti,(d.|ta) (;)
+mit(d|ta)tens(d'|ta) du(d|ta)os(d'|ta) de(d|ta) di(dc|cl)scí(f|vi)pu(g'|vihg)lis(f|ta) su(gh|pe)is,(h_'|vi-) (,)
+a(h|vi)it(g'|ta) il(g|vi>)li:(f.|ta-) (;)
+Tu(f|ta) es(g'|vi) qui(h|vihh) ven(g'|ta)tú(h|vi)rus(fe|cl) es,(d_f_d_'/dc.|peSpr) (,)
+an(c_d|peS) á(f|vi)li(f|ta)um(e_f|cl-) ex(g|vi)spec(fe|cl)tá(d.|ta)mus?(d.|ta) (::)
