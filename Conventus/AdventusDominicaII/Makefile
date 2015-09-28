@@ -21,9 +21,18 @@ PSALM_PREPROCESSOR = $(TOOLS_DIR)/psalmpreprocessor.rb
 INITIUM_TOOL = $(TOOLS_DIR)/initiumpsalmi.rb
 PSSKIP = 1
 GENPSCOMB = $(AWK) -f pscomb.awk -v PSSKIP=$(PSSKIP) -v TRFILE=$(word 2,$^) $< > $@
-PSALMS = 4 62 90 92 99 109 110 111 112 113 118v_x 118xi_xvi 118xvii_xxii 133 143i 143ii 144i_vii 144viii_xiii 144xiv_xxi 148 149 150
+PSALMS = 1 2 3 4 8 9ii_xi 9xii_xxi 9xxii_xxxii 9xxxiii_xxxix 10 62 90 92 99 109 110 111 112 113 118v_x 118xi_xvi 118xvii_xxii 133 143i 143ii 144i_vii 144viii_xiii 144xiv_xxi 148 149 150
 include tonus.mk
+MODUS-1 = i-g
+MODUS-2 = ii-D
+MODUS-3 = iii-a
 MODUS-4 = viii-G
+MODUS-8 = iv-E
+MODUS-9ii_xi = v-a
+MODUS-9xii_xxi = vi-F
+MODUS-9xxii_xxxii = vii-d
+MODUS-9xxxiii_xxxix = viii-G
+MODUS-10 = iv-E
 MODUS-62 = vii-a
 MODUS-90 = viii-G
 MODUS-92 = i-g
@@ -68,8 +77,8 @@ LAPSALMS = $(patsubst %,$(TMP_DIR)/ps%.tex,$(PSALMS))
 LAPSALMSEXTRA = $(patsubst %,$(TMP_DIR)/%.tex,benedictus magnificat nuncdimittis dan3)
 ALLLAPSALMS = $(LAPSALMS) $(LAPSALMSEXTRA)
 SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
-	 $(addprefix versus-,rorate voxclamantis custodi angelus veni ostende super) \
-	 $(addprefix hym-,ConditorAlme VoxClara TeLucis NuncSancte RectorPotens RerumDeus) \
+	 $(addprefix versus-,rorate voxclamantis custodi angelus veni ostende super exsion emitte egredietur) \
+	 $(addprefix hym-,ConditorAlme VoxClara TeLucis NuncSancte RectorPotens RerumDeus VerbumSupernum) \
 	 benedicamus-dominica-advequad \
 	 deusinadiutorium-alter supplicatiolitaniae oratiodominica resp-vesp resp-laud \
 	 dominusvobiscum-solemnis domineexaudi magnificat-initium-vii-a \
@@ -79,14 +88,20 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 convertenosdeus ant-miserere deusinadiutorium-communis \
 	 resp-inmanus ant-salvanos-antiquo \
 	 oratio-visita benedicamus-minor an_alma_redemptoris_mater \
-	 oratio-AlmaRedemptorisAdvent divinumauxilium oratiodominica-mat
+	 oratio-AlmaRedemptorisAdvent divinumauxilium oratiodominica-mat \
+	 $(addprefix absolutio-,exaudi ipsius avinculis) dominelabiamea \
+	 $(addprefix benedictio-solemn-,benedictione unigenitus spiritus deus christus ignem evangelica divinum adsocietatem) \
+	 $(addprefix matant,1 2 3 4 5 6 7 8 9) $(addprefix matresp,1 2 3 4 5 6 7 8 9) \
+	 tedecetlaus tonus-evangelii-b tonus-lectionis-solemnis \
+	 $(addprefix venite5,a b c d e f) matinv-RegemVenturum \
+	 benedicamus-solemnis-laud tuautem
 #	 introitus-GaudeamusOmnes graduale-BenedictaEtVenerabilis \
 #	 alleluia-SolemnitasGloriosae offertorium-BeataEs \
 #	 communio-BeatamMeDicent communio-versus-Magnificat \
 #	 ix-agnusdei ix-gloria ix-kyrie ix-sanctus credo-iii
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(patsubst %,cantus/amon33/hym-%-bohtext.tex,ConditorAlme VoxClara TeLucis NuncSancte RectorPotens RerumDeus) \
-	    $(TMP_DIR)/magnificat2-comb.tex
+	    cantus/nrom02/hym-VerbumSupernum-bohtext.tex $(TMP_DIR)/magnificat2-comb.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
 LAPSALMSINITTEX = $(patsubst %.gabc,%.gtex,$(LAPSALMSINITGABC))
@@ -102,9 +117,9 @@ include $(iter)
 define iter-doit
 $(TMP_DIR)/%.gtex: $(i)/%.gabc ; if $(GREP) -q ^nabc-lines: $$<; then $(SED) -e ':d;s/\(([^).]*\)\./\1/g;/([^)]*\./bd' $$<; else $(CAT) $$<; fi | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g;:d;s/\(([^)'\'']*\)'\''/\1/g;/([^)]*'\''/bd' | $(SED) -e ':d;s/\(\(^\|)\)[^(j]*\)j/\1i/g;s/\(\(^\|)\)[^(J]*\)J/\1I/g;td' | $(GREGORIO) -s -o $$@
 endef
-iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 arom12 triplex76) \
+iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 arom12 nrom02 triplex76) \
 	     $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR) \
-	     $(addprefix ../Epiphania/cantus/,arom12 grom61 cselecti57 triplex76)
+	     $(addprefix ../Epiphania/cantus/,arom12 grom61 cselecti57 nrom02 triplex76)
 include $(iter)
 
 all: adventusdominicaii.pdf
