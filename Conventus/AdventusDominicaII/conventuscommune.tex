@@ -211,12 +211,10 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \newcommand{\cantusSineNeumas}{
   \grechangestaffsize{14}
 %  \global\advance\grespaceabovelines by -5mm%
-  \grechangedim{spaceabovelines}{0cm}{1}%
+  \grechangedim{spaceabovelines}{0cm}{scalable}%
 }
 
-\renewcommand{\greabovelinestextstyle}[1]{%
-{\color{red}\textit{#1}}\relax %
-}
+\grechangestyle{abovelinestext}{\color{red}\it}
 
 % znaky k umisteni nad inicialu zpevu
 \newcommand{\superInitialam}[1]{\greannotation{\footnotesize {\textbf{#1}}}}
