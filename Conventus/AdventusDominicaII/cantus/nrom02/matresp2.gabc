@@ -5,17 +5,18 @@ book: Nocturnale Romanum, 2002, pg. 125;
 mode: 5;
 transcriber: Jakub Jelínek;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
 (cb3)
-EC(h)ce(f) Dó(hi)mi(h)nus(g) *()
-vé(h)ni(g)et,(fgf) (;)
-et(d) om(ef~)nes(f) San(fg~)cti(f) e(fg~)jus(f) cum(gf/gf/giHGhe!fwgFE) e(DEfvEDe)o,(ed) (:)
-et(h) e(ih/i!jwkkl)rit(k) in(k) di(ko<!lv)e(lk!jkvJIH) il(hiOk>)la(hihho~/fgf) lux(hg/hiO!jv) mag(HIjvIHi)na:(ih) (;)
-et(f) ex(h)í(hi)bunt(h) de(h) Je(fgFE)rú(hi)sa(he!fwgfg)lem(gf) (:)
-si(d)cut(f) a(hi)qua(h) mun(he!fwgfg)da:(ggOf) +(;)
-Et(d) reg(f>)ná(hi)bit(h) Dó(h)mi(hsss)nus(hf) in(hi) æ(gygh)tér(f)num(fefshsshfhsshvGFhe/f/eeOd) (,)
-su(d)per(eg) om(gsss<)nes(f!gwhgFEfwgFE) gen(DEfvEDe)tes.(ed) <sp>V/</sp>.(::)
+EC(h|vi)ce(f|ta) Dó(hi|pe)mi(h|vi)nus(g|ta) *()
+vé(h|vihg)ni(g|vi)et,(fgf|to) (;)
+et(d|``talsi7) om(ef~|ta>)nes(f|tahg) San(fg~|ta>)cti(f|tahg) e(fg~|ta>)jus(f|tahg) cum(gf/gf/giHGhe!fwgFE|pflst2pesu2lsc3cl-qi-su2) e(DEfvEDe|vi-pp2su2vihh)o,(ed|cl-) (:)
+et(h|vi) e(ih/i!jwkkl|``cl-ql-hjppt1pehk)rit(k|//tahj) in(k|tahj) di(ko<!lv|pqhj)e(lk!j|ciGhk|kvJIH|vi-hjsut1su2) il(hiOk>|sa>lsi6)la(hihho~/fgf|toortohh) lux(hg/hiO!jv|cl-sa) mag(HIjvIHi|vi-pp2su2vihh)na:(ih|cl-) (;)
+et(f|ta) ex(h|vi)í(hi|pe)bunt(h|ta) de(h|vi) Je(fgFE|pe-1su2)rú(hi|peS)sa(he!fwgfg|cl-qi!po)lem(gf|cl-) (:)
+si(d|```talse4)cut(f|vi) a(hi|pe)qua(h|ta) mun(he!fwgfg|cl-ql!po)da:(ggOf|pr) +(;)
+Et(d|talsi8) reg(f>|vi>)ná(hi|pe)bit(h|ta) Dó(h|ta)mi(hsss|ts)nus(hf|cllsm3) in(hi|pe) æ(gygh|//pe)tér(f|ta)num(fefshsshfhsshvGFhe/f/eeOd|cllsc3lsl1tsMclhhlsc3ds-hhci-hhclS-hhvi-hhprhh) (,)
+su(d|ta)per(eg|pe) om(gsss<|ts>)nes(f!gwhgFE|ql!vsppt1sut2|fwgFE|qi-hgsu2) gen(DEfvEDe|vi-pp2su2vihh)tes.(ed|cl-) <sp>V/</sp>.(::)
 (c3)
 Ec(h)ce(gyhihssfgf) Dó(h)mi(h)nus(h) cum(h) vir(hf~)tú(fi)te(gh) vé(h)ni(hg!hwihi)et:(ih) (;)
 et(d) reg(f)num(h) in(h) ma(hi)nu(h) e(hi~)jus,(h) et(h) po(h)tés(hi)tas(h) et(hg/hg~) im(gf~)pé(hi)ri(hg!hwihGFg)um.(gf) +(::)
