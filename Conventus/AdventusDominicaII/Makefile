@@ -94,14 +94,14 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 $(addprefix matant,1 2 3 4 5 6 7 8 9) $(addprefix matresp,1 2 3 4 5 6 7 8 9) \
 	 tedecetlaus tonus-evangelii-b tonus-lectionis-solemnis \
 	 $(addprefix venite5,a b c d e f) matinv-RegemVenturum \
-	 benedicamus-solemnis-laud tuautem
-#	 introitus-GaudeamusOmnes graduale-BenedictaEtVenerabilis \
-#	 alleluia-SolemnitasGloriosae offertorium-BeataEs \
-#	 communio-BeatamMeDicent communio-versus-Magnificat \
-#	 ix-agnusdei ix-gloria ix-kyrie ix-sanctus credo-iii
+	 benedicamus-solemnis-laud tuautem \
+	 introitus-PopulusSion graduale-ExSion alleluia-LaetatusSum \
+	 offertorium-DeusTu communio-IerusalemSurge communio-versus-Lauda-initium \
+	 xvii-agnusdei xviic-kyrie xvii-sanctus credo-iii
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(patsubst %,cantus/amon33/hym-%-bohtext.tex,ConditorAlme VoxClara TeLucis NuncSancte RectorPotens RerumDeus) \
-	    cantus/nrom02/hym-VerbumSupernum-bohtext.tex $(TMP_DIR)/magnificat2-comb.tex
+	    cantus/nrom02/hym-VerbumSupernum-bohtext.tex $(TMP_DIR)/magnificat2-comb.tex \
+	    $(TMP_DIR)/communio-versus-Lauda-comb.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
 LAPSALMSINITTEX = $(patsubst %.gabc,%.gtex,$(LAPSALMSINITGABC))
@@ -117,7 +117,7 @@ include $(iter)
 define iter-doit
 $(TMP_DIR)/%.gtex: $(i)/%.gabc ; if $(GREP) -q ^nabc-lines: $$<; then $(SED) -e ':d;s/\(([^).]*\)\./\1/g;/([^)]*\./bd' $$<; else $(CAT) $$<; fi | $(SED) -e 's/<sp>\([AVR]\)\/<\/sp>\./<v>\\\1bardot{}<\/v>/g;s/†/ +/g;:d;s/\(([^)'\'']*\)'\''/\1/g;/([^)]*'\''/bd' | $(SED) -e ':d;s/\(\(^\|)\)[^(j]*\)j/\1i/g;s/\(\(^\|)\)[^(J]*\)J/\1I/g;td' | $(GREGORIO) -s -o $$@
 endef
-iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 arom12 nrom02 triplex76) \
+iter-left := . $(TMP_DIR) $(addprefix cantus/,amon33 arom12 nrom02 triplex76 otriplex85) \
 	     $(addprefix $(COMMON_CHANTS_DIR)/,kyriale76 amon33 arom12 lcantualis78) $(PSALMTONES_DIR) \
 	     $(addprefix ../Epiphania/cantus/,arom12 grom61 cselecti57 nrom02 triplex76)
 include $(iter)
@@ -152,6 +152,8 @@ $(TMP_DIR)/magnificat2-comb.tex: $(TMP_DIR)/magnificat2.tex $(TMP_DIR)/magnifica
 	$(GENPSCOMB)
 $(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
 $(TMP_DIR)/magnificat2-comb.tex: PSSKIP = 2
+$(TMP_DIR)/communio-versus-Lauda-comb.tex: $(patsubst %,cantus/triplex76/communio-versus-Lauda%tex,. -boh.)
+	$(GENPSCOMB)
 adventusdominicaii.pdf: adventusdominicaii.tex conventuscommune.tex translationes_cs.tex \
 	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS) \
 	       imagines/imago_Sion.jpg
