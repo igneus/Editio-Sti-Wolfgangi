@@ -97,7 +97,7 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 benedicamus-solemnis-laud tuautem \
 	 introitus-PopulusSion graduale-ExSion alleluia-LaetatusSum \
 	 offertorium-DeusTu communio-IerusalemSurge communio-versus-Lauda-initium \
-	 xvii-agnusdei xviic-kyrie xvii-sanctus credo-iii
+	 xvii-agnusdei xviic-kyrie xvii-sanctus credo-i
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(patsubst %,cantus/amon33/hym-%-bohtext.tex,ConditorAlme VoxClara TeLucis NuncSancte RectorPotens RerumDeus) \
 	    cantus/nrom02/hym-VerbumSupernum-bohtext.tex $(TMP_DIR)/magnificat2-comb.tex \
