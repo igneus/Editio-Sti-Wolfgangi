@@ -156,7 +156,7 @@ $(TMP_DIR)/communio-versus-Lauda-comb.tex: $(patsubst %,cantus/triplex76/communi
 	$(GENPSCOMB)
 adventusdominicaii.pdf: adventusdominicaii.tex conventuscommune.tex translationes_cs.tex \
 	       $(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS) \
-	       imagines/imago_Sion.jpg
+	       imagines/imago_Sion.jpg imagines/angelus.jpg
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
 clean:
