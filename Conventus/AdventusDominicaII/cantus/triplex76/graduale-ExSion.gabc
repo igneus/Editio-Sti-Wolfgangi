@@ -3,18 +3,19 @@ office-part: Graduale;
 mode: 5;
 book: Graduale Romanum, 1961, p. 4 & The Liber Usualis, 1961, p. 328;
 transcriber: Andrew Hinkley;
+nabc-lines: 1;
 %%
 (c3)
-EX(d) Si(fh)on(h_fhvGEf'/hf/fd.) *(;)
-spé(f_d/ef!gwh/hi)ci(h)es(h/ij'IH.ghGF.) (;)
-de(f!hgh)có(f_e)ris(fgwh) e(e_d~)jus:(df/e!hhhf/fef.) (:)
-De(fh/ih)us(hg!ijIH.ghGF.) (;)
-ma(f)ni(hg)fé(h_fhvGE'f)ste(d_e) (,)
-vé(d!efhv.ijHF.ghFE.)(,)(fhef)ni(d)et.(efe/fhf/f/ded.___) <sp>V/</sp>.(::)
-Con(d)gre(f)gá(hf/hhf/hhf/hhjvIH./f!hhjvIH'ihh'hf)(,)(gxgvFEfvEDfv.hhvF'Ef)te(f.) (;)
-il(fh)li(h_g) sanc(f!g'h)tos(gx/efd___//f_e/fgF'E) e(ded~___)jus,(d.) (:)
-qui(d) or(ef~)di(f)na(hfge)vé(f/hhh)runt(h./ih/ghFE.) (,) (hih___/ih/ghFE.) (;)
-(f/hgh/ivHF.h_g/hif./h_g/efgvgf.) (:)
-te(f!h'i)sta(h_g)mén(f!g'h)tum(e_d) (`)
-e(fdfEDf_d/ef!gwh'/ih~)jus(hg/ijIH.ghGF.) (;)
-su(f!h'i)per(hg~) sa(f!g'h)cri(ef)fí(gxhfge)ci(d)a.(de/gf/g_h) (,) (gxfgE'De_fe/ed.) (::)
+EX(d|ta) Si(fh|pe)on(h_fhvGE|cl-visu1sut1lsc2|f'/hf/fd.|clhh!pihhppu1lsc1lst3) *(;)
+spé(f_d/ef!gwh/hi|cl-qlppt2vihj)ci(h|vi)es(h/ij'IH.ghGF.|vipp2su1sut1pehhsu1sut1lsc2) (;)
+de(f!hgh|trG)có(f_e|cllst2)ris(f!gwh|viqlhi) e(e_d~|cl-)jus:(df/e!hhhf/fef.|pe-tsM-hhlsc1lsx6clS-hjlsc2vi-hjpihjlsc2vihj) (:)
+De(fh/ih|sflsc2)us(hg!ijIH.ghGF.|clpehgsu1suu1pehhsu1suu1) (;)
+ma(f|ta)ni(hg|cllsc3)fé(h_fhvGE'f|cl-vihgsu1suu1lsc3//vihg)ste(d_e|peS) (,)
+vé(d!efhv.ijHF.ghFE.|vi-hdppt3toS2hjsut1tgS3hj)(,)(fhef|trGhi)ni(d|ta)et.(efe/fhf/f|totohhor>hh|/ded.___|toShj) <sp>V/</sp>.(::)
+Con(d|gr)gre(f|vi)gá(hf/hhf|cllsc3pr-lsc3|/hhf/hhjvIH.|pr-lsc3dshhvihhsu1sut1lssta1lss2lsc3|/f!hh|tsMhh|jvIH'ih|cihjlss9clhjlsc2|h'hf|tghj)(,)(gxgvFE|//cihj|fvED|cihj|fv.hhvF'Ef|vi-hjtgS3hjvi)te(f.|ta) (;)
+il(fh|peS)li(h_g|cl-) sanc(f!g'h|sa>lss3)tos(gx/e_f_d_2|////toS|//f_e/fgF'E|//cl-hhlss9peShjsut2) e(ded~___|pe>1)jus,(d.|ta) (:)
+qui(d|ta) or(ef~|ta>)di(f|ta)na(hfge|pflsc2lsl2)vé(f/hhh|ta-tshh)runt(h./ih|taclhg|/ghFE.|tgS3hi) (,|) (hih___/ih|``toShilss1clhilsc3|/ghFE.|tgS3hilsx3) (;)
+(f/hgh|po-1hippt1|/ivHF.|vihisu1suu1|h_g|cl-hi|/hif./h_g|to-1hicl-hi|/efgvgf.|schjcl-hk) (:)
+te(f!h'i|sa)sta(h_g|cllst2)mén(f!g'h|sa>)tum(e_d|cl-) (`)
+e(fdfED|posu2lsc2|f_d/ef!gwh'/ih~|cl-qlhhppt2vi>hj)jus(hg|cl|/ijIH.|pehhsu1sut1|ghGF.|pehisu1sut1) (;)
+su(f!h'i|sa)per(hg~|vi) sa(f!g'h|sa)cri(ef|peS)fí(gxhfge|////pflss1)ci(d|vi)a.(de/gf/g_h|sfpq-hh) (,) (gxfgE'D|//tg1hh|e_fe/ed.|pqhhprhh) (::)
