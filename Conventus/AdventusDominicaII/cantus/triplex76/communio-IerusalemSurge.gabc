@@ -3,11 +3,13 @@ office-part: Communio;
 mode: 2;
 book: Graduale Romanum, 1961, p. 6 & The Liber Usualis, 1961, p. 330;
 transcriber: Andrew Hinkley;
+initial-style: 1;
+nabc-lines: 1;
 %%
 (f3)
-JE(fge)rú(fh)sa(h_g)lem(hv.ghf) *()
-sur(hj)ge,(i.) (,)
-et(i/ig) sta(hi) in(ij) ex(i)cél(hi)so:(gf..) (:)
-et(h) vi(fv./ege/fg)de(f) ju(f)cun(hf/fe~)di(f)tá(h!ihi)tem,(hg..) (;)
-quæ(g) vé(ij)ni(ig)et(high) ti(fv./egef)bi(fvEC.) (,)
-a(e) De(gih)o(hv./giH'Gh) tu(fgf___)o.(f.) (::)
+JE(fge|tolss2lsi9)rú(fh|peS)sa(h_g|cl-)lem(hv.ghf|vi-to>hhlsi9) *()
+sur(hj|```pe>1lsl4lss2lsi6)ge,(i.|ta) (,)
+et(i/ig|pr-lse4) sta(hi|peS) in(ij|peS) ex(i|vi)cél(hi|pe>1)so:(gf..|cl) (:)
+et(h|vi>lsi6) vi(fv./ege/fg|vi-trvihg)de(f|ta) ju(f|ta)cun(hf/fe~|clor>)di(f|vi)tá(h!ihi|vi-lss2pohi)tem,(hg..|cl-) (;)
+quæ(g|ta) vé(ij|```peSlss4)ni(ig|cl)et(high|vi-pohi) ti(fv./egef|vi-trhi)bi(fvEC.|peSsut2lsi7) (,)
+a(e|vilssm2) De(gih|tolss4)o(hv./giH'Gh|vi-pesu2vihi) tu(fgf___|toS)o.(f.|ta) (::)
