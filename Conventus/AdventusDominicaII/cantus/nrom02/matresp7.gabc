@@ -5,17 +5,19 @@ book: Nocturnale Romanum, 2002, pg. 129;
 mode: 3;
 transcriber: Jakub Jelínek;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
 (c4)
-E(dc)Gre(f)di(gh)é(hg)tur(ghGF) Dó(f!gwhgh!iv)mi(h)nus(h) *(;)
-de(ffef) Sa(dg)má(hj)ri(ikjjs)a(ji) (:)
-ad(g) por(ighsjssjij)tam,(iio!jv) (;)
-quæ(g/hv) rés(g)pi(g)cit(gegvFEfvEDed) ad(fh~) O(h/fgOh)ri(hiGFghg)én(egffs)tem:(fe) (:)
-et(ef) vé(g)ni(f)et(gff) in(ed~) Beth(e/fgff)l<i>eh</i>{e}m,(ed) (,)
-ám(h)bu(j)lans(hhOg) su(g)per(h) a(jh!iwj)quas(kijvHGjvHGhih) re(gf)dem(g)pti(h!iwj)ó(jvjvIG)nis(jk) Ju(jh!iwjij)dæ:(iiOh) +(;)
-Tunc(FGhvjggo~) sal(gffs)vus(f) e(efEDe)rit(d/efefv) om(d)nis(e) ho(ghOj)mo:(hg/hih) (,)
-qui(g)a(g) ec(jvjvjv//jvHGig/hi)ce(h) vé(hjvHGhv////FGhvig/hg)ni(egffs)et.(fe) <sp>V/</sp>.(::)
+E(dc|cllsim2)Gre(f|vi)di(gh|pe)é(hg|cl-)tur(ghGF|pe-1su2) Dó(f!gwhgh!iv|ql!po-1ppt1vihjlsal3)mi(h|vi)nus(h|vihg) *(;)
+de(ffef|ta-lse2po) Sa(dg|peS)má(hj|peShg)ri(ikjjs|tohi/sthk)a(ji|cl-) (:)
+ad(g|talsi6) por(ig|cl|hsjss|tsM|jij|pohi)tam,(iio!jv|sa) (;)
+quæ(g/hv|vi) rés(g|ta)pi(g|ta)cit(ge|cllsc3|gvFE|ci|fvED|vi-su2|ed|cl-) ad(fh~|ta>) O(h/fgOh|vi-sahh)ri(hiGF|pesu2|ghg|tohi)én(egffs|to/sthh)tem:(fe|cl-) (:)
+et(ef|`````peSlse4) vé(g|vi)ni(f|ta)et(gff|po) in(ed~|vi>) Beth(e/fgff|vi-trhj)l<i>eh</i>{e}m,(ed|cl-) (,)
+ám(h|vi)bu(j|vihh)lans(hhOg|pr) su(g|vi)per(h|vi) a(jh!iwj|cl-ql)quas(ki|//cl-hh|jvHG|vi-hhsut2|jvHG|vi-hhsut2|hih|toShj) re(gf|cllsc3)dem(g|vi)pti(h!iwj|viqlhi)ó(jvjvIG|vi-``vi-su2)nis(jk|peShh) Ju(jh!iwjij|cl-qihg!pohg)dæ:(iiOh|pr) +(;)
+% FIXME: saM4 instead of saM1
+Tunc(FGhv|vi-pp2|jg|clhi|go~|or>hi) sal(gffs|cl/sthh)vus(f|vi) e(efEDe|pe-1su2vi)rit(d/efefv|ta-toS2hgvi-hg) om(d|ta)nis(e|vi) ho(ghOj|saM1)mo:(hg/hih|cllsc3tohg) (,)
+qui(g|ta)a(g|ta) ec(jvvv|tv-|//jvHG|vi-suu2|ig|cl-|/hi|peS)ce(h|ta) vé(hjvHGhv|visu2ppu1lsc3vi-|////FGhv|vi-pp2|ig|clShi|/hg|cl-hj)ni(egffs|to/sthh)et.(fe|cl-) <sp>V/</sp>.(::)
 Et(i) præ(i)pa(i)rá(ikjjs)bi(h!iwji)tur(hhOg) in(i) mi(i)se(i)ri(i)cór(i!jo)di(h)a(h) só(hg)li(h)um(j) e(ikjjs)jus,(ji) (;)
 et(hg~) se(hi)dé(i)bit(i) su(i!jo)per(i) il(i)lud(i) in(ikjIHiwji) ve(hg)ri(GHiwj)tá(jiiOhivHGh)te.(hg) +(::)
 Tunc.(FGhvjggo~) (::)
