@@ -5,14 +5,15 @@ book: Nocturnale Romanum, 2002, pg. 130;
 mode: 2;
 transcriber: Jakub Jelínek;
 initial-style: 1;
+nabc-lines: 1;
 %%
 
 (f3)
-FE(c)stí(ef)na,(f/ghf/g/ffOe) *(,)
-ne(f) tar(hg~)dá(hggOfgvhih)ve(ghgFEf)ris,(fe/fh/ghgf~) (,)
-Dó(f)mi(fgf)ne:(f) +(:)
-Et(e!fh~) lí(hhghffOeGHihg)be(fgFEf)ra(fe) (;)
-pó(f!gwh)pu(ge)lum(gvf!gwhGEf/eh/ghgf~) tu(fgf)um.(f) <sp>V/</sp>.(::)
-Ve(EFgwh/hi)ni,(h) Dó(ij)mi(i)ne(h) et(h) no(hg)li(hi) tar(gh>)dá(f!gwhg)re:(gf) (;)
-re(f)lá(ef)xa(f) fa(f)ci(f)nó(f)ra(f!gwhGFE) plé(f)bi(hg/hih) tu(hvGFg)æ.(ffOe) +(::)
+FE(c|ta)stí(ef|peS)na,(f/ghf|vi-toS2hi|/g|vi-hi|/ffOe|prhi) *(,)
+ne(f|vi) tar(hg~|vi>)dá(hg|cl-|gOf|pr|gv|vi-|hih|///tohi)ve(ghgFEf|toSsu2vi)ris,(fe|cl-|/fh/ghgf~|`pe-to>hh) (,)
+Dó(f|ta)mi(fgf|toS)ne:(f|ta) +(:)
+Et(e!fh~|pe>2) lí(hhghffOeGHihg|vi-hgpf-hhprhiciGhjpp2)be(fgFEf|pe-1su2vi)ra(fe|cl-) (;)
+pó(f!gwh|qlhhppt1)pu(ge|clhh)lum(gvf!gwhGEf/eh/ghgf~|vi-hhql-hippt1su2vi-hipe-hito>hi) tu(fgf|toS)um.(f|ta) <sp>V/</sp>.(::)
+Ve(EFgwh/hi|`````ql-ppu2pehh)ni,(h|ta) Dó(ij|pe)mi(i|vi)ne(h|ta) et(h|ta) no(hg|cl)li(hi|pe) tar(gh>|pe>)dá(f!gwhg|ql!clppt1)re:(gf|cl-) (;)
+re(f|vi)lá(ef|pe)xa(f|vi) fa(f|vihg)ci(f|vihg)nó(f|vihg)ra(f!gwhGFE|vi-hgql-hjsu1suu2) plé(f|vi)bi(hg|clhg|/hih|tohg) tu(hvGFg|ci-vi)æ.(ffOe|pr) +(::)
 Et.(e!fh~) (::)
