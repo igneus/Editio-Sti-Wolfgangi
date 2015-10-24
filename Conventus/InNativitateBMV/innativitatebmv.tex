@@ -74,16 +74,15 @@
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
-\setspaceafterinitial{2.2mm}{1}
-\setspacebeforeinitial{2.2mm}{1}
+\grechangedim{afterinitialshift}{2.2mm}{scalable}
+\grechangedim{beforeinitialshift}{2.2mm}{scalable}
 
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\grechangedim{annotationraise}{-0.2cm}{scalable}
 
 % Here we set the initial font. Change 38 if you want a bigger initial.
 % Emit the initials in red.
-\def\greinitialformat#1{%
-{\color{red}\fontsize{38}{38}\selectfont #1}%
-}
+\grechangestyle{initial}{\color{red}\fontsize{38}{38}\selectfont}
 
 \pagestyle{empty}
 
@@ -167,9 +166,9 @@ per infiníta sǽcula sæculórum.
 
 \label{deusinadiutorium}
 {
-\grechangedim{interwordspacetext}{0.18 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.18 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/deusinadiutorium-communis.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \vfill
@@ -180,9 +179,9 @@ per infiníta sǽcula sæculórum.
 \pars{Psalmus 1.} \scriptura{\textbf{H307}}
 
 {
-\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{VIII G}{temporalia/ant1.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \trAntI
@@ -227,9 +226,9 @@ per infiníta sǽcula sæculórum.
 \pars{Psalmus 4.} \scriptura{\textbf{H308}}
 
 {
-\grechangedim{interwordspacetext}{0.24 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.24 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{VIII G}{temporalia/ant4.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \trAntIV
@@ -270,9 +269,9 @@ per infiníta sǽcula sæculórum.
 
 \superInitialam{I}
 {
-\grechangedim{interwordspacetext}{0.20 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.20 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/hym-AveMarisStella.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 {
 \vspace{-0.3cm}
@@ -368,9 +367,9 @@ per infiníta sǽcula sæculórum.
 \pars{Psalmus 1.} \scriptura{Ps. 66}
 
 {
-\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/ps66-initium-dir-auto.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \psalmusEtTranslatioT{temporalia/ps66-comb.tex}{10cm}
@@ -381,9 +380,9 @@ per infiníta sǽcula sæculórum.
 \pars{Psalmus 2.} \scriptura{\textbf{H307}}
 
 {
-\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{VIII G}{temporalia/ant1.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \trAntI
@@ -434,9 +433,9 @@ per infiníta sǽcula sæculórum.
 \pars{Psalmus 5.} \scriptura{\textbf{H308}}
 
 {
-\grechangedim{interwordspacetext}{0.24 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.24 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{VIII G}{temporalia/ant4.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \trAntIV
@@ -458,9 +457,9 @@ per infiníta sǽcula sæculórum.
 \pars{Psalmus 6.} \scriptura{\textbf{H308}}
 
 {
-\grechangedim{interwordspacetext}{0.14 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.14 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{VII c}{temporalia/ant5.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \trAntV
@@ -498,9 +497,9 @@ per infiníta sǽcula sæculórum.
 \psalmusEtTranslatioT{temporalia/ps150-comb.tex}{10cm}
 
 {
-\grechangedim{interwordspacetext}{0.14 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.14 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/ant5.gtex} % repeat the antiphon - new page
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \vfill
@@ -638,12 +637,12 @@ per infiníta sǽcula sæculórum.
 {
 \vspace{-0.25cm}
 \vfill
-\grechangedim{interwordspacetext}{0.23 cm plus 0.15 cm minus 0.05 cm}{1}%
-\grechangedim{spacelinestext}{0.40617 cm}{1}%
+\grechangedim{interwordspacetext}{0.23 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\grechangedim{spacelinestext}{0.40617 cm}{scalable}%
 \superInitialam{V}
 \gregorioscore{temporalia/credo-iii.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
-\grechangedim{spacelinestext}{0.50617 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\grechangedim{spacelinestext}{0.50617 cm}{scalable}%
 }
 
 \vfill
