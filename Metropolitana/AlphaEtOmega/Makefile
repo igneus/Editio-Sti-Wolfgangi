@@ -71,10 +71,9 @@ $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: %.pslm
 $(TMP_DIR)/hospodine.gtex: hospodine.gabc
 	$(GREGORIO) $< -o $@
 alphaetomega.pdf: alphaetomega.tex conventuscommune.tex \
-	gregall.tex gregall.lua gregall.ttf SGModern.ttf \
 	$(ALLLAPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
 clean:
-	-rm -rf $(TMP_DIR) *~ *.aux *.gaux *.log
+	-rm -rf $(TMP_DIR) *~ *.aux *.gaux *.greaux *.log
 .PHONY: clean

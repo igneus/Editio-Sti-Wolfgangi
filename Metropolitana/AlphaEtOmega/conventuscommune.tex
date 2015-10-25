@@ -65,23 +65,27 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 
 % In Junicode, the default R/ with .35em has the bar too close to the
 % letter.
-\gresimpledefbarglyph{R}{.41em}
+\grelatexsimpledefbarredsymbol{A}{.30em}{.25em}{.30em}{.27em}%
+\grelatexsimpledefbarredsymbol{R}{.41em}{.45em}{.45em}{.48em}%
+\grelatexsimpledefbarredsymbol{V}{.10em}{.10em}{.10em}{.13em}%
 
 % Emit R/, V/, A/ and + in red
 \let\oldrbar\Rbar
 \let\oldvbar\Vbar
 \let\oldabar\Abar
 \let\oldgrecross\grecross
-\let\oldgrestar\grestar
-\let\oldgredagger\gredagger
+\let\oldGreStar\GreStar
+\let\oldGreDagger\GreDagger
 \let\olddag\dag
 \let\oldddag\ddag
 \renewcommand{\Rbar}{{\color{red}\oldrbar}}
 \renewcommand{\Vbar}{{\color{red}\oldvbar}}
 \renewcommand{\Abar}{{\color{red}\oldabar}}
 \renewcommand{\grecross}{{\color{red}\oldgrecross}}
-\renewcommand{\grestar}{{\color{red}\oldgrestar}}
-\renewcommand{\gredagger}{{\color{red}\oldgredagger}}
+\newcommand{\grestar}{{\color{red}\oldGreStar}}
+\renewcommand{\GreStar}{{\color{red}\oldGreStar}}
+\newcommand{\gredagger}{{\color{red}\oldGreDagger}}
+\renewcommand{\GreDagger}{{\color{red}\oldGreDagger}}
 \renewcommand{\dag}{{\color{red}\olddag}}
 \renewcommand{\ddag}{{\color{red}\oldddag}}
 \newcommand{\Rbardot}{{\color{red}\oldrbar.~}}
@@ -202,22 +206,20 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 
 % prepinani mista mezi notovymi osnovami: pro neumovane a neneumovane zpevy
 \newcommand{\cantusCumNeumis}{
-  \setgrefactor{14}
+  \grechangestaffsize{14}
 %  \global\advance\grespaceabovelines by 5mm%
 %  \global\advance\grespaceabovelines by 2mm%
 }
 \newcommand{\cantusSineNeumas}{
-  \setgrefactor{14}
+  \grechangestaffsize{14}
 %  \global\advance\grespaceabovelines by -5mm%
-  \grechangedim{spaceabovelines}{0cm}{1}%
+  \grechangedim{spaceabovelines}{0cm}{scalable}%
 }
 
-\renewcommand{\greabovelinestextstyle}[1]{%
-{\color{red}\textit{#1}}\relax %
-}
+\grechangestyle{abovelinestext}{\color{red}\it}
 
 % znaky k umisteni nad inicialu zpevu
-\newcommand{\superInitialam}[1]{\gresetfirstlineaboveinitial{\footnotesize {\textbf{#1}}}{\footnotesize {\textbf{#1}}}}
+\newcommand{\superInitialam}[1]{\greannotation{\footnotesize {\textbf{#1}}}}
 
 % pars officii, i.e. "oratio", ...
 \newcommand{\pars}[1]{\textbf{#1}}
@@ -241,7 +243,7 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \newcommand{\antiphona}[3]{%
 \hicSuntNeumae
 \superInitialam{#1}
-\includescore{#2}
+\gregorioscore{#2}
 
 #3
 }

@@ -32,7 +32,6 @@
 \setlength{\headheight}{12pt}
 
 \input{conventuscommune.tex} % Often used macros
-\input{gregall.tex}
 
 \setlength{\columnsep}{15pt} % prostor mezi sloupci
 
@@ -41,20 +40,19 @@
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
-\setspaceafterinitial{2.2mm}{1}
-\setspacebeforeinitial{2.2mm}{1}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{afterinitialshift}{2.2mm}{scalable}
+\grechangedim{beforeinitialshift}{2.2mm}{scalable}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\grechangedim{annotationraise}{-0.2cm}{scalable}
 
 % Here we set the initial font. Change 38 if you want a bigger initial.
 % Emit the initials in red.
-\def\greinitialformat#1{%
-{\color{red}\fontsize{36}{36}\selectfont #1}%
-}
+\grechangestyle{initial}{\color{red}\fontsize{36}{36}\selectfont}
 
 \renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
 \pagestyle{empty}
 
-\grechangedim{spaceabovelines}{0.2cm}{1}%
+\grechangedim{spaceabovelines}{0.2cm}{scalable}%
 
 \vfill
 
@@ -76,13 +74,13 @@
 
 \vspace{-0.3cm}
 
-\includescore{temporalia/ps66-initium-dir-auto.gtex}
+\gregorioscore{temporalia/ps66-initium-dir-auto.gtex}
 
 {\setlength{\parindent}{0pt}\input{temporalia/ps66.tex}}
 
 \vspace{0.5cm}
 
-\includescore{temporalia/deusinadiutorium-communis.gtex}
+\gregorioscore{temporalia/deusinadiutorium-communis.gtex}
 
 \vspace{0.5cm}
 
@@ -104,7 +102,7 @@
 
 \antiphona{I f}{temporalia/ant-intympano.gtex}
 
-\includescore{temporalia/ps150-initium-i-f-auto.gtex}
+\gregorioscore{temporalia/ps150-initium-i-f-auto.gtex}
 
 {\setlength{\parindent}{0pt}\input{temporalia/ps150.tex}}
 
@@ -114,7 +112,7 @@
 
 \pars{Canticum Zachariæ.} \scriptura{Lucæ 1, 68-79}
 
-\includescore{temporalia/benedictus-initium-iiisoll-a-auto.gtex}
+\gregorioscore{temporalia/benedictus-initium-iiisoll-a-auto.gtex}
 
 {\setlength{\parindent}{0pt}\input{temporalia/benedictus.tex}}
 
@@ -128,11 +126,11 @@
 
 \pars{Lectio brevis.} \scriptura{1 Petr. 5, 8-9}
 
-\includescore{temporalia/lectiobrevis-fratressobrii.gtex}
+\gregorioscore{temporalia/lectiobrevis-fratressobrii.gtex}
 
 \vspace{0.5cm}
 
-\includescore{temporalia/versus-adjutorium.gtex}
+\gregorioscore{temporalia/versus-adjutorium.gtex}
 
 \noindent\pars{Confessio.}
                                                           
@@ -148,17 +146,17 @@ peccátis nostris, perdúcat nos ad vitam ætérnam. \Rbardot{} Amen.
 
 \vspace{0.5cm}
 
-\includescore{temporalia/convertenosdeus.gtex}
+\gregorioscore{temporalia/convertenosdeus.gtex}
 
 \vspace{0.5cm}
 %\vfill
 %\pagebreak
 
-\grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.15 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 \antiphona{VIII}{temporalia/hym-TeLucis.gtex}
 
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 %\vspace{0.5cm}
 \vfill
@@ -166,12 +164,12 @@ peccátis nostris, perdúcat nos ad vitam ætérnam. \Rbardot{} Amen.
 
 \pars{Lectio brevis.} \scriptura{Deut. 6, 4-7}
 
-\includescore{temporalia/lectiobrevis-audi.gtex}
+\gregorioscore{temporalia/lectiobrevis-audi.gtex}
 
 %\vspace{0.5cm}
 
 \superInitialam{VI}
-\includescore{temporalia/resp-inmanus.gtex}
+\gregorioscore{temporalia/resp-inmanus.gtex}
 
 \vspace{0.5cm}
 
@@ -185,24 +183,24 @@ peccátis nostris, perdúcat nos ad vitam ætérnam. \Rbardot{} Amen.
 
 \scriptura{Lucæ 2, 29-32}
 
-\includescore{temporalia/nuncdimittis-initium-iii-a-auto.gtex}
+\gregorioscore{temporalia/nuncdimittis-initium-iii-a-auto.gtex}
 
 {\setlength{\parindent}{0pt}\input{temporalia/nuncdimittis.tex}}
 
 \vspace{0.5cm}
 
-\includescore{temporalia/kyrie.gtex}
+\gregorioscore{temporalia/kyrie.gtex}
 
 \vspace{0.5cm}
 
 \pars{Oratio Dominica.}
 
-\includescore{temporalia/oratiodominica.gtex}
+\gregorioscore{temporalia/oratiodominica.gtex}
 
 \vspace{0.5cm}
 
 \pars{Hospodine, pomiluj ny.}
 
-\includescore{temporalia/hospodine.gtex}
+\gregorioscore{temporalia/hospodine.gtex}
 
 \end{document}
