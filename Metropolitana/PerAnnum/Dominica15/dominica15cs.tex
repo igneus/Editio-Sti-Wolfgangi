@@ -33,7 +33,6 @@
 
 \input{conventuscommune.tex} % Often used macros
 \input{translationes_cs.tex} % Czech translations of the proper texts
-\input{gregall.tex}
 
 \setlength{\columnsep}{15pt} % prostor mezi sloupci
 
@@ -42,20 +41,19 @@
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
-\setspaceafterinitial{2.2mm}{1}
-\setspacebeforeinitial{2.2mm}{1}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{afterinitialshift}{2.2mm}{scalable}
+\grechangedim{beforeinitialshift}{2.2mm}{scalable}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\grechangedim{annotationraise}{-0.2cm}{scalable}
 
 % Here we set the initial font. Change 38 if you want a bigger initial.
 % Emit the initials in red.
-\def\greinitialformat#1{%
-{\color{red}\fontsize{36}{36}\selectfont #1}%
-}
+\grechangestyle{initial}{\color{red}\fontsize{36}{36}\selectfont}
 
 \renewcommand{\headrulewidth}{0pt} % no horiz. rule at the header
 \pagestyle{empty}
 
-\grechangedim{spaceabovelines}{0.2cm}{1}%
+\grechangedim{spaceabovelines}{0.2cm}{scalable}%
 
 \vfill
 
@@ -104,7 +102,7 @@ per schola, populus et campana
 
 \pars{Introductio}
 
-\includescore{temporalia/deusinadiutorium-communis.gtex}
+\gregorioscore{temporalia/deusinadiutorium-communis.gtex}
 
 \trIntroductio
 
@@ -135,7 +133,7 @@ per schola, populus et campana
 
 \vspace{0.2cm}
 
-\includescore{temporalia/ps112-initium-vii-c-auto.gtex}
+\gregorioscore{temporalia/ps112-initium-vii-c-auto.gtex}
 
 %{\setlength{\parindent}{0pt}\input{temporalia/ps112.tex}}
 \psalmusEtTranslatioT{temporalia/ps112-comb.tex}{6cm}
@@ -155,9 +153,9 @@ per schola, populus et campana
 
 \pars{Psalmus 115}
 
-\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{1}%
-\includescore{temporalia/ps115-initium-ii-D-auto.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\gregorioscore{temporalia/ps115-initium-ii-D-auto.gtex}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 %{\setlength{\parindent}{0pt}\input{temporalia/ps115.tex}}
 \psalmusEtTranslatioT{temporalia/ps115-comb.tex}{6cm}
@@ -177,7 +175,7 @@ per schola, populus et campana
 
 \pars{Canticum} \scriptura{Phil. 2, 6-11}
 
-\includescore{temporalia/phil2-initium-i-f-auto.gtex}
+\gregorioscore{temporalia/phil2-initium-i-f-auto.gtex}
 
 %{\setlength{\parindent}{0pt}\input{temporalia/phil2.tex}}
 \psalmusEtTranslatioT{temporalia/phil2-comb.tex}{6cm}
@@ -195,9 +193,9 @@ per schola, populus et campana
 
 \vspace{-0.2cm}
 
-\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{VII}{temporalia/resp2.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 \trRespII
 
@@ -213,9 +211,9 @@ per schola, populus et campana
 
 \vspace{-0.2cm}
 
-\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{\oldrbar.~ br.}{temporalia/resp.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 \trResp
 
@@ -228,7 +226,9 @@ per schola, populus et campana
 
 \vspace{-0.2cm}
 
+\grechangedim{interwordspacetext}{0.25 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{I g}{temporalia/ant-magn-vesp.gtex}
+\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 \trAntMagnificat
 
@@ -236,7 +236,7 @@ per schola, populus et campana
 
 \pars{Canticum Evangelicum} \scriptura{Lc. 1, 46-55}
 
-\includescore{temporalia/magnificat-initium-i-g.gtex}
+\gregorioscore{temporalia/magnificat-initium-i-g.gtex}
 
 %{\setlength{\parindent}{0pt}\input{temporalia/magnificat.tex}}
 \psalmusEtTranslatioT{temporalia/magnificat-comb.tex}{6cm}
@@ -253,7 +253,7 @@ per schola, populus et campana
 
 \pars{Oratio Dominica}
 
-\includescore{temporalia/oratiodominica.gtex}
+\gregorioscore{temporalia/oratiodominica.gtex}
 
 \trOratioDominica
 
@@ -275,6 +275,6 @@ per schola, populus et campana
 
 \trAdDimissionem
 
-\includescore{temporalia/benedicamus-dominica-per-annum.gtex}
+\gregorioscore{temporalia/benedicamus-dominica-per-annum.gtex}
 
 \end{document}

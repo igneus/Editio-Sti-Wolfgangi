@@ -91,7 +91,6 @@ $(LAPSALMSEXTRA2): $(TMP_DIR)/%.tex: %.pslm
 	$(GENPSALM)
 	$(SED) -i -e 'y/Jj/Ii/' $@
 COMMON_DEPS = conventuscommune.tex \
-	gregall.tex gregall.lua gregall.ttf SGModern.ttf \
 	$(ALLLAPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 dominica15.pdf: dominica15.tex $(COMMON_DEPS)
 	$(LUALATEX) -interaction=nonstopmode $<
@@ -101,5 +100,5 @@ dominica15cs.pdf: dominica15cs.tex $(COMMON_DEPS) $(ALLCOMBPSALMS) \
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
 clean:
-	-rm -rf $(TMP_DIR) *~ *.aux *.gaux *.log
+	-rm -rf $(TMP_DIR) *~ *.aux *.gaux *.greaux *.log
 .PHONY: clean
