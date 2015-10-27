@@ -79,7 +79,6 @@ $(LAPSALMSEXTRA2): $(TMP_DIR)/%.tex: %.pslm
 	$(GENPSALM)
 	$(SED) -i -e 'y/Jj/Ii/' $@
 sbenedicti.pdf: sbenedicti.tex conventuscommune.tex \
-	gregall.tex gregall.lua gregall.ttf SGModern.ttf \
 	$(ALLLAPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
