@@ -89,10 +89,10 @@ $(ALLCOMBTEXTS): PSSKIP = 0
 $(ALLCOMBTEXTS): $(TMP_DIR)/%-comb.tex: %.tex %-boh.tex
 	$(GENPSCOMB)
 dominicainpalmis.pdf: dominicainpalmis.tex conventuscommune.tex translationes_cs.tex \
-	gregall.tex gregall.lua gregall.ttf SGModern.ttf $(LILYPONDPDFS) $(ALLCOMBTEXTS) \
+	$(LILYPONDPDFS) $(ALLCOMBTEXTS) \
 	$(ALLCZPSALMS) $(ALLLAPSALMS) $(ALLCOMBPSALMS) $(LAPSALMSINITTEX) $(OTHERSCORES) $(OTHERDEPS)
 	$(LUALATEX) -interaction=nonstopmode $<
 	$(LUALATEX) -interaction=nonstopmode $<
 clean:
-	-rm -rf $(TMP_DIR) *~ *.aux *.gaux *.log
+	-rm -rf $(TMP_DIR) *~ *.aux *.gaux *.greaux *.log
 .PHONY: clean

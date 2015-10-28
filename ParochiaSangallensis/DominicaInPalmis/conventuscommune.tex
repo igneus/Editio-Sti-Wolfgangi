@@ -65,23 +65,29 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 
 % In Junicode, the default R/ with .35em has the bar too close to the
 % letter.
-\gresimpledefbarglyph{R}{.41em}
+\grelatexsimpledefbarredsymbol{A}{.30em}{.25em}{.30em}{.27em}%
+\grelatexsimpledefbarredsymbol{R}{.41em}{.45em}{.45em}{.48em}%
+\grelatexsimpledefbarredsymbol{V}{.10em}{.10em}{.10em}{.13em}%
 
 % Emit R/, V/, A/ and + in red
 \let\oldrbar\Rbar
 \let\oldvbar\Vbar
 \let\oldabar\Abar
 \let\oldgrecross\grecross
-\let\oldgrestar\grestar
-\let\oldgredagger\gredagger
+\let\oldgrealtcross\grealtcross
+\let\oldGreStar\GreStar
+\let\oldGreDagger\GreDagger
 \let\olddag\dag
 \let\oldddag\ddag
 \renewcommand{\Rbar}{{\color{red}\oldrbar}}
 \renewcommand{\Vbar}{{\color{red}\oldvbar}}
 \renewcommand{\Abar}{{\color{red}\oldabar}}
 \renewcommand{\grecross}{{\color{red}\oldgrecross}}
-\renewcommand{\grestar}{{\color{red}\oldgrestar}}
-\renewcommand{\gredagger}{{\color{red}\oldgredagger}}
+\renewcommand{\grealtcross}{{\color{red}\oldgrealtcross}}
+\newcommand{\grestar}{{\color{red}\oldGreStar}}
+\renewcommand{\GreStar}{{\color{red}\oldGreStar}}
+\newcommand{\gredagger}{{\color{red}\oldGreDagger}}
+\renewcommand{\GreDagger}{{\color{red}\oldGreDagger}}
 \renewcommand{\dag}{{\color{red}\olddag}}
 \renewcommand{\ddag}{{\color{red}\oldddag}}
 \newcommand{\Rbardot}{{\color{red}\oldrbar.~}}
@@ -101,7 +107,7 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 }
 
 % a part of a hora, larger than pars
-\newcommand{\subhora}[1]{
+\newcommand{\subhora}[1]{%
 \begin{center}
 {\large \textit{#1}}
 \end{center}
@@ -122,7 +128,7 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \newcommand{\translatioCantus}[1]{\vspace{1mm}%
 {\noindent\footnotesize \nlfont{#1}}}
 
-\newenvironment{translatioMulticol}[1]{
+\newenvironment{translatioMulticol}[1]{%
   \begin{multicols}{#1}
     \footnotesize
     \setlength{\parindent}{0pt}
@@ -131,14 +137,14 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 
 % pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
 % s prekladem
-\newcommand{\psalmusEtTranslatioB}[3]{
+\newcommand{\psalmusEtTranslatioB}[3]{%
   \vspace{0.5cm}
   \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
-    \colchunk{
+    \colchunk{%
       \input{#1}
     }
 
-    \colchunk{
+    \colchunk{%
       \vspace{-0.5cm}
       {\footnotesize \nlfont
         \input{#2}
@@ -147,12 +153,12 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
   \end{parcolumns}
 }
 
-\newcommand{\psalmusEtTranslatio}[2]{
+\newcommand{\psalmusEtTranslatio}[2]{%
   \psalmusEtTranslatioB{#1}{#2}{8.5cm}
 }
 
 \newcommand{\psalmusTr}[1]{{\footnotesize\nlfont\hspace*{-4pt} #1}}
-\newcommand{\psalmusEtTranslatioT}[2]{{
+\newcommand{\psalmusEtTranslatioT}[2]{{%
   \setlength{\LTleft}{-0.25cm}
   \setlength{\LTright}{\fill}
   \setlength{\tabcolsep}{0.35cm}
@@ -163,7 +169,7 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
       \end{longtable}
   \end{psalmus}
 }}
-\newcommand{\psalmusEtTranslatioTS}[2]{{
+\newcommand{\psalmusEtTranslatioTS}[2]{{%
   \setlength{\LTleft}{-0.25cm}
   \setlength{\LTright}{\fill}
   \setlength{\tabcolsep}{0.25cm}
@@ -175,20 +181,20 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
   \end{psalmus}
 }}
 
-\newcommand{\canticumMagnificatEtTranslatio}[1]{
+\newcommand{\canticumMagnificatEtTranslatio}[1]{%
   \psalmusEtTranslatioB{#1}{temporalia/extra-adventum-vespers/magnificat-boh.tex}{12cm}
 }
-\newcommand{\canticumBenedictusEtTranslatio}[1]{
+\newcommand{\canticumBenedictusEtTranslatio}[1]{%
   \psalmusEtTranslatioB{#1}{temporalia/extra-adventum-laudes/benedictus-boh.tex}{10.5cm}
 }
 
-\newcommand{\textusEtTranslatio}[3]{
+\newcommand{\textusEtTranslatio}[3]{%
   \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
-    \colchunk{
+    \colchunk{%
       #1
     }
 
-    \colchunk{
+    \colchunk{%
       \vspace{-0.5cm}
       {\footnotesize \nlfont
         #2
@@ -201,37 +207,35 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \newcommand{\hicSuntNeumae}{\vspace{0.5cm}}
 
 % prepinani mista mezi notovymi osnovami: pro neumovane a neneumovane zpevy
-\newcommand{\cantusCumNeumis}{
-  \setgrefactor{14}
+\newcommand{\cantusCumNeumis}{%
+  \grechangestaffsize{14}
 %  \global\advance\grespaceabovelines by 5mm%
 %  \global\advance\grespaceabovelines by 2mm%
 }
-\newcommand{\cantusSineNeumas}{
-  \setgrefactor{14}
+\newcommand{\cantusSineNeumas}{%
+  \grechangestaffsize{14}
 %  \global\advance\grespaceabovelines by -5mm%
-  \grechangedim{spaceabovelines}{0cm}{1}%
+  \grechangedim{spaceabovelines}{0cm}{scalable}%
 }
 
-\renewcommand{\greabovelinestextstyle}[1]{%
-{\color{red}\textit{#1}}\relax %
-}
+\grechangestyle{abovelinestext}{\color{red}\it}
 
 % znaky k umisteni nad inicialu zpevu
-\newcommand{\superInitialam}[1]{\gresetfirstlineaboveinitial{\footnotesize {\textbf{#1}}}{\footnotesize {\textbf{#1}}}}
+\newcommand{\superInitialam}[1]{\greannotation{\footnotesize {\textbf{#1}}}}
 
 % pars officii, i.e. "oratio", ...
 \newcommand{\pars}[1]{\textbf{#1}}
 
-\newenvironment{psalmus}{
+\newenvironment{psalmus}{%
   \setlength{\parindent}{0pt}
   \setlength{\parskip}{5pt}
-}{
+}{%
   \setlength{\parindent}{10pt}
   \setlength{\parskip}{10pt}
 }
 
 %%%% Prejmenovat na latinske:
-\newcommand{\nadpisZalmu}[1]{
+\newcommand{\nadpisZalmu}[1]{%
   \hspace{2cm}\textbf{#1}\vspace{2mm}%
   \nopagebreak%
 
@@ -241,7 +245,7 @@ contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
 \newcommand{\antiphona}[3]{%
 \hicSuntNeumae
 \superInitialam{#1}
-\includescore{#2}
+\gregorioscore{#2}
 
 #3
 }
