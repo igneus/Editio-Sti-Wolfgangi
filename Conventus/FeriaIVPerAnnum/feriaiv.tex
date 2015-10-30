@@ -66,14 +66,14 @@
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
-\setspaceafterinitial{2.2mm}{1}
-\setspacebeforeinitial{2.2mm}{1}
+\grechangedim{afterinitialshift}{2.2mm}{scalable}
+\grechangedim{beforeinitialshift}{2.2mm}{scalable}
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\grechangedim{annotationraise}{-0.2cm}{scalable}
 
 % Here we set the initial font. Change 38 if you want a bigger initial.
 % Emit the initials in red.
-\def\greinitialformat#1{%
-{\color{red}\fontsize{38}{38}\selectfont #1}%
-}
+\grechangestyle{initial}{\color{red}\fontsize{38}{38}\selectfont}
 
 \pagestyle{empty}
 
@@ -159,9 +159,9 @@ per infiníta sǽcula sæculórum.
 % 50, 63, 64, Cant. Annae, 148+149+150
 
 \vspace{1cm}
-\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/deusinadiutorium-communis.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \vspace{1cm}
 
 \vfill
@@ -171,9 +171,9 @@ per infiníta sǽcula sæculórum.
 
 \scriptura{Psalmus 66.}
 
-\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/ps66-initium-dir-auto.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 \psalmusEtTranslatioT{temporalia/ps66-comb.tex}{10cm}
 
@@ -360,36 +360,36 @@ per infiníta sǽcula sæculórum.
 
 \pars{Deprecatio Gelasii I}
 
-\grechangedim{interwordspacetext}{0.12 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.12 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{D1}{temporalia/deprecatio1.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 \vfill
 \pagebreak
 
 \pars{Deprecatio Gelasii II}
 
-\grechangedim{interwordspacetext}{0.12 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.12 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{D4}{temporalia/deprecatio2.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 \vfill
 \pagebreak
 
 \pars{Deprecatio Gelasii III}
 
-\grechangedim{interwordspacetext}{0.12 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.12 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{D3}{temporalia/deprecatio3.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 \vfill
 \pagebreak
 
 \pars{Deprecatio Gelasii IV}
 
-\grechangedim{interwordspacetext}{0.12 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.12 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{D1}{temporalia/deprecatio4.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 
 \vfill
 \pagebreak
