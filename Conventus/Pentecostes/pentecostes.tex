@@ -79,16 +79,14 @@
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
-\setspaceafterinitial{2.2mm}{1}
-\setspacebeforeinitial{2.2mm}{1}
-
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{afterinitialshift}{2.2mm}{scalable}
+\grechangedim{beforeinitialshift}{2.2mm}{scalable}
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\grechangedim{annotationraise}{-0.2cm}{scalable}
 
 % Here we set the initial font. Change 38 if you want a bigger initial.
 % Emit the initials in red.
-\def\greinitialformat#1{%
-{\color{red}\fontsize{38}{38}\selectfont #1}%
-}
+\grechangestyle{initial}{\color{red}\fontsize{38}{38}\selectfont}
 
 \pagestyle{empty}
 
@@ -375,9 +373,9 @@ per infiníta sǽcula sæculórum.
 \pars{Canticum B. Mariæ V.}\rubrica{ - in I. vesperis:} \scriptura{Io. 14, 18.28; ibid. 16, 22; \textbf{H267}}
 
 {
-\grechangedim{interwordspacetext}{0.24 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.24 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{I D*}{temporalia/ant-magn-vesp1.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \trAntMagnificatI
@@ -570,9 +568,9 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \pars{Versus.} \scriptura{Ps. 16, 8}
 
 {
-\grechangedim{interwordspacetext}{0.24 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.24 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/versus-custodi.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \noindent \trComplVersus
@@ -585,9 +583,9 @@ omnípotens et miséricors Dóminus. \Rbardot{} Amen.
 \pars{Canticum Simeonis.}
 
 {
-\grechangedim{interwordspacetext}{0.30 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.30 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{III a}{temporalia/ant-salvanos-antiquo.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \trAntSalvaNos
@@ -710,9 +708,9 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \vspace{-0.5cm}
 
 {
-\grechangedim{interwordspacetext}{0.30 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.30 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{VIII}{temporalia/hym-JamChristus.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 {
 \vspace{-0.5cm}
@@ -778,9 +776,9 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \pars{Versus.} \scriptura{Sap. 1, 7}
 
 {
-\grechangedim{interwordspacetext}{0.30 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.30 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/versus-spiritus.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \noindent \trMatVersus
@@ -932,10 +930,10 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \pars{Hymnus Ambrosianus}
 
 {
-\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \superInitialam{III}
 \gregorioscore{temporalia/tedeum-solemnis.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \trTeDeum
@@ -1144,9 +1142,9 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \pars{Capitulum.} \scriptura{Act. 2, 1 - 2}
 
 {
-\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/capitulum-CumComplerentur.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 % preklad Jeruz. bible
@@ -1165,10 +1163,10 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \pars{Hymnus.}
 
 {
-\grechangedim{interwordspacetext}{0.23 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.23 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \superInitialam{I}
 \gregorioscore{temporalia/hym-BeataNobis.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 \input{hym-BeataNobis-bohtext.tex}
 
@@ -1276,9 +1274,9 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \pars{Versus.}
 
 {
-\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.28 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \gregorioscore{temporalia/versus-spiritus-simplex.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \noindent \trMatVersus
@@ -1384,12 +1382,12 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 {
 \vspace{-0.25cm}
 \vfill
-\grechangedim{interwordspacetext}{0.23 cm plus 0.15 cm minus 0.05 cm}{1}%
-\grechangedim{spacelinestext}{0.40617 cm}{1}%
+\grechangedim{interwordspacetext}{0.23 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\grechangedim{spacelinestext}{0.40617 cm}{scalable}%
 \superInitialam{V}
 \gregorioscore{temporalia/credo-iii.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
-\grechangedim{spacelinestext}{0.50617 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
+\grechangedim{spacelinestext}{0.50617 cm}{scalable}%
 }
 
 \vfill
@@ -1398,9 +1396,9 @@ Pater, et Fílius, et Spíritus Sanctus. \Rbardot{} Amen.
 \pars{Offertorium.} \scriptura{Ps. 67, 29.30; \Vbardot{} ibid. 5.27.33.34; \textbf{E256}}
 
 {
-\grechangedim{interwordspacetext}{0.07 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.07 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 \antiphona{IV}{temporalia/offertorium-ConfirmaHoc.gtex}
-\grechangedim{interwordspacetext}{0.38 cm plus 0.15 cm minus 0.05 cm}{1}%
+\grechangedim{interwordspacetext}{0.32 cm plus 0.15 cm minus 0.05 cm}{scalable}%
 }
 
 \pagebreak
