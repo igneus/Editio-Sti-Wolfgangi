@@ -21,7 +21,7 @@ PSALM_PREPROCESSOR = $(TOOLS_DIR)/psalmpreprocessor.rb
 INITIUM_TOOL = $(TOOLS_DIR)/initiumpsalmi.rb
 PSSKIP = 1
 GENPSCOMB = $(AWK) -f pscomb.awk -v PSSKIP=$(PSSKIP) -v TRFILE=$(word 2,$^) $< > $@
-PSALMS = 1 2 3 4 8 9ii_xi 9xii_xxi 9xxii_xxxii 9xxxiii_xxxix 10 62 90 92 99 109 110 111 112 113 118v_x 118xi_xvi 118xvii_xxii 133 143i 143ii 144i_vii 144viii_xiii 144xiv_xxi 148 149 150
+PSALMS = 1 2 3 4 8 9ii_xi 9xii_xxi 9xxii_xxxii 9xxxiii_xxxix 10 62 90 92 99 109 110 111 112 113 118v_vi 118vii_viii 118ix_x 118xi_xii 118xiii_xiv 118xv_xvi 118xvii_xviii 118xix_xx 118xxi_xxii 133 143i 143ii 144i_vii 144viii_xiii 144xiv_xxi 148 149 150
 include tonus.mk
 MODUS-1 = i-g
 MODUS-2 = ii-D
@@ -42,9 +42,15 @@ MODUS-110 = vii-d
 MODUS-111 = vii-a
 MODUS-112 = i-f
 MODUS-113 = iii-a
-MODUS-118v_x = vii-d
-MODUS-118xi_xvi = vii-a
-MODUS-118xvii_xxii = iii-a
+MODUS-118v_vi = vii-d
+MODUS-118vii_viii = vii-d
+MODUS-118ix_x = vii-d
+MODUS-118xi_xii = vii-a
+MODUS-118xiii_xiv = vii-a
+MODUS-118xv_xvi = vii-a
+MODUS-118xvii_xviii = iii-a
+MODUS-118xix_xx = iii-a
+MODUS-118xxi_xxii = iii-a
 MODUS-133 = viii-G
 MODUS-143i = i-g
 MODUS-143ii = vii-d
@@ -128,7 +134,7 @@ $(patsubst %,$(TMP_DIR)/%.tex,ps4 ps148 ps149 dan3): PSALMOPTS = $(LAPSALMOPTS)
 $(TMP_DIR)/magnificat.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold --skip-verses 2 $(LAPSALMOPTSACC)
 $(TMP_DIR)/magnificat2.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold --skip-verses 2 $(LAPSALMOPTSACC)
 $(TMP_DIR)/ps90.tex: PSALMOPTS = --accents-style bold $(LAPSALMOPTSACC)
-$(TMP_DIR)/ps133.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold $(LAPSALMOPTSACC)
+$(patsubst %,$(TMP_DIR)/ps%.tex,118vii_viii 118ix_x 118xiii_xiv 118xv_xvi 118xix_xx 118xxi_xxii 133): PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold $(LAPSALMOPTSACC)
 $(TMP_DIR)/%-boh.tex: PSALMOPTS = $(CZPSALMOPTS)
 $(CZPSALMS) $(TMP_DIR)/benedictus-boh.tex: $(TMP_DIR)/%-boh.tex: $(CZECH_PSALMS_DIR)/Hejcl1922/%.pslm
 	$(GENPSALM)
@@ -138,7 +144,7 @@ $(patsubst %,$(TMP_DIR)/%-boh.tex, magnificat nuncdimittis): $(TMP_DIR)/%-boh.te
 	$(GENPSALM)
 $(LAPSALMS): $(TMP_DIR)/ps%.tex: $(PSALMS_DIR)/ps%.pslm
 	$(GENPSALM)
-	case "$<" in */ps118[ivx]*) $(AWK) -f hebletter.awk -v PSLM="$<" -v TEX=1 $@ > $@.tmp; $(MV) -f $@.tmp $@;; esac || :
+	case "$<" in */ps118[ivx]*) $(AWK) -f hebletter.awk -v PSLM="$<" -v TEX=$(if $(filter --skip-verses,$(PSALMOPTS)),1,2) $@ > $@.tmp; $(MV) -f $@.tmp $@;; esac || :
 	$(SED) -i -e 'y/Jj/Ii/' $@
 $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: $(PSALMS_DIR)/%.pslm
 	$(GENPSALM)
@@ -152,6 +158,7 @@ $(TMP_DIR)/magnificat2-comb.tex: $(TMP_DIR)/magnificat2.tex $(TMP_DIR)/magnifica
 	$(GENPSCOMB)
 $(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
 $(TMP_DIR)/magnificat2-comb.tex: PSSKIP = 2
+$(patsubst %,$(TMP_DIR)/ps%-comb.tex,90 118vii_viii 118ix_x 118xiii_xiv 118xv_xvi 118xix_xx 118xxi_xxii 133): PSSKIP = 0
 $(TMP_DIR)/communio-versus-Lauda-comb.tex: $(patsubst %,cantus/triplex76/communio-versus-Lauda%tex,. -boh.)
 	$(GENPSCOMB)
 adventusdominicaii.pdf: adventusdominicaii.tex conventuscommune.tex translationes_cs.tex \
