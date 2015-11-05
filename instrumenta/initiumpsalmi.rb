@@ -356,7 +356,13 @@ def set_verse_part(parttext, partmelody, text_offset, of)
           if j == 0 then
             neume.gsub! 'r', 'r[ocba:1{]'
           elsif j == 1 then
-            neume.gsub! 'r1', '[ocba:1}]'
+            # For podatus, like (efr1) we want (ef[ocba:0}]), for clivis
+            # like (ihr1) or (gr1f) we want (ih[ocba:1}]) or (g[ocba:1}]f).
+            if neume.index('r1') == 3 && neume.getbyte(1) < neume.getbyte(2) then
+              neume.gsub! 'r1', '[ocba:0}]'
+            else
+              neume.gsub! 'r1', '[ocba:1}]'
+            end
           end
         end
 
@@ -377,7 +383,13 @@ def set_verse_part(parttext, partmelody, text_offset, of)
         if j == 0 then
           neume.gsub! 'r', 'r[ocba:1{]'
         elsif j == 1 then
-          neume.gsub! 'r1', '[ocba:1}]'
+          # For podatus, like (efr1) we want (ef[ocba:0}]), for clivis
+          # like (ihr1) or (gr1f) we want (ih[ocba:1}]) or (g[ocba:1}]f).
+          if neume.index('r1') == 3 && neume.getbyte(1) < neume.getbyte(2) then
+            neume.gsub! 'r1', '[ocba:0}]'
+          else
+            neume.gsub! 'r1', '[ocba:1}]'
+          end
         end
       end
 
