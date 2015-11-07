@@ -103,11 +103,11 @@ SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
 	 benedicamus-solemnis-laud tuautem \
 	 introitus-PopulusSion graduale-ExSion alleluia-LaetatusSum \
 	 offertorium-DeusTu communio-IerusalemSurge communio-versus-Lauda-initium \
-	 xvii-agnusdei xviic-kyrie xvii-sanctus credo-i
+	 xvii-agnusdei xviic-kyrie xvii-sanctus credo-i ant-rorate
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(patsubst %,cantus/amon33/hym-%-bohtext.tex,ConditorAlme VoxClara TeLucis NuncSancte RectorPotens RerumDeus) \
 	    cantus/nrom02/hym-VerbumSupernum-bohtext.tex $(TMP_DIR)/magnificat2-comb.tex \
-	    $(TMP_DIR)/communio-versus-Lauda-comb.tex
+	    $(TMP_DIR)/communio-versus-Lauda-comb.tex $(COMMON_CHANTS_DIR)/lcantualis78/ant-rorate-bohtext.tex
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
 		   $(foreach P,dan3 benedictus nuncdimittis,$(TMP_DIR)/$(P)-initium-$(MODUS-$(P))-auto.gabc)
 LAPSALMSINITTEX = $(patsubst %.gabc,%.gtex,$(LAPSALMSINITGABC))
