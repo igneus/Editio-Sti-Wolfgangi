@@ -1,0 +1,7 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+# fix problem in https://tex.stackexchange.com/q/220038/7883
+feature fixi {
+  sub uni0131 by i;
+  sub uniF6BE by j;
+} fixi;

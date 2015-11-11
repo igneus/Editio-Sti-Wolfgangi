@@ -1,0 +1,254 @@
+% Commands used to produce a typical "Conventus" booklet
+
+\newenvironment{titulusOfficii}{\begin{center}}{\end{center}}
+\newcommand{\dies}[1]{#1
+
+}
+\newcommand{\nomenFesti}[1]{\textbf{\Large #1}
+
+}
+\newcommand{\celebratio}[1]{#1
+
+}
+
+%%%% Prejmenovat na latinske
+\newcounter{Thumb}
+\setcounter{Thumb}{0}
+\newcommand{\thumbTitulus}{}
+
+\newif\ifSideThumbsEnabled
+
+\newlength\ThumbSize
+\setlength\ThumbSize{2cm}
+
+\SideThumbsEnabledfalse
+\AddEverypageHook{
+\ifSideThumbsEnabled
+\ifodd\value{page}
+\backgroundsetup{
+angle=90,
+position={current page.east|-current page text area.north east},
+vshift=12pt,
+hshift=-\value{Thumb}*\ThumbSize+\ThumbSize+\ThumbSize/4,
+contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
+ align=center,text height=14pt,text depth=30pt]
+{\small\thumbTitulus};
+}
+}
+\else
+\backgroundsetup{
+angle=90,
+position={current page.west|-current page text area.north west},
+vshift=-16pt,
+hshift=-\value{Thumb}*\ThumbSize+\ThumbSize+\ThumbSize/4,
+contents={\tikz\node[fill=gray!30,anchor=west,text width=\ThumbSize,
+ align=center,text height=28pt,text depth=6pt]
+{\small\thumbTitulus};
+}
+}
+\fi
+\BgMaterial
+\else\relax\fi}
+\newcommand\sideThumbs[1]{\SideThumbsEnabledtrue%
+\renewcommand{\thumbTitulus}{#1}%
+\stepcounter{Thumb}
+}
+\newcommand\RemoveSideThumbs{\SideThumbsEnabledfalse}
+
+\newcommand{\hora}[1]{%
+\vspace{0.5cm}{\large \textbf{#1}}
+
+\fancyhead[LE]{\thepage\ / #1}
+\fancyhead[RO]{#1 / \thepage}
+\addcontentsline{toc}{subsection}{#1}
+}
+
+% In Junicode, the default R/ with .35em has the bar too close to the
+% letter.
+\grelatexsimpledefbarredsymbol{A}{.30em}{.25em}{.30em}{.27em}%
+\grelatexsimpledefbarredsymbol{R}{.41em}{.45em}{.45em}{.48em}%
+\grelatexsimpledefbarredsymbol{V}{.10em}{.10em}{.10em}{.13em}%
+
+% Emit R/, V/, A/ and + in red
+\let\oldrbar\Rbar
+\let\oldvbar\Vbar
+\let\oldabar\Abar
+\let\oldgrecross\grecross
+\let\oldgrealtcross\grealtcross
+\let\oldGreStar\GreStar
+\let\oldGreDagger\GreDagger
+\let\olddag\dag
+\let\oldddag\ddag
+\renewcommand{\Rbar}{{\color{red}\oldrbar}}
+\renewcommand{\Vbar}{{\color{red}\oldvbar}}
+\renewcommand{\Abar}{{\color{red}\oldabar}}
+\renewcommand{\grecross}{{\color{red}\oldgrecross}}
+\renewcommand{\grealtcross}{{\color{red}\oldgrealtcross}}
+\newcommand{\grestar}{{\color{red}\oldGreStar}}
+\renewcommand{\GreStar}{{\color{red}\oldGreStar}}
+\newcommand{\gredagger}{{\color{red}\oldGreDagger}}
+\renewcommand{\GreDagger}{{\color{red}\oldGreDagger}}
+\renewcommand{\dag}{{\color{red}\olddag}}
+\renewcommand{\ddag}{{\color{red}\oldddag}}
+\newcommand{\Rbardot}{{\color{red}\oldrbar.~}}
+\newcommand{\Vbardot}{{\color{red}\oldvbar.~}}
+\newcommand{\Abardot}{{\color{red}\oldabar.~}}
+\newcommand{\Psdot}{{\color{red}Ps.~}}
+
+\let\quasiHora\hora
+
+% larger unit than a hora
+\newcommand{\divisio}[1]{%
+\begin{center}
+{\Large \textsc{#1}}
+\end{center}
+\fancyhead[CO,CE]{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+% a part of a hora, larger than pars
+\newcommand{\subhora}[1]{%
+\begin{center}
+{\large \textit{#1}}
+\end{center}
+%\fancyhead[CO,CE]{#1}
+\addcontentsline{toc}{subsubsection}{#1}
+}
+
+% rubricated inline text
+\newcommand{\rubricatum}[1]{\textit{#1}}
+
+% standalone rubric
+\newcommand{\rubrica}[1]{\vspace{3mm}\rubricatum{#1}}
+
+\newcommand{\notitia}[1]{\textcolor{red}{#1}}
+
+\newcommand{\scriptura}[1]{\hfill \small\textit{#1}}
+
+\newcommand{\translatioCantus}[1]{\vspace{1mm}%
+{\noindent\footnotesize \nlfont{#1}}}
+
+\newenvironment{translatioMulticol}[1]{%
+  \begin{multicols}{#1}
+    \footnotesize
+    \setlength{\parindent}{0pt}
+    \setlength{\columnseprule}{0pt}
+}{\end{multicols}}
+
+% pruznejsi varianta nasledujiciho - umoznuje nastavit sirku sloupce
+% s prekladem
+\newcommand{\psalmusEtTranslatioB}[3]{%
+  \vspace{0.5cm}
+  \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
+    \colchunk{%
+      \input{#1}
+    }
+
+    \colchunk{%
+      \vspace{-0.5cm}
+      {\footnotesize \nlfont
+        \input{#2}
+      }
+    }
+  \end{parcolumns}
+}
+
+\newcommand{\psalmusEtTranslatio}[2]{%
+  \psalmusEtTranslatioB{#1}{#2}{8.5cm}
+}
+
+\newcommand{\psalmusTr}[1]{{\footnotesize\nlfont\hspace*{-4pt} #1}}
+\newcommand{\psalmusEtTranslatioT}[2]{{%
+  \setlength{\LTleft}{-0.25cm}
+  \setlength{\LTright}{\fill}
+  \setlength{\tabcolsep}{0.35cm}
+  \begin{psalmus}
+      \noindent
+      \begin{longtable}{p{\textwidth-#2-1cm}p{#2}}
+        \input{#1}
+      \end{longtable}
+  \end{psalmus}
+}}
+\newcommand{\psalmusEtTranslatioTS}[2]{{%
+  \setlength{\LTleft}{-0.25cm}
+  \setlength{\LTright}{\fill}
+  \setlength{\tabcolsep}{0.25cm}
+  \begin{psalmus}
+      \noindent
+      \begin{longtable}{p{\textwidth-#2-0.5cm}p{#2}}
+        \input{#1}
+      \end{longtable}
+  \end{psalmus}
+}}
+
+\newcommand{\canticumMagnificatEtTranslatio}[1]{%
+  \psalmusEtTranslatioB{#1}{temporalia/extra-adventum-vespers/magnificat-boh.tex}{12cm}
+}
+\newcommand{\canticumBenedictusEtTranslatio}[1]{%
+  \psalmusEtTranslatioB{#1}{temporalia/extra-adventum-laudes/benedictus-boh.tex}{10.5cm}
+}
+
+\newcommand{\textusEtTranslatio}[3]{%
+  \begin{parcolumns}[colwidths={2=#3}, nofirstindent=true]{2}
+    \colchunk{%
+      #1
+    }
+
+    \colchunk{%
+      \vspace{-0.5cm}
+      {\footnotesize \nlfont
+        #2
+      }
+    }
+  \end{parcolumns}
+}
+
+% volne misto nad antifonami, kam si zpevaci dokresli neumy
+\newcommand{\hicSuntNeumae}{\vspace{0.5cm}}
+
+% prepinani mista mezi notovymi osnovami: pro neumovane a neneumovane zpevy
+\newcommand{\cantusCumNeumis}{%
+  \grechangestaffsize{14}
+%  \global\advance\grespaceabovelines by 5mm%
+%  \global\advance\grespaceabovelines by 2mm%
+}
+\newcommand{\cantusSineNeumas}{%
+  \grechangestaffsize{14}
+%  \global\advance\grespaceabovelines by -5mm%
+  \grechangedim{spaceabovelines}{0cm}{scalable}%
+}
+
+\grechangestyle{abovelinestext}{\color{red}\it}
+
+% znaky k umisteni nad inicialu zpevu
+\newcommand{\superInitialam}[1]{\greannotation{\footnotesize {\textbf{#1}}}}
+
+% pars officii, i.e. "oratio", ...
+\newcommand{\pars}[1]{\textbf{#1}}
+
+\newenvironment{psalmus}{%
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{5pt}
+}{%
+  \setlength{\parindent}{10pt}
+  \setlength{\parskip}{10pt}
+}
+
+%%%% Prejmenovat na latinske:
+\newcommand{\nadpisZalmu}[1]{%
+  \hspace{2cm}\textbf{#1}\vspace{2mm}%
+  \nopagebreak%
+
+}
+
+% mode, score, translation
+\newcommand{\antiphona}[3]{%
+\hicSuntNeumae
+\superInitialam{#1}
+\gregorioscore{#2}
+
+#3
+}
+
+% a semantic alias of the previous
+\newcommand{\responsorium}[3]{\antiphona{#1}{#2}{#3}}
