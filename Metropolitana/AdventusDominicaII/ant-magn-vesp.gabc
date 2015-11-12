@@ -3,9 +3,11 @@ office-part: Antiphona;
 mode: 7;
 book: Antiphonale Romanum II, 2009, p. 17;
 transcriber: Sr. Maria Ruth Malagoli osb; Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
 (c3)
-VE(e)ni,(f) Dó(h)mi(hi)ne,(i!/io) *(,)
-vi(h)si(i)tá(j)re(k) nos(l) in(kj~) pa(i)ce,(i) (;)
-ut(k!/koj) læ(hi)té(k)mur(j) co(i)ram(h) te(gf) (,)
-cor(ef)de(g) per(f>)féc(e)to.(e) (::)
+VE(e|gr)ni,(f|vihg) Dó(h|vihh)mi(hi|pehh)ne,(i!/io|vs) *(,)
+vi(h|ta)si(i|vi)tá(j|vihh)re(k|vihj) nos(l|vihllsl2) in(kj~|vi>hh) pa(i|ta)ce,(i|ta) (;)
+ut(k!/koj|prhhlsal3) læ(hi|peS)té(k|vihi)mur(j|vihg) co(i|vi)ram(h|ta) te(gf|cl-) (,)
+cor(ef|peS)de(g|vihg) per(f>|vi>)féc(e|ta)to.(e|ta) (::)

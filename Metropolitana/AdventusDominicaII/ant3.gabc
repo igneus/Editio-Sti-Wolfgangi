@@ -3,8 +3,10 @@ office-part: I. vesperas, 3. antiphona;
 mode: 1;
 book: Antiphonale Romanum II, 2009, pg. 16;
 transcriber: Sr. Maria Ruth Malagoli osb; Jakub Jelínek;
+initial-style: 1;
+nabc-lines: 1;
 %%
 (c4)
-LEX(d!/do) per(c) Móy(d)sen(ef) da(g)ta(fe) est,(d) *(;)
-grá(f)ti(g)a(h) et(g>) vé(fg)ri(f)tas(f) (,)
-per(f) Ie(f)sum(g) Chri(e)stum(f) fac(d)ta(cd) est.(d) (::)
+LEX(d!/do|vs) per(c|ta) Móy(d|vi)sen(ef|peS) da(g|vihg)ta(fe|cllsc3) est,(d|talsx6) *(;)
+grá(f|vi)ti(g|vihg)a(h|vihh) et(g>|vi>) vé(fg|pe)ri(f|ta)tas(f|ta-) (,)
+per(f|ta) Ie(f|ta)sum(g|vi) Chri(e|ta)stum(f|vihg) fac(d|vi)ta(cd|pe) est.(d|ta) (::)
