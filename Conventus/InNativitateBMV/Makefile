@@ -21,7 +21,7 @@ PSALM_PREPROCESSOR = $(TOOLS_DIR)/psalmpreprocessor.rb
 INITIUM_TOOL = $(TOOLS_DIR)/initiumpsalmi.rb
 PSSKIP = 1
 GENPSCOMB = $(AWK) -f pscomb.awk -v PSSKIP=$(PSSKIP) -v TRFILE=$(word 2,$^) $< > $@
-PSALMS = 62 66 92 99 109 112 121 126 148 149 150
+PSALMS = 62 66 92 99 109 112 118v_vi 118vii_viii 118ix_x 118xi_xii 118xiii_xiv 118xv_xvi 118xvii_xviii 118xix_xx 118xxi_xxii 121 126 148 149 150
 include tonus.mk
 MODUS-62 = vi-F
 MODUS-66 = dir
@@ -29,6 +29,15 @@ MODUS-92 = viii-G
 MODUS-99 = vii-c
 MODUS-109 = viii-G
 MODUS-112 = vii-c
+MODUS-118v_vi = vii-c
+MODUS-118vii_viii = vii-c
+MODUS-118ix_x = vii-c
+MODUS-118xi_xii = vi-F
+MODUS-118xiii_xiv = vi-F
+MODUS-118xv_xvi = vi-F
+MODUS-118xvii_xviii = vii-c
+MODUS-118xix_xx = vii-c
+MODUS-118xxi_xxii = vii-c
 MODUS-121 = vi-F
 MODUS-126 = viii-G
 MODUS-148 = vii-c
@@ -55,15 +64,17 @@ LAPSALMS = $(patsubst %,$(TMP_DIR)/ps%.tex,$(PSALMS))
 LAPSALMSEXTRA = $(patsubst %,$(TMP_DIR)/%.tex,benedictus magnificat dan3)
 ALLLAPSALMS = $(LAPSALMS) $(LAPSALMSEXTRA)
 SCORES = $(addprefix ant,1 2 3 4 5) ant-magn-vesp1 ant-magn-vesp2 ant-ben-laud \
-	 versus-nativitasest $(addprefix hym-,AveMarisStella OGloriosaDomina) \
+	 $(addprefix versus-,nativitasest specie adjuvabit elegit) \
+	 $(addprefix hym-,AveMarisStella OGloriosaDomina NuncSancte RectorPotens RerumDeus) \
 	 benedicamus-duplex-laudes benedicamus-duplex-vesperae \
 	 deusinadiutorium-communis supplicatiolitaniae oratiodominica resp1v \
 	 dominusvobiscum-solemnis domineexaudi magnificat-initium-i-D2 \
-	 magnificat-initium-i-f capitulum-AbInitio oratio \
-	 introitus-GaudeamusOmnes graduale-BenedictaEtVenerabilis \
+	 $(addprefix capitulum-,AbInitio EtSic InPlateis) \
+	 magnificat-initium-i-f oratio introitus-GaudeamusOmnes graduale-BenedictaEtVenerabilis \
 	 alleluia-SolemnitasGloriosae offertorium-BeataEs \
 	 communio-BeatamMeDicent communio-versus-Magnificat \
-	 ix-agnusdei ix-gloria ix-kyrie ix-sanctus credo-iii
+	 ix-agnusdei ix-gloria ix-kyrie ix-sanctus credo-iii \
+	 oratiodominica-mat benedicamus-minor
 OTHERSCORES = $(patsubst %,$(TMP_DIR)/%.gtex,$(SCORES))
 OTHERDEPS = $(addprefix cantus/amon33/,$(addsuffix -bohtext.tex,hym-AveMarisStella hym-OGloriosaDomina))
 LAPSALMSINITGABC = $(foreach P,$(PSALMS),$(TMP_DIR)/ps$(P)-initium-$(MODUS-$(P))-auto.gabc) \
@@ -91,7 +102,7 @@ $(TMP_DIR)/%.tex: PSALMOPTS = $(APPENDGLORIAPATRI) $(LAPSALMOPTS)
 $(patsubst %,$(TMP_DIR)/%.tex,ps148 ps149 dan3): PSALMOPTS = $(LAPSALMOPTS)
 $(TMP_DIR)/magnificat.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold --skip-verses 2 $(LAPSALMOPTSACC)
 $(TMP_DIR)/ps90.tex: PSALMOPTS = --accents-style bold $(LAPSALMOPTSACC)
-$(TMP_DIR)/ps133.tex: PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold $(LAPSALMOPTSACC)
+$(patsubst %,$(TMP_DIR)/ps%.tex,118vii_viii 118ix_x 118xiii_xiv 118xv_xvi 118xix_xx 118xxi_xxii 133): PSALMOPTS = $(APPENDGLORIAPATRI) --accents-style bold $(LAPSALMOPTSACC)
 $(TMP_DIR)/%-boh.tex: PSALMOPTS = $(CZPSALMOPTS)
 $(CZPSALMS) $(TMP_DIR)/benedictus-boh.tex: $(TMP_DIR)/%-boh.tex: $(CZECH_PSALMS_DIR)/Hejcl1922/%.pslm
 	$(GENPSALM)
@@ -101,7 +112,7 @@ $(patsubst %,$(TMP_DIR)/%-boh.tex, magnificat): $(TMP_DIR)/%-boh.tex: $(CZECH_PS
 	$(GENPSALM)
 $(LAPSALMS): $(TMP_DIR)/ps%.tex: $(PSALMS_DIR)/ps%.pslm
 	$(GENPSALM)
-	case "$<" in */ps118[ivx]*) $(AWK) -f hebletter.awk -v PSLM="$<" -v TEX=1 $@ > $@.tmp; $(MV) -f $@.tmp $@;; esac || :
+	case "$<" in */ps118[ivx]*) $(AWK) -f hebletter.awk -v PSLM="$<" -v TEX=$(if $(filter --skip-verses,$(PSALMOPTS)),1,2) $@ > $@.tmp; $(MV) -f $@.tmp $@;; esac || :
 	$(SED) -i -e 'y/Jj/Ii/' $@
 $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: $(PSALMS_DIR)/%.pslm
 	$(GENPSALM)
@@ -109,6 +120,7 @@ $(LAPSALMSEXTRA): $(TMP_DIR)/%.tex: $(PSALMS_DIR)/%.pslm
 $(ALLCOMBPSALMS): $(TMP_DIR)/%-comb.tex: $(TMP_DIR)/%.tex $(TMP_DIR)/%-boh.tex
 	$(GENPSCOMB)
 $(TMP_DIR)/magnificat-comb.tex: PSSKIP = 2
+$(patsubst %,$(TMP_DIR)/ps%-comb.tex,90 118vii_viii 118ix_x 118xiii_xiv 118xv_xvi 118xix_xx 118xxi_xxii 133): PSSKIP = 0
 #$(TMP_DIR)/communio-versus-Exsurgat-comb.tex: $(patsubst %,communio-versus-Exsurgat%tex,. -boh.)
 #	$(GENPSCOMB)
 innativitatebmv.pdf: innativitatebmv.tex conventuscommune.tex translationes_cs.tex \
