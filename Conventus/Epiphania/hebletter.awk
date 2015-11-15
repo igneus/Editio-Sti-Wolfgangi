@@ -19,5 +19,5 @@ function romtoheb(txt, adj,   num)
 }
 BEGIN{ if (TEX == 0){printf romtoheb(PSLM,0);exit 0} if (TEX == 2){nspc=7;adj=-1}else{nspc=1;adj=0} }
 /^$/ {nspc=nspc+1;print;next}
-/^Gló.*ri.*a .*Pat.*ri et .*Fí.*li.*o/ {if (nspc==8){nspc=0}}
+/^Gló.*ri.*a.*Pat.*ri.*et.*Fí.*li.*o/ {if (nspc==8){nspc=0}}
 { if (nspc==8){adj=adj+1;nspc=0;printf "\\hebinitial{%s}", romtoheb(PSLM,adj)}; print}
