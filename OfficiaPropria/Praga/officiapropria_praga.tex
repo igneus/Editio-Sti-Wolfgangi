@@ -2,8 +2,7 @@
 
 \documentclass[a4paper, twoside, 10pt]{article}
 
-\usepackage[latin]{babel} 
-\usepackage{ecclesiastic}
+\usepackage[latin]{babel}
 
 \usepackage{geometry}
 %\geometry{papersize={7.444in,9.681in},total={4.8in,6.8in}}
@@ -17,6 +16,8 @@
 \usepackage{lettrine}
 \usepackage{fancyhdr}
 
+\usepackage{ecclesiastic}
+
 \newcommand{\rubricatum}[1]{\textcolor{red}{#1}}
 
 % kalendarium
@@ -29,29 +30,61 @@
 
 }
 
+\newcommand{\titulusTomus}[1]{
+  \begin{center}
+    {\Huge
+      Officia propria
+
+      Provinciæ Pragensis}
+
+    {\Large
+      a S. Sede approbata et indulta}
+
+    \vfill
+
+    #1
+
+    \vfill
+
+    Editio Sancti Wolfgangi
+  \end{center}
+}
+
 \begin{document}
 
 \pagestyle{empty}
 
-\begin{center}
-{\Huge 
-  Officia propria
-
-  Provinciæ Pragensis}
-
-{\Large 
-  a S. Sede approbata et indulta}
-
-\vfill
-
-tomus alter
-
-\vfill
-
-Editio Sancti Wolfgangi
-\end{center}
+\titulusTomus{tomus prior}
 
 \cleardoublepage
+
+\pagestyle{plain}
+
+\section*{Kalendarium perpetuum\\Provinciæ Pragensis}
+
+\begin{kalendarium}
+% 1928, aestiva, without commemorations and suppressed octaves
+\kMensis{Novembris}
+
+\end{kalendarium}
+
+\cleardoublepage
+
+\begin{multicols}{2}
+
+  \input{edmund}
+
+\end{multicols}
+
+\cleardoublepage
+
+\pagestyle{empty}
+
+\titulusTomus{tomus alter}
+
+\cleardoublepage
+
+\pagestyle{plain}
 
 \section*{Kalendarium perpetuum\\Provinciæ Pragensis}
 
